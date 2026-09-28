@@ -71,7 +71,8 @@ class NoRedirect(urllib.request.HTTPRedirectHandler):
 
 
 def run(inputs, output, provider='baseline', model=None, endpoint=None, key_env=None,
-        limit=None, timeout=60, context_tokens=None, deployment=None):
+        limit=None, timeout=60, context_tokens=None, deployment=None,
+        api_key=None, progress=None, stop_event=None):
     records = read_jsonl(inputs)
     if limit is not None:
         if limit < 1:
@@ -89,7 +90,7 @@ def run(inputs, output, provider='baseline', model=None, endpoint=None, key_env=
             raise ValueError('Endpoint must not contain credentials, query parameters or fragments.')
         if u.scheme != 'https' and not (u.scheme == 'http' and u.hostname in {'localhost', '127.0.0.1', '::1'}):
             raise ValueError('Use HTTPS except for a loopback server.')
-    api_key = os.environ.get(key_env) if key_env else None
+    api_key = api_key or (os.environ.get(key_env) if key_env else None)
     if key_env and not api_key:
         raise ValueError(f'Set the {key_env} environment variable before running.')
     meta = {'provider': provider, 'requested_model': model, 'endpoint': endpoint,
@@ -102,8 +103,12 @@ def run(inputs, output, provider='baseline', model=None, endpoint=None, key_env=
     opener = urllib.request.build_opener(NoRedirect())
     started = time.perf_counter()
     failures = 0
+    attempted = 0
     with output.open('x') as stream:
         for record in records:
+            if stop_event is not None and stop_event.is_set():
+                break
+            attempted += 1
             row = {'id': record['id'], 'status': 'ok', 'predictions': {}, 'probabilities': {}}
             t = time.perf_counter()
             try:
@@ -130,13 +135,20 @@ def run(inputs, output, provider='baseline', model=None, endpoint=None, key_env=
             except urllib.error.HTTPError as exc:
                 row.update(status='error', error=f'HTTP {exc.code}')
             except (ValueError, KeyError, TypeError, OSError) as exc:
-                row.update(status='error', error=f'{type(exc).__name__}: {exc}')
+                message = str(exc)
+                if api_key:
+                    message = message.replace(api_key, '[redacted]')
+                row.update(status='error', error=f'{type(exc).__name__}: {message}')
             failures += int(row['status'] != 'ok')
             row['latency_ms'] = (time.perf_counter() - t) * 1000
             stream.write(json.dumps(row, ensure_ascii=False) + '\n')
             stream.flush()
+            if progress:
+                progress(attempted, len(records), row)
     meta['failed_records'] = failures
-    meta['successful_records'] = len(records) - failures
+    meta['attempted_records'] = attempted
+    meta['cancelled'] = attempted < len(records)
+    meta['successful_records'] = attempted - failures
     meta['wall_seconds'] = time.perf_counter() - started
     output.with_suffix('.meta.json').write_text(json.dumps(meta, indent=2) + '\n')
     return meta

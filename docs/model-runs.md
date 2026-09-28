@@ -1,5 +1,7 @@
 # Running the models
 
+For the browser app and local Laya/CLM setup on a 36 GB Apple Silicon Mac, start with [the app guide](app.md). This page covers the lower-level CLI.
+
 The runner uses the shared `POST /v1/systemone` wire format with `state`, `model`, and `questions`. Each decision is a Choice question, including yes/no uncertainty. Answer distributions and provider confidence are retained separately. No probability is fabricated for the baseline.
 
 This format was checked against the [Jev quickstart](https://docs.typesafe.ai/introduction/quickstart), [Laya model card](https://huggingface.co/convaiinnovations/laya), and [CLM repository](https://github.com/Contrastive-LM/CLM). Compatibility tests use a local HTTP fixture; live endpoint behavior remains to be verified.

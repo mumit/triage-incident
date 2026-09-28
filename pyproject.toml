@@ -4,10 +4,13 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "northstar-triage-bench"
-version = "0.1.0"
+version = "0.2.0"
 description = "Synthetic network incident benchmark for Jev, Laya and CLM-8B"
 requires-python = ">=3.10"
 dependencies = []
 
 [tool.setuptools.packages.find]
 include = ["triage_bench*"]
+
+[tool.setuptools.package-data]
+triage_bench = ["web/*.html", "web/*.css", "web/*.js"]

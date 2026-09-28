@@ -2,11 +2,23 @@
 
 A runnable synthetic network-incident benchmark for **Jev, Laya, and CLM-8B**, using **Northstar Networks**, a fictional operator used solely for this project.
 
-The first release contains **1,064 labeled examples**, a reproducible generator, a model-neutral training exporter, a rule-based baseline, a shared HTTP adapter for the three models, and an evaluation harness. It uses Python 3.10+ with no runtime dependencies. Run commands from this checkout.
+The project includes a **local browser comparison app**, **1,064 labeled examples**, a reproducible generator, a model-neutral training exporter, a rule-based baseline, model-server setup scripts, and an evaluation harness. It uses Python 3.10+ with no runtime dependencies. Run commands from this checkout.
 
 **No Jev, Laya, or CLM model results have been measured.** The included results are from the rule-based baseline only. Model adapters have been tested against a local HTTP fixture, not live model servers.
 
-## Quick start
+## Browser app
+
+```bash
+python3 -m triage_bench.app
+```
+
+Open **http://127.0.0.1:8765**. Add Jev credentials in Model settings, select models and incidents, then run a comparison. You can inspect individual decisions and probabilities, compare batch metrics, export JSON, and revisit saved runs.
+
+For a **36 GB Apple Silicon Mac**, use the included Laya and CLM/MLX setup scripts. No paid API keys are needed for those open models. Software setup does not download weights; starting a model server does. The Mac CLM path is documented and contract-tested, but has not been validated with actual weights here.
+
+**[Step-by-step Mac setup and app guide](docs/app.md)**
+
+## CLI quick start
 
 ```bash
 python -m triage_bench validate
@@ -61,6 +73,6 @@ Implemented decisions: initial investigating domain, policy priority, next diagn
 
 The generator is scenario-driven, not a network physics simulator. The authored prose often states evidence clearly and is intentionally easier than messy operational tickets. A network specialist has not reviewed these labels. Synthetic scores establish performance on this policy benchmark, not production accuracy or restoration-time savings.
 
-Next work: specialist review, richer structured telemetry and timeline simulation, trained model experiments, validation-selected thresholds, related-incident matching, and an interactive comparison UI. The current release is a dataset and CLI benchmark, not a production incident-management system.
+Next work: specialist review, richer structured telemetry and timeline simulation, trained model experiments, validation-selected thresholds, and related-incident matching. The app is an evaluation workbench, not a production incident-management system.
 
 [Project brief](docs/project-brief.md) · [Dataset design](docs/dataset-design.md) · [Evaluation plan](docs/evaluation-plan.md)

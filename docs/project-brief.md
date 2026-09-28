@@ -31,6 +31,6 @@ A paired case removes the shared transport dependency. The model should reconsid
 
 ## Product scope and release status
 
-The target application includes incident import, model adapters, an evidence and label review screen, batch evaluation, and a comparison dashboard. Version 0.1.0 implements the dataset and CLI harness; the interactive screen and dashboard remain planned. Models receive the same evidence and candidate answers. Dataset generation and the evaluation harness should precede UI implementation.
+The target application includes incident import, model adapters, an evidence and label review screen, batch evaluation, and a comparison dashboard. The project now implements the dataset, CLI harness and local browser comparison app. Related-incident matching remains planned. Models receive the same evidence and candidate answers. Dataset generation and the evaluation harness should precede UI implementation.
 
 The synthetic data will support experimentation and training where a model's supported interfaces permit it. Hosted model access must not be assumed to include fine-tuning. Compare unmodified models first and report any trained or calibrated variants separately.

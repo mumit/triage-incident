@@ -1,0 +1,155 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Public incident record",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id",
+    "policy_version",
+    "input"
+  ],
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "policy_version": {
+      "const": "northstar-1.0"
+    },
+    "input": {
+      "type": "object",
+      "required": [
+        "operator",
+        "decision_timestamp",
+        "ticket",
+        "observations",
+        "service_impact",
+        "topology",
+        "change_record",
+        "operator_note"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "operator": {
+          "const": "Northstar Networks"
+        },
+        "decision_timestamp": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "ticket": {
+          "type": "object",
+          "required": [
+            "title",
+            "description"
+          ],
+          "properties": {
+            "title": {
+              "type": "string"
+            },
+            "description": {
+              "type": "string"
+            }
+          },
+          "additionalProperties": false
+        },
+        "observations": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "required": [
+              "observed_at",
+              "source",
+              "detail"
+            ],
+            "properties": {
+              "observed_at": {
+                "type": "string",
+                "format": "date-time"
+              },
+              "source": {
+                "type": "string"
+              },
+              "detail": {
+                "type": "string"
+              }
+            },
+            "additionalProperties": false
+          }
+        },
+        "service_impact": {
+          "type": "object",
+          "required": [
+            "status",
+            "affected_sites",
+            "basis"
+          ],
+          "properties": {
+            "status": {
+              "enum": [
+                "outage",
+                "degraded",
+                "none",
+                "unknown"
+              ]
+            },
+            "affected_sites": {
+              "type": [
+                "integer",
+                "null"
+              ],
+              "minimum": 0
+            },
+            "basis": {
+              "type": "string"
+            }
+          },
+          "additionalProperties": false
+        },
+        "topology": {
+          "type": "object",
+          "required": [
+            "pattern",
+            "edges",
+            "note"
+          ],
+          "properties": {
+            "pattern": {
+              "type": "string"
+            },
+            "edges": {
+              "type": "array",
+              "items": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                },
+                "minItems": 2,
+                "maxItems": 2
+              }
+            },
+            "note": {
+              "type": "string"
+            }
+          },
+          "additionalProperties": false
+        },
+        "change_record": {
+          "type": "object",
+          "required": [
+            "status"
+          ],
+          "properties": {
+            "status": {
+              "type": "string"
+            }
+          },
+          "additionalProperties": false
+        },
+        "operator_note": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}

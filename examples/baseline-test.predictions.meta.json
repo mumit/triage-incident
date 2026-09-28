@@ -1,0 +1,17 @@
+{
+  "provider": "baseline",
+  "requested_model": null,
+  "endpoint": null,
+  "deployment": null,
+  "declared_context_tokens": null,
+  "input_file": "data/test.inputs.jsonl",
+  "input_sha256": "c5ec51cdfacaf4a70910ccf72db69b4e790a488a207eb5d4bc5beb4fe74e9c3d",
+  "started_at": "2026-09-28T04:02:16.783623+00:00",
+  "records": 220,
+  "execution": "serial; first request cold/unknown, remaining requests warm/unknown; no warmup or retries",
+  "policy_sha256": "c18543ebccd1bb5a7e681cb3819ca125e08ffd5cbb6024f40c97b51914513b7e",
+  "benchmark_version": "0.1.0",
+  "failed_records": 0,
+  "successful_records": 220,
+  "wall_seconds": 0.0019515829626470804
+}

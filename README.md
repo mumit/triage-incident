@@ -1,41 +1,66 @@
 # Northstar Network Bench
 
-A proposed network-operations benchmark and incident-triage workbench comparing Jev, Laya, and CLM-8B using synthetic incidents for **Northstar Networks**, a fictional operator used solely for this project.
+A runnable synthetic network-incident benchmark for **Jev, Laya, and CLM-8B**, using **Northstar Networks**, a fictional operator used solely for this project.
 
-## Status
+The first release contains **1,064 labeled examples**, a reproducible generator, a model-neutral training exporter, a rule-based baseline, a shared HTTP adapter for the three models, and an evaluation harness. It uses Python 3.10+ with no runtime dependencies. Run commands from this checkout.
 
-Design stage. No dataset has been generated, no model has been run, and no performance results are claimed. This repository captures the agreed direction before implementation.
+**No Jev, Laya, or CLM model results have been measured.** The included results are from the rule-based baseline only. Model adapters have been tested against a local HTTP fixture, not live model servers.
 
-## Purpose
+## Quick start
 
-Compare how well the three models select an initial investigating domain, apply a supplied priority policy, identify insufficient evidence, and choose the next diagnostic check. Add related-incident matching after the initial workflow is working.
+```bash
+python -m triage_bench validate
+python -m unittest discover -s tests -v
+python -m triage_bench run --inputs data/test.inputs.jsonl --output runs/baseline.jsonl
+python -m triage_bench evaluate --labels data/test.labels.jsonl --predictions runs/baseline.jsonl --output runs/baseline.metrics.json
+```
 
-The first scope is **RAN symptoms, transport dependencies, and the next diagnostic check**. The intended users are network operations engineers and technology leaders evaluating decision models.
+Run output paths are immutable: choose a new filename for a repeat experiment. A model run exits with status 2 when any request fails, while preserving per-record errors for evaluation.
 
-## Demonstration
+## Dataset
 
-A user selects a synthetic incident packet. Three model panels show the selected answers, available probability distributions, and measured end-to-end response times. A reference panel shows the benchmark's accepted answers and supporting evidence. A paired-case view reveals whether a model changes its decision when a material fact changes.
+| Split | Records | Authored scenario families |
+|---|---:|---:|
+| Training | 600 | 30 |
+| Validation | 220 | 11 |
+| Test | 220 | 11 |
+| Challenge | 24 | 4 intervention archetypes, 12 pairs |
 
-A batch view reports quality, uncertainty, latency, and cost. All displayed results must come from actual recorded runs; example values must be clearly marked as illustrations.
+Each regular scenario has 20 parameterized realizations. Those realizations vary identifiers, times, surface presentation, and service-impact counts where appropriate. They are **not 1,040 independent fault scenarios**. The challenge pairs test priority boundaries, stale evidence, irrelevant change timing, and topology-dependent ownership.
 
-## Documents
+Public inputs and answer keys are separate JSONL files. The runner reads only inputs and constructs requests with an explicit allowlist. Test labels are supplied for reproducibility, not held secret; keep them out of prompt tuning, calibration and training.
 
-- [Project brief](docs/project-brief.md)
-- [Synthetic dataset design](docs/dataset-design.md)
-- [Evaluation plan](docs/evaluation-plan.md)
+- [Dataset card](docs/dataset-card.md)
+- [Sample incidents](docs/samples.md)
+- [Fictional operations policy](docs/policy.md)
+- [Model setup and evaluation](docs/model-runs.md)
+- [Measured baseline results](docs/baseline-results.md)
+- [Data files and checksums](data/manifest.json)
 
-## Model references
+## Training export
 
-These are implementation references, not endorsements of vendor benchmark claims.
+```bash
+python -m triage_bench export-training --split train --output runs/training.jsonl
+python -m triage_bench export-training --split validation --output runs/validation.jsonl
+```
 
-- Jev: https://typesafe.ai/
-- Laya: https://huggingface.co/convaiinnovations/laya
-- CLM: https://github.com/Contrastive-LM/CLM
+Exports contain `state`, typed `questions`, reference `answers`, and `accepted_answers`. This is a model-neutral supervised format, not a claim of native compatibility with every trainer. Adapt it to the selected training implementation. Hosted model access does not imply fine-tuning access. Test and challenge export are intentionally unavailable from this command.
 
-CLM is also described by its authors as a System One model. This project compares individual models and deployment configurations, not training methods in isolation. Pin the exact model versions and Laya checkpoint in every experiment.
+## Regenerate
 
-## Boundaries
+```bash
+python -m triage_bench generate
+python -m triage_bench validate
+```
 
-All operator names, topology, assets, incidents, notes, and operational policies will be fictional. Do not incorporate private source documents, actual infrastructure identifiers, or actual operator procedures. The first release recommends diagnostic steps; it does not change network configuration.
+The fixed seed reproduces committed data and checksums. The catalog is in `triage_bench/scenarios.py`. Changes to policy or generation require a versioned dataset release and fresh evaluations.
 
-Synthetic performance measures consistency with this benchmark. It does not establish production accuracy, actual incident prevalence, or reductions in service-restoration time.
+## Scope and next steps
+
+Implemented decisions: initial investigating domain, policy priority, next diagnostic check, and insufficient evidence. Five owner classes cover radio access, transport, site power, core services and operations. All actions are diagnostic; none changes network configuration.
+
+The generator is scenario-driven, not a network physics simulator. The authored prose often states evidence clearly and is intentionally easier than messy operational tickets. A network specialist has not reviewed these labels. Synthetic scores establish performance on this policy benchmark, not production accuracy or restoration-time savings.
+
+Next work: specialist review, richer structured telemetry and timeline simulation, trained model experiments, validation-selected thresholds, related-incident matching, and an interactive comparison UI. The current release is a dataset and CLI benchmark, not a production incident-management system.
+
+[Project brief](docs/project-brief.md) · [Dataset design](docs/dataset-design.md) · [Evaluation plan](docs/evaluation-plan.md)

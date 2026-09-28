@@ -1,5 +1,7 @@
 # Synthetic dataset design
 
+This document describes the target design. The current release uses authored evidence scenarios and parameterized realizations rather than a physical topology-and-timeline simulator. See [the dataset card](dataset-card.md) for implemented behavior and limitations.
+
 ## Generation method
 
 Create a fictional topology and incident timeline first. Render ticket text and operator notes from the resulting facts. Keep the latent simulated cause separate from evidence visible to the model.
@@ -24,7 +26,7 @@ Provide separate training, validation, and test files. Group all paraphrases, ti
 
 Use validation data for threshold selection and calibration. Keep test labels unavailable to prompt tuning and training. A separate challenge set should test unfamiliar combinations, missing evidence, misleading notes, maintenance exceptions, and multiple acceptable actions.
 
-Report both record counts and independent family counts. Additional paraphrases do not create independent incidents. Dataset sizes remain to be selected; do not claim generated records before they exist.
+Report both record counts and independent family counts. Additional paraphrases do not create independent incidents. Version 0.1.0 contains 600 training, 220 validation, 220 test and 24 challenge records; family counts are disclosed in the dataset card.
 
 ## Label quality
 

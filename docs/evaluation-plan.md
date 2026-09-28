@@ -1,5 +1,7 @@
 # Evaluation plan
 
+This is the target evaluation plan. See [model runs](model-runs.md) for implemented metrics and remaining work. Model inference has not yet been benchmarked; only the keyword baseline has been run.
+
 ## Shared task
 
 Give each model identical visible evidence, a versioned benchmark policy, and the same candidate decisions. Preserve equivalent question semantics when adapting API formats. Record any input truncation, unsupported output, timeout, or adapter failure.

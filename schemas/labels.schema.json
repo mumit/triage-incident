@@ -1,0 +1,48 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Answer labels",
+  "type": "object",
+  "required": [
+    "initial_owner",
+    "priority",
+    "next_check",
+    "insufficient_evidence"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "initial_owner": {
+      "enum": [
+        "ran",
+        "transport",
+        "power",
+        "core",
+        "noc"
+      ]
+    },
+    "priority": {
+      "enum": [
+        "P1",
+        "P2",
+        "P3",
+        "P4"
+      ]
+    },
+    "next_check": {
+      "enum": [
+        "inspect_radio",
+        "inspect_transport",
+        "inspect_power",
+        "inspect_core",
+        "verify_change",
+        "gather_evidence",
+        "monitor"
+      ]
+    },
+    "insufficient_evidence": {
+      "enum": [
+        "yes",
+        "no"
+      ]
+    }
+  }
+}

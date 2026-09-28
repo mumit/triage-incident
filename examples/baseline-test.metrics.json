@@ -1,0 +1,405 @@
+{
+  "label_sha256": "9b7d4e177bbffa7d92061d3b654ded95e54003a68e521c449500616857a44ea8",
+  "prediction_sha256": "5a8e7c3c7ef66c24327787a26d795e74476bb671bf26370b2037cc534ee93bec",
+  "records": 220,
+  "attempted_records": 220,
+  "missing_records": 0,
+  "failed_records": 0,
+  "fields": {
+    "initial_owner": {
+      "accuracy": 0.9090909090909091,
+      "macro_f1": 0.8933333333333333,
+      "confusion_matrix": {
+        "ran": {
+          "ran": 40,
+          "transport": 0,
+          "power": 0,
+          "core": 0,
+          "noc": 0,
+          "ERROR": 0
+        },
+        "transport": {
+          "ran": 20,
+          "transport": 20,
+          "power": 0,
+          "core": 0,
+          "noc": 0,
+          "ERROR": 0
+        },
+        "power": {
+          "ran": 0,
+          "transport": 0,
+          "power": 40,
+          "core": 0,
+          "noc": 0,
+          "ERROR": 0
+        },
+        "core": {
+          "ran": 0,
+          "transport": 0,
+          "power": 0,
+          "core": 40,
+          "noc": 0,
+          "ERROR": 0
+        },
+        "noc": {
+          "ran": 0,
+          "transport": 0,
+          "power": 0,
+          "core": 0,
+          "noc": 60,
+          "ERROR": 0
+        }
+      },
+      "brier_score": null,
+      "brier_records": 0,
+      "probability_records": 0,
+      "reliability_bins": [],
+      "family_bootstrap_95_percent_interval": [
+        0.7272727272727273,
+        1.0
+      ],
+      "families": 11,
+      "coverage_curve": [
+        {
+          "threshold": 0,
+          "accepted": 0,
+          "coverage": 0.0,
+          "error_rate": null
+        },
+        {
+          "threshold": 0.5,
+          "accepted": 0,
+          "coverage": 0.0,
+          "error_rate": null
+        },
+        {
+          "threshold": 0.7,
+          "accepted": 0,
+          "coverage": 0.0,
+          "error_rate": null
+        },
+        {
+          "threshold": 0.8,
+          "accepted": 0,
+          "coverage": 0.0,
+          "error_rate": null
+        },
+        {
+          "threshold": 0.9,
+          "accepted": 0,
+          "coverage": 0.0,
+          "error_rate": null
+        },
+        {
+          "threshold": 0.95,
+          "accepted": 0,
+          "coverage": 0.0,
+          "error_rate": null
+        },
+        {
+          "threshold": 0.99,
+          "accepted": 0,
+          "coverage": 0.0,
+          "error_rate": null
+        }
+      ]
+    },
+    "priority": {
+      "accuracy": 1.0,
+      "macro_f1": 1.0,
+      "confusion_matrix": {
+        "P1": {
+          "P1": 16,
+          "P2": 0,
+          "P3": 0,
+          "P4": 0,
+          "ERROR": 0
+        },
+        "P2": {
+          "P1": 0,
+          "P2": 50,
+          "P3": 0,
+          "P4": 0,
+          "ERROR": 0
+        },
+        "P3": {
+          "P1": 0,
+          "P2": 0,
+          "P3": 134,
+          "P4": 0,
+          "ERROR": 0
+        },
+        "P4": {
+          "P1": 0,
+          "P2": 0,
+          "P3": 0,
+          "P4": 20,
+          "ERROR": 0
+        }
+      },
+      "brier_score": null,
+      "brier_records": 0,
+      "probability_records": 0,
+      "reliability_bins": [],
+      "family_bootstrap_95_percent_interval": [
+        1.0,
+        1.0
+      ],
+      "families": 11,
+      "coverage_curve": [
+        {
+          "threshold": 0,
+          "accepted": 0,
+          "coverage": 0.0,
+          "error_rate": null
+        },
+        {
+          "threshold": 0.5,
+          "accepted": 0,
+          "coverage": 0.0,
+          "error_rate": null
+        },
+        {
+          "threshold": 0.7,
+          "accepted": 0,
+          "coverage": 0.0,
+          "error_rate": null
+        },
+        {
+          "threshold": 0.8,
+          "accepted": 0,
+          "coverage": 0.0,
+          "error_rate": null
+        },
+        {
+          "threshold": 0.9,
+          "accepted": 0,
+          "coverage": 0.0,
+          "error_rate": null
+        },
+        {
+          "threshold": 0.95,
+          "accepted": 0,
+          "coverage": 0.0,
+          "error_rate": null
+        },
+        {
+          "threshold": 0.99,
+          "accepted": 0,
+          "coverage": 0.0,
+          "error_rate": null
+        }
+      ]
+    },
+    "next_check": {
+      "accuracy": 0.9090909090909091,
+      "macro_f1": 0.780952380952381,
+      "confusion_matrix": {
+        "inspect_radio": {
+          "inspect_radio": 40,
+          "inspect_transport": 0,
+          "inspect_power": 0,
+          "inspect_core": 0,
+          "verify_change": 0,
+          "gather_evidence": 0,
+          "monitor": 0,
+          "ERROR": 0
+        },
+        "inspect_transport": {
+          "inspect_radio": 20,
+          "inspect_transport": 20,
+          "inspect_power": 0,
+          "inspect_core": 0,
+          "verify_change": 0,
+          "gather_evidence": 0,
+          "monitor": 0,
+          "ERROR": 0
+        },
+        "inspect_power": {
+          "inspect_radio": 0,
+          "inspect_transport": 0,
+          "inspect_power": 40,
+          "inspect_core": 0,
+          "verify_change": 0,
+          "gather_evidence": 0,
+          "monitor": 0,
+          "ERROR": 0
+        },
+        "inspect_core": {
+          "inspect_radio": 0,
+          "inspect_transport": 0,
+          "inspect_power": 0,
+          "inspect_core": 40,
+          "verify_change": 0,
+          "gather_evidence": 0,
+          "monitor": 0,
+          "ERROR": 0
+        },
+        "verify_change": {
+          "inspect_radio": 0,
+          "inspect_transport": 0,
+          "inspect_power": 0,
+          "inspect_core": 0,
+          "verify_change": 0,
+          "gather_evidence": 0,
+          "monitor": 0,
+          "ERROR": 0
+        },
+        "gather_evidence": {
+          "inspect_radio": 0,
+          "inspect_transport": 0,
+          "inspect_power": 0,
+          "inspect_core": 0,
+          "verify_change": 0,
+          "gather_evidence": 40,
+          "monitor": 0,
+          "ERROR": 0
+        },
+        "monitor": {
+          "inspect_radio": 0,
+          "inspect_transport": 0,
+          "inspect_power": 0,
+          "inspect_core": 0,
+          "verify_change": 0,
+          "gather_evidence": 0,
+          "monitor": 20,
+          "ERROR": 0
+        }
+      },
+      "brier_score": null,
+      "brier_records": 0,
+      "probability_records": 0,
+      "reliability_bins": [],
+      "family_bootstrap_95_percent_interval": [
+        0.7272727272727273,
+        1.0
+      ],
+      "families": 11,
+      "coverage_curve": [
+        {
+          "threshold": 0,
+          "accepted": 0,
+          "coverage": 0.0,
+          "error_rate": null
+        },
+        {
+          "threshold": 0.5,
+          "accepted": 0,
+          "coverage": 0.0,
+          "error_rate": null
+        },
+        {
+          "threshold": 0.7,
+          "accepted": 0,
+          "coverage": 0.0,
+          "error_rate": null
+        },
+        {
+          "threshold": 0.8,
+          "accepted": 0,
+          "coverage": 0.0,
+          "error_rate": null
+        },
+        {
+          "threshold": 0.9,
+          "accepted": 0,
+          "coverage": 0.0,
+          "error_rate": null
+        },
+        {
+          "threshold": 0.95,
+          "accepted": 0,
+          "coverage": 0.0,
+          "error_rate": null
+        },
+        {
+          "threshold": 0.99,
+          "accepted": 0,
+          "coverage": 0.0,
+          "error_rate": null
+        }
+      ]
+    },
+    "insufficient_evidence": {
+      "accuracy": 1.0,
+      "macro_f1": 1.0,
+      "confusion_matrix": {
+        "yes": {
+          "yes": 40,
+          "no": 0,
+          "ERROR": 0
+        },
+        "no": {
+          "yes": 0,
+          "no": 180,
+          "ERROR": 0
+        }
+      },
+      "brier_score": null,
+      "brier_records": 0,
+      "probability_records": 0,
+      "reliability_bins": [],
+      "family_bootstrap_95_percent_interval": [
+        1.0,
+        1.0
+      ],
+      "families": 11,
+      "coverage_curve": [
+        {
+          "threshold": 0,
+          "accepted": 0,
+          "coverage": 0.0,
+          "error_rate": null
+        },
+        {
+          "threshold": 0.5,
+          "accepted": 0,
+          "coverage": 0.0,
+          "error_rate": null
+        },
+        {
+          "threshold": 0.7,
+          "accepted": 0,
+          "coverage": 0.0,
+          "error_rate": null
+        },
+        {
+          "threshold": 0.8,
+          "accepted": 0,
+          "coverage": 0.0,
+          "error_rate": null
+        },
+        {
+          "threshold": 0.9,
+          "accepted": 0,
+          "coverage": 0.0,
+          "error_rate": null
+        },
+        {
+          "threshold": 0.95,
+          "accepted": 0,
+          "coverage": 0.0,
+          "error_rate": null
+        },
+        {
+          "threshold": 0.99,
+          "accepted": 0,
+          "coverage": 0.0,
+          "error_rate": null
+        }
+      ]
+    }
+  },
+  "limitations": "Synthetic policy benchmark. Repeated family realizations are not independent incidents. No production benefit is measured.",
+  "all_fields_accuracy": 0.9090909090909091,
+  "p1_miss_rate": 0.0,
+  "p1_records": 16,
+  "paired_families": 0,
+  "pair_all_fields_accuracy": null,
+  "successful_latency_ms": {
+    "p50": 0.002334010787308216,
+    "p95": 0.003958004526793957,
+    "records": 220
+  }
+}

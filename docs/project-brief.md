@@ -29,8 +29,8 @@ Under a benchmark policy that prioritizes shared upstream dependencies, the expe
 
 A paired case removes the shared transport dependency. The model should reconsider grouping the sites. Final accepted answers depend on the full evidence packet and the written benchmark policy.
 
-## Product scope
+## Product scope and release status
 
-The first release contains incident import, three model adapters, an evidence and label review screen, batch evaluation, and a comparison dashboard. Models receive the same evidence and candidate answers. Dataset generation and the evaluation harness should precede UI implementation.
+The target application includes incident import, model adapters, an evidence and label review screen, batch evaluation, and a comparison dashboard. Version 0.1.0 implements the dataset and CLI harness; the interactive screen and dashboard remain planned. Models receive the same evidence and candidate answers. Dataset generation and the evaluation harness should precede UI implementation.
 
 The synthetic data will support experimentation and training where a model's supported interfaces permit it. Hosted model access must not be assumed to include fine-tuning. Compare unmodified models first and report any trained or calibrated variants separately.

@@ -12,7 +12,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
-from triage_bench import workflow  # noqa: E402
+from triage_bench import compact_jev, workflow  # noqa: E402
 from triage_bench.app import load_env  # noqa: E402
 from triage_bench.encoder import predict_file  # noqa: E402
 from triage_bench.evaluate import evaluate  # noqa: E402
@@ -22,7 +22,7 @@ from triage_bench.runner import run  # noqa: E402
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--cohort', choices=('draft', 'validation'), default='draft')
-    parser.add_argument('--providers', nargs='+', choices=('encoder', 'jev_workflow', 'jev_original'),
+    parser.add_argument('--providers', nargs='+', choices=('encoder', 'jev_workflow', 'jev_original', 'jev_compact'),
                         default=['encoder', 'jev_workflow', 'jev_original'])
     parser.add_argument('--output-dir', type=Path, required=True)
     parser.add_argument('--model-dir', type=Path, default=ROOT / 'runs/encoder/minilm-v1')
@@ -58,7 +58,7 @@ def main():
             run(inputs, predictions, provider='jev', model='jev-1.13.0',
                 endpoint='https://api.typesafe.ai/v1/systemone', key_env='TYPESAFE_API_KEY',
                 context_tokens=8192, deployment=f'Hosted Jev; development {provider}',
-                decision_workflow=workflow if provider == 'jev_workflow' else None)
+                decision_workflow=({'jev_workflow': workflow, 'jev_compact': compact_jev}.get(provider)))
         # Predictions are completed and saved before the scorer opens labels.
         metrics = evaluate(labels, predictions, predictions.with_suffix('.metrics.json'))
         manifest['results'][provider] = metrics

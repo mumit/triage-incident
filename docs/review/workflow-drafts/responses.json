@@ -1,0 +1,218 @@
+{
+  "purpose": "Specialist review of development drafts; never a holdout qualification",
+  "input_sha256": "2326f2877980291feb621ebd615b0d0f6ffcf1ebcb0f154c9aa9d20b1f0895a7",
+  "reviewer": {
+    "name": "",
+    "network_operations_experience": ""
+  },
+  "cases": [
+    {
+      "id": "WF-887c2bb778-a",
+      "decision": "pending",
+      "accepted_answers": {
+        "initial_owner": [],
+        "priority": [],
+        "next_check": [],
+        "insufficient_evidence": []
+      },
+      "rationale": "",
+      "input_corrections": "",
+      "related_mechanisms": ""
+    },
+    {
+      "id": "WF-887c2bb778-b",
+      "decision": "pending",
+      "accepted_answers": {
+        "initial_owner": [],
+        "priority": [],
+        "next_check": [],
+        "insufficient_evidence": []
+      },
+      "rationale": "",
+      "input_corrections": "",
+      "related_mechanisms": ""
+    },
+    {
+      "id": "WF-e4d3ea3699-a",
+      "decision": "pending",
+      "accepted_answers": {
+        "initial_owner": [],
+        "priority": [],
+        "next_check": [],
+        "insufficient_evidence": []
+      },
+      "rationale": "",
+      "input_corrections": "",
+      "related_mechanisms": ""
+    },
+    {
+      "id": "WF-e4d3ea3699-b",
+      "decision": "pending",
+      "accepted_answers": {
+        "initial_owner": [],
+        "priority": [],
+        "next_check": [],
+        "insufficient_evidence": []
+      },
+      "rationale": "",
+      "input_corrections": "",
+      "related_mechanisms": ""
+    },
+    {
+      "id": "WF-25bee86485-a",
+      "decision": "pending",
+      "accepted_answers": {
+        "initial_owner": [],
+        "priority": [],
+        "next_check": [],
+        "insufficient_evidence": []
+      },
+      "rationale": "",
+      "input_corrections": "",
+      "related_mechanisms": ""
+    },
+    {
+      "id": "WF-25bee86485-b",
+      "decision": "pending",
+      "accepted_answers": {
+        "initial_owner": [],
+        "priority": [],
+        "next_check": [],
+        "insufficient_evidence": []
+      },
+      "rationale": "",
+      "input_corrections": "",
+      "related_mechanisms": ""
+    },
+    {
+      "id": "WF-8c543664cc-a",
+      "decision": "pending",
+      "accepted_answers": {
+        "initial_owner": [],
+        "priority": [],
+        "next_check": [],
+        "insufficient_evidence": []
+      },
+      "rationale": "",
+      "input_corrections": "",
+      "related_mechanisms": ""
+    },
+    {
+      "id": "WF-8c543664cc-b",
+      "decision": "pending",
+      "accepted_answers": {
+        "initial_owner": [],
+        "priority": [],
+        "next_check": [],
+        "insufficient_evidence": []
+      },
+      "rationale": "",
+      "input_corrections": "",
+      "related_mechanisms": ""
+    },
+    {
+      "id": "WF-b81deaf387-a",
+      "decision": "pending",
+      "accepted_answers": {
+        "initial_owner": [],
+        "priority": [],
+        "next_check": [],
+        "insufficient_evidence": []
+      },
+      "rationale": "",
+      "input_corrections": "",
+      "related_mechanisms": ""
+    },
+    {
+      "id": "WF-b81deaf387-b",
+      "decision": "pending",
+      "accepted_answers": {
+        "initial_owner": [],
+        "priority": [],
+        "next_check": [],
+        "insufficient_evidence": []
+      },
+      "rationale": "",
+      "input_corrections": "",
+      "related_mechanisms": ""
+    },
+    {
+      "id": "WF-025f5b51ee-a",
+      "decision": "pending",
+      "accepted_answers": {
+        "initial_owner": [],
+        "priority": [],
+        "next_check": [],
+        "insufficient_evidence": []
+      },
+      "rationale": "",
+      "input_corrections": "",
+      "related_mechanisms": ""
+    },
+    {
+      "id": "WF-025f5b51ee-b",
+      "decision": "pending",
+      "accepted_answers": {
+        "initial_owner": [],
+        "priority": [],
+        "next_check": [],
+        "insufficient_evidence": []
+      },
+      "rationale": "",
+      "input_corrections": "",
+      "related_mechanisms": ""
+    },
+    {
+      "id": "WF-218b817fda-a",
+      "decision": "pending",
+      "accepted_answers": {
+        "initial_owner": [],
+        "priority": [],
+        "next_check": [],
+        "insufficient_evidence": []
+      },
+      "rationale": "",
+      "input_corrections": "",
+      "related_mechanisms": ""
+    },
+    {
+      "id": "WF-218b817fda-b",
+      "decision": "pending",
+      "accepted_answers": {
+        "initial_owner": [],
+        "priority": [],
+        "next_check": [],
+        "insufficient_evidence": []
+      },
+      "rationale": "",
+      "input_corrections": "",
+      "related_mechanisms": ""
+    },
+    {
+      "id": "WF-a33ebc4c18-a",
+      "decision": "pending",
+      "accepted_answers": {
+        "initial_owner": [],
+        "priority": [],
+        "next_check": [],
+        "insufficient_evidence": []
+      },
+      "rationale": "",
+      "input_corrections": "",
+      "related_mechanisms": ""
+    },
+    {
+      "id": "WF-a33ebc4c18-b",
+      "decision": "pending",
+      "accepted_answers": {
+        "initial_owner": [],
+        "priority": [],
+        "next_check": [],
+        "insufficient_evidence": []
+      },
+      "rationale": "",
+      "input_corrections": "",
+      "related_mechanisms": ""
+    }
+  ]
+}

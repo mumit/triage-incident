@@ -10,6 +10,8 @@ The [technical report](docs/incident-triage-technical-report.md) summarizes the 
 
 A [small encoder follow-up](docs/encoder-study.md) trains a frozen 22.7M-parameter MiniLM classifier with no autoregressive inference. It reached 220/220 on both regular evaluation splits; the raw classifier got 18/24 challenge cases and a separately labeled, post-hoc policy-guarded variant got 24/24. These synthetic results need a new specialist-reviewed holdout before operational use.
 
+The [current comparison study is closed](docs/study-closeout.md), with frozen file identities and a verification command. The [next study](docs/workflow-study.md) compares the frozen encoder with a compact, decomposed Jev workflow. Its harness and draft review cohort are available; new accuracy results and specialist-reviewed holdout labels are pending.
+
 ## Browser app
 
 ```bash

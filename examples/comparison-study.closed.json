@@ -1,0 +1,27 @@
+{
+  "study": "Northstar comparison and encoder follow-up",
+  "status": "closed",
+  "closed_on": "2026-09-29",
+  "encoder_commit": "516af9a",
+  "zero_shot_commit": "93582d5",
+  "merged_pull_requests": [
+    1,
+    2
+  ],
+  "sha256": {
+    "docs/full-zero-shot-evaluation.md": "431b019531d2fd0cb66f5ba1bb884883e1daeabb1b11c2cd86d475b8bae40c4a",
+    "docs/encoder-study.md": "200770ce30c45b5a3648b18dd1ddc81ce1d62b44d8fdb37e9052ef1e5856a393",
+    "docs/incident-triage-technical-report.md": "20fcee664fdb005d8227565f2c17fd35d01a81c7242576acc35a57cf15d28a19",
+    "examples/full-zero-shot-evaluation.evidence.json": "acc2a275022697901022a07d750fecf45cc6f31d3b59214223c765e2fad5bca0",
+    "examples/encoder-evaluation.evidence.json": "bde7d3965bc226f2dce3a862b1b316e7b93f2bd0d841aa5cf42d58c0adeae8c0",
+    "data/challenge.inputs.jsonl": "16d55bed104406243c5b93b736a831337252094e059a8621aa237effa5c33142",
+    "data/challenge.labels.jsonl": "a321a671ce91e11e2c05b77a600e08a8f70c8ed84c917bad5de04065cc696852",
+    "data/test.inputs.jsonl": "c5ec51cdfacaf4a70910ccf72db69b4e790a488a207eb5d4bc5beb4fe74e9c3d",
+    "data/test.labels.jsonl": "9b7d4e177bbffa7d92061d3b654ded95e54003a68e521c449500616857a44ea8",
+    "data/train.inputs.jsonl": "52d3a3d6212cdfaf1548f64012ee6cecf7587401d46c7ec6d07c7bc557c4b945",
+    "data/train.labels.jsonl": "9882ab495ba1f23e75a6be65340958053e4a9ef0d9c7eafeb0a0683662c40574",
+    "data/validation.inputs.jsonl": "389469f83a877db5169c1c1e3141164cf780d8135efb010733194b90790404e0",
+    "data/validation.labels.jsonl": "eaf371c921dbeb946b3990c4060c3442e1d5695c6edb0d98d8c81668d73a5938",
+    "data/manifest.json": "caf36461cee461cc968acc0b11b48c4e2ba5114b255544189ba2000c5a7bc7c7"
+  }
+}

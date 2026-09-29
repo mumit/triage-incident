@@ -1,0 +1,12 @@
+{
+  "study": "workflow-v1",
+  "status": "draft-unreviewed",
+  "records": 16,
+  "families": 8,
+  "pairs": 8,
+  "sha256": {
+    "draft.inputs.jsonl": "2326f2877980291feb621ebd615b0d0f6ffcf1ebcb0f154c9aa9d20b1f0895a7",
+    "draft.labels.jsonl": "26400ae85758429febc6077944bae566c2badb1216443475796745f5e1617e21",
+    "review.json": "e8a0842d72c95a3713be12f83385bf10128fc72a35d45993a380bf2e9603d681"
+  }
+}

@@ -107,9 +107,25 @@ The LLM receives the same public incident packet, fictional policy, and allowed 
 
 To run Luna without rerunning other models, check **LLM · Fuel iX** in Models to run and uncheck **Rules baseline** and any other checked models. Earlier scores remain in Run history. A five-incident validation run checks connectivity and output shape; it is not an accuracy estimate.
 
-## 7. Run the comparison
+## 7. Set up the local MiniLM encoder
 
-1. Start the app and whichever model servers you want to compare.
+The app also offers **MiniLM encoder** and **MiniLM + policy**. Both use the same frozen 22.7M-parameter encoder and a locally trained seven-class head. Priority comes from the published impact policy. The second entry adds explicit freshness and complete-topology vetoes. It was changed after inspecting challenge failures, so its challenge score is post-hoc. See the [encoder study](encoder-study.md) before presenting either score.
+
+Create an optional Python environment and train the head once from the committed training set:
+
+```bash
+python3 -m venv .venv-encoder
+source .venv-encoder/bin/activate
+python3 -m pip install -e '.[encoder]'
+python3 scripts/train_encoder.py
+python3 -m triage_bench.app
+```
+
+The training step downloads the pinned MiniLM checkpoint from Hugging Face on first use. The trained head is written to `runs/encoder/minilm-v1/`; the checkpoint lives in the Hugging Face cache. Inference uses cached files only and makes no network or autoregressive call. Keep the same Python environment and cache when starting the app. Set `ENCODER_MODEL_DIR` to another trained-head directory if needed. The head and checkpoint are local artifacts, not committed; a fresh checkout must train its own head. Select either MiniLM entry, or both for a side-by-side comparison. No API token is needed. The app does not train automatically.
+
+## 8. Run the comparison
+
+1. Start the app and whichever model servers you want to compare. The MiniLM entries run in the app process and need no separate server.
 2. Configure Jev or the Fuel iX LLM if selected, and check every model identifier and Deployment details.
 3. Choose **Validation**, five incidents, and the models to run.
 4. Click **Run comparison**. First requests may be slower because caches are cold.

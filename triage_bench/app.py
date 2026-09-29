@@ -14,7 +14,7 @@ from .dataset import ROOT, read_jsonl, write_jsonl
 from .evaluate import evaluate
 from .runner import run
 
-PROVIDERS = ['baseline', 'jev', 'kev', 'laya', 'clm', 'llm']
+PROVIDERS = ['baseline', 'encoder', 'encoder_guarded', 'jev', 'kev', 'laya', 'clm', 'llm']
 SPLITS = ['validation', 'test', 'challenge']
 
 
@@ -39,6 +39,10 @@ def profiles():
     return {
         'baseline': dict(model='keyword-baseline', endpoint='', context_tokens=8192,
                          deployment='Local deterministic rules', api_key=''),
+        'encoder': dict(model='MiniLM-L6-v2 + trained head', endpoint='', context_tokens=256,
+                        deployment='Local frozen encoder; raw seven-class decision', api_key=''),
+        'encoder_guarded': dict(model='MiniLM-L6-v2 + trained head + policy guards', endpoint='', context_tokens=256,
+                                deployment='Local frozen encoder; explicit freshness and topology vetoes', api_key=''),
         'jev': dict(model=os.getenv('JEV_MODEL', 'jev-latest'), endpoint=os.getenv('JEV_ENDPOINT', 'https://api.typesafe.ai/v1/systemone'),
                     context_tokens=int(os.getenv('JEV_CONTEXT_TOKENS', '8192')), deployment='Hosted Jev API', api_key=os.getenv('TYPESAFE_API_KEY', '')),
         'kev': dict(model=os.getenv('KEV_MODEL', 'kev-latest'), endpoint=os.getenv('KEV_ENDPOINT', 'http://127.0.0.1:8009/v1/systemone'),
@@ -79,7 +83,7 @@ class App:
 
     def configure(self, payload):
         name = payload.get('provider')
-        if name not in PROVIDERS or name == 'baseline':
+        if name not in PROVIDERS or name in {'baseline', 'encoder', 'encoder_guarded'}:
             raise ValueError('Choose Jev, Kev, Laya, CLM or LLM.')
         endpoint = str(payload.get('endpoint', '')).strip()
         url = urlparse(endpoint)
@@ -122,6 +126,9 @@ class App:
         temp.write_text(json.dumps(job, indent=2) + '\n')
         temp.replace(path)
 
+    def encoder_model_dir(self):
+        return Path(os.getenv('ENCODER_MODEL_DIR', str(self.root / 'runs/encoder/minilm-v1')))
+
     def start(self, payload):
         split = payload.get('split', 'validation')
         chosen = payload.get('providers', [])
@@ -161,6 +168,9 @@ class App:
                     raise ValueError('Add your Fuel iX base URL in Settings first.')
                 if not config['llm']['api_key']:
                     raise ValueError('Add your Fuel iX bearer token in Settings first.')
+            if any(name in chosen for name in ('encoder', 'encoder_guarded')):
+                if not (self.encoder_model_dir() / 'head.npz').is_file():
+                    raise ValueError('Train the local encoder first with scripts/train_encoder.py.')
             job_id = uuid.uuid4().hex[:16]
             directory = self.run_root / job_id
             directory.mkdir()
@@ -191,7 +201,15 @@ class App:
                     job['completed']=before+done
             output = directory/f'{name}.jsonl'
             try:
-                meta = run(directory/'inputs.jsonl',output,provider=name,stop_event=stop,progress=progress,timeout=300,**cfg)
+                if name in {'encoder', 'encoder_guarded'}:
+                    from .encoder import predict_file
+                    predict_file(directory/'inputs.jsonl', output, self.encoder_model_dir(),
+                                 guards='policy-v1' if name == 'encoder_guarded' else 'none',
+                                 progress=progress, stop_event=stop)
+                    meta = json.loads(output.with_suffix('.meta.json').read_text())
+                    meta['deployment'] = cfg['deployment']
+                else:
+                    meta = run(directory/'inputs.jsonl',output,provider=name,stop_event=stop,progress=progress,timeout=300,**cfg)
                 metrics = evaluate(directory/'labels.jsonl',output,directory/f'{name}.metrics.json')
                 rows = read_jsonl(output)
                 public_rows = [{k:v for k,v in row.items() if k!='raw_response'} for row in rows]

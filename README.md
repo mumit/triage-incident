@@ -8,6 +8,8 @@ The [full zero-shot evaluation](docs/full-zero-shot-evaluation.md) covers all 22
 
 The [technical report](docs/incident-triage-technical-report.md) summarizes the data, experiment, findings, limits, and recommended next experiments for a team discussion.
 
+A [small encoder follow-up](docs/encoder-study.md) trains a frozen 22.7M-parameter MiniLM classifier with no autoregressive inference. It reached 220/220 on both regular evaluation splits; the raw classifier got 18/24 challenge cases and a separately labeled, post-hoc policy-guarded variant got 24/24. These synthetic results need a new specialist-reviewed holdout before operational use.
+
 ## Browser app
 
 ```bash

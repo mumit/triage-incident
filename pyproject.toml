@@ -9,6 +9,9 @@ description = "Synthetic network incident benchmark for Jev, Kev, Laya and CLM-8
 requires-python = ">=3.10"
 dependencies = []
 
+[project.optional-dependencies]
+encoder = ["numpy>=1.26", "scikit-learn>=1.4", "torch>=2.6", "transformers>=4.50,<6"]
+
 [tool.setuptools.packages.find]
 include = ["triage_bench*"]
 

@@ -103,6 +103,11 @@ class AppTests(unittest.TestCase):
         self.assertFalse(cfg['kev']['key_configured'])
         self.assertIn(b'value="kev"',(ROOT/'triage_bench/web/index.html').read_bytes())
 
+    def test_encoder_requires_a_trained_head(self):
+        with self.assertRaisesRegex(ValueError, 'Train the local encoder first'):
+            self.app.start({'split': 'validation', 'providers': ['encoder'], 'count': 1})
+        self.assertEqual(self.app.jobs, {})
+
     def test_external_plain_http_rejected(self):
         with self.assertRaisesRegex(ValueError,'HTTPS'):
             self.app.configure({'provider':'laya','model':'x','endpoint':'http://example.org/v1/systemone'})

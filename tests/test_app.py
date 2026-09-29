@@ -44,6 +44,7 @@ class AppTests(unittest.TestCase):
 
     def test_single_record(self):
         incident=self.app.incidents('test')[8]
+        self.assertEqual(incident['accepted_answers']['initial_owner'],[incident['labels']['initial_owner']])
         job=self.await_job(self.app.start({'split':'test','providers':['baseline'],'record_id':incident['id']})['id'])
         self.assertEqual(job['count'],1)
         self.assertEqual(job['results']['baseline']['predictions'][0]['id'],incident['id'])
@@ -69,6 +70,38 @@ class AppTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError,'API key'):
             self.app.start({'providers':['jev'],'count':1})
         self.assertFalse(self.app.jobs)
+
+    def test_llm_can_run_alone_without_other_providers(self):
+        self.app.profiles['llm']['endpoint']=''
+        self.app.profiles['llm']['api_key']=''
+        with self.assertRaisesRegex(ValueError,'base URL'):
+            self.app.start({'providers':['llm'],'count':1})
+        cfg=self.app.config()['llm']
+        self.app.configure({'provider':'llm',**cfg,'endpoint':'https://proxy.example/v1',
+                            'api_key':'fixture-bearer-secret'})
+        self.assertNotIn('fixture-bearer-secret',json.dumps(self.app.config()))
+        calls=[]
+        def fake_run(inputs,output,provider,**kwargs):
+            calls.append(provider)
+            labels=read_jsonl(output.parent/'labels.jsonl')[0]['labels']
+            output.write_text(json.dumps({'id':read_jsonl(inputs)[0]['id'],'status':'ok',
+                                          'predictions':labels,'probabilities':{}})+'\n')
+            return {'provider':provider,'failed_records':0,'deployment':'fixture'}
+        with patch('triage_bench.app.run',side_effect=fake_run):
+            job=self.await_job(self.app.start({'providers':['llm'],'count':1})['id'])
+        self.assertEqual((job['providers'],calls),(['llm'],['llm']))
+        self.assertEqual(job['total'],1)
+        self.assertEqual(set(job['results']),{'llm'})
+        self.assertEqual(job['results']['llm']['metrics']['all_fields_accuracy'],1)
+        self.assertNotIn('fixture-bearer-secret',json.dumps(job))
+        self.assertNotIn('fixture-bearer-secret',(self.app.run_root/job['id']/'job.json').read_text())
+
+    def test_kev_is_separate_local_provider(self):
+        cfg=self.app.config()
+        self.assertEqual(cfg['kev']['model'],'kev-latest')
+        self.assertEqual(cfg['kev']['endpoint'],'http://127.0.0.1:8009/v1/systemone')
+        self.assertFalse(cfg['kev']['key_configured'])
+        self.assertIn(b'value="kev"',(ROOT/'triage_bench/web/index.html').read_bytes())
 
     def test_external_plain_http_rejected(self):
         with self.assertRaisesRegex(ValueError,'HTTPS'):
@@ -97,9 +130,11 @@ class AppTests(unittest.TestCase):
             req=urllib.request.Request(base+'/api/jobs',data=b'{}',headers={'Content-Type':'application/json','Origin':'https://example.org'})
             with self.assertRaises(urllib.error.HTTPError) as error:urllib.request.urlopen(req)
             self.assertEqual(error.exception.code,403)
+            error.exception.close()
             req=urllib.request.Request(base+'/api/config',headers={'Host':'rebound.example.org'})
             with self.assertRaises(urllib.error.HTTPError) as error:urllib.request.urlopen(req)
             self.assertEqual(error.exception.code,403)
+            error.exception.close()
         finally:
             server.shutdown();server.server_close();thread.join()
 

@@ -13,8 +13,13 @@ case "$precision" in
   8bit) encoder='czl/CLM-v0.1-8B-MLX-8bit' ;;
   *) printf '%s\n' 'Use CLM_PRECISION=bf16 or 8bit.' >&2; exit 1 ;;
 esac
+if ! "$py" -c 'import socket; s=socket.socket(); s.setsockopt(socket.SOL_SOCKET,socket.SO_REUSEADDR,1); s.bind(("127.0.0.1", 8092)); s.close()' 2>/dev/null; then
+  printf '%s\n' 'Port 8092 is already in use. Stop the existing encoder before starting CLM.' >&2
+  exit 1
+fi
+instance_id=$("$py" -c 'import uuid; print(uuid.uuid4().hex)')
 mkdir -p runs/clm-mac
-"$py" -m triage_bench.mlx_embeddings --model "$encoder" --max-tokens 8192 --port 8092 \
+"$py" -m triage_bench.mlx_embeddings --model "$encoder" --max-tokens 8192 --port 8092 --instance-id "$instance_id" \
   > runs/clm-mac/encoder.log 2>&1 &
 encoder_pid=$!
 api_pid=''
@@ -30,7 +35,7 @@ for ((i=0;i<900;i++)); do
   if ! kill -0 "$encoder_pid" 2>/dev/null; then
     printf '%s\n' 'Encoder failed; inspect runs/clm-mac/encoder.log.' >&2; exit 1
   fi
-  if "$py" -c 'import urllib.request; urllib.request.urlopen("http://127.0.0.1:8092/health",timeout=2)' >/dev/null 2>&1; then ready=1; break; fi
+  if "$py" -c 'import json,sys,urllib.request; info=json.load(urllib.request.urlopen("http://127.0.0.1:8092/health",timeout=2)); assert info.get("instance_id")==sys.argv[1] and info.get("model")==sys.argv[2]' "$instance_id" "$encoder" >/dev/null 2>&1; then ready=1; break; fi
   sleep 2
 done
 if [[ "$ready" != 1 ]]; then printf '%s\n' 'Encoder startup timed out after 30 minutes.' >&2; exit 1; fi

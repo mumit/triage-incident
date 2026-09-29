@@ -1,0 +1,757 @@
+{
+  "study": "Northstar workflow development",
+  "evaluation_use": "development only; not a holdout",
+  "labels_reviewed": false,
+  "input_sha256": "2326f2877980291feb621ebd615b0d0f6ffcf1ebcb0f154c9aa9d20b1f0895a7",
+  "label_sha256": "26400ae85758429febc6077944bae566c2badb1216443475796745f5e1617e21",
+  "cases": [
+    {
+      "accepted_answers": {
+        "initial_owner": [
+          "power"
+        ],
+        "insufficient_evidence": [
+          "no"
+        ],
+        "next_check": [
+          "inspect_power"
+        ],
+        "priority": [
+          "P3"
+        ]
+      },
+      "id": "WF-887c2bb778-a",
+      "incident_family_id": "mixed_dc_voltage",
+      "label_rationale": "A stale alarm is accompanied by independent current evidence; replacing that evidence changes domain sufficiency.",
+      "labels": {
+        "initial_owner": "power",
+        "insufficient_evidence": "no",
+        "next_check": "inspect_power",
+        "priority": "P3"
+      },
+      "pair_id": "WF-887c2bb778",
+      "review_status": "unreviewed",
+      "split": "draft"
+    },
+    {
+      "accepted_answers": {
+        "initial_owner": [
+          "noc"
+        ],
+        "insufficient_evidence": [
+          "yes"
+        ],
+        "next_check": [
+          "gather_evidence"
+        ],
+        "priority": [
+          "P3"
+        ]
+      },
+      "id": "WF-887c2bb778-b",
+      "incident_family_id": "mixed_dc_voltage",
+      "label_rationale": "A stale alarm is accompanied by independent current evidence; replacing that evidence changes domain sufficiency.",
+      "labels": {
+        "initial_owner": "noc",
+        "insufficient_evidence": "yes",
+        "next_check": "gather_evidence",
+        "priority": "P3"
+      },
+      "pair_id": "WF-887c2bb778",
+      "review_status": "unreviewed",
+      "split": "draft"
+    },
+    {
+      "accepted_answers": {
+        "initial_owner": [
+          "transport"
+        ],
+        "insufficient_evidence": [
+          "no"
+        ],
+        "next_check": [
+          "inspect_transport"
+        ],
+        "priority": [
+          "P3"
+        ]
+      },
+      "id": "WF-e4d3ea3699-a",
+      "incident_family_id": "queue_drops",
+      "label_rationale": "Positive packet impairment evidence versus explicitly normal transport counters.",
+      "labels": {
+        "initial_owner": "transport",
+        "insufficient_evidence": "no",
+        "next_check": "inspect_transport",
+        "priority": "P3"
+      },
+      "pair_id": "WF-e4d3ea3699",
+      "review_status": "unreviewed",
+      "split": "draft"
+    },
+    {
+      "accepted_answers": {
+        "initial_owner": [
+          "noc"
+        ],
+        "insufficient_evidence": [
+          "yes"
+        ],
+        "next_check": [
+          "gather_evidence"
+        ],
+        "priority": [
+          "P3"
+        ]
+      },
+      "id": "WF-e4d3ea3699-b",
+      "incident_family_id": "queue_drops",
+      "label_rationale": "Positive packet impairment evidence versus explicitly normal transport counters.",
+      "labels": {
+        "initial_owner": "noc",
+        "insufficient_evidence": "yes",
+        "next_check": "gather_evidence",
+        "priority": "P3"
+      },
+      "pair_id": "WF-e4d3ea3699",
+      "review_status": "unreviewed",
+      "split": "draft"
+    },
+    {
+      "accepted_answers": {
+        "initial_owner": [
+          "noc"
+        ],
+        "insufficient_evidence": [
+          "yes"
+        ],
+        "next_check": [
+          "gather_evidence"
+        ],
+        "priority": [
+          "P2"
+        ]
+      },
+      "id": "WF-25bee86485-a",
+      "incident_family_id": "alarm_clear_service_probe",
+      "label_rationale": "An alarm clearing is not recovery; the second record includes verified service restoration.",
+      "labels": {
+        "initial_owner": "noc",
+        "insufficient_evidence": "yes",
+        "next_check": "gather_evidence",
+        "priority": "P2"
+      },
+      "pair_id": "WF-25bee86485",
+      "review_status": "unreviewed",
+      "split": "draft"
+    },
+    {
+      "accepted_answers": {
+        "initial_owner": [
+          "noc"
+        ],
+        "insufficient_evidence": [
+          "no"
+        ],
+        "next_check": [
+          "monitor"
+        ],
+        "priority": [
+          "P4"
+        ]
+      },
+      "id": "WF-25bee86485-b",
+      "incident_family_id": "alarm_clear_service_probe",
+      "label_rationale": "An alarm clearing is not recovery; the second record includes verified service restoration.",
+      "labels": {
+        "initial_owner": "noc",
+        "insufficient_evidence": "no",
+        "next_check": "monitor",
+        "priority": "P4"
+      },
+      "pair_id": "WF-25bee86485",
+      "review_status": "unreviewed",
+      "split": "draft"
+    },
+    {
+      "accepted_answers": {
+        "initial_owner": [
+          "noc"
+        ],
+        "insufficient_evidence": [
+          "yes"
+        ],
+        "next_check": [
+          "gather_evidence"
+        ],
+        "priority": [
+          "P2"
+        ]
+      },
+      "id": "WF-8c543664cc-a",
+      "incident_family_id": "contradictory_power_sources",
+      "label_rationale": "Conflicting independent measurements versus agreement with an independently observed electrical fault.",
+      "labels": {
+        "initial_owner": "noc",
+        "insufficient_evidence": "yes",
+        "next_check": "gather_evidence",
+        "priority": "P2"
+      },
+      "pair_id": "WF-8c543664cc",
+      "review_status": "unreviewed",
+      "split": "draft"
+    },
+    {
+      "accepted_answers": {
+        "initial_owner": [
+          "power"
+        ],
+        "insufficient_evidence": [
+          "no"
+        ],
+        "next_check": [
+          "inspect_power"
+        ],
+        "priority": [
+          "P2"
+        ]
+      },
+      "id": "WF-8c543664cc-b",
+      "incident_family_id": "contradictory_power_sources",
+      "label_rationale": "Conflicting independent measurements versus agreement with an independently observed electrical fault.",
+      "labels": {
+        "initial_owner": "power",
+        "insufficient_evidence": "no",
+        "next_check": "inspect_power",
+        "priority": "P2"
+      },
+      "pair_id": "WF-8c543664cc",
+      "review_status": "unreviewed",
+      "split": "draft"
+    },
+    {
+      "accepted_answers": {
+        "initial_owner": [
+          "core"
+        ],
+        "insufficient_evidence": [
+          "no"
+        ],
+        "next_check": [
+          "inspect_core"
+        ],
+        "priority": [
+          "P1"
+        ]
+      },
+      "id": "WF-b81deaf387-a",
+      "incident_family_id": "core_certificate",
+      "label_rationale": "Direct shared-service evidence versus a potentially relevant change without current diagnosis.",
+      "labels": {
+        "initial_owner": "core",
+        "insufficient_evidence": "no",
+        "next_check": "inspect_core",
+        "priority": "P1"
+      },
+      "pair_id": "WF-b81deaf387",
+      "review_status": "unreviewed",
+      "split": "draft"
+    },
+    {
+      "accepted_answers": {
+        "initial_owner": [
+          "noc"
+        ],
+        "insufficient_evidence": [
+          "yes"
+        ],
+        "next_check": [
+          "verify_change"
+        ],
+        "priority": [
+          "P1"
+        ]
+      },
+      "id": "WF-b81deaf387-b",
+      "incident_family_id": "core_certificate",
+      "label_rationale": "Direct shared-service evidence versus a potentially relevant change without current diagnosis.",
+      "labels": {
+        "initial_owner": "noc",
+        "insufficient_evidence": "yes",
+        "next_check": "verify_change",
+        "priority": "P1"
+      },
+      "pair_id": "WF-b81deaf387",
+      "review_status": "unreviewed",
+      "split": "draft"
+    },
+    {
+      "accepted_answers": {
+        "initial_owner": [
+          "noc"
+        ],
+        "insufficient_evidence": [
+          "no"
+        ],
+        "next_check": [
+          "monitor"
+        ],
+        "priority": [
+          "P4"
+        ]
+      },
+      "id": "WF-025f5b51ee-a",
+      "incident_family_id": "maintenance_scope_mismatch",
+      "label_rationale": "Verified fully explained planned impact versus impact beyond confirmed maintenance scope.",
+      "labels": {
+        "initial_owner": "noc",
+        "insufficient_evidence": "no",
+        "next_check": "monitor",
+        "priority": "P4"
+      },
+      "pair_id": "WF-025f5b51ee",
+      "review_status": "unreviewed",
+      "split": "draft"
+    },
+    {
+      "accepted_answers": {
+        "initial_owner": [
+          "noc"
+        ],
+        "insufficient_evidence": [
+          "yes"
+        ],
+        "next_check": [
+          "verify_change"
+        ],
+        "priority": [
+          "P2"
+        ]
+      },
+      "id": "WF-025f5b51ee-b",
+      "incident_family_id": "maintenance_scope_mismatch",
+      "label_rationale": "Verified fully explained planned impact versus impact beyond confirmed maintenance scope.",
+      "labels": {
+        "initial_owner": "noc",
+        "insufficient_evidence": "yes",
+        "next_check": "verify_change",
+        "priority": "P2"
+      },
+      "pair_id": "WF-025f5b51ee",
+      "review_status": "unreviewed",
+      "split": "draft"
+    },
+    {
+      "accepted_answers": {
+        "initial_owner": [
+          "ran"
+        ],
+        "insufficient_evidence": [
+          "no"
+        ],
+        "next_check": [
+          "inspect_radio"
+        ],
+        "priority": [
+          "P3"
+        ]
+      },
+      "id": "WF-218b817fda-a",
+      "incident_family_id": "unrelated_change_radio",
+      "label_rationale": "Irrelevant change framing should not override confirmed radio evidence.",
+      "labels": {
+        "initial_owner": "ran",
+        "insufficient_evidence": "no",
+        "next_check": "inspect_radio",
+        "priority": "P3"
+      },
+      "pair_id": "WF-218b817fda",
+      "review_status": "unreviewed",
+      "split": "draft"
+    },
+    {
+      "accepted_answers": {
+        "initial_owner": [
+          "ran"
+        ],
+        "insufficient_evidence": [
+          "no"
+        ],
+        "next_check": [
+          "inspect_radio"
+        ],
+        "priority": [
+          "P3"
+        ]
+      },
+      "id": "WF-218b817fda-b",
+      "incident_family_id": "unrelated_change_radio",
+      "label_rationale": "Irrelevant change framing should not override confirmed radio evidence.",
+      "labels": {
+        "initial_owner": "ran",
+        "insufficient_evidence": "no",
+        "next_check": "inspect_radio",
+        "priority": "P3"
+      },
+      "pair_id": "WF-218b817fda",
+      "review_status": "unreviewed",
+      "split": "draft"
+    },
+    {
+      "accepted_answers": {
+        "initial_owner": [
+          "transport"
+        ],
+        "insufficient_evidence": [
+          "no"
+        ],
+        "next_check": [
+          "inspect_transport"
+        ],
+        "priority": [
+          "P2"
+        ]
+      },
+      "id": "WF-a33ebc4c18-a",
+      "incident_family_id": "dependency_membership",
+      "label_rationale": "A complete dependency graph connects or disconnects all affected sites from the alarmed uplink.",
+      "labels": {
+        "initial_owner": "transport",
+        "insufficient_evidence": "no",
+        "next_check": "inspect_transport",
+        "priority": "P2"
+      },
+      "pair_id": "WF-a33ebc4c18",
+      "review_status": "unreviewed",
+      "split": "draft"
+    },
+    {
+      "accepted_answers": {
+        "initial_owner": [
+          "noc"
+        ],
+        "insufficient_evidence": [
+          "yes"
+        ],
+        "next_check": [
+          "gather_evidence"
+        ],
+        "priority": [
+          "P2"
+        ]
+      },
+      "id": "WF-a33ebc4c18-b",
+      "incident_family_id": "dependency_membership",
+      "label_rationale": "A complete dependency graph connects or disconnects all affected sites from the alarmed uplink.",
+      "labels": {
+        "initial_owner": "noc",
+        "insufficient_evidence": "yes",
+        "next_check": "gather_evidence",
+        "priority": "P2"
+      },
+      "pair_id": "WF-a33ebc4c18",
+      "review_status": "unreviewed",
+      "split": "draft"
+    }
+  ],
+  "runs": {
+    "encoder_frozen": {
+      "prediction_sha256": "1fdcc6dc3ae3282fbfa6e09fa869db5b0eee56fea9237e323a74003d6a192ad3",
+      "metadata": {
+        "provider": "encoder",
+        "model_id": "sentence-transformers/all-MiniLM-L6-v2",
+        "model_revision": "1110a243fdf4706b3f48f1d95db1a4f5529b4d41",
+        "head_sha256": "d79e70fbce1ad33e83a9a3d6c7741e24438c2a706f288a38ea5e5161d191d585",
+        "head_training": {
+          "model_id": "sentence-transformers/all-MiniLM-L6-v2",
+          "model_revision": "1110a243fdf4706b3f48f1d95db1a4f5529b4d41",
+          "architecture": "frozen MiniLM encoder plus seven-way logistic head; deterministic priority",
+          "encoder_parameters": 22713216,
+          "classes": [
+            [
+              "ran",
+              "inspect_radio",
+              "no"
+            ],
+            [
+              "transport",
+              "inspect_transport",
+              "no"
+            ],
+            [
+              "power",
+              "inspect_power",
+              "no"
+            ],
+            [
+              "core",
+              "inspect_core",
+              "no"
+            ],
+            [
+              "noc",
+              "gather_evidence",
+              "yes"
+            ],
+            [
+              "noc",
+              "verify_change",
+              "yes"
+            ],
+            [
+              "noc",
+              "monitor",
+              "no"
+            ]
+          ],
+          "fields": [
+            "initial_owner",
+            "next_check",
+            "insufficient_evidence"
+          ],
+          "max_tokens": 256,
+          "feature_scale": 0.5,
+          "feature_patterns": [
+            "change|maintenance|configuration|planned work|scope|window",
+            "recover|clear|baseline|no active fault",
+            "missing|stale|unavailable|unknown|not arrived|cannot|disagree|conflict|not independently"
+          ],
+          "classifier_C": 0.1,
+          "class_weight": "balanced",
+          "train_rows": 600,
+          "train_families": 30,
+          "validation_rows": 220,
+          "validation_families": 11,
+          "validation_correct": 220,
+          "train_input_sha256": "52d3a3d6212cdfaf1548f64012ee6cecf7587401d46c7ec6d07c7bc557c4b945",
+          "train_label_sha256": "9882ab495ba1f23e75a6be65340958053e4a9ef0d9c7eafeb0a0683662c40574",
+          "validation_input_sha256": "389469f83a877db5169c1c1e3141164cf780d8135efb010733194b90790404e0",
+          "validation_label_sha256": "eaf371c921dbeb946b3990c4060c3442e1d5695c6edb0d98d8c81668d73a5938",
+          "versions": {
+            "torch": "2.8.0",
+            "transformers": "5.17.0",
+            "sklearn": "1.9.1",
+            "numpy": "2.5.3"
+          }
+        },
+        "device": "mps",
+        "records": 16,
+        "policy_guards": "none",
+        "guarded_records": 0,
+        "attempted_records": 16,
+        "cancelled": false,
+        "input_sha256": "2326f2877980291feb621ebd615b0d0f6ffcf1ebcb0f154c9aa9d20b1f0895a7",
+        "execution": "serial; model loaded once; per-incident latency excludes model loading",
+        "no_autoregressive_calls": true
+      },
+      "summary": {
+        "records": 16,
+        "all_four_correct": 8,
+        "field_correct": {
+          "initial_owner": 8,
+          "priority": 16,
+          "next_check": 8,
+          "insufficient_evidence": 8
+        },
+        "failed_records": 0,
+        "missing_records": 0,
+        "pairs": 8,
+        "complete_pairs": 1,
+        "insufficient_evidence": {
+          "true_positive": 2,
+          "false_positive": 3,
+          "false_negative": 5,
+          "precision": 0.4,
+          "recall": 0.2857142857142857
+        },
+        "false_domain_assignments": 5,
+        "false_monitor_dispositions": 0,
+        "p1_records": 2,
+        "p1_missed": 0,
+        "latency_ms": {
+          "p50": 19.37741693109274,
+          "p95": 376.69895915314555,
+          "records": 16
+        }
+      },
+      "predictions": [
+        {
+          "id": "WF-887c2bb778-a",
+          "latency_ms": 376.69895915314555,
+          "predictions": {
+            "initial_owner": "power",
+            "insufficient_evidence": "no",
+            "next_check": "inspect_power",
+            "priority": "P3"
+          },
+          "status": "ok"
+        },
+        {
+          "id": "WF-887c2bb778-b",
+          "latency_ms": 47.59695800021291,
+          "predictions": {
+            "initial_owner": "power",
+            "insufficient_evidence": "no",
+            "next_check": "inspect_power",
+            "priority": "P3"
+          },
+          "status": "ok"
+        },
+        {
+          "id": "WF-e4d3ea3699-a",
+          "latency_ms": 22.23074994981289,
+          "predictions": {
+            "initial_owner": "transport",
+            "insufficient_evidence": "no",
+            "next_check": "inspect_transport",
+            "priority": "P3"
+          },
+          "status": "ok"
+        },
+        {
+          "id": "WF-e4d3ea3699-b",
+          "latency_ms": 22.672167047858238,
+          "predictions": {
+            "initial_owner": "transport",
+            "insufficient_evidence": "no",
+            "next_check": "inspect_transport",
+            "priority": "P3"
+          },
+          "status": "ok"
+        },
+        {
+          "id": "WF-25bee86485-a",
+          "latency_ms": 101.99645790271461,
+          "predictions": {
+            "initial_owner": "core",
+            "insufficient_evidence": "no",
+            "next_check": "inspect_core",
+            "priority": "P2"
+          },
+          "status": "ok"
+        },
+        {
+          "id": "WF-25bee86485-b",
+          "latency_ms": 21.72224991954863,
+          "predictions": {
+            "initial_owner": "noc",
+            "insufficient_evidence": "no",
+            "next_check": "monitor",
+            "priority": "P4"
+          },
+          "status": "ok"
+        },
+        {
+          "id": "WF-8c543664cc-a",
+          "latency_ms": 19.37741693109274,
+          "predictions": {
+            "initial_owner": "power",
+            "insufficient_evidence": "no",
+            "next_check": "inspect_power",
+            "priority": "P2"
+          },
+          "status": "ok"
+        },
+        {
+          "id": "WF-8c543664cc-b",
+          "latency_ms": 16.339584020897746,
+          "predictions": {
+            "initial_owner": "power",
+            "insufficient_evidence": "no",
+            "next_check": "inspect_power",
+            "priority": "P2"
+          },
+          "status": "ok"
+        },
+        {
+          "id": "WF-b81deaf387-a",
+          "latency_ms": 8.305333089083433,
+          "predictions": {
+            "initial_owner": "core",
+            "insufficient_evidence": "no",
+            "next_check": "inspect_core",
+            "priority": "P1"
+          },
+          "status": "ok"
+        },
+        {
+          "id": "WF-b81deaf387-b",
+          "latency_ms": 17.890291986986995,
+          "predictions": {
+            "initial_owner": "core",
+            "insufficient_evidence": "no",
+            "next_check": "inspect_core",
+            "priority": "P1"
+          },
+          "status": "ok"
+        },
+        {
+          "id": "WF-025f5b51ee-a",
+          "latency_ms": 20.980041939765215,
+          "predictions": {
+            "initial_owner": "noc",
+            "insufficient_evidence": "no",
+            "next_check": "monitor",
+            "priority": "P4"
+          },
+          "status": "ok"
+        },
+        {
+          "id": "WF-025f5b51ee-b",
+          "latency_ms": 8.875542087480426,
+          "predictions": {
+            "initial_owner": "noc",
+            "insufficient_evidence": "yes",
+            "next_check": "verify_change",
+            "priority": "P2"
+          },
+          "status": "ok"
+        },
+        {
+          "id": "WF-218b817fda-a",
+          "latency_ms": 8.278958033770323,
+          "predictions": {
+            "initial_owner": "noc",
+            "insufficient_evidence": "yes",
+            "next_check": "verify_change",
+            "priority": "P3"
+          },
+          "status": "ok"
+        },
+        {
+          "id": "WF-218b817fda-b",
+          "latency_ms": 26.055875001475215,
+          "predictions": {
+            "initial_owner": "noc",
+            "insufficient_evidence": "yes",
+            "next_check": "verify_change",
+            "priority": "P3"
+          },
+          "status": "ok"
+        },
+        {
+          "id": "WF-a33ebc4c18-a",
+          "latency_ms": 7.905999897047877,
+          "predictions": {
+            "initial_owner": "noc",
+            "insufficient_evidence": "yes",
+            "next_check": "gather_evidence",
+            "priority": "P2"
+          },
+          "status": "ok"
+        },
+        {
+          "id": "WF-a33ebc4c18-b",
+          "latency_ms": 7.912958972156048,
+          "predictions": {
+            "initial_owner": "noc",
+            "insufficient_evidence": "yes",
+            "next_check": "gather_evidence",
+            "priority": "P2"
+          },
+          "status": "ok"
+        }
+      ]
+    }
+  }
+}

@@ -1,6 +1,6 @@
 # Encoder versus decomposed Jev workflow
 
-Status: preparation. No new model accuracy claim is available. The preceding [comparison study is closed](study-closeout.md).
+Status: development. The [first encoder diagnostic](workflow-development-results.md) scored 8/16 unreviewed draft incidents and 1/8 complete pairs. Jev development calls are pending credentials; no held-out model comparison is available. The preceding [comparison study is closed](study-closeout.md).
 
 ## Purpose
 
@@ -61,3 +61,5 @@ The encoder command requires the optional encoder environment and the original t
 ## Next steps
 
 Inspect request semantics on development incidents. Prepare and review new families, then establish family-disjoint development and holdout splits. Select thresholds, freeze artifacts, and run the comparison. If decomposition adds no measured benefit over the encoder, retain the encoder as the primary candidate and document Jev's remaining limitations.
+
+The [development result note](workflow-development-results.md) provides the three-candidate run command and portable evidence export. `scripts/run_workflow_study.py` accepts an explicit local `--env-file`, freezes the encoder head and Jev identifier, and scores only saved predictions. Credential availability is checked before a run directory is created.

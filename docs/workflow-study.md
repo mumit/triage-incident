@@ -1,6 +1,6 @@
 # Encoder versus decomposed Jev workflow
 
-Status: preparation. No new model accuracy claim is available. The preceding [comparison study is closed](study-closeout.md).
+Status: development comparison complete. The [Jev results](workflow-jev-development-results.md) show that the decomposed workflow trails the original Jev protocol when both use policy priority: 11/16 versus 13/16 on drafts, and 120/220 versus 159/220 on validation. The [frozen encoder](workflow-development-results.md) scores 8/16 on drafts and 220/220 on old validation. Labels remain unreviewed; no held-out comparison is available. The preceding [comparison study is closed](study-closeout.md).
 
 ## Purpose
 
@@ -61,3 +61,5 @@ The encoder command requires the optional encoder environment and the original t
 ## Next steps
 
 Inspect request semantics on development incidents. Prepare and review new families, then establish family-disjoint development and holdout splits. Select thresholds, freeze artifacts, and run the comparison. If decomposition adds no measured benefit over the encoder, retain the encoder as the primary candidate and document Jev's remaining limitations.
+
+The [development result note](workflow-development-results.md) provides the three-candidate run command and portable evidence export. `scripts/run_workflow_study.py` accepts an explicit local `--env-file`, freezes the encoder head and Jev identifier, and scores only saved predictions. Credential availability is checked before a run directory is created.

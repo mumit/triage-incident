@@ -124,7 +124,8 @@ def fetch_json(opener, request, timeout, provider, stop_event=None):
 
 def run(inputs, output, provider='baseline', model=None, endpoint=None, key_env=None,
         limit=None, timeout=60, context_tokens=None, deployment=None,
-        api_key=None, progress=None, stop_event=None, reasoning_effort='none'):
+        api_key=None, progress=None, stop_event=None, reasoning_effort='none',
+        decision_workflow=None):
     records = read_jsonl(inputs)
     if limit is not None:
         if limit < 1:
@@ -159,6 +160,11 @@ def run(inputs, output, provider='baseline', model=None, endpoint=None, key_env=
         meta['request_protocol'] = 'openai-compatible-chat-completions-v1'
         meta['prompt_sha256'] = hashlib.sha256(llm.system_prompt().encode()).hexdigest()
         meta['reasoning_effort'] = reasoning_effort
+    if decision_workflow is not None:
+        if provider != 'jev':
+            raise ValueError('The decomposed workflow requires the Jev provider')
+        meta.update(decision_workflow.metadata())
+        meta['question_schema_sha256'] = meta['workflow_question_sha256']
     output.with_suffix('.meta.json').write_text(json.dumps(meta, indent=2) + '\n')
     opener = urllib.request.build_opener(NoRedirect())
     started = time.perf_counter()
@@ -175,7 +181,10 @@ def run(inputs, output, provider='baseline', model=None, endpoint=None, key_env=
                 if provider == 'baseline':
                     row['predictions'] = baseline(record['input'])
                 else:
-                    body = llm.request_body(record, model, reasoning_effort) if provider == 'llm' else request_body(record, model)
+                    if decision_workflow is not None:
+                        body = decision_workflow.request_body(record, model)
+                    else:
+                        body = llm.request_body(record, model, reasoning_effort) if provider == 'llm' else request_body(record, model)
                     body_bytes = json.dumps(body, ensure_ascii=False).encode()
                     # UTF-8 bytes are a deliberately conservative preflight proxy, not a tokenizer.
                     # Require reserve for server-specific wrappers as well.
@@ -198,6 +207,8 @@ def run(inputs, output, provider='baseline', model=None, endpoint=None, key_env=
                     raw = redact_secret(raw, api_key)
                     if provider == 'llm':
                         row['predictions'] = llm.normalize(raw)
+                    elif decision_workflow is not None:
+                        row['predictions'], row['probabilities'], row['provider_confidence'] = decision_workflow.normalize(raw, record['input'])
                     else:
                         row['predictions'], row['probabilities'], row['provider_confidence'] = normalize(raw)
                         original_sums = {}

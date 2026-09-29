@@ -28,7 +28,7 @@ class WorkflowAnalysisTests(unittest.TestCase):
             labels.write_text(''.join(json.dumps({'id': str(i), 'incident_family_id': 'family',
                                                  'labels': values, 'accepted_answers': {k: [v] for k, v in values.items()}}) + '\n' for i in range(2)))
             rows = [{'id': '0', 'status': 'ok', 'predictions': {**values, 'priority': 'P2'},
-                     'probabilities': {'priority': {'P2': 1}}, 'provider_confidence': {'priority': 1}},
+                     'probabilities': {'priority': {'P1': 0, 'P2': 1, 'P3': 0, 'P4': 0}}, 'provider_confidence': {'priority': 1}},
                     {'id': '1', 'status': 'error', 'predictions': {}, 'error': 'HTTP 520'}]
             source.write_text(''.join(json.dumps(row) + '\n' for row in rows))
             source.with_suffix('.meta.json').write_text(json.dumps({'input_sha256': hashlib.sha256(inputs.read_bytes()).hexdigest()}))

@@ -2,6 +2,8 @@
 
 Status: initial encoder diagnostic on 2026-09-29. The subsequent [Jev comparison](workflow-jev-development-results.md) is now complete. This note preserves the first encoder error analysis. This is not a holdout result. The 16 synthetic inputs and their provisional labels were authored and inspected by an AI agent, with no specialist review.
 
+The [compact Jev control](compact-jev-results.md) is also complete. [Specialist review and new training families](specialist-review-and-holdout.md) are the next dependencies; the encoder head remains unchanged.
+
 ## Result
 
 The unchanged MiniLM encoder made all four decisions correctly on **8/16 incidents** and **1/8 complete pairs**. It previously scored 220/220 on each regular Northstar split. These draft cases are harder for the frozen configuration and show why the earlier perfect scores did not establish generalization.

@@ -10,7 +10,7 @@ The [technical report](docs/incident-triage-technical-report.md) summarizes the 
 
 A [small encoder follow-up](docs/encoder-study.md) trains a frozen 22.7M-parameter MiniLM classifier with no autoregressive inference. It reached 220/220 on both regular evaluation splits; the raw classifier got 18/24 challenge cases and a separately labeled, post-hoc policy-guarded variant got 24/24. These synthetic results need a new specialist-reviewed holdout before operational use.
 
-The [current comparison study is closed](docs/study-closeout.md), with frozen file identities and a verification command. The [next study](docs/workflow-study.md) compares the frozen encoder with a compact, decomposed Jev workflow. The [development comparison](docs/workflow-jev-development-results.md) scores the encoder at 8/16 drafts, decomposed Jev at 11/16, and original Jev with policy priority at 13/16. Decomposition also trails that Jev reference on old validation. Specialist-reviewed holdout labels are pending.
+The [current comparison study is closed](docs/study-closeout.md), with frozen file identities and a verification command. The [next study](docs/workflow-study.md) compares the frozen encoder with Jev input and question configurations. The [development comparison](docs/workflow-jev-development-results.md) scores the encoder at 8/16 drafts, decomposed Jev at 11/16, and original Jev with policy priority at 13/16. The [compact input control](docs/compact-jev-results.md) also trails the original with policy priority: 11/16 versus 13/16 drafts and 141/220 versus 159/220 validation. A [blind specialist review pack](docs/specialist-review-and-holdout.md) is ready; review and new holdout collection remain pending.
 
 ## Browser app
 

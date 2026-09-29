@@ -1,6 +1,8 @@
-# Encoder versus decomposed Jev workflow
+# Encoder versus Jev triage configurations
 
 Status: development comparison complete. The [Jev results](workflow-jev-development-results.md) show that the decomposed workflow trails the original Jev protocol when both use policy priority: 11/16 versus 13/16 on drafts, and 120/220 versus 159/220 on validation. The [frozen encoder](workflow-development-results.md) scores 8/16 on drafts and 220/220 on old validation. Labels remain unreviewed; no held-out comparison is available. The preceding [comparison study is closed](study-closeout.md).
+
+The subsequent [compact input control](compact-jev-results.md) preserves original questions and also trails original Jev with policy priority: 11/16 drafts and 141/220 validation. The [specialist review pack and next encoder plan](specialist-review-and-holdout.md) are ready. No candidate has been retrained or promoted from these results.
 
 ## Purpose
 
@@ -15,6 +17,9 @@ RLCD is TypeSafe's training method, not a common architecture shared by the eval
 | Frozen MiniLM reference | Existing seven-class head and feature protocol | Published structured-impact policy |
 | Decomposed Jev | Disposition gate and four independent domain-support questions, in one typed request | Same policy |
 | Original Jev reference | Original four-question protocol | Model prediction |
+| Compact Jev control | Decomposed-workflow input, original four questions and normalization | Model prediction |
+
+Original and compact Jev also have separately saved offline policy-priority diagnostics. These replace only priority from public structured impact, without reading labels or making new model calls.
 
 The primary comparison uses no topology or freshness regex vetoes in the composition code. Jev must interpret those supplied facts. MiniLM retains its original input renderer, which omits graph edges and timestamps. This is a comparison of complete configurations, not an architecture-controlled test. Report that information difference. The original guarded encoder is a secondary reference only; any shared structured guard experiment must be separately identified.
 
@@ -60,6 +65,6 @@ The encoder command requires the optional encoder environment and the original t
 
 ## Next steps
 
-Inspect request semantics on development incidents. Prepare and review new families, then establish family-disjoint development and holdout splits. Select thresholds, freeze artifacts, and run the comparison. If decomposition adds no measured benefit over the encoder, retain the encoder as the primary candidate and document Jev's remaining limitations.
+Keep the original Jev protocol with policy priority as the Jev reference; keep the encoder frozen. Complete specialist review, add new training families, and establish family-disjoint development and holdout splits. Select candidates and thresholds on development data, freeze artifacts, then run the unseen comparison. Neither input compaction nor decomposition has justified replacing the Jev reference in these development results.
 
 The [development result note](workflow-development-results.md) provides the three-candidate run command and portable evidence export. `scripts/run_workflow_study.py` accepts an explicit local `--env-file`, freezes the encoder head and Jev identifier, and scores only saved predictions. Credential availability is checked before a run directory is created.

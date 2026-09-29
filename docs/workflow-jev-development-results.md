@@ -2,6 +2,8 @@
 
 Status: development results collected on 2026-09-29. All Jev responses resolved to `jev-1.13.0`. No model, question wording, composer, or threshold was changed after these runs. The 16 draft incidents have unreviewed AI-authored labels. The 220 original validation cases were previously used in development. Neither cohort is a holdout.
 
+The later [compact input control](compact-jev-results.md) also trails original Jev with policy priority: 11/16 versus 13/16 drafts and 141/220 versus 159/220 validation. A [blind specialist review pack](specialist-review-and-holdout.md) is ready for the next encoder experiment. The results below preserve the preceding comparison.
+
 ## Finding
 
 The decomposed Jev workflow does **not** improve on the original protocol when priority is computed by the same policy. On drafts, it scored 11/16 versus 13/16 for the original protocol with only priority replaced. On validation, it scored 120/220 versus 159/220. The latter are offline diagnostics from saved original responses, not new zero-shot scores.

@@ -6,6 +6,8 @@ The subsequent [compact input control](compact-jev-results.md) preserves origina
 
 [Blind LLM review](llm-review-results.md) now supports the next development phase: Luna reviewed 16 cases, Sol reviewed nine flagged cases, and seven labels passed a conservative candidate filter. Nine cases remain pending; the filter excludes both uncertainty dispositions and is not sufficient for retraining. Human review is recommended for operational validation, while research can proceed with explicit teacher-label provenance.
 
+The [corrected V2 development cohort](development-v2-results.md) has now been reviewed by both teachers across all 16 cases. Separate offline citation revalidation yields 16 candidate labels, including both uncertainty dispositions. The frozen encoder remains at 8/16. New family-disjoint training data is the next step; this already-inspected cohort remains development material.
+
 ## Purpose
 
 Determine whether a compact, decomposed Jev workflow can match a trained local encoder on initial incident triage without autoregressive inference. Test where general decision models add value: new evidence wording, ambiguous domain assignments, recovery, change scope, and conflicting observations.

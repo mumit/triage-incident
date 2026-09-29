@@ -1,6 +1,7 @@
 """Blind offline label review. Prediction never opens answer keys or model runs."""
 
 import hashlib
+import copy
 import json
 import time
 import urllib.error
@@ -87,7 +88,7 @@ def nonblank(value):
     return isinstance(value, str) and bool(value.strip())
 
 
-def normalize(response, packet):
+def normalize(response, packet, structural_citations=False):
     choice = response['choices'][0]
     if choice.get('finish_reason') != 'stop':
         raise ValueError('Review response did not finish normally')
@@ -115,7 +116,28 @@ def normalize(response, packet):
                 raise ValueError('Invalid evidence citation')
             value = pointer(packet, citation['path'])
             text = value if isinstance(value, str) else json.dumps(value, ensure_ascii=False)
-            if citation['quote'] not in text:
+            matches = citation['quote'] in text
+            if structural_citations and isinstance(value, str) and not matches:
+                try:
+                    quoted = json.loads(citation['quote'])
+                    matches = isinstance(quoted, str) and quoted == value
+                except ValueError:
+                    pass
+            if structural_citations and not isinstance(value, (str, list, dict)):
+                try:
+                    quoted = json.loads(citation['quote'])
+                    matches = json.dumps(quoted, allow_nan=False) == json.dumps(value, allow_nan=False)
+                except (ValueError, TypeError):
+                    matches = False
+            if structural_citations and isinstance(value, (list, dict)):
+                try:
+                    quoted = json.loads(citation['quote'])
+                    # Strict JSON type equality avoids true == 1 acceptance.
+                    matches = (json.dumps(quoted, sort_keys=True, allow_nan=False)
+                               == json.dumps(value, sort_keys=True, allow_nan=False))
+                except (ValueError, TypeError):
+                    matches = False
+            if not matches:
                 raise ValueError(f'Citation quote not present at {citation["path"]}')
     if not isinstance(review['input_issues'], list):
         raise ValueError('Input issues must be a list')
@@ -139,7 +161,7 @@ def policy_issues(answers, packet):
 
 
 def run(inputs, output, model, endpoint, api_key, reasoning_effort='none',
-        context_tokens=32768, timeout=60, min_interval=3.5, progress=None):
+        context_tokens=32768, timeout=60, min_interval=3.5, progress=None, review_protocol=None):
     """Serial immutable review, with errors preserved and no retries or labels."""
     records = read_jsonl(inputs)
     if not records or len({record['id'] for record in records}) != len(records):
@@ -157,17 +179,22 @@ def run(inputs, output, model, endpoint, api_key, reasoning_effort='none',
         raise ValueError('Invalid reasoning effort')
     if not 0 <= min_interval <= 60 or not 0 < timeout <= 60:
         raise ValueError('Interval and timeout must be within 60 seconds')
-    meta = {'request_protocol': PROTOCOL, 'requested_model': model, 'endpoint': endpoint,
+    if review_protocol is None:
+        import sys
+        review_protocol = sys.modules[__name__]
+    meta = {'request_protocol': review_protocol.PROTOCOL, 'requested_model': model, 'endpoint': endpoint,
             'reasoning_effort': reasoning_effort, 'input_sha256': sha(inputs),
-            'prompt_sha256': hashlib.sha256(system_prompt().encode()).hexdigest(),
-            'renderer_sha256': sha(workflow.__file__), 'review_source_sha256': sha(__file__),
+            'prompt_sha256': hashlib.sha256(review_protocol.system_prompt().encode()).hexdigest(),
+            'renderer_sha256': sha(workflow.__file__), 'review_source_sha256': sha(review_protocol.__file__),
+            'runner_source_sha256': sha(__file__),
             'policy_sha256': hashlib.sha256(TEXT.encode()).hexdigest(),
             'started_at': datetime.now(timezone.utc).isoformat(), 'records': len(records),
             'execution': f'serial; at least {min_interval}s between starts; no warmup or retries',
             'declared_context_tokens': context_tokens,
             'evaluation_use': 'LLM review of development inputs; not independent accuracy or specialist review'}
     output.parent.mkdir(parents=True, exist_ok=True)
-    output.with_suffix('.source.py').write_bytes(Path(__file__).read_bytes())
+    output.with_suffix('.source.py').write_bytes(Path(review_protocol.__file__).read_bytes())
+    output.with_suffix('.runner.py').write_bytes(Path(__file__).read_bytes())
     output.with_suffix('.meta.json').write_text(json.dumps(meta, indent=2) + '\n')
     opener = urllib.request.build_opener(NoRedirect())
     started = time.perf_counter()
@@ -181,7 +208,7 @@ def run(inputs, output, model, endpoint, api_key, reasoning_effort='none',
             previous_start = time.perf_counter()
             row = {'id': record['id'], 'status': 'error'}
             try:
-                body = json.dumps(request_body(record, model, reasoning_effort), ensure_ascii=False).encode()
+                body = json.dumps(review_protocol.request_body(record, model, reasoning_effort), ensure_ascii=False).encode()
                 row['request_sha256'] = hashlib.sha256(body).hexdigest()
                 if len(body) + 512 > context_tokens:
                     raise ValueError('Context byte-bound preflight failed; no request sent')
@@ -193,7 +220,7 @@ def run(inputs, output, model, endpoint, api_key, reasoning_effort='none',
                 json.dumps(raw, allow_nan=False)
                 raw = redact_secret(raw, api_key)
                 row.update(raw_response=raw, resolved_model=raw.get('model'), usage=raw.get('usage'))
-                review = normalize(raw, public_packet(record))
+                review = review_protocol.normalize(raw, public_packet(record))
                 row.update(status='ok', review=review, predictions=review['answers'],
                            policy_issues=policy_issues(review['answers'], public_packet(record)))
             except urllib.error.HTTPError as exc:
@@ -262,22 +289,27 @@ def compare(records, labels, rows):
 
 
 def verify_run(records, rows, meta, input_hash):
-    if meta['input_sha256'] != input_hash or meta['request_protocol'] != PROTOCOL:
+    import sys
+    protocol = sys.modules[__name__]
+    if meta['request_protocol'] != PROTOCOL:
+        from . import llm_review_v2
+        protocol = llm_review_v2
+    if meta['input_sha256'] != input_hash or meta['request_protocol'] != protocol.PROTOCOL:
         raise ValueError('Review protocol or inputs differ')
     packets = {record['id']: record for record in records}
     if len({row['id'] for row in rows}) != len(rows) or any(row['id'] not in packets for row in rows):
         raise ValueError('Invalid review IDs')
-    if meta['prompt_sha256'] != hashlib.sha256(system_prompt().encode()).hexdigest():
+    if meta['prompt_sha256'] != hashlib.sha256(protocol.system_prompt().encode()).hexdigest():
         raise ValueError('Review prompt differs')
     if meta['renderer_sha256'] != sha(workflow.__file__):
         raise ValueError('Review input renderer differs')
     for row in rows:
         record = packets[row['id']]
-        body = json.dumps(request_body(record, meta['requested_model'], meta['reasoning_effort']), ensure_ascii=False).encode()
+        body = json.dumps(protocol.request_body(record, meta['requested_model'], meta['reasoning_effort']), ensure_ascii=False).encode()
         if row['request_sha256'] != hashlib.sha256(body).hexdigest():
             raise ValueError('Saved review request differs from blind packet')
         if row['status'] == 'ok':
-            review = normalize(row['raw_response'], public_packet(record))
+            review = protocol.normalize(row['raw_response'], public_packet(record))
             if (review != row['review'] or review['answers'] != row['predictions']
                     or policy_issues(review['answers'], public_packet(record)) != row['policy_issues']):
                 raise ValueError('Review differs from its saved provider response')
@@ -305,6 +337,15 @@ def export(inputs, labels, predictions, output_dir):
     if hashlib.sha256(source.encode()).hexdigest() != meta['review_source_sha256']:
         raise ValueError('Review source snapshot differs from run metadata')
     snapshot['review_source'] = source
+    if 'source_prediction_sha256' in meta:
+        snapshot['source_prediction_text'] = Path(predictions).with_suffix('.original.jsonl').read_text()
+        snapshot['source_reviews'] = [json.loads(line) for line in snapshot['source_prediction_text'].splitlines()]
+        snapshot['source_metadata'] = json.loads(Path(predictions).with_suffix('.original.meta.json').read_text())
+    if 'runner_source_sha256' in meta:
+        runner_source = Path(predictions).with_suffix('.runner.py').read_text()
+        if hashlib.sha256(runner_source.encode()).hexdigest() != meta['runner_source_sha256']:
+            raise ValueError('Review runner source snapshot differs')
+        snapshot['runner_source'] = runner_source
     (output_dir / 'evidence.json').write_text(json.dumps(snapshot, indent=2, allow_nan=False) + '\n')
     selected = {case['id'] for case in comparison['cases'] if not case['requires_adjudication']}
     rows_by_id = {row['id']: row for row in rows}
@@ -340,17 +381,55 @@ def verify_evidence(snapshot_path, inputs, labels):
     verify_run(records, snapshot['reviews'], snapshot['metadata'], sha(inputs))
     if hashlib.sha256(snapshot['review_source'].encode()).hexdigest() != snapshot['metadata']['review_source_sha256']:
         raise ValueError('Archived review source differs from run metadata')
+    if 'runner_source_sha256' in snapshot['metadata']:
+        if hashlib.sha256(snapshot['runner_source'].encode()).hexdigest() != snapshot['metadata']['runner_source_sha256']:
+            raise ValueError('Archived runner source differs from run metadata')
+    if 'source_reviews' in snapshot:
+        meta = snapshot['metadata']
+        if (snapshot['source_metadata']['prediction_sha256'] != meta['source_prediction_sha256']
+                or snapshot['source_metadata']['input_sha256'] != snapshot['input_sha256']):
+            raise ValueError('Offline revalidation source identity differs')
+        if (hashlib.sha256(snapshot['source_prediction_text'].encode()).hexdigest() != meta['source_prediction_sha256']
+                or [json.loads(line) for line in snapshot['source_prediction_text'].splitlines()] != snapshot['source_reviews']):
+            raise ValueError('Offline revalidation source responses changed')
+        if revalidate_rows(records, snapshot['source_reviews']) != snapshot['reviews']:
+            raise ValueError('Offline revalidation changed more than response validation')
     comparison = compare(records, keys, snapshot['reviews'])
     if comparison != snapshot['comparison']:
         raise ValueError('Recorded label agreement differs from reviews')
     return snapshot
 
 
-def reconcile(primary, secondary):
+def revalidate_rows(records, rows):
+    """V2 diagnostic only: validate saved responses, preserve source outcomes."""
+    from . import llm_review_v2
+    packets = {record['id']: public_packet(record) for record in records}
+    derived = copy.deepcopy(rows)
+    for row in derived:
+        row['source_status'] = row['status']
+        row['source_error'] = row.get('error')
+        if row['status'] == 'error' and 'raw_response' in row:
+            try:
+                review = llm_review_v2.normalize(row['raw_response'], packets[row['id']])
+                row.update(status='ok', review=review, predictions=review['answers'],
+                           policy_issues=policy_issues(review['answers'], packets[row['id']]))
+                row.pop('error', None)
+            except (ValueError, KeyError, IndexError, TypeError):
+                pass
+    return derived
+
+
+def reconcile(primary, secondary, all_cases=False):
     """Independent second review can confirm decisions, never repair flagged facts."""
-    expected = {case['id'] for case in primary['comparison']['cases'] if case['requires_adjudication']}
+    expected = {case['id'] for case in primary['comparison']['cases'] if all_cases or case['requires_adjudication']}
     if primary['metadata']['requested_model'] == secondary['metadata']['requested_model']:
         raise ValueError('Adjudication needs a different requested model')
+    if primary['metadata'].get('request_protocol') != secondary['metadata'].get('request_protocol'):
+        raise ValueError('Reviewers must use the same review protocol')
+    primary_keys = {key['id']: key for key in primary.get('draft_labels', [])}
+    secondary_keys = {key['id']: key for key in secondary.get('draft_labels', [])}
+    if secondary_keys and secondary_keys != {record_id: primary_keys[record_id] for record_id in expected}:
+        raise ValueError('Reviewer reference cohorts differ')
     first = {row['id']: row for row in primary['reviews']}
     second = {row['id']: row for row in secondary['reviews']}
     if set(second) != expected:

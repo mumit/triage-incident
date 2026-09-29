@@ -1,6 +1,6 @@
 # Workflow study development results
 
-Status: partial development evaluation on 2026-09-29. The frozen encoder has run; Jev comparison calls are pending a credential. This is not a holdout result. The 16 synthetic inputs and their provisional labels were authored and inspected by an AI agent, with no specialist review.
+Status: initial encoder diagnostic on 2026-09-29. The subsequent [Jev comparison](workflow-jev-development-results.md) is now complete. This note preserves the first encoder error analysis. This is not a holdout result. The 16 synthetic inputs and their provisional labels were authored and inspected by an AI agent, with no specialist review.
 
 ## Result
 
@@ -9,8 +9,8 @@ The unchanged MiniLM encoder made all four decisions correctly on **8/16 inciden
 | Configuration | All four | Owner | Priority | Next check | Evidence flag | Complete pairs |
 |---|---:|---:|---:|---:|---:|---:|
 | Frozen MiniLM + policy priority | 8/16 | 8/16 | 16/16 | 8/16 | 8/16 | 1/8 |
-| Decomposed Jev + policy priority | Pending | Pending | Pending | Pending | Pending | Pending |
-| Original Jev protocol | Pending | Pending | Pending | Pending | Pending | Pending | Pending |
+| Decomposed Jev + policy priority | 11/16 | 12/16 | 16/16 | 11/16 | 12/16 | 4/8 |
+| Original Jev protocol | 8/16 | 13/16 | 10/16 | 14/16 | 15/16 | 3/8 |
 
 There were zero failed or missing encoder predictions. A second fresh run reproduced every categorical decision. Both reference P1 priorities were correct by construction; this does not measure the model's ability to recognize severe service impact from raw tickets.
 
@@ -55,4 +55,4 @@ python3 scripts/workflow_evidence.py --evidence runs/workflow/draft-comparison-0
 
 Run development validation separately with `--cohort validation`. Preserve the first complete Jev workflow run before changing wording or thresholds. The study runner scores all requested records, including missing or failed predictions, after inference is complete. Jev calls use pinned `jev-1.13.0`; the runner does not accept a moving model alias.
 
-Specialist review and new family-disjoint holdout collection remain outstanding. Until Jev is run on the same cohort, these results do not show whether decomposition helps it or whether it outperforms the encoder.
+Specialist review and new family-disjoint holdout collection remain outstanding. The [completed development comparison](workflow-jev-development-results.md) records Jev's results and the separate priority-only diagnostic; it does not establish held-out or production performance.

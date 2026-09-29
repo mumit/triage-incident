@@ -8,6 +8,7 @@ from pathlib import Path
 
 from .dataset import read_jsonl
 from .evaluate import evaluate
+from .policy import priority
 
 
 def sha(path):
@@ -98,6 +99,7 @@ def verify(snapshot_path, inputs_path, labels_path):
         raise ValueError('Snapshot labels differ from the draft answer keys')
     if snapshot['evaluation_use'] != 'development only; not a holdout' or snapshot['labels_reviewed'] is not False:
         raise ValueError('Development evidence has an incorrect review or evaluation claim')
+    packets = {record['id']: record.get('input') for record in read_jsonl(inputs_path)}
     with tempfile.TemporaryDirectory() as directory:
         for name, section in snapshot['runs'].items():
             if section['metadata']['input_sha256'] != snapshot['input_sha256']:
@@ -106,4 +108,25 @@ def verify(snapshot_path, inputs_path, labels_path):
             prediction_path.write_text(''.join(json.dumps(row) + '\n' for row in section['predictions']))
             if summarize(labels_path, prediction_path) != section['summary']:
                 raise ValueError(f'{name} recorded summary differs from saved predictions')
+            meta = section['metadata']
+            if meta.get('request_protocol') == 'offline-policy-priority-diagnostic-v1':
+                sources = [run for run in snapshot['runs'].values()
+                           if run['prediction_sha256'] == meta['source_prediction_sha256']]
+                if len(sources) != 1:
+                    raise ValueError('Policy diagnostic must include its unique source run')
+                originals = {row['id']: row for row in sources[0]['predictions']}
+                if set(originals) != {row['id'] for row in section['predictions']}:
+                    raise ValueError('Policy diagnostic IDs differ from its source')
+                changed = 0
+                for row in section['predictions']:
+                    original = originals[row['id']]
+                    if row.get('status') != original.get('status'):
+                        raise ValueError('Policy diagnostic changed source status')
+                    if row.get('status') == 'ok':
+                        expected = {**original['predictions'], 'priority': priority(packets[row['id']]['service_impact'])}
+                        if row['predictions'] != expected or row['source_priority'] != original['predictions']['priority']:
+                            raise ValueError('Policy diagnostic changed more than priority')
+                        changed += expected['priority'] != original['predictions']['priority']
+                if changed != meta['changed_priorities']:
+                    raise ValueError('Policy diagnostic changed-count differs')
     return snapshot

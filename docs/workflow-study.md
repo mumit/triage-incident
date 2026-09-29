@@ -1,6 +1,6 @@
 # Encoder versus decomposed Jev workflow
 
-Status: development. The [first encoder diagnostic](workflow-development-results.md) scored 8/16 unreviewed draft incidents and 1/8 complete pairs. Jev development calls are pending credentials; no held-out model comparison is available. The preceding [comparison study is closed](study-closeout.md).
+Status: development comparison complete. The [Jev results](workflow-jev-development-results.md) show that the decomposed workflow trails the original Jev protocol when both use policy priority: 11/16 versus 13/16 on drafts, and 120/220 versus 159/220 on validation. The [frozen encoder](workflow-development-results.md) scores 8/16 on drafts and 220/220 on old validation. Labels remain unreviewed; no held-out comparison is available. The preceding [comparison study is closed](study-closeout.md).
 
 ## Purpose
 

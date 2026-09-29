@@ -4,6 +4,8 @@ Status: development comparison complete. The [Jev results](workflow-jev-developm
 
 The subsequent [compact input control](compact-jev-results.md) preserves original questions and also trails original Jev with policy priority: 11/16 drafts and 141/220 validation. The [specialist review pack and next encoder plan](specialist-review-and-holdout.md) are ready. No candidate has been retrained or promoted from these results.
 
+[Blind LLM review](llm-review-results.md) now supports the next development phase: Luna reviewed 16 cases, Sol reviewed nine flagged cases, and seven labels passed a conservative candidate filter. Nine cases remain pending; the filter excludes both uncertainty dispositions and is not sufficient for retraining. Human review is recommended for operational validation, while research can proceed with explicit teacher-label provenance.
+
 ## Purpose
 
 Determine whether a compact, decomposed Jev workflow can match a trained local encoder on initial incident triage without autoregressive inference. Test where general decision models add value: new evidence wording, ambiguous domain assignments, recovery, change scope, and conflicting observations.

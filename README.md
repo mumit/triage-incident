@@ -12,6 +12,8 @@ A [small encoder follow-up](docs/encoder-study.md) trains a frozen 22.7M-paramet
 
 The [current comparison study is closed](docs/study-closeout.md), with frozen file identities and a verification command. The [next study](docs/workflow-study.md) compares the frozen encoder with Jev input and question configurations. The [development comparison](docs/workflow-jev-development-results.md) scores the encoder at 8/16 drafts, decomposed Jev at 11/16, and original Jev with policy priority at 13/16. The [compact input control](docs/compact-jev-results.md) also trails the original with policy priority: 11/16 versus 13/16 drafts and 141/220 versus 159/220 validation. A [blind specialist review pack](docs/specialist-review-and-holdout.md) is ready; review and new holdout collection remain pending.
 
+The [blind LLM review](docs/llm-review-results.md) uses Luna as an offline label teacher and a second model for flagged cases. It preserves reviewer issues and candidate-label provenance. Autoregressive calls support development; the current encoder still runs locally without them.
+
 ## Browser app
 
 ```bash

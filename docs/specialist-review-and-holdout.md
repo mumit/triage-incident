@@ -1,6 +1,6 @@
 # Specialist review and next encoder experiment
 
-Status: ready for reviewer assignment. No incident is newly specialist-approved by this preparation. The existing 16 drafts were inspected during development and cannot become an independent holdout by relabeling them.
+Status: human review pack ready. [Blind LLM review](llm-review-results.md) now provides a path for continuing development without waiting for a specialist. No incident is specialist-approved by either workflow. The existing 16 drafts were inspected during development and cannot become an independent holdout by relabeling them.
 
 ## Review pack
 
@@ -38,4 +38,6 @@ Report complete-decision accuracy, field metrics, severe-priority errors, false 
 
 ## Required next input
 
-A named network operations reviewer must complete and adjudicate the development draft review before these labels are used as specialist-approved training data. A separate unseen cohort is still needed for a holdout claim. The code and review pack are ready; this document does not imply that review or new data collection has occurred.
+Research can continue with explicitly identified LLM-reviewed development labels. Preserve the teacher model, prompt, input, and review provenance; keep unresolved input problems and reviewer disagreements out of automatic label promotion. Training and evaluation against the same teacher measure transfer of that teacher's decisions.
+
+A named network operations reviewer is needed to call labels specialist-approved. Specialist audit is recommended before operational use, especially for unresolved and high-impact cases. A separate unseen cohort is still needed for a holdout claim. Neither review workflow establishes independent operational accuracy by itself.

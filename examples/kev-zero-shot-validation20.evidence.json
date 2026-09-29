@@ -1,0 +1,1255 @@
+{
+  "study": "Kev-4B zero-shot supplement to the Northstar 20-incident pilot",
+  "reference_run_id": "b80756a81ff248c9",
+  "kev_run_id": "3ed6c46570454f2b",
+  "split": "validation",
+  "sample": {
+    "records": 20,
+    "families": 10,
+    "selection": "first 20 validation records"
+  },
+  "protocol": {
+    "input_sha256": "4f246ee87455bd394f98dc022afea2059ea9a65dfa1a10cb289db1b6a207ed5b",
+    "label_sha256": "6b2a8027764e56d591b5a00a5b036ce459d2d441717c4f3b3f1d5bfcb401206a",
+    "policy_sha256": "c18543ebccd1bb5a7e681cb3819ca125e08ffd5cbb6024f40c97b51914513b7e",
+    "question_schema_sha256": "cd1d0b71594a215e691c84c232bd40b6912a9e23194bc39562bad7a8d7e385e4"
+  },
+  "model": {
+    "requested_model": "kev-latest",
+    "resolved_models": [
+      "kev-latest"
+    ],
+    "source_revision": "3e1cd3bb588a388a06827443380befece23e68c7",
+    "checkpoint": "jaredpalmer/kev-4b@139fdd94f1b6a6ad80cc15e08fcb99cac885a101",
+    "base": "Qwen/Qwen3.5-4B-Base",
+    "base_revision": "1001bb4d826a52d1f399e183466143f4da7b741b",
+    "device": "mps",
+    "backend": "mlx",
+    "dtype": "bfloat16",
+    "prediction_sha256": "00a4007e525ff95b0de99241ec267a9d179f8ee56d8557361d50f4da089bc96c",
+    "failed_records": 0,
+    "all_fields_accuracy": 0.4,
+    "field_accuracy": {
+      "initial_owner": 0.75,
+      "priority": 0.9,
+      "next_check": 0.5,
+      "insufficient_evidence": 0.7
+    },
+    "prediction_counts": {
+      "initial_owner": {
+        "core": 3,
+        "noc": 8,
+        "power": 1,
+        "ran": 1,
+        "transport": 7
+      },
+      "priority": {
+        "P1": 1,
+        "P2": 9,
+        "P3": 9,
+        "P4": 1
+      },
+      "next_check": {
+        "gather_evidence": 9,
+        "inspect_core": 1,
+        "inspect_power": 1,
+        "inspect_radio": 1,
+        "inspect_transport": 4,
+        "monitor": 1,
+        "verify_change": 3
+      },
+      "insufficient_evidence": {
+        "no": 12,
+        "yes": 8
+      }
+    },
+    "latency_ms": {
+      "p50": 4700.839500059374,
+      "p95": 8964.709417079575,
+      "records": 20
+    },
+    "wall_seconds": 109.39337745809462
+  },
+  "cases": [
+    {
+      "id": "NS-847827ec5900",
+      "incident_family_id": "power_transfer",
+      "labels": {
+        "initial_owner": "power",
+        "insufficient_evidence": "no",
+        "next_check": "inspect_power",
+        "priority": "P2"
+      },
+      "accepted_answers": {
+        "initial_owner": [
+          "power"
+        ],
+        "insufficient_evidence": [
+          "no"
+        ],
+        "next_check": [
+          "inspect_power"
+        ],
+        "priority": [
+          "P2"
+        ]
+      },
+      "predictions": {
+        "initial_owner": "noc",
+        "priority": "P2",
+        "next_check": "gather_evidence",
+        "insufficient_evidence": "no"
+      },
+      "probabilities": {
+        "initial_owner": {
+          "ran": 0.0175,
+          "transport": 0.1378,
+          "power": 0.3739,
+          "core": 0.0666,
+          "noc": 0.4042
+        },
+        "priority": {
+          "P1": 0.006400000000000001,
+          "P2": 0.5851000000000001,
+          "P3": 0.26730000000000004,
+          "P4": 0.14120000000000002
+        },
+        "next_check": {
+          "inspect_radio": 0.011398860113988602,
+          "inspect_transport": 0.05579442055794421,
+          "inspect_power": 0.19618038196180385,
+          "inspect_core": 0.072992700729927,
+          "verify_change": 0.24897510248975102,
+          "gather_evidence": 0.2947705229477052,
+          "monitor": 0.11988801119888012
+        },
+        "insufficient_evidence": {
+          "yes": 0.3532,
+          "no": 0.6468
+        }
+      },
+      "latency_ms": 4161.807292024605
+    },
+    {
+      "id": "NS-a56de13ed2c1",
+      "incident_family_id": "transport_route",
+      "labels": {
+        "initial_owner": "transport",
+        "insufficient_evidence": "no",
+        "next_check": "inspect_transport",
+        "priority": "P2"
+      },
+      "accepted_answers": {
+        "initial_owner": [
+          "transport"
+        ],
+        "insufficient_evidence": [
+          "no"
+        ],
+        "next_check": [
+          "inspect_transport"
+        ],
+        "priority": [
+          "P2"
+        ]
+      },
+      "predictions": {
+        "initial_owner": "transport",
+        "priority": "P2",
+        "next_check": "verify_change",
+        "insufficient_evidence": "no"
+      },
+      "probabilities": {
+        "initial_owner": {
+          "ran": 0.006700670067006701,
+          "transport": 0.710971097109711,
+          "power": 0.0113011301130113,
+          "core": 0.0573057305730573,
+          "noc": 0.21372137213721373
+        },
+        "priority": {
+          "P1": 0.0047,
+          "P2": 0.7925,
+          "P3": 0.1389,
+          "P4": 0.0639
+        },
+        "next_check": {
+          "inspect_radio": 0.0077,
+          "inspect_transport": 0.2434,
+          "inspect_power": 0.0188,
+          "inspect_core": 0.0993,
+          "verify_change": 0.3056,
+          "gather_evidence": 0.2549,
+          "monitor": 0.0703
+        },
+        "insufficient_evidence": {
+          "yes": 0.3348,
+          "no": 0.6652
+        }
+      },
+      "latency_ms": 8097.446499974467
+    },
+    {
+      "id": "NS-b073aba91088",
+      "incident_family_id": "radio_scheduler",
+      "labels": {
+        "initial_owner": "ran",
+        "insufficient_evidence": "no",
+        "next_check": "inspect_radio",
+        "priority": "P3"
+      },
+      "accepted_answers": {
+        "initial_owner": [
+          "ran"
+        ],
+        "insufficient_evidence": [
+          "no"
+        ],
+        "next_check": [
+          "inspect_radio"
+        ],
+        "priority": [
+          "P3"
+        ]
+      },
+      "predictions": {
+        "initial_owner": "noc",
+        "priority": "P3",
+        "next_check": "gather_evidence",
+        "insufficient_evidence": "yes"
+      },
+      "probabilities": {
+        "initial_owner": {
+          "ran": 0.25747425257474255,
+          "transport": 0.1060893910608939,
+          "power": 0.019598040195980403,
+          "core": 0.1503849615038496,
+          "noc": 0.4664533546645336
+        },
+        "priority": {
+          "P1": 0.0046,
+          "P2": 0.1179,
+          "P3": 0.6017,
+          "P4": 0.2758
+        },
+        "next_check": {
+          "inspect_radio": 0.0958904109589041,
+          "inspect_transport": 0.045495450454954504,
+          "inspect_power": 0.010898910108989102,
+          "inspect_core": 0.09079092090790922,
+          "verify_change": 0.19918008199180082,
+          "gather_evidence": 0.5153484651534846,
+          "monitor": 0.0423957604239576
+        },
+        "insufficient_evidence": {
+          "yes": 0.683,
+          "no": 0.31699999999999995
+        }
+      },
+      "latency_ms": 9378.899499890395
+    },
+    {
+      "id": "NS-72437a9bb5c7",
+      "incident_family_id": "power_transfer",
+      "labels": {
+        "initial_owner": "power",
+        "insufficient_evidence": "no",
+        "next_check": "inspect_power",
+        "priority": "P2"
+      },
+      "accepted_answers": {
+        "initial_owner": [
+          "power"
+        ],
+        "insufficient_evidence": [
+          "no"
+        ],
+        "next_check": [
+          "inspect_power"
+        ],
+        "priority": [
+          "P2"
+        ]
+      },
+      "predictions": {
+        "initial_owner": "noc",
+        "priority": "P2",
+        "next_check": "gather_evidence",
+        "insufficient_evidence": "no"
+      },
+      "probabilities": {
+        "initial_owner": {
+          "ran": 0.0183,
+          "transport": 0.1227,
+          "power": 0.3867,
+          "core": 0.0694,
+          "noc": 0.4029
+        },
+        "priority": {
+          "P1": 0.0067,
+          "P2": 0.5556,
+          "P3": 0.2958,
+          "P4": 0.1419
+        },
+        "next_check": {
+          "inspect_radio": 0.0118,
+          "inspect_transport": 0.0499,
+          "inspect_power": 0.1969,
+          "inspect_core": 0.0709,
+          "verify_change": 0.2462,
+          "gather_evidence": 0.2852,
+          "monitor": 0.1391
+        },
+        "insufficient_evidence": {
+          "yes": 0.3787,
+          "no": 0.6213
+        }
+      },
+      "latency_ms": 8393.015208072029
+    },
+    {
+      "id": "NS-b9d4b13a0440",
+      "incident_family_id": "transport_optics",
+      "labels": {
+        "initial_owner": "transport",
+        "insufficient_evidence": "no",
+        "next_check": "inspect_transport",
+        "priority": "P2"
+      },
+      "accepted_answers": {
+        "initial_owner": [
+          "transport"
+        ],
+        "insufficient_evidence": [
+          "no"
+        ],
+        "next_check": [
+          "inspect_transport"
+        ],
+        "priority": [
+          "P2"
+        ]
+      },
+      "predictions": {
+        "initial_owner": "transport",
+        "priority": "P2",
+        "next_check": "inspect_transport",
+        "insufficient_evidence": "no"
+      },
+      "probabilities": {
+        "initial_owner": {
+          "ran": 0.0141,
+          "transport": 0.8918,
+          "power": 0.0054,
+          "core": 0.0169,
+          "noc": 0.0718
+        },
+        "priority": {
+          "P1": 0.2116,
+          "P2": 0.6867,
+          "P3": 0.0737,
+          "P4": 0.028
+        },
+        "next_check": {
+          "inspect_radio": 0.0315031503150315,
+          "inspect_transport": 0.5768576857685769,
+          "inspect_power": 0.015401540154015401,
+          "inspect_core": 0.06060606060606061,
+          "verify_change": 0.08840884088408842,
+          "gather_evidence": 0.20292029202920292,
+          "monitor": 0.024302430243024302
+        },
+        "insufficient_evidence": {
+          "yes": 0.3254,
+          "no": 0.6746
+        }
+      },
+      "latency_ms": 7326.679458026774
+    },
+    {
+      "id": "NS-07749b28c843",
+      "incident_family_id": "radio_scheduler",
+      "labels": {
+        "initial_owner": "ran",
+        "insufficient_evidence": "no",
+        "next_check": "inspect_radio",
+        "priority": "P3"
+      },
+      "accepted_answers": {
+        "initial_owner": [
+          "ran"
+        ],
+        "insufficient_evidence": [
+          "no"
+        ],
+        "next_check": [
+          "inspect_radio"
+        ],
+        "priority": [
+          "P3"
+        ]
+      },
+      "predictions": {
+        "initial_owner": "noc",
+        "priority": "P3",
+        "next_check": "gather_evidence",
+        "insufficient_evidence": "yes"
+      },
+      "probabilities": {
+        "initial_owner": {
+          "ran": 0.2711,
+          "transport": 0.1023,
+          "power": 0.0202,
+          "core": 0.1505,
+          "noc": 0.4559
+        },
+        "priority": {
+          "P1": 0.0046004600460046,
+          "P2": 0.12361236123612361,
+          "P3": 0.6142614261426143,
+          "P4": 0.2575257525752575
+        },
+        "next_check": {
+          "inspect_radio": 0.0868,
+          "inspect_transport": 0.043,
+          "inspect_power": 0.011,
+          "inspect_core": 0.0925,
+          "verify_change": 0.203,
+          "gather_evidence": 0.5221,
+          "monitor": 0.0416
+        },
+        "insufficient_evidence": {
+          "yes": 0.6658,
+          "no": 0.33420000000000005
+        }
+      },
+      "latency_ms": 5594.97629199177
+    },
+    {
+      "id": "NS-80618ec31cfc",
+      "incident_family_id": "power_battery",
+      "labels": {
+        "initial_owner": "power",
+        "insufficient_evidence": "no",
+        "next_check": "inspect_power",
+        "priority": "P3"
+      },
+      "accepted_answers": {
+        "initial_owner": [
+          "power"
+        ],
+        "insufficient_evidence": [
+          "no"
+        ],
+        "next_check": [
+          "inspect_power"
+        ],
+        "priority": [
+          "P3"
+        ]
+      },
+      "predictions": {
+        "initial_owner": "power",
+        "priority": "P3",
+        "next_check": "inspect_power",
+        "insufficient_evidence": "no"
+      },
+      "probabilities": {
+        "initial_owner": {
+          "ran": 0.0063,
+          "transport": 0.0148,
+          "power": 0.8712,
+          "core": 0.016,
+          "noc": 0.0917
+        },
+        "priority": {
+          "P1": 0.005900000000000001,
+          "P2": 0.11910000000000001,
+          "P3": 0.5951000000000001,
+          "P4": 0.27990000000000004
+        },
+        "next_check": {
+          "inspect_radio": 0.0098,
+          "inspect_transport": 0.0165,
+          "inspect_power": 0.5729,
+          "inspect_core": 0.0281,
+          "verify_change": 0.0952,
+          "gather_evidence": 0.2308,
+          "monitor": 0.0467
+        },
+        "insufficient_evidence": {
+          "yes": 0.4999,
+          "no": 0.5001
+        }
+      },
+      "latency_ms": 4695.289958035573
+    },
+    {
+      "id": "NS-5d0bf58ee9f2",
+      "incident_family_id": "noc_clock",
+      "labels": {
+        "initial_owner": "noc",
+        "insufficient_evidence": "yes",
+        "next_check": "gather_evidence",
+        "priority": "P3"
+      },
+      "accepted_answers": {
+        "initial_owner": [
+          "noc"
+        ],
+        "insufficient_evidence": [
+          "yes"
+        ],
+        "next_check": [
+          "gather_evidence"
+        ],
+        "priority": [
+          "P3"
+        ]
+      },
+      "predictions": {
+        "initial_owner": "noc",
+        "priority": "P3",
+        "next_check": "gather_evidence",
+        "insufficient_evidence": "yes"
+      },
+      "probabilities": {
+        "initial_owner": {
+          "ran": 0.0335,
+          "transport": 0.0722,
+          "power": 0.0204,
+          "core": 0.1492,
+          "noc": 0.7247
+        },
+        "priority": {
+          "P1": 0.014998500149985002,
+          "P2": 0.04419558044195581,
+          "P3": 0.5934406559344066,
+          "P4": 0.34736526347365265
+        },
+        "next_check": {
+          "inspect_radio": 0.0080991900809919,
+          "inspect_transport": 0.021897810218978103,
+          "inspect_power": 0.0072992700729927005,
+          "inspect_core": 0.043795620437956206,
+          "verify_change": 0.1126887311268873,
+          "gather_evidence": 0.7765223477652234,
+          "monitor": 0.029697030296970305
+        },
+        "insufficient_evidence": {
+          "yes": 0.8827,
+          "no": 0.11729999999999996
+        }
+      },
+      "latency_ms": 3868.9390000654384
+    },
+    {
+      "id": "NS-f42acd27ee24",
+      "incident_family_id": "noc_probe_recovery",
+      "labels": {
+        "initial_owner": "noc",
+        "insufficient_evidence": "no",
+        "next_check": "monitor",
+        "priority": "P4"
+      },
+      "accepted_answers": {
+        "initial_owner": [
+          "noc"
+        ],
+        "insufficient_evidence": [
+          "no"
+        ],
+        "next_check": [
+          "monitor"
+        ],
+        "priority": [
+          "P4"
+        ]
+      },
+      "predictions": {
+        "initial_owner": "noc",
+        "priority": "P4",
+        "next_check": "monitor",
+        "insufficient_evidence": "no"
+      },
+      "probabilities": {
+        "initial_owner": {
+          "ran": 0.018500000000000003,
+          "transport": 0.07490000000000001,
+          "power": 0.014700000000000001,
+          "core": 0.11220000000000001,
+          "noc": 0.7797000000000001
+        },
+        "priority": {
+          "P1": 0.0019,
+          "P2": 0.0051,
+          "P3": 0.013,
+          "P4": 0.98
+        },
+        "next_check": {
+          "inspect_radio": 0.0136,
+          "inspect_transport": 0.0392,
+          "inspect_power": 0.0122,
+          "inspect_core": 0.0618,
+          "verify_change": 0.1447,
+          "gather_evidence": 0.098,
+          "monitor": 0.6305
+        },
+        "insufficient_evidence": {
+          "yes": 0.265,
+          "no": 0.735
+        }
+      },
+      "latency_ms": 7164.271667017601
+    },
+    {
+      "id": "NS-36f7e295c1f0",
+      "incident_family_id": "radio_receiver",
+      "labels": {
+        "initial_owner": "ran",
+        "insufficient_evidence": "no",
+        "next_check": "inspect_radio",
+        "priority": "P3"
+      },
+      "accepted_answers": {
+        "initial_owner": [
+          "ran"
+        ],
+        "insufficient_evidence": [
+          "no"
+        ],
+        "next_check": [
+          "inspect_radio"
+        ],
+        "priority": [
+          "P3"
+        ]
+      },
+      "predictions": {
+        "initial_owner": "ran",
+        "priority": "P3",
+        "next_check": "inspect_radio",
+        "insufficient_evidence": "yes"
+      },
+      "probabilities": {
+        "initial_owner": {
+          "ran": 0.4909,
+          "transport": 0.1036,
+          "power": 0.0402,
+          "core": 0.0518,
+          "noc": 0.3135
+        },
+        "priority": {
+          "P1": 0.0032,
+          "P2": 0.1493,
+          "P3": 0.5985,
+          "P4": 0.249
+        },
+        "next_check": {
+          "inspect_radio": 0.4078,
+          "inspect_transport": 0.0413,
+          "inspect_power": 0.0167,
+          "inspect_core": 0.029,
+          "verify_change": 0.0875,
+          "gather_evidence": 0.3844,
+          "monitor": 0.0333
+        },
+        "insufficient_evidence": {
+          "yes": 0.6427,
+          "no": 0.35729999999999995
+        }
+      },
+      "latency_ms": 8964.709417079575
+    },
+    {
+      "id": "NS-67f6438ec5bf",
+      "incident_family_id": "noc_clock",
+      "labels": {
+        "initial_owner": "noc",
+        "insufficient_evidence": "yes",
+        "next_check": "gather_evidence",
+        "priority": "P3"
+      },
+      "accepted_answers": {
+        "initial_owner": [
+          "noc"
+        ],
+        "insufficient_evidence": [
+          "yes"
+        ],
+        "next_check": [
+          "gather_evidence"
+        ],
+        "priority": [
+          "P3"
+        ]
+      },
+      "predictions": {
+        "initial_owner": "noc",
+        "priority": "P3",
+        "next_check": "gather_evidence",
+        "insufficient_evidence": "yes"
+      },
+      "probabilities": {
+        "initial_owner": {
+          "ran": 0.031103110311031103,
+          "transport": 0.07180718071807181,
+          "power": 0.0194019401940194,
+          "core": 0.1214121412141214,
+          "noc": 0.7562756275627562
+        },
+        "priority": {
+          "P1": 0.024502450245024503,
+          "P2": 0.0466046604660466,
+          "P3": 0.6394639463946394,
+          "P4": 0.28942894289428944
+        },
+        "next_check": {
+          "inspect_radio": 0.006400640064006401,
+          "inspect_transport": 0.0177017701770177,
+          "inspect_power": 0.006400640064006401,
+          "inspect_core": 0.0356035603560356,
+          "verify_change": 0.0814081408140814,
+          "gather_evidence": 0.8277827782778278,
+          "monitor": 0.024702470247024703
+        },
+        "insufficient_evidence": {
+          "yes": 0.869,
+          "no": 0.131
+        }
+      },
+      "latency_ms": 7126.851499895565
+    },
+    {
+      "id": "NS-bed90468cf79",
+      "incident_family_id": "transport_route",
+      "labels": {
+        "initial_owner": "transport",
+        "insufficient_evidence": "no",
+        "next_check": "inspect_transport",
+        "priority": "P2"
+      },
+      "accepted_answers": {
+        "initial_owner": [
+          "transport"
+        ],
+        "insufficient_evidence": [
+          "no"
+        ],
+        "next_check": [
+          "inspect_transport"
+        ],
+        "priority": [
+          "P2"
+        ]
+      },
+      "predictions": {
+        "initial_owner": "transport",
+        "priority": "P2",
+        "next_check": "verify_change",
+        "insufficient_evidence": "no"
+      },
+      "probabilities": {
+        "initial_owner": {
+          "ran": 0.008499150084991502,
+          "transport": 0.6768323167683231,
+          "power": 0.012598740125987402,
+          "core": 0.05969403059694031,
+          "noc": 0.24237576242375763
+        },
+        "priority": {
+          "P1": 0.0072992700729927005,
+          "P2": 0.46485351464853514,
+          "P3": 0.38486151384861517,
+          "P4": 0.142985701429857
+        },
+        "next_check": {
+          "inspect_radio": 0.0094,
+          "inspect_transport": 0.2017,
+          "inspect_power": 0.0176,
+          "inspect_core": 0.0859,
+          "verify_change": 0.3766,
+          "gather_evidence": 0.226,
+          "monitor": 0.0828
+        },
+        "insufficient_evidence": {
+          "yes": 0.3952,
+          "no": 0.6048
+        }
+      },
+      "latency_ms": 7535.764875006862
+    },
+    {
+      "id": "NS-52ac36b6ebee",
+      "incident_family_id": "radio_scheduler",
+      "labels": {
+        "initial_owner": "ran",
+        "insufficient_evidence": "no",
+        "next_check": "inspect_radio",
+        "priority": "P3"
+      },
+      "accepted_answers": {
+        "initial_owner": [
+          "ran"
+        ],
+        "insufficient_evidence": [
+          "no"
+        ],
+        "next_check": [
+          "inspect_radio"
+        ],
+        "priority": [
+          "P3"
+        ]
+      },
+      "predictions": {
+        "initial_owner": "noc",
+        "priority": "P3",
+        "next_check": "gather_evidence",
+        "insufficient_evidence": "yes"
+      },
+      "probabilities": {
+        "initial_owner": {
+          "ran": 0.2729,
+          "transport": 0.1152,
+          "power": 0.0197,
+          "core": 0.1644,
+          "noc": 0.4278
+        },
+        "priority": {
+          "P1": 0.0045000000000000005,
+          "P2": 0.13060000000000002,
+          "P3": 0.6132000000000001,
+          "P4": 0.25170000000000003
+        },
+        "next_check": {
+          "inspect_radio": 0.11238876112388761,
+          "inspect_transport": 0.0463953604639536,
+          "inspect_power": 0.010998900109989001,
+          "inspect_core": 0.10048995100489952,
+          "verify_change": 0.19518048195180485,
+          "gather_evidence": 0.49545045495450457,
+          "monitor": 0.03909609039096091
+        },
+        "insufficient_evidence": {
+          "yes": 0.6558,
+          "no": 0.34419999999999995
+        }
+      },
+      "latency_ms": 5829.513208940625
+    },
+    {
+      "id": "NS-6ba0130abc07",
+      "incident_family_id": "transport_route",
+      "labels": {
+        "initial_owner": "transport",
+        "insufficient_evidence": "no",
+        "next_check": "inspect_transport",
+        "priority": "P1"
+      },
+      "accepted_answers": {
+        "initial_owner": [
+          "transport"
+        ],
+        "insufficient_evidence": [
+          "no"
+        ],
+        "next_check": [
+          "inspect_transport"
+        ],
+        "priority": [
+          "P1"
+        ]
+      },
+      "predictions": {
+        "initial_owner": "transport",
+        "priority": "P1",
+        "next_check": "verify_change",
+        "insufficient_evidence": "no"
+      },
+      "probabilities": {
+        "initial_owner": {
+          "ran": 0.0073,
+          "transport": 0.7054,
+          "power": 0.0124,
+          "core": 0.068,
+          "noc": 0.2069
+        },
+        "priority": {
+          "P1": 0.8408159184081592,
+          "P2": 0.11528847115288471,
+          "P3": 0.029997000299970003,
+          "P4": 0.013898610138986101
+        },
+        "next_check": {
+          "inspect_radio": 0.0087008700870087,
+          "inspect_transport": 0.2447244724472447,
+          "inspect_power": 0.0192019201920192,
+          "inspect_core": 0.11341134113411341,
+          "verify_change": 0.31543154315431543,
+          "gather_evidence": 0.22752275227522753,
+          "monitor": 0.071007100710071
+        },
+        "insufficient_evidence": {
+          "yes": 0.3137,
+          "no": 0.6863
+        }
+      },
+      "latency_ms": 4249.308124999516
+    },
+    {
+      "id": "NS-33d019151ae0",
+      "incident_family_id": "core_address",
+      "labels": {
+        "initial_owner": "core",
+        "insufficient_evidence": "no",
+        "next_check": "inspect_core",
+        "priority": "P3"
+      },
+      "accepted_answers": {
+        "initial_owner": [
+          "core"
+        ],
+        "insufficient_evidence": [
+          "no"
+        ],
+        "next_check": [
+          "inspect_core"
+        ],
+        "priority": [
+          "P3"
+        ]
+      },
+      "predictions": {
+        "initial_owner": "core",
+        "priority": "P2",
+        "next_check": "inspect_core",
+        "insufficient_evidence": "no"
+      },
+      "probabilities": {
+        "initial_owner": {
+          "ran": 0.0093,
+          "transport": 0.0898,
+          "power": 0.0055,
+          "core": 0.7072,
+          "noc": 0.1882
+        },
+        "priority": {
+          "P1": 0.012898710128987101,
+          "P2": 0.6801319868013199,
+          "P3": 0.23517648235176483,
+          "P4": 0.07179282071792821
+        },
+        "next_check": {
+          "inspect_radio": 0.006498700259948011,
+          "inspect_transport": 0.06608678264347131,
+          "inspect_power": 0.007298540291941612,
+          "inspect_core": 0.4324135172965407,
+          "verify_change": 0.14287142571485703,
+          "gather_evidence": 0.3140371925614877,
+          "monitor": 0.03079384123175365
+        },
+        "insufficient_evidence": {
+          "yes": 0.4371,
+          "no": 0.5629
+        }
+      },
+      "latency_ms": 2626.922041992657
+    },
+    {
+      "id": "NS-c1f40e76ceb5",
+      "incident_family_id": "core_service_discovery",
+      "labels": {
+        "initial_owner": "core",
+        "insufficient_evidence": "no",
+        "next_check": "inspect_core",
+        "priority": "P3"
+      },
+      "accepted_answers": {
+        "initial_owner": [
+          "core"
+        ],
+        "insufficient_evidence": [
+          "no"
+        ],
+        "next_check": [
+          "inspect_core"
+        ],
+        "priority": [
+          "P3"
+        ]
+      },
+      "predictions": {
+        "initial_owner": "core",
+        "priority": "P2",
+        "next_check": "gather_evidence",
+        "insufficient_evidence": "yes"
+      },
+      "probabilities": {
+        "initial_owner": {
+          "ran": 0.011801180118011801,
+          "transport": 0.16121612161216123,
+          "power": 0.013101310131013101,
+          "core": 0.4221422142214221,
+          "noc": 0.3917391739173917
+        },
+        "priority": {
+          "P1": 0.0129012901290129,
+          "P2": 0.7324732473247325,
+          "P3": 0.18321832183218323,
+          "P4": 0.07140714071407141
+        },
+        "next_check": {
+          "inspect_radio": 0.0062,
+          "inspect_transport": 0.0659,
+          "inspect_power": 0.009,
+          "inspect_core": 0.2999,
+          "verify_change": 0.1741,
+          "gather_evidence": 0.4066,
+          "monitor": 0.0383
+        },
+        "insufficient_evidence": {
+          "yes": 0.5991,
+          "no": 0.40090000000000003
+        }
+      },
+      "latency_ms": 4700.839500059374
+    },
+    {
+      "id": "NS-9aaf08023f67",
+      "incident_family_id": "core_service_discovery",
+      "labels": {
+        "initial_owner": "core",
+        "insufficient_evidence": "no",
+        "next_check": "inspect_core",
+        "priority": "P2"
+      },
+      "accepted_answers": {
+        "initial_owner": [
+          "core"
+        ],
+        "insufficient_evidence": [
+          "no"
+        ],
+        "next_check": [
+          "inspect_core"
+        ],
+        "priority": [
+          "P2"
+        ]
+      },
+      "predictions": {
+        "initial_owner": "core",
+        "priority": "P2",
+        "next_check": "gather_evidence",
+        "insufficient_evidence": "yes"
+      },
+      "probabilities": {
+        "initial_owner": {
+          "ran": 0.011498850114988501,
+          "transport": 0.14378562143785623,
+          "power": 0.0112988701129887,
+          "core": 0.46265373462653736,
+          "noc": 0.37076292370762925
+        },
+        "priority": {
+          "P1": 0.2071,
+          "P2": 0.6694,
+          "P3": 0.0867,
+          "P4": 0.0368
+        },
+        "next_check": {
+          "inspect_radio": 0.0071,
+          "inspect_transport": 0.0701,
+          "inspect_power": 0.0089,
+          "inspect_core": 0.3355,
+          "verify_change": 0.1587,
+          "gather_evidence": 0.3865,
+          "monitor": 0.0332
+        },
+        "insufficient_evidence": {
+          "yes": 0.5698,
+          "no": 0.4302
+        }
+      },
+      "latency_ms": 2487.4322920804843
+    },
+    {
+      "id": "NS-dfe52d05cd10",
+      "incident_family_id": "transport_optics",
+      "labels": {
+        "initial_owner": "transport",
+        "insufficient_evidence": "no",
+        "next_check": "inspect_transport",
+        "priority": "P2"
+      },
+      "accepted_answers": {
+        "initial_owner": [
+          "transport"
+        ],
+        "insufficient_evidence": [
+          "no"
+        ],
+        "next_check": [
+          "inspect_transport"
+        ],
+        "priority": [
+          "P2"
+        ]
+      },
+      "predictions": {
+        "initial_owner": "transport",
+        "priority": "P2",
+        "next_check": "inspect_transport",
+        "insufficient_evidence": "no"
+      },
+      "probabilities": {
+        "initial_owner": {
+          "ran": 0.0103,
+          "transport": 0.9137,
+          "power": 0.0048,
+          "core": 0.0136,
+          "noc": 0.0576
+        },
+        "priority": {
+          "P1": 0.243,
+          "P2": 0.6476,
+          "P3": 0.0818,
+          "P4": 0.0276
+        },
+        "next_check": {
+          "inspect_radio": 0.0252,
+          "inspect_transport": 0.6541,
+          "inspect_power": 0.0161,
+          "inspect_core": 0.0538,
+          "verify_change": 0.0724,
+          "gather_evidence": 0.1593,
+          "monitor": 0.0191
+        },
+        "insufficient_evidence": {
+          "yes": 0.308,
+          "no": 0.692
+        }
+      },
+      "latency_ms": 2753.7395419785753
+    },
+    {
+      "id": "NS-671d733c0f03",
+      "incident_family_id": "transport_optics",
+      "labels": {
+        "initial_owner": "transport",
+        "insufficient_evidence": "no",
+        "next_check": "inspect_transport",
+        "priority": "P3"
+      },
+      "accepted_answers": {
+        "initial_owner": [
+          "transport"
+        ],
+        "insufficient_evidence": [
+          "no"
+        ],
+        "next_check": [
+          "inspect_transport"
+        ],
+        "priority": [
+          "P3"
+        ]
+      },
+      "predictions": {
+        "initial_owner": "transport",
+        "priority": "P3",
+        "next_check": "inspect_transport",
+        "insufficient_evidence": "no"
+      },
+      "probabilities": {
+        "initial_owner": {
+          "ran": 0.015101510151015102,
+          "transport": 0.8865886588658866,
+          "power": 0.0056005600560056,
+          "core": 0.013201320132013201,
+          "noc": 0.07950795079507951
+        },
+        "priority": {
+          "P1": 0.004400440044004401,
+          "P2": 0.16101610161016103,
+          "P3": 0.6608660866086609,
+          "P4": 0.17371737173717372
+        },
+        "next_check": {
+          "inspect_radio": 0.0355035503550355,
+          "inspect_transport": 0.5162516251625162,
+          "inspect_power": 0.020602060206020602,
+          "inspect_core": 0.0452045204520452,
+          "verify_change": 0.09600960096009602,
+          "gather_evidence": 0.2628262826282628,
+          "monitor": 0.023602360236023603
+        },
+        "insufficient_evidence": {
+          "yes": 0.3447,
+          "no": 0.6553
+        }
+      },
+      "latency_ms": 2248.1960830045864
+    },
+    {
+      "id": "NS-1281f211092d",
+      "incident_family_id": "transport_optics",
+      "labels": {
+        "initial_owner": "transport",
+        "insufficient_evidence": "no",
+        "next_check": "inspect_transport",
+        "priority": "P3"
+      },
+      "accepted_answers": {
+        "initial_owner": [
+          "transport"
+        ],
+        "insufficient_evidence": [
+          "no"
+        ],
+        "next_check": [
+          "inspect_transport"
+        ],
+        "priority": [
+          "P3"
+        ]
+      },
+      "predictions": {
+        "initial_owner": "transport",
+        "priority": "P3",
+        "next_check": "inspect_transport",
+        "insufficient_evidence": "no"
+      },
+      "probabilities": {
+        "initial_owner": {
+          "ran": 0.0190980901909809,
+          "transport": 0.8684131586841316,
+          "power": 0.006299370062993701,
+          "core": 0.0160983901609839,
+          "noc": 0.09009099090090991
+        },
+        "priority": {
+          "P1": 0.0048,
+          "P2": 0.1364,
+          "P3": 0.6733,
+          "P4": 0.1855
+        },
+        "next_check": {
+          "inspect_radio": 0.036196380361963806,
+          "inspect_transport": 0.5096490350964904,
+          "inspect_power": 0.0206979302069793,
+          "inspect_core": 0.04559544045595441,
+          "verify_change": 0.10788921107889211,
+          "gather_evidence": 0.255974402559744,
+          "monitor": 0.023997600239976002
+        },
+        "insufficient_evidence": {
+          "yes": 0.3644,
+          "no": 0.6355999999999999
+        }
+      },
+      "latency_ms": 2174.3482500314713
+    }
+  ]
+}

@@ -1,6 +1,6 @@
 # Evaluation plan
 
-This is the target evaluation plan. See [model runs](model-runs.md) for implemented metrics and remaining work. Model inference has not yet been benchmarked; only the keyword baseline has been run.
+This is the target evaluation plan. See [model runs](model-runs.md) for implemented metrics and remaining work, the [20-case zero-shot pilot](zero-shot-study.md), and the [full zero-shot evaluation](full-zero-shot-evaluation.md) across validation, test, and paired challenge sets. The measured synthetic results do not replace field evaluation.
 
 ## Shared task
 

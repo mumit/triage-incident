@@ -1,0 +1,887 @@
+{
+  "study": "Northstar zero-shot validation pilot",
+  "run_id": "b80756a81ff248c9",
+  "split": "validation",
+  "sample": {
+    "selection": "first 20 validation records in dataset order",
+    "records": 20,
+    "incident_families": 10
+  },
+  "protocol": {
+    "policy_sha256": "c18543ebccd1bb5a7e681cb3819ca125e08ffd5cbb6024f40c97b51914513b7e",
+    "question_schema_sha256": "cd1d0b71594a215e691c84c232bd40b6912a9e23194bc39562bad7a8d7e385e4",
+    "input_sha256": "4f246ee87455bd394f98dc022afea2059ea9a65dfa1a10cb289db1b6a207ed5b",
+    "label_sha256": "6b2a8027764e56d591b5a00a5b036ce459d2d441717c4f3b3f1d5bfcb401206a"
+  },
+  "models": {
+    "baseline": {
+      "requested_model": "keyword-baseline",
+      "resolved_models": [],
+      "prediction_sha256": "da3384ee6493f492763a32dca3e11b76a2c765e87d04b974161c8a18c6e851f0",
+      "failed_records": 0,
+      "all_fields_accuracy": 0.95,
+      "field_accuracy": {
+        "initial_owner": 0.95,
+        "priority": 1.0,
+        "next_check": 0.95,
+        "insufficient_evidence": 1.0
+      },
+      "prediction_counts": {
+        "initial_owner": {
+          "core": 3,
+          "noc": 3,
+          "power": 3,
+          "ran": 3,
+          "transport": 8
+        },
+        "priority": {
+          "P1": 1,
+          "P2": 7,
+          "P3": 11,
+          "P4": 1
+        },
+        "next_check": {
+          "gather_evidence": 2,
+          "inspect_core": 3,
+          "inspect_power": 3,
+          "inspect_radio": 3,
+          "inspect_transport": 8,
+          "monitor": 1
+        },
+        "insufficient_evidence": {
+          "no": 18,
+          "yes": 2
+        }
+      }
+    },
+    "jev": {
+      "requested_model": "jev-latest",
+      "resolved_models": [
+        "jev-1.13.0"
+      ],
+      "prediction_sha256": "f2fdf85023ea679cb8e60e119a0017018533c46ba62b1d90a1ce3716d3d11c94",
+      "failed_records": 0,
+      "all_fields_accuracy": 0.55,
+      "field_accuracy": {
+        "initial_owner": 0.85,
+        "priority": 0.55,
+        "next_check": 0.8,
+        "insufficient_evidence": 0.9
+      },
+      "prediction_counts": {
+        "initial_owner": {
+          "core": 3,
+          "noc": 6,
+          "power": 3,
+          "ran": 1,
+          "transport": 7
+        },
+        "priority": {
+          "P1": 1,
+          "P2": 16,
+          "P3": 2,
+          "P4": 1
+        },
+        "next_check": {
+          "gather_evidence": 6,
+          "inspect_core": 3,
+          "inspect_power": 3,
+          "inspect_transport": 7,
+          "monitor": 1
+        },
+        "insufficient_evidence": {
+          "no": 16,
+          "yes": 4
+        }
+      }
+    },
+    "laya": {
+      "requested_model": "laya-multilingual",
+      "resolved_models": [
+        "laya-multilingual@55cf4c4ebb4ebe31b2550e8bdf3bd21b99753851"
+      ],
+      "prediction_sha256": "4a749060c02004d9485884370f992da932958c3adce858d14c5d857004b5a86e",
+      "failed_records": 0,
+      "all_fields_accuracy": 0.0,
+      "field_accuracy": {
+        "initial_owner": 0.2,
+        "priority": 0.25,
+        "next_check": 0.1,
+        "insufficient_evidence": 0.1
+      },
+      "prediction_counts": {
+        "initial_owner": {
+          "noc": 12,
+          "transport": 8
+        },
+        "priority": {
+          "P1": 2,
+          "P2": 3,
+          "P3": 4,
+          "P4": 11
+        },
+        "next_check": {
+          "gather_evidence": 8,
+          "inspect_core": 5,
+          "inspect_transport": 2,
+          "monitor": 3,
+          "verify_change": 2
+        },
+        "insufficient_evidence": {
+          "yes": 20
+        }
+      }
+    },
+    "clm": {
+      "requested_model": "clm-mlx-bf16",
+      "resolved_models": [
+        "clm-mlx-bf16"
+      ],
+      "prediction_sha256": "f9312fb41097636d5e03257b1e96f49c6a12a664d617d8ad3c847cd70b556953",
+      "failed_records": 0,
+      "all_fields_accuracy": 0.0,
+      "field_accuracy": {
+        "initial_owner": 0.35,
+        "priority": 0.35,
+        "next_check": 0.1,
+        "insufficient_evidence": 0.1
+      },
+      "prediction_counts": {
+        "initial_owner": {
+          "transport": 20
+        },
+        "priority": {
+          "P2": 20
+        },
+        "next_check": {
+          "gather_evidence": 20
+        },
+        "insufficient_evidence": {
+          "yes": 20
+        }
+      }
+    }
+  },
+  "cases": [
+    {
+      "id": "NS-847827ec5900",
+      "incident_family_id": "power_transfer",
+      "labels": {
+        "initial_owner": "power",
+        "insufficient_evidence": "no",
+        "next_check": "inspect_power",
+        "priority": "P2"
+      },
+      "predictions": {
+        "baseline": {
+          "initial_owner": "power",
+          "next_check": "inspect_power",
+          "insufficient_evidence": "no",
+          "priority": "P2"
+        },
+        "jev": {
+          "initial_owner": "power",
+          "priority": "P2",
+          "next_check": "inspect_power",
+          "insufficient_evidence": "no"
+        },
+        "laya": {
+          "initial_owner": "noc",
+          "priority": "P4",
+          "next_check": "inspect_core",
+          "insufficient_evidence": "yes"
+        },
+        "clm": {
+          "initial_owner": "transport",
+          "priority": "P2",
+          "next_check": "gather_evidence",
+          "insufficient_evidence": "yes"
+        }
+      }
+    },
+    {
+      "id": "NS-a56de13ed2c1",
+      "incident_family_id": "transport_route",
+      "labels": {
+        "initial_owner": "transport",
+        "insufficient_evidence": "no",
+        "next_check": "inspect_transport",
+        "priority": "P2"
+      },
+      "predictions": {
+        "baseline": {
+          "initial_owner": "transport",
+          "next_check": "inspect_transport",
+          "insufficient_evidence": "no",
+          "priority": "P2"
+        },
+        "jev": {
+          "initial_owner": "transport",
+          "priority": "P2",
+          "next_check": "inspect_transport",
+          "insufficient_evidence": "no"
+        },
+        "laya": {
+          "initial_owner": "noc",
+          "priority": "P2",
+          "next_check": "monitor",
+          "insufficient_evidence": "yes"
+        },
+        "clm": {
+          "initial_owner": "transport",
+          "priority": "P2",
+          "next_check": "gather_evidence",
+          "insufficient_evidence": "yes"
+        }
+      }
+    },
+    {
+      "id": "NS-b073aba91088",
+      "incident_family_id": "radio_scheduler",
+      "labels": {
+        "initial_owner": "ran",
+        "insufficient_evidence": "no",
+        "next_check": "inspect_radio",
+        "priority": "P3"
+      },
+      "predictions": {
+        "baseline": {
+          "initial_owner": "ran",
+          "next_check": "inspect_radio",
+          "insufficient_evidence": "no",
+          "priority": "P3"
+        },
+        "jev": {
+          "initial_owner": "noc",
+          "priority": "P2",
+          "next_check": "gather_evidence",
+          "insufficient_evidence": "no"
+        },
+        "laya": {
+          "initial_owner": "noc",
+          "priority": "P3",
+          "next_check": "inspect_core",
+          "insufficient_evidence": "yes"
+        },
+        "clm": {
+          "initial_owner": "transport",
+          "priority": "P2",
+          "next_check": "gather_evidence",
+          "insufficient_evidence": "yes"
+        }
+      }
+    },
+    {
+      "id": "NS-72437a9bb5c7",
+      "incident_family_id": "power_transfer",
+      "labels": {
+        "initial_owner": "power",
+        "insufficient_evidence": "no",
+        "next_check": "inspect_power",
+        "priority": "P2"
+      },
+      "predictions": {
+        "baseline": {
+          "initial_owner": "power",
+          "next_check": "inspect_power",
+          "insufficient_evidence": "no",
+          "priority": "P2"
+        },
+        "jev": {
+          "initial_owner": "power",
+          "priority": "P2",
+          "next_check": "inspect_power",
+          "insufficient_evidence": "no"
+        },
+        "laya": {
+          "initial_owner": "transport",
+          "priority": "P1",
+          "next_check": "inspect_core",
+          "insufficient_evidence": "yes"
+        },
+        "clm": {
+          "initial_owner": "transport",
+          "priority": "P2",
+          "next_check": "gather_evidence",
+          "insufficient_evidence": "yes"
+        }
+      }
+    },
+    {
+      "id": "NS-b9d4b13a0440",
+      "incident_family_id": "transport_optics",
+      "labels": {
+        "initial_owner": "transport",
+        "insufficient_evidence": "no",
+        "next_check": "inspect_transport",
+        "priority": "P2"
+      },
+      "predictions": {
+        "baseline": {
+          "initial_owner": "transport",
+          "next_check": "inspect_transport",
+          "insufficient_evidence": "no",
+          "priority": "P2"
+        },
+        "jev": {
+          "initial_owner": "transport",
+          "priority": "P2",
+          "next_check": "inspect_transport",
+          "insufficient_evidence": "no"
+        },
+        "laya": {
+          "initial_owner": "noc",
+          "priority": "P4",
+          "next_check": "gather_evidence",
+          "insufficient_evidence": "yes"
+        },
+        "clm": {
+          "initial_owner": "transport",
+          "priority": "P2",
+          "next_check": "gather_evidence",
+          "insufficient_evidence": "yes"
+        }
+      }
+    },
+    {
+      "id": "NS-07749b28c843",
+      "incident_family_id": "radio_scheduler",
+      "labels": {
+        "initial_owner": "ran",
+        "insufficient_evidence": "no",
+        "next_check": "inspect_radio",
+        "priority": "P3"
+      },
+      "predictions": {
+        "baseline": {
+          "initial_owner": "ran",
+          "next_check": "inspect_radio",
+          "insufficient_evidence": "no",
+          "priority": "P3"
+        },
+        "jev": {
+          "initial_owner": "noc",
+          "priority": "P2",
+          "next_check": "gather_evidence",
+          "insufficient_evidence": "no"
+        },
+        "laya": {
+          "initial_owner": "noc",
+          "priority": "P4",
+          "next_check": "inspect_core",
+          "insufficient_evidence": "yes"
+        },
+        "clm": {
+          "initial_owner": "transport",
+          "priority": "P2",
+          "next_check": "gather_evidence",
+          "insufficient_evidence": "yes"
+        }
+      }
+    },
+    {
+      "id": "NS-80618ec31cfc",
+      "incident_family_id": "power_battery",
+      "labels": {
+        "initial_owner": "power",
+        "insufficient_evidence": "no",
+        "next_check": "inspect_power",
+        "priority": "P3"
+      },
+      "predictions": {
+        "baseline": {
+          "initial_owner": "power",
+          "next_check": "inspect_power",
+          "insufficient_evidence": "no",
+          "priority": "P3"
+        },
+        "jev": {
+          "initial_owner": "power",
+          "priority": "P2",
+          "next_check": "inspect_power",
+          "insufficient_evidence": "no"
+        },
+        "laya": {
+          "initial_owner": "noc",
+          "priority": "P3",
+          "next_check": "inspect_transport",
+          "insufficient_evidence": "yes"
+        },
+        "clm": {
+          "initial_owner": "transport",
+          "priority": "P2",
+          "next_check": "gather_evidence",
+          "insufficient_evidence": "yes"
+        }
+      }
+    },
+    {
+      "id": "NS-5d0bf58ee9f2",
+      "incident_family_id": "noc_clock",
+      "labels": {
+        "initial_owner": "noc",
+        "insufficient_evidence": "yes",
+        "next_check": "gather_evidence",
+        "priority": "P3"
+      },
+      "predictions": {
+        "baseline": {
+          "initial_owner": "noc",
+          "next_check": "gather_evidence",
+          "insufficient_evidence": "yes",
+          "priority": "P3"
+        },
+        "jev": {
+          "initial_owner": "noc",
+          "priority": "P3",
+          "next_check": "gather_evidence",
+          "insufficient_evidence": "yes"
+        },
+        "laya": {
+          "initial_owner": "noc",
+          "priority": "P4",
+          "next_check": "monitor",
+          "insufficient_evidence": "yes"
+        },
+        "clm": {
+          "initial_owner": "transport",
+          "priority": "P2",
+          "next_check": "gather_evidence",
+          "insufficient_evidence": "yes"
+        }
+      }
+    },
+    {
+      "id": "NS-f42acd27ee24",
+      "incident_family_id": "noc_probe_recovery",
+      "labels": {
+        "initial_owner": "noc",
+        "insufficient_evidence": "no",
+        "next_check": "monitor",
+        "priority": "P4"
+      },
+      "predictions": {
+        "baseline": {
+          "initial_owner": "noc",
+          "next_check": "monitor",
+          "insufficient_evidence": "no",
+          "priority": "P4"
+        },
+        "jev": {
+          "initial_owner": "noc",
+          "priority": "P4",
+          "next_check": "monitor",
+          "insufficient_evidence": "no"
+        },
+        "laya": {
+          "initial_owner": "transport",
+          "priority": "P2",
+          "next_check": "verify_change",
+          "insufficient_evidence": "yes"
+        },
+        "clm": {
+          "initial_owner": "transport",
+          "priority": "P2",
+          "next_check": "gather_evidence",
+          "insufficient_evidence": "yes"
+        }
+      }
+    },
+    {
+      "id": "NS-36f7e295c1f0",
+      "incident_family_id": "radio_receiver",
+      "labels": {
+        "initial_owner": "ran",
+        "insufficient_evidence": "no",
+        "next_check": "inspect_radio",
+        "priority": "P3"
+      },
+      "predictions": {
+        "baseline": {
+          "initial_owner": "transport",
+          "next_check": "inspect_transport",
+          "insufficient_evidence": "no",
+          "priority": "P3"
+        },
+        "jev": {
+          "initial_owner": "ran",
+          "priority": "P2",
+          "next_check": "gather_evidence",
+          "insufficient_evidence": "yes"
+        },
+        "laya": {
+          "initial_owner": "transport",
+          "priority": "P3",
+          "next_check": "gather_evidence",
+          "insufficient_evidence": "yes"
+        },
+        "clm": {
+          "initial_owner": "transport",
+          "priority": "P2",
+          "next_check": "gather_evidence",
+          "insufficient_evidence": "yes"
+        }
+      }
+    },
+    {
+      "id": "NS-67f6438ec5bf",
+      "incident_family_id": "noc_clock",
+      "labels": {
+        "initial_owner": "noc",
+        "insufficient_evidence": "yes",
+        "next_check": "gather_evidence",
+        "priority": "P3"
+      },
+      "predictions": {
+        "baseline": {
+          "initial_owner": "noc",
+          "next_check": "gather_evidence",
+          "insufficient_evidence": "yes",
+          "priority": "P3"
+        },
+        "jev": {
+          "initial_owner": "noc",
+          "priority": "P3",
+          "next_check": "gather_evidence",
+          "insufficient_evidence": "yes"
+        },
+        "laya": {
+          "initial_owner": "noc",
+          "priority": "P4",
+          "next_check": "gather_evidence",
+          "insufficient_evidence": "yes"
+        },
+        "clm": {
+          "initial_owner": "transport",
+          "priority": "P2",
+          "next_check": "gather_evidence",
+          "insufficient_evidence": "yes"
+        }
+      }
+    },
+    {
+      "id": "NS-bed90468cf79",
+      "incident_family_id": "transport_route",
+      "labels": {
+        "initial_owner": "transport",
+        "insufficient_evidence": "no",
+        "next_check": "inspect_transport",
+        "priority": "P2"
+      },
+      "predictions": {
+        "baseline": {
+          "initial_owner": "transport",
+          "next_check": "inspect_transport",
+          "insufficient_evidence": "no",
+          "priority": "P2"
+        },
+        "jev": {
+          "initial_owner": "transport",
+          "priority": "P2",
+          "next_check": "inspect_transport",
+          "insufficient_evidence": "no"
+        },
+        "laya": {
+          "initial_owner": "transport",
+          "priority": "P3",
+          "next_check": "monitor",
+          "insufficient_evidence": "yes"
+        },
+        "clm": {
+          "initial_owner": "transport",
+          "priority": "P2",
+          "next_check": "gather_evidence",
+          "insufficient_evidence": "yes"
+        }
+      }
+    },
+    {
+      "id": "NS-52ac36b6ebee",
+      "incident_family_id": "radio_scheduler",
+      "labels": {
+        "initial_owner": "ran",
+        "insufficient_evidence": "no",
+        "next_check": "inspect_radio",
+        "priority": "P3"
+      },
+      "predictions": {
+        "baseline": {
+          "initial_owner": "ran",
+          "next_check": "inspect_radio",
+          "insufficient_evidence": "no",
+          "priority": "P3"
+        },
+        "jev": {
+          "initial_owner": "noc",
+          "priority": "P2",
+          "next_check": "gather_evidence",
+          "insufficient_evidence": "yes"
+        },
+        "laya": {
+          "initial_owner": "noc",
+          "priority": "P4",
+          "next_check": "gather_evidence",
+          "insufficient_evidence": "yes"
+        },
+        "clm": {
+          "initial_owner": "transport",
+          "priority": "P2",
+          "next_check": "gather_evidence",
+          "insufficient_evidence": "yes"
+        }
+      }
+    },
+    {
+      "id": "NS-6ba0130abc07",
+      "incident_family_id": "transport_route",
+      "labels": {
+        "initial_owner": "transport",
+        "insufficient_evidence": "no",
+        "next_check": "inspect_transport",
+        "priority": "P1"
+      },
+      "predictions": {
+        "baseline": {
+          "initial_owner": "transport",
+          "next_check": "inspect_transport",
+          "insufficient_evidence": "no",
+          "priority": "P1"
+        },
+        "jev": {
+          "initial_owner": "transport",
+          "priority": "P1",
+          "next_check": "inspect_transport",
+          "insufficient_evidence": "no"
+        },
+        "laya": {
+          "initial_owner": "transport",
+          "priority": "P4",
+          "next_check": "gather_evidence",
+          "insufficient_evidence": "yes"
+        },
+        "clm": {
+          "initial_owner": "transport",
+          "priority": "P2",
+          "next_check": "gather_evidence",
+          "insufficient_evidence": "yes"
+        }
+      }
+    },
+    {
+      "id": "NS-33d019151ae0",
+      "incident_family_id": "core_address",
+      "labels": {
+        "initial_owner": "core",
+        "insufficient_evidence": "no",
+        "next_check": "inspect_core",
+        "priority": "P3"
+      },
+      "predictions": {
+        "baseline": {
+          "initial_owner": "core",
+          "next_check": "inspect_core",
+          "insufficient_evidence": "no",
+          "priority": "P3"
+        },
+        "jev": {
+          "initial_owner": "core",
+          "priority": "P2",
+          "next_check": "inspect_core",
+          "insufficient_evidence": "no"
+        },
+        "laya": {
+          "initial_owner": "transport",
+          "priority": "P4",
+          "next_check": "verify_change",
+          "insufficient_evidence": "yes"
+        },
+        "clm": {
+          "initial_owner": "transport",
+          "priority": "P2",
+          "next_check": "gather_evidence",
+          "insufficient_evidence": "yes"
+        }
+      }
+    },
+    {
+      "id": "NS-c1f40e76ceb5",
+      "incident_family_id": "core_service_discovery",
+      "labels": {
+        "initial_owner": "core",
+        "insufficient_evidence": "no",
+        "next_check": "inspect_core",
+        "priority": "P3"
+      },
+      "predictions": {
+        "baseline": {
+          "initial_owner": "core",
+          "next_check": "inspect_core",
+          "insufficient_evidence": "no",
+          "priority": "P3"
+        },
+        "jev": {
+          "initial_owner": "core",
+          "priority": "P2",
+          "next_check": "inspect_core",
+          "insufficient_evidence": "no"
+        },
+        "laya": {
+          "initial_owner": "transport",
+          "priority": "P4",
+          "next_check": "gather_evidence",
+          "insufficient_evidence": "yes"
+        },
+        "clm": {
+          "initial_owner": "transport",
+          "priority": "P2",
+          "next_check": "gather_evidence",
+          "insufficient_evidence": "yes"
+        }
+      }
+    },
+    {
+      "id": "NS-9aaf08023f67",
+      "incident_family_id": "core_service_discovery",
+      "labels": {
+        "initial_owner": "core",
+        "insufficient_evidence": "no",
+        "next_check": "inspect_core",
+        "priority": "P2"
+      },
+      "predictions": {
+        "baseline": {
+          "initial_owner": "core",
+          "next_check": "inspect_core",
+          "insufficient_evidence": "no",
+          "priority": "P2"
+        },
+        "jev": {
+          "initial_owner": "core",
+          "priority": "P2",
+          "next_check": "inspect_core",
+          "insufficient_evidence": "no"
+        },
+        "laya": {
+          "initial_owner": "transport",
+          "priority": "P2",
+          "next_check": "gather_evidence",
+          "insufficient_evidence": "yes"
+        },
+        "clm": {
+          "initial_owner": "transport",
+          "priority": "P2",
+          "next_check": "gather_evidence",
+          "insufficient_evidence": "yes"
+        }
+      }
+    },
+    {
+      "id": "NS-dfe52d05cd10",
+      "incident_family_id": "transport_optics",
+      "labels": {
+        "initial_owner": "transport",
+        "insufficient_evidence": "no",
+        "next_check": "inspect_transport",
+        "priority": "P2"
+      },
+      "predictions": {
+        "baseline": {
+          "initial_owner": "transport",
+          "next_check": "inspect_transport",
+          "insufficient_evidence": "no",
+          "priority": "P2"
+        },
+        "jev": {
+          "initial_owner": "transport",
+          "priority": "P2",
+          "next_check": "inspect_transport",
+          "insufficient_evidence": "no"
+        },
+        "laya": {
+          "initial_owner": "noc",
+          "priority": "P4",
+          "next_check": "gather_evidence",
+          "insufficient_evidence": "yes"
+        },
+        "clm": {
+          "initial_owner": "transport",
+          "priority": "P2",
+          "next_check": "gather_evidence",
+          "insufficient_evidence": "yes"
+        }
+      }
+    },
+    {
+      "id": "NS-671d733c0f03",
+      "incident_family_id": "transport_optics",
+      "labels": {
+        "initial_owner": "transport",
+        "insufficient_evidence": "no",
+        "next_check": "inspect_transport",
+        "priority": "P3"
+      },
+      "predictions": {
+        "baseline": {
+          "initial_owner": "transport",
+          "next_check": "inspect_transport",
+          "insufficient_evidence": "no",
+          "priority": "P3"
+        },
+        "jev": {
+          "initial_owner": "transport",
+          "priority": "P2",
+          "next_check": "inspect_transport",
+          "insufficient_evidence": "no"
+        },
+        "laya": {
+          "initial_owner": "noc",
+          "priority": "P1",
+          "next_check": "inspect_transport",
+          "insufficient_evidence": "yes"
+        },
+        "clm": {
+          "initial_owner": "transport",
+          "priority": "P2",
+          "next_check": "gather_evidence",
+          "insufficient_evidence": "yes"
+        }
+      }
+    },
+    {
+      "id": "NS-1281f211092d",
+      "incident_family_id": "transport_optics",
+      "labels": {
+        "initial_owner": "transport",
+        "insufficient_evidence": "no",
+        "next_check": "inspect_transport",
+        "priority": "P3"
+      },
+      "predictions": {
+        "baseline": {
+          "initial_owner": "transport",
+          "next_check": "inspect_transport",
+          "insufficient_evidence": "no",
+          "priority": "P3"
+        },
+        "jev": {
+          "initial_owner": "transport",
+          "priority": "P2",
+          "next_check": "inspect_transport",
+          "insufficient_evidence": "no"
+        },
+        "laya": {
+          "initial_owner": "noc",
+          "priority": "P4",
+          "next_check": "inspect_core",
+          "insufficient_evidence": "yes"
+        },
+        "clm": {
+          "initial_owner": "transport",
+          "priority": "P2",
+          "next_check": "gather_evidence",
+          "insufficient_evidence": "yes"
+        }
+      }
+    }
+  ]
+}

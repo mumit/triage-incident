@@ -1,0 +1,63 @@
+# Encoder versus decomposed Jev workflow
+
+Status: preparation. No new model accuracy claim is available. The preceding [comparison study is closed](study-closeout.md).
+
+## Purpose
+
+Determine whether a compact, decomposed Jev workflow can match a trained local encoder on initial incident triage without autoregressive inference. Test where general decision models add value: new evidence wording, ambiguous domain assignments, recovery, change scope, and conflicting observations.
+
+RLCD is TypeSafe's training method, not a common architecture shared by the evaluated models. This study compares concrete configurations.
+
+## Configurations
+
+| Configuration | Semantic decisions | Priority |
+|---|---|---|
+| Frozen MiniLM reference | Existing seven-class head and feature protocol | Published structured-impact policy |
+| Decomposed Jev | Disposition gate and four independent domain-support questions, in one typed request | Same policy |
+| Original Jev reference | Original four-question protocol | Model prediction |
+
+The primary comparison uses no topology or freshness regex vetoes in the composition code. Jev must interpret those supplied facts. MiniLM retains its original input renderer, which omits graph edges and timestamps. This is a comparison of complete configurations, not an architecture-controlled test. Report that information difference. The original guarded encoder is a secondary reference only; any shared structured guard experiment must be separately identified.
+
+The Jev gate chooses verified monitoring, change verification, evidence gathering, or domain investigation. A domain investigation routes only when exactly one of the four domain questions says current independent evidence supports it. Zero or multiple supported domains retain `noc / gather_evidence / yes`. Code maps a unique domain to its matching diagnostic check and computes priority. Intermediate probabilities are saved; no complete-decision confidence is invented by multiplying them or taking their minimum.
+
+## Data and controls
+
+Use original training and validation data for interface development only. Existing test and challenge data can check regressions, but cannot become a fresh holdout.
+
+Collect newly authored incidents and obtain network-specialist review of inputs, labels, and accepted alternatives. Keep all realizations of each fault mechanism and all pair variants in one split. Compare against the existing scenario catalog for semantic duplication, not just matching IDs. Reserve independent families after development is complete; freeze the model head, prompts, composer, policy, review thresholds, and dataset hashes before scoring that holdout. Do not call an agent-authored or developer-inspected draft an independent specialist-reviewed holdout.
+
+Include negated and conflicting evidence, stale observations mixed with current ones, incomplete and changed dependencies, alarm clearance without verified recovery, unrelated changes, confirmed maintenance scope, and new fault vocabulary. The main accuracy cohort needs realistic frequencies; a separate paired stress cohort can deliberately balance interventions.
+
+Target at least 30 independent development families and 30 new holdout families as an initial planning scale, subject to specialist capacity. This is not a statistical guarantee. Report family-level uncertainty and avoid using hundreds of paraphrases to imply hundreds of independent scenarios.
+
+## Measurements
+
+Report owner and next-check accuracy, all four accepted decisions, insufficient-evidence precision/recall, severe-priority errors, false escalation, and complete challenge-pair accuracy. Every timeout, malformed response, oversized input, or missing record counts as an error.
+
+Repeat a fixed sample to measure decision consistency. Fit each model's review threshold on development data only and compare error at matched automation coverage. Evidence sufficiency is an operational label, not proof that the model's own answer is reliable. This first scaffold does not implement calibrated automation thresholds; all valid responses are scored at full coverage.
+
+Measure Brier scores for the individual Jev question probabilities where reviewed intermediate labels exist. Evaluate encoder probabilities separately if added in a versioned extension. No inference about production calibration follows from the current synthetic sets.
+
+Measure local encoder cold load and warm inference separately from Jev end-to-end API latency. Record failures, token usage, concurrency, serving hardware, throughput, and cost per 1,000 incidents including hosted pricing and local capacity. Keep the existing Luna evidence as historical context; fresh comparative Luna accuracy would require running the same new cohort.
+
+## Current implementation
+
+`triage_bench/workflow.py` defines a compact public-input allowlist, five typed questions, and a deterministic composer. `scripts/run_workflow.py` exports requests for inspection or runs the workflow through the existing failure-inclusive runner. Neither prediction path reads labels. Dry-run files contain public inputs and policy only; do not use them for private tickets without an appropriate data-handling setup.
+
+`data/workflow-study/` contains 16 agent-authored draft incidents in eight pairs and a review checklist. These are development material, not a held-out dataset. Several mechanisms deliberately extend earlier challenges. A specialist must check evidence sufficiency, accepted actions, and scenario similarity before approving any later split. This draft is well below the planned family count and does not have realistic operational class frequencies.
+
+```bash
+python3 scripts/run_workflow.py --inputs data/validation.inputs.jsonl --output runs/workflow/request-preview.jsonl --dry-run --limit 5
+python3 scripts/run_workflow.py --inputs data/workflow-study/draft.inputs.jsonl --output runs/workflow/draft-request-preview.jsonl --dry-run
+python3 scripts/run_study_encoder.py --inputs data/workflow-study/draft.inputs.jsonl --output runs/workflow/encoder-draft.jsonl
+python3 scripts/run_workflow.py --inputs data/validation.inputs.jsonl --output runs/workflow/development.jsonl --limit 5
+python3 -m triage_bench evaluate --labels data/validation.labels.jsonl --predictions runs/workflow/development.jsonl --output runs/workflow/development.metrics.json
+```
+
+Live calls require `TYPESAFE_API_KEY` and default to pinned `jev-1.13.0`. They incur normal provider charges. The default 8,192-token byte-bound preflight is conservative; failures must be recorded rather than silently truncating input. Model and prompt hashes are recorded in run metadata.
+
+The encoder command requires the optional encoder environment and the original trained head. It verifies the head hash against the closed-study evidence, loads cached weights, and reads no labels. Its output on these drafts is a development diagnostic only. For the original Jev reference, use the existing `python3 -m triage_bench run` command with the same new input file.
+
+## Next steps
+
+Inspect request semantics on development incidents. Prepare and review new families, then establish family-disjoint development and holdout splits. Select thresholds, freeze artifacts, and run the comparison. If decomposition adds no measured benefit over the encoder, retain the encoder as the primary candidate and document Jev's remaining limitations.

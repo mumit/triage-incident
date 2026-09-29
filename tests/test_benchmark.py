@@ -1,14 +1,17 @@
 import copy
+import io
 import json
 import tempfile
 import threading
 import unittest
 from http.server import BaseHTTPRequestHandler, HTTPServer
 from pathlib import Path
+from unittest.mock import patch
 
 from triage_bench.dataset import generate, read_jsonl, write_jsonl
 from triage_bench.evaluate import evaluate
-from triage_bench.policy import OPTIONS
+from triage_bench.llm import normalize as normalize_llm, request_body as llm_request_body
+from triage_bench.policy import OPTIONS, questions
 from triage_bench.runner import normalize, request_body, run
 from triage_bench.validate import validate
 
@@ -38,6 +41,14 @@ class BenchmarkTests(unittest.TestCase):
         self.assertNotIn('ANSWER_KEY_SENTINEL',body)
         self.assertNotIn('FAMILY_SENTINEL',body)
         self.assertNotIn(poisoned['id'],body)
+        llm_body=json.dumps(llm_request_body(poisoned,'gpt-6-luna'))
+        self.assertNotIn('ANSWER_KEY_SENTINEL',llm_body)
+        self.assertNotIn('FAMILY_SENTINEL',llm_body)
+        self.assertNotIn(poisoned['id'],llm_body)
+
+    def test_evidence_flag_uses_binary_question(self):
+        self.assertEqual(questions()['insufficient_evidence']['type'],'noul')
+        self.assertEqual(set(questions()['insufficient_evidence']['criteria']),{'false','true'})
 
     def test_local_radio_and_power_impacts_are_bounded(self):
         for split in ['train','validation','test']:
@@ -74,6 +85,22 @@ class BenchmarkTests(unittest.TestCase):
         self.assertEqual(m['all_fields_accuracy'],1)
         self.assertIsNone(m['fields']['initial_owner']['brier_score'])
 
+    def test_accepted_alternative_is_correct_in_accuracy_and_confusion(self):
+        key=copy.deepcopy(self.keys[0])
+        canonical=key['labels']['initial_owner']
+        alternative=next(choice for choice in OPTIONS['initial_owner'] if choice!=canonical)
+        key['accepted_answers']['initial_owner']=[canonical,alternative]
+        predictions={**key['labels'],'initial_owner':alternative}
+        write_jsonl(self.root/'alternative.labels.jsonl',[key])
+        write_jsonl(self.root/'alternative.predictions.jsonl',[
+            {'id':key['id'],'status':'ok','predictions':predictions}])
+        metrics=evaluate(self.root/'alternative.labels.jsonl',self.root/'alternative.predictions.jsonl')
+        owner=metrics['fields']['initial_owner']
+        self.assertEqual(metrics['all_fields_accuracy'],1)
+        self.assertEqual(owner['accuracy'],1)
+        self.assertEqual(owner['confusion_matrix'][alternative][alternative],1)
+        self.assertEqual(owner['confusion_matrix'][canonical][alternative],0)
+
     def test_missing_predictions_count_as_errors(self):
         write_jsonl(self.root/'empty.jsonl',[])
         m=evaluate(self.root/'data/test.labels.jsonl',self.root/'empty.jsonl')
@@ -88,8 +115,10 @@ class BenchmarkTests(unittest.TestCase):
             evaluate(self.root/'data/test.labels.jsonl',self.root/'duplicate.jsonl')
 
     def response(self):
-        return {'model':'fixture-model', 'answers':{f:{'choice':next(iter(c)),
-            'probabilities':{v:1/len(c) for v in c}, 'confidence':0.77} for f,c in OPTIONS.items()}}
+        answers={f:{'choice':next(iter(c)), 'probabilities':{v:1/len(c) for v in c},
+                    'confidence':0.77} for f,c in OPTIONS.items() if f!='insufficient_evidence'}
+        answers['insufficient_evidence']={'type':'noul','noul':0.77}
+        return {'model':'fixture-model','answers':answers}
 
     def test_partial_distribution_rejected(self):
         response=self.response()
@@ -101,6 +130,55 @@ class BenchmarkTests(unittest.TestCase):
         response=self.response()
         response['answers']['initial_owner']['probabilities']['ran']=float('nan')
         with self.assertRaisesRegex(ValueError,'Invalid probability'):
+            normalize(response)
+
+    def test_two_decimal_distribution_is_normalized_but_large_error_rejected(self):
+        response=self.response()
+        values=list(OPTIONS['next_check'])
+        response['answers']['next_check']['probabilities']={c:(0.33 if i<3 else 0) for i,c in enumerate(values)}
+        _,probabilities,_=normalize(response)
+        self.assertAlmostEqual(sum(probabilities['next_check'].values()),1)
+        self.assertAlmostEqual(probabilities['next_check'][values[0]],1/3)
+        response['answers']['next_check']['probabilities']={c:(0.30 if i<3 else 0) for i,c in enumerate(values)}
+        with self.assertRaisesRegex(ValueError,'outside rounding tolerance'):
+            normalize(response)
+
+    def test_binary_probability_maps_to_yes_and_no(self):
+        response=self.response()
+        predictions,probabilities,_=normalize(response)
+        self.assertEqual(predictions['insufficient_evidence'],'yes')
+        self.assertAlmostEqual(probabilities['insufficient_evidence']['yes'],.77)
+        response['answers']['insufficient_evidence']['noul']=.2
+        predictions,probabilities,_=normalize(response)
+        self.assertEqual(predictions['insufficient_evidence'],'no')
+        self.assertAlmostEqual(probabilities['insufficient_evidence']['no'],.8)
+
+    def test_runner_records_rounded_distribution_and_binary_answer(self):
+        response=self.response()
+        values=list(OPTIONS['next_check'])
+        response['answers']['next_check']['probabilities']={c:(0.33 if i<3 else 0) for i,c in enumerate(values)}
+        requests=[]
+        class Opener:
+            def open(self, request, timeout):
+                requests.append(json.loads(request.data))
+                return io.BytesIO(json.dumps(response).encode())
+        path=self.root/'rounded.jsonl'
+        with patch('triage_bench.runner.urllib.request.build_opener',return_value=Opener()):
+            meta=run(self.root/'data/test.inputs.jsonl',path,provider='laya',model='fixture-model',
+                endpoint='http://127.0.0.1:8000/v1/systemone',limit=1,
+                context_tokens=16384,deployment='fixture')
+        row=read_jsonl(path)[0]
+        self.assertEqual(row['status'],'ok')
+        self.assertEqual(row['predictions']['insufficient_evidence'],'yes')
+        self.assertAlmostEqual(row['probability_original_sums']['next_check'],.99)
+        self.assertAlmostEqual(sum(row['probabilities']['next_check'].values()),1)
+        self.assertEqual(requests[0]['questions']['insufficient_evidence']['type'],'noul')
+        self.assertIn('question_schema_sha256',meta)
+
+    def test_nonfinite_confidence_rejected(self):
+        response=self.response()
+        response['answers']['initial_owner']['confidence']=float('nan')
+        with self.assertRaisesRegex(ValueError,'Invalid confidence'):
             normalize(response)
 
     def test_confidence_is_separate_from_probability(self):
@@ -120,7 +198,7 @@ class BenchmarkTests(unittest.TestCase):
         server=HTTPServer(('127.0.0.1',0),Handler)
         thread=threading.Thread(target=server.serve_forever,daemon=True); thread.start()
         try:
-            for provider in ['jev','laya','clm']:
+            for provider in ['jev','kev','laya','clm']:
                 path=self.root/f'{provider}.jsonl'
                 run(self.root/'data/test.inputs.jsonl',path,provider=provider,model='fixture-model',
                     endpoint=f'http://127.0.0.1:{server.server_port}/v1/systemone',limit=1,
@@ -128,8 +206,106 @@ class BenchmarkTests(unittest.TestCase):
                 row=read_jsonl(path)[0]
                 self.assertEqual(row['status'],'ok')
                 self.assertEqual(row['resolved_model'],'fixture-model')
-            self.assertEqual(len(captured),3)
+            self.assertEqual(len(captured),4)
             self.assertTrue(all(set(c)=={'model','state','questions'} for c in captured))
+            self.assertTrue(all(c['questions']['insufficient_evidence']['type']=='noul' for c in captured))
+        finally:
+            server.shutdown(); server.server_close(); thread.join()
+
+    def test_llm_chat_contract_and_zero_shot_scoring(self):
+        captured=[]
+        expected=self.keys[0]['labels']
+        class Handler(BaseHTTPRequestHandler):
+            def do_POST(self):
+                body=json.loads(self.rfile.read(int(self.headers['Content-Length'])))
+                captured.append((self.path,self.headers.get('Authorization'),self.headers.get('User-Agent'),
+                                 self.headers.get('Accept'),body))
+                response={'model':'gpt-6-luna','choices':[{'finish_reason':'stop','message':{'content':json.dumps(expected)}}],
+                          'usage':{'prompt_tokens':1200,'completion_tokens':80},
+                          'diagnostic_echo':'fixture-bearer-secret'}
+                self.send_response(200); self.send_header('Content-Type','application/json'); self.end_headers()
+                self.wfile.write(json.dumps(response).encode())
+            def log_message(self,*args): pass
+        server=HTTPServer(('127.0.0.1',0),Handler)
+        thread=threading.Thread(target=server.serve_forever,daemon=True);thread.start()
+        try:
+            output=self.root/'llm.jsonl'
+            meta=run(self.root/'data/test.inputs.jsonl',output,provider='llm',model='gpt-6-luna',
+                     endpoint=f'http://127.0.0.1:{server.server_port}/v1',limit=1,
+                     context_tokens=32768,deployment='fixture',api_key='fixture-bearer-secret')
+            row=read_jsonl(output)[0]
+            self.assertEqual((row['status'],row['predictions']),('ok',expected))
+            self.assertEqual(row['probabilities'],{})
+            self.assertEqual(captured[0][0],'/v1/chat/completions')
+            self.assertEqual(captured[0][1],'Bearer fixture-bearer-secret')
+            self.assertEqual(captured[0][2],'NorthstarIncidentBench/0.1')
+            self.assertEqual(captured[0][3],'application/json')
+            self.assertEqual(captured[0][4]['reasoning_effort'],'none')
+            self.assertEqual(captured[0][4]['model'],'gpt-6-luna')
+            self.assertEqual([m['role'] for m in captured[0][4]['messages']],['system','user'])
+            self.assertIn('prompt_sha256',meta)
+            self.assertNotIn('fixture-bearer-secret',output.read_text())
+            self.assertNotIn('fixture-bearer-secret',output.with_suffix('.meta.json').read_text())
+        finally:
+            server.shutdown();server.server_close();thread.join()
+
+    def test_llm_invalid_choice_is_error(self):
+        response={'choices':[{'message':{'content':json.dumps({
+            'initial_owner':'invented','priority':'P2','next_check':'monitor','insufficient_evidence':'no'})}}]}
+        with self.assertRaisesRegex(ValueError,'Invalid choice for initial_owner'):
+            normalize_llm(response)
+
+    def test_llm_retries_a_rate_limit_without_scoring_a_failure(self):
+        requests=[]
+        expected=self.keys[0]['labels']
+        class Handler(BaseHTTPRequestHandler):
+            def do_POST(self):
+                self.rfile.read(int(self.headers['Content-Length']))
+                requests.append(self.path)
+                if len(requests)==1:
+                    self.send_response(429);self.send_header('Retry-After','0');self.end_headers()
+                else:
+                    response={'model':'fixture','choices':[{'finish_reason':'stop',
+                              'message':{'content':json.dumps(expected)}}]}
+                    self.send_response(200);self.send_header('Content-Type','application/json')
+                    self.end_headers();self.wfile.write(json.dumps(response).encode())
+            def log_message(self,*args):pass
+        server=HTTPServer(('127.0.0.1',0),Handler)
+        thread=threading.Thread(target=server.serve_forever,daemon=True);thread.start()
+        try:
+            with patch('triage_bench.runner.time.sleep') as wait:
+                output=self.root/'rate-limit.jsonl'
+                run(self.root/'data/test.inputs.jsonl',output,provider='llm',model='fixture',
+                    endpoint=f'http://127.0.0.1:{server.server_port}/v1',limit=1,
+                    context_tokens=32768,deployment='fixture')
+            row=read_jsonl(output)[0]
+            self.assertEqual(row['status'],'ok')
+            self.assertEqual(row['rate_limit_retries'],1)
+            self.assertEqual(len(requests),2)
+            wait.assert_called_once_with(1)
+        finally:
+            server.shutdown();server.server_close();thread.join()
+
+    def test_nonfinite_provider_metadata_is_record_error(self):
+        response=self.response()
+        response['usage']={'input_tokens':float('inf')}
+        class Handler(BaseHTTPRequestHandler):
+            def do_POST(self):
+                self.rfile.read(int(self.headers['Content-Length']))
+                self.send_response(200); self.send_header('Content-Type','application/json'); self.end_headers()
+                self.wfile.write(json.dumps(response).encode())
+            def log_message(self,*args): pass
+        server=HTTPServer(('127.0.0.1',0),Handler)
+        thread=threading.Thread(target=server.serve_forever,daemon=True); thread.start()
+        try:
+            path=self.root/'nonfinite.jsonl'
+            run(self.root/'data/test.inputs.jsonl',path,provider='laya',model='fixture-model',
+                endpoint=f'http://127.0.0.1:{server.server_port}/v1/systemone',limit=1,
+                context_tokens=16384,deployment='fixture')
+            row=read_jsonl(path)[0]
+            self.assertEqual(row['status'],'error')
+            self.assertNotIn('Infinity',path.read_text())
+            self.assertNotIn('NaN',path.read_text())
         finally:
             server.shutdown(); server.server_close(); thread.join()
 

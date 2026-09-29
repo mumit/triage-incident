@@ -42,5 +42,11 @@ def questions():
         'next_check': 'Which next diagnostic check is best supported now?',
         'insufficient_evidence': 'Is evidence insufficient to select a unique investigating fault domain, using the policy definition?'
     }
-    return {key: dict(type='choice', instructions=instructions[key], criteria=values)
-            for key, values in OPTIONS.items()}
+    result = {key: dict(type='choice', instructions=instructions[key], criteria=values)
+              for key, values in OPTIONS.items() if key != 'insufficient_evidence'}
+    # A binary question uses the API's binary type. Laya's base checkpoints can
+    # follow literal yes/no keys in a choice question instead of its descriptions.
+    result['insufficient_evidence'] = dict(type='noul', instructions=instructions['insufficient_evidence'],
+        criteria={'false': 'Current independent evidence supports an initial domain, or verified recovery supports monitoring.',
+                  'true': 'Evidence is missing, stale, or conflicting; no unique investigating domain is justified.'})
+    return result

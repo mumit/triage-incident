@@ -14,7 +14,7 @@ from .dataset import ROOT, read_jsonl, write_jsonl
 from .evaluate import evaluate
 from .runner import run
 
-PROVIDERS = ['baseline', 'jev', 'laya', 'clm']
+PROVIDERS = ['baseline', 'jev', 'kev', 'laya', 'clm', 'llm']
 SPLITS = ['validation', 'test', 'challenge']
 
 
@@ -41,10 +41,17 @@ def profiles():
                          deployment='Local deterministic rules', api_key=''),
         'jev': dict(model=os.getenv('JEV_MODEL', 'jev-latest'), endpoint=os.getenv('JEV_ENDPOINT', 'https://api.typesafe.ai/v1/systemone'),
                     context_tokens=int(os.getenv('JEV_CONTEXT_TOKENS', '8192')), deployment='Hosted Jev API', api_key=os.getenv('TYPESAFE_API_KEY', '')),
+        'kev': dict(model=os.getenv('KEV_MODEL', 'kev-latest'), endpoint=os.getenv('KEV_ENDPOINT', 'http://127.0.0.1:8009/v1/systemone'),
+                    context_tokens=int(os.getenv('KEV_CONTEXT_TOKENS', '8192')), deployment='Local Kev-4B; record checkpoint revision, backend and precision', api_key=os.getenv('KEV_API_KEY', '')),
         'laya': dict(model=os.getenv('LAYA_MODEL', 'laya-multilingual'), endpoint=os.getenv('LAYA_ENDPOINT', 'http://127.0.0.1:8000/v1/systemone'),
                      context_tokens=8192, deployment='Local Laya multilingual; inspect server health for device and revision', api_key=os.getenv('LAYA_API_KEY', '')),
         'clm': dict(model=os.getenv('CLM_MODEL', 'clm-mlx-bf16'), endpoint=os.getenv('CLM_ENDPOINT', 'http://127.0.0.1:8700/v1/systemone'),
-                    context_tokens=8192, deployment='CLM-8B / MLX bf16 / Apple Silicon; record chip and revisions', api_key=os.getenv('CLM_API_KEY', ''))}
+                    context_tokens=8192, deployment='CLM-8B / MLX bf16 / Apple Silicon; record chip and revisions', api_key=os.getenv('CLM_API_KEY', '')),
+        'llm': dict(model=os.getenv('LLM_MODEL', 'gpt-6-luna'), endpoint=os.getenv('LLM_BASE_URL', ''),
+                    context_tokens=int(os.getenv('LLM_CONTEXT_TOKENS', '32768')),
+                    deployment='Fuel iX proxy / OpenAI-compatible chat completions',
+                    api_key=os.getenv('FUELIX_BEARER_TOKEN', ''),
+                    reasoning_effort=os.getenv('LLM_REASONING_EFFORT', 'none'))}
 
 
 class App:
@@ -73,7 +80,7 @@ class App:
     def configure(self, payload):
         name = payload.get('provider')
         if name not in PROVIDERS or name == 'baseline':
-            raise ValueError('Choose Jev, Laya or CLM.')
+            raise ValueError('Choose Jev, Kev, Laya, CLM or LLM.')
         endpoint = str(payload.get('endpoint', '')).strip()
         url = urlparse(endpoint)
         if url.username or url.password or url.query or url.fragment or not url.hostname:
@@ -84,6 +91,9 @@ class App:
         capacity = int(payload.get('context_tokens',8192))
         if not model or not 512 <= capacity <= 1000000:
             raise ValueError('Supply a model name and a valid context capacity.')
+        reasoning_effort = str(payload.get('reasoning_effort', 'none'))
+        if name == 'llm' and reasoning_effort not in {'default', 'none', 'low', 'medium', 'high'}:
+            raise ValueError('Choose a valid LLM reasoning effort.')
         with self.lock:
             previous = self.profiles[name]
             key = str(payload.get('api_key','')).strip()
@@ -93,6 +103,8 @@ class App:
                 key = previous['api_key']
             self.profiles[name] = dict(model=model, endpoint=endpoint, context_tokens=capacity,
                 deployment=str(payload.get('deployment','Unspecified deployment')).strip(), api_key=key)
+            if name == 'llm':
+                self.profiles[name]['reasoning_effort'] = reasoning_effort
         return self.config()
 
     def incidents(self, split):
@@ -100,6 +112,7 @@ class App:
             raise ValueError('Unknown evaluation split.')
         keys = {k['id']: k for k in read_jsonl(self.root / 'data' / f'{split}.labels.jsonl')}
         return [{'id':r['id'], 'input':r['input'], 'labels':keys[r['id']]['labels'],
+                 'accepted_answers':keys[r['id']]['accepted_answers'],
                  'family':keys[r['id']]['incident_family_id'], 'pair_id':keys[r['id']].get('pair_id')}
                 for r in read_jsonl(self.root / 'data' / f'{split}.inputs.jsonl')]
 
@@ -143,6 +156,11 @@ class App:
             config = {name:copy.deepcopy(self.profiles[name]) for name in chosen}
             if 'jev' in chosen and not config['jev']['api_key']:
                 raise ValueError('Add your Jev API key in Settings first.')
+            if 'llm' in chosen:
+                if not config['llm']['endpoint']:
+                    raise ValueError('Add your Fuel iX base URL in Settings first.')
+                if not config['llm']['api_key']:
+                    raise ValueError('Add your Fuel iX bearer token in Settings first.')
             job_id = uuid.uuid4().hex[:16]
             directory = self.run_root / job_id
             directory.mkdir()

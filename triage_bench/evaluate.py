@@ -49,7 +49,10 @@ def evaluate(labels_path, predictions_path, output=None):
             ok = pred in accepted
             matches[key['id']][field] = ok
             correct += ok
-            confusion[actual][pred if pred in choices else 'ERROR'] += 1
+            # When several answers are valid, credit a valid prediction to its own
+            # class so the confusion matrix and macro-F1 agree with accuracy.
+            scored_actual = pred if ok else actual
+            confusion[scored_actual][pred if pred in choices else 'ERROR'] += 1
             family_scores[key['incident_family_id']].append(int(ok))
             dist = row.get('probabilities', {}).get(field) if row.get('status') == 'ok' else None
             if dist is not None:

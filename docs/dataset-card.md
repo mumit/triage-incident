@@ -14,6 +14,8 @@ Each split has separate `.inputs.jsonl` and `.labels.jsonl` files. Inputs contai
 
 Labels are `initial_owner`, `priority`, `next_check`, and `insufficient_evidence`. The current release uses one accepted answer per field. The evaluator supports multiple accepted decisions for correctness; probability scoring is skipped for fields with multiple accepted answers rather than inventing a target distribution.
 
+For a field with multiple accepted answers, an accepted prediction is credited to its own class in the confusion matrix and macro-F1. Otherwise those metrics use the canonical label. The browser marks every accepted answer correct and shows the alternatives alongside the reference decision.
+
 ## Construction and separation
 
 An authored evidence scenario determines the initial investigating domain and diagnostic action. A fictional policy determines priority from visible service impact. Cases lacking sufficient domain evidence explicitly remain with operations. None labels a confirmed physical root cause.

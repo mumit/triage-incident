@@ -6,11 +6,12 @@ if [[ "$(uname -s)" != Linux ]] || ! command -v nvidia-smi >/dev/null 2>&1; then
   exit 1
 fi
 export UV_CACHE_DIR="$PWD/.cache/uv"
+python3_executable=$(python3 -c 'import sys; print(sys.executable)')
 if command -v uv >/dev/null 2>&1; then
-  uv venv --python 3.12 --allow-existing .venv-clm
+  uv venv --python "$python3_executable" --allow-existing .venv-clm
   uv pip install --python .venv-clm/bin/python 'contrastive-lm==0.1.0'
 else
-  python3.12 -m venv .venv-clm
+  python3 -m venv .venv-clm
   .venv-clm/bin/python -m pip install 'contrastive-lm==0.1.0'
 fi
 printf '%s\n' 'Ready. Run scripts/start_clm.sh. This downloads Qwen3-8B and CLM weights on first start.'

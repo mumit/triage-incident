@@ -32,6 +32,7 @@ def main():
     parser.add_argument('--revision',default=None)
     parser.add_argument('--port',type=int,default=8092)
     parser.add_argument('--max-tokens',type=int,default=8192)
+    parser.add_argument('--instance-id',default=None,help='Startup identity for a supervising script')
     args=parser.parse_args()
     root=Path(__file__).resolve().parents[1]
     os.environ.setdefault('HF_HOME',str(root/'.cache'/'huggingface'))
@@ -45,7 +46,8 @@ def main():
         allow_patterns=['*.safetensors','*.json','*.model','*.txt'])
     model,tokenizer=load(directory,tokenizer_config={'trust_remote_code':False})
     metadata=dict(model=args.model,revision=revision,runtime='MLX',pooling='last real token after final norm; L2 normalized',
-                  dimensions=4096,max_tokens=args.max_tokens,batch_policy='one text at a time; no KV cache')
+                  dimensions=4096,max_tokens=args.max_tokens,batch_policy='one text at a time; no KV cache',
+                  instance_id=args.instance_id)
     class Handler(BaseHTTPRequestHandler):
         def log_message(self,*args): pass
         def send(self,status,value):

@@ -8,6 +8,8 @@ The [full zero-shot evaluation](docs/full-zero-shot-evaluation.md) covers all 22
 
 The [technical report](docs/incident-triage-technical-report.md) summarizes the data, experiment, findings, limits, and recommended next experiments for a team discussion.
 
+The [interactive study walkthrough](docs/presentation/incident-triage-study.html) presents the full study in 12 chapters, with selectable results, paired-case evidence, latency and coverage diagnostics. Open it in a browser; it works offline. [Presentation instructions](docs/presentation/README.md) explain sharing, printing and rebuilding from the evidence.
+
 A [small encoder follow-up](docs/encoder-study.md) trains a frozen 22.7M-parameter MiniLM classifier with no autoregressive inference. It reached 220/220 on both regular evaluation splits; the raw classifier got 18/24 challenge cases and a separately labeled, post-hoc policy-guarded variant got 24/24. These synthetic results need a new specialist-reviewed holdout before operational use.
 
 The [current comparison study is closed](docs/study-closeout.md), with frozen file identities and a verification command. The [next study](docs/workflow-study.md) compares the frozen encoder with Jev input and question configurations. The [development comparison](docs/workflow-jev-development-results.md) scores the encoder at 8/16 drafts, decomposed Jev at 11/16, and original Jev with policy priority at 13/16. The [compact input control](docs/compact-jev-results.md) also trails the original with policy priority: 11/16 versus 13/16 drafts and 141/220 versus 159/220 validation. A [blind specialist review pack](docs/specialist-review-and-holdout.md) is ready; review and new holdout collection remain pending.

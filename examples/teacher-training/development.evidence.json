@@ -1,0 +1,2359 @@
+{
+  "protocol": "northstar-teacher-encoder-evidence-v1",
+  "use": "development selection; not holdout",
+  "label_provenance": "LLM-reviewed synthetic labels; no specialist adjudication",
+  "input_sha256": "30e34939ef57cfde37a96d5a578f9747ea5f27d17dc66984fc7bd805705d50b4",
+  "label_sha256": "63cd06e0c42e3cf8e97ea42068e974e75b0618dc88a07e9b4f8ecefb7f5d8f7a",
+  "cases": [
+    {
+      "id": "WF-887c2bb778-a-v2",
+      "incident_family_id": "mixed_dc_voltage",
+      "pair_id": "WF-887c2bb778",
+      "split": "development_candidate",
+      "labels": {
+        "initial_owner": "power",
+        "priority": "P3",
+        "next_check": "inspect_power",
+        "insufficient_evidence": "no"
+      },
+      "accepted_answers": {
+        "initial_owner": [
+          "power"
+        ],
+        "priority": [
+          "P3"
+        ],
+        "next_check": [
+          "inspect_power"
+        ],
+        "insufficient_evidence": [
+          "no"
+        ]
+      },
+      "review_status": "LLM-reviewed candidate; no specialist review",
+      "review_models": [
+        "gpt-6-luna-2026-09-22",
+        "gpt-6.1-sol-2026-09-29"
+      ]
+    },
+    {
+      "id": "WF-887c2bb778-b-v2",
+      "incident_family_id": "mixed_dc_voltage",
+      "pair_id": "WF-887c2bb778",
+      "split": "development_candidate",
+      "labels": {
+        "initial_owner": "noc",
+        "priority": "P3",
+        "next_check": "gather_evidence",
+        "insufficient_evidence": "yes"
+      },
+      "accepted_answers": {
+        "initial_owner": [
+          "noc"
+        ],
+        "priority": [
+          "P3"
+        ],
+        "next_check": [
+          "gather_evidence"
+        ],
+        "insufficient_evidence": [
+          "yes"
+        ]
+      },
+      "review_status": "LLM-reviewed candidate; no specialist review",
+      "review_models": [
+        "gpt-6-luna-2026-09-22",
+        "gpt-6.1-sol-2026-09-29"
+      ]
+    },
+    {
+      "id": "WF-e4d3ea3699-a-v2",
+      "incident_family_id": "queue_drops",
+      "pair_id": "WF-e4d3ea3699",
+      "split": "development_candidate",
+      "labels": {
+        "initial_owner": "transport",
+        "priority": "P3",
+        "next_check": "inspect_transport",
+        "insufficient_evidence": "no"
+      },
+      "accepted_answers": {
+        "initial_owner": [
+          "transport"
+        ],
+        "priority": [
+          "P3"
+        ],
+        "next_check": [
+          "inspect_transport"
+        ],
+        "insufficient_evidence": [
+          "no"
+        ]
+      },
+      "review_status": "LLM-reviewed candidate; no specialist review",
+      "review_models": [
+        "gpt-6-luna-2026-09-22",
+        "gpt-6.1-sol-2026-09-29"
+      ]
+    },
+    {
+      "id": "WF-e4d3ea3699-b-v2",
+      "incident_family_id": "queue_drops",
+      "pair_id": "WF-e4d3ea3699",
+      "split": "development_candidate",
+      "labels": {
+        "initial_owner": "noc",
+        "priority": "P3",
+        "next_check": "gather_evidence",
+        "insufficient_evidence": "yes"
+      },
+      "accepted_answers": {
+        "initial_owner": [
+          "noc"
+        ],
+        "priority": [
+          "P3"
+        ],
+        "next_check": [
+          "gather_evidence"
+        ],
+        "insufficient_evidence": [
+          "yes"
+        ]
+      },
+      "review_status": "LLM-reviewed candidate; no specialist review",
+      "review_models": [
+        "gpt-6-luna-2026-09-22",
+        "gpt-6.1-sol-2026-09-29"
+      ]
+    },
+    {
+      "id": "WF-25bee86485-a-v2",
+      "incident_family_id": "alarm_clear_service_probe",
+      "pair_id": "WF-25bee86485",
+      "split": "development_candidate",
+      "labels": {
+        "initial_owner": "noc",
+        "priority": "P2",
+        "next_check": "gather_evidence",
+        "insufficient_evidence": "yes"
+      },
+      "accepted_answers": {
+        "initial_owner": [
+          "noc"
+        ],
+        "priority": [
+          "P2"
+        ],
+        "next_check": [
+          "gather_evidence"
+        ],
+        "insufficient_evidence": [
+          "yes"
+        ]
+      },
+      "review_status": "LLM-reviewed candidate; no specialist review",
+      "review_models": [
+        "gpt-6-luna-2026-09-22",
+        "gpt-6.1-sol-2026-09-29"
+      ]
+    },
+    {
+      "id": "WF-25bee86485-b-v2",
+      "incident_family_id": "alarm_clear_service_probe",
+      "pair_id": "WF-25bee86485",
+      "split": "development_candidate",
+      "labels": {
+        "initial_owner": "noc",
+        "priority": "P4",
+        "next_check": "monitor",
+        "insufficient_evidence": "no"
+      },
+      "accepted_answers": {
+        "initial_owner": [
+          "noc"
+        ],
+        "priority": [
+          "P4"
+        ],
+        "next_check": [
+          "monitor"
+        ],
+        "insufficient_evidence": [
+          "no"
+        ]
+      },
+      "review_status": "LLM-reviewed candidate; no specialist review",
+      "review_models": [
+        "gpt-6-luna-2026-09-22",
+        "gpt-6.1-sol-2026-09-29"
+      ]
+    },
+    {
+      "id": "WF-8c543664cc-a-v2",
+      "incident_family_id": "contradictory_power_sources",
+      "pair_id": "WF-8c543664cc",
+      "split": "development_candidate",
+      "labels": {
+        "initial_owner": "noc",
+        "priority": "P2",
+        "next_check": "gather_evidence",
+        "insufficient_evidence": "yes"
+      },
+      "accepted_answers": {
+        "initial_owner": [
+          "noc"
+        ],
+        "priority": [
+          "P2"
+        ],
+        "next_check": [
+          "gather_evidence"
+        ],
+        "insufficient_evidence": [
+          "yes"
+        ]
+      },
+      "review_status": "LLM-reviewed candidate; no specialist review",
+      "review_models": [
+        "gpt-6-luna-2026-09-22",
+        "gpt-6.1-sol-2026-09-29"
+      ]
+    },
+    {
+      "id": "WF-8c543664cc-b-v2",
+      "incident_family_id": "contradictory_power_sources",
+      "pair_id": "WF-8c543664cc",
+      "split": "development_candidate",
+      "labels": {
+        "initial_owner": "power",
+        "priority": "P2",
+        "next_check": "inspect_power",
+        "insufficient_evidence": "no"
+      },
+      "accepted_answers": {
+        "initial_owner": [
+          "power"
+        ],
+        "priority": [
+          "P2"
+        ],
+        "next_check": [
+          "inspect_power"
+        ],
+        "insufficient_evidence": [
+          "no"
+        ]
+      },
+      "review_status": "LLM-reviewed candidate; no specialist review",
+      "review_models": [
+        "gpt-6-luna-2026-09-22",
+        "gpt-6.1-sol-2026-09-29"
+      ]
+    },
+    {
+      "id": "WF-b81deaf387-a-v2",
+      "incident_family_id": "core_certificate",
+      "pair_id": "WF-b81deaf387",
+      "split": "development_candidate",
+      "labels": {
+        "initial_owner": "core",
+        "priority": "P1",
+        "next_check": "inspect_core",
+        "insufficient_evidence": "no"
+      },
+      "accepted_answers": {
+        "initial_owner": [
+          "core"
+        ],
+        "priority": [
+          "P1"
+        ],
+        "next_check": [
+          "inspect_core"
+        ],
+        "insufficient_evidence": [
+          "no"
+        ]
+      },
+      "review_status": "LLM-reviewed candidate; no specialist review",
+      "review_models": [
+        "gpt-6-luna-2026-09-22",
+        "gpt-6.1-sol-2026-09-29"
+      ]
+    },
+    {
+      "id": "WF-b81deaf387-b-v2",
+      "incident_family_id": "core_certificate",
+      "pair_id": "WF-b81deaf387",
+      "split": "development_candidate",
+      "labels": {
+        "initial_owner": "noc",
+        "priority": "P1",
+        "next_check": "verify_change",
+        "insufficient_evidence": "yes"
+      },
+      "accepted_answers": {
+        "initial_owner": [
+          "noc"
+        ],
+        "priority": [
+          "P1"
+        ],
+        "next_check": [
+          "verify_change"
+        ],
+        "insufficient_evidence": [
+          "yes"
+        ]
+      },
+      "review_status": "LLM-reviewed candidate; no specialist review",
+      "review_models": [
+        "gpt-6-luna-2026-09-22",
+        "gpt-6.1-sol-2026-09-29"
+      ]
+    },
+    {
+      "id": "WF-025f5b51ee-a-v2",
+      "incident_family_id": "maintenance_scope_mismatch",
+      "pair_id": "WF-025f5b51ee",
+      "split": "development_candidate",
+      "labels": {
+        "initial_owner": "noc",
+        "priority": "P4",
+        "next_check": "monitor",
+        "insufficient_evidence": "no"
+      },
+      "accepted_answers": {
+        "initial_owner": [
+          "noc"
+        ],
+        "priority": [
+          "P4"
+        ],
+        "next_check": [
+          "monitor"
+        ],
+        "insufficient_evidence": [
+          "no"
+        ]
+      },
+      "review_status": "LLM-reviewed candidate; no specialist review",
+      "review_models": [
+        "gpt-6-luna-2026-09-22",
+        "gpt-6.1-sol-2026-09-29"
+      ]
+    },
+    {
+      "id": "WF-025f5b51ee-b-v2",
+      "incident_family_id": "maintenance_scope_mismatch",
+      "pair_id": "WF-025f5b51ee",
+      "split": "development_candidate",
+      "labels": {
+        "initial_owner": "noc",
+        "priority": "P2",
+        "next_check": "verify_change",
+        "insufficient_evidence": "yes"
+      },
+      "accepted_answers": {
+        "initial_owner": [
+          "noc"
+        ],
+        "priority": [
+          "P2"
+        ],
+        "next_check": [
+          "verify_change"
+        ],
+        "insufficient_evidence": [
+          "yes"
+        ]
+      },
+      "review_status": "LLM-reviewed candidate; no specialist review",
+      "review_models": [
+        "gpt-6-luna-2026-09-22",
+        "gpt-6.1-sol-2026-09-29"
+      ]
+    },
+    {
+      "id": "WF-218b817fda-a-v2",
+      "incident_family_id": "unrelated_change_radio",
+      "pair_id": "WF-218b817fda",
+      "split": "development_candidate",
+      "labels": {
+        "initial_owner": "ran",
+        "priority": "P3",
+        "next_check": "inspect_radio",
+        "insufficient_evidence": "no"
+      },
+      "accepted_answers": {
+        "initial_owner": [
+          "ran"
+        ],
+        "priority": [
+          "P3"
+        ],
+        "next_check": [
+          "inspect_radio"
+        ],
+        "insufficient_evidence": [
+          "no"
+        ]
+      },
+      "review_status": "LLM-reviewed candidate; no specialist review",
+      "review_models": [
+        "gpt-6-luna-2026-09-22",
+        "gpt-6.1-sol-2026-09-29"
+      ]
+    },
+    {
+      "id": "WF-218b817fda-b-v2",
+      "incident_family_id": "unrelated_change_radio",
+      "pair_id": "WF-218b817fda",
+      "split": "development_candidate",
+      "labels": {
+        "initial_owner": "ran",
+        "priority": "P3",
+        "next_check": "inspect_radio",
+        "insufficient_evidence": "no"
+      },
+      "accepted_answers": {
+        "initial_owner": [
+          "ran"
+        ],
+        "priority": [
+          "P3"
+        ],
+        "next_check": [
+          "inspect_radio"
+        ],
+        "insufficient_evidence": [
+          "no"
+        ]
+      },
+      "review_status": "LLM-reviewed candidate; no specialist review",
+      "review_models": [
+        "gpt-6-luna-2026-09-22",
+        "gpt-6.1-sol-2026-09-29"
+      ]
+    },
+    {
+      "id": "WF-a33ebc4c18-a-v2",
+      "incident_family_id": "dependency_membership",
+      "pair_id": "WF-a33ebc4c18",
+      "split": "development_candidate",
+      "labels": {
+        "initial_owner": "transport",
+        "priority": "P2",
+        "next_check": "inspect_transport",
+        "insufficient_evidence": "no"
+      },
+      "accepted_answers": {
+        "initial_owner": [
+          "transport"
+        ],
+        "priority": [
+          "P2"
+        ],
+        "next_check": [
+          "inspect_transport"
+        ],
+        "insufficient_evidence": [
+          "no"
+        ]
+      },
+      "review_status": "LLM-reviewed candidate; no specialist review",
+      "review_models": [
+        "gpt-6-luna-2026-09-22",
+        "gpt-6.1-sol-2026-09-29"
+      ]
+    },
+    {
+      "id": "WF-a33ebc4c18-b-v2",
+      "incident_family_id": "dependency_membership",
+      "pair_id": "WF-a33ebc4c18",
+      "split": "development_candidate",
+      "labels": {
+        "initial_owner": "noc",
+        "priority": "P2",
+        "next_check": "gather_evidence",
+        "insufficient_evidence": "yes"
+      },
+      "accepted_answers": {
+        "initial_owner": [
+          "noc"
+        ],
+        "priority": [
+          "P2"
+        ],
+        "next_check": [
+          "gather_evidence"
+        ],
+        "insufficient_evidence": [
+          "yes"
+        ]
+      },
+      "review_status": "LLM-reviewed candidate; no specialist review",
+      "review_models": [
+        "gpt-6-luna-2026-09-22",
+        "gpt-6.1-sol-2026-09-29"
+      ]
+    }
+  ],
+  "runs": {
+    "original_frozen": {
+      "predictions": [
+        {
+          "id": "WF-887c2bb778-a-v2",
+          "latency_ms": 398.7534169573337,
+          "predictions": {
+            "initial_owner": "power",
+            "insufficient_evidence": "no",
+            "next_check": "inspect_power",
+            "priority": "P3"
+          },
+          "status": "ok"
+        },
+        {
+          "id": "WF-887c2bb778-b-v2",
+          "latency_ms": 9.94650018401444,
+          "predictions": {
+            "initial_owner": "power",
+            "insufficient_evidence": "no",
+            "next_check": "inspect_power",
+            "priority": "P3"
+          },
+          "status": "ok"
+        },
+        {
+          "id": "WF-e4d3ea3699-a-v2",
+          "latency_ms": 7.938000140711665,
+          "predictions": {
+            "initial_owner": "transport",
+            "insufficient_evidence": "no",
+            "next_check": "inspect_transport",
+            "priority": "P3"
+          },
+          "status": "ok"
+        },
+        {
+          "id": "WF-e4d3ea3699-b-v2",
+          "latency_ms": 6.324791116639972,
+          "predictions": {
+            "initial_owner": "transport",
+            "insufficient_evidence": "no",
+            "next_check": "inspect_transport",
+            "priority": "P3"
+          },
+          "status": "ok"
+        },
+        {
+          "id": "WF-25bee86485-a-v2",
+          "latency_ms": 4.026666982099414,
+          "predictions": {
+            "initial_owner": "core",
+            "insufficient_evidence": "no",
+            "next_check": "inspect_core",
+            "priority": "P2"
+          },
+          "status": "ok"
+        },
+        {
+          "id": "WF-25bee86485-b-v2",
+          "latency_ms": 5.128083052113652,
+          "predictions": {
+            "initial_owner": "noc",
+            "insufficient_evidence": "no",
+            "next_check": "monitor",
+            "priority": "P4"
+          },
+          "status": "ok"
+        },
+        {
+          "id": "WF-8c543664cc-a-v2",
+          "latency_ms": 4.018750041723251,
+          "predictions": {
+            "initial_owner": "power",
+            "insufficient_evidence": "no",
+            "next_check": "inspect_power",
+            "priority": "P2"
+          },
+          "status": "ok"
+        },
+        {
+          "id": "WF-8c543664cc-b-v2",
+          "latency_ms": 3.971708007156849,
+          "predictions": {
+            "initial_owner": "power",
+            "insufficient_evidence": "no",
+            "next_check": "inspect_power",
+            "priority": "P2"
+          },
+          "status": "ok"
+        },
+        {
+          "id": "WF-b81deaf387-a-v2",
+          "latency_ms": 3.770667128264904,
+          "predictions": {
+            "initial_owner": "core",
+            "insufficient_evidence": "no",
+            "next_check": "inspect_core",
+            "priority": "P1"
+          },
+          "status": "ok"
+        },
+        {
+          "id": "WF-b81deaf387-b-v2",
+          "latency_ms": 4.272792022675276,
+          "predictions": {
+            "initial_owner": "core",
+            "insufficient_evidence": "no",
+            "next_check": "inspect_core",
+            "priority": "P1"
+          },
+          "status": "ok"
+        },
+        {
+          "id": "WF-025f5b51ee-a-v2",
+          "latency_ms": 3.600750118494034,
+          "predictions": {
+            "initial_owner": "noc",
+            "insufficient_evidence": "no",
+            "next_check": "monitor",
+            "priority": "P4"
+          },
+          "status": "ok"
+        },
+        {
+          "id": "WF-025f5b51ee-b-v2",
+          "latency_ms": 4.440207965672016,
+          "predictions": {
+            "initial_owner": "noc",
+            "insufficient_evidence": "yes",
+            "next_check": "verify_change",
+            "priority": "P2"
+          },
+          "status": "ok"
+        },
+        {
+          "id": "WF-218b817fda-a-v2",
+          "latency_ms": 3.7919168826192617,
+          "predictions": {
+            "initial_owner": "noc",
+            "insufficient_evidence": "yes",
+            "next_check": "verify_change",
+            "priority": "P3"
+          },
+          "status": "ok"
+        },
+        {
+          "id": "WF-218b817fda-b-v2",
+          "latency_ms": 3.741250140592456,
+          "predictions": {
+            "initial_owner": "noc",
+            "insufficient_evidence": "yes",
+            "next_check": "verify_change",
+            "priority": "P3"
+          },
+          "status": "ok"
+        },
+        {
+          "id": "WF-a33ebc4c18-a-v2",
+          "latency_ms": 3.688083030283451,
+          "predictions": {
+            "initial_owner": "noc",
+            "insufficient_evidence": "yes",
+            "next_check": "gather_evidence",
+            "priority": "P2"
+          },
+          "status": "ok"
+        },
+        {
+          "id": "WF-a33ebc4c18-b-v2",
+          "latency_ms": 3.5896250046789646,
+          "predictions": {
+            "initial_owner": "noc",
+            "insufficient_evidence": "yes",
+            "next_check": "gather_evidence",
+            "priority": "P2"
+          },
+          "status": "ok"
+        }
+      ],
+      "predictions_canonical_sha256": "d45e8dcf980aecda2a9f6771eaf9bd77d1e6b96e0e9981537daa4f4855540548",
+      "metadata": {
+        "provider": "encoder",
+        "model_id": "sentence-transformers/all-MiniLM-L6-v2",
+        "model_revision": "1110a243fdf4706b3f48f1d95db1a4f5529b4d41",
+        "head_sha256": "d79e70fbce1ad33e83a9a3d6c7741e24438c2a706f288a38ea5e5161d191d585",
+        "head_training": {
+          "model_id": "sentence-transformers/all-MiniLM-L6-v2",
+          "model_revision": "1110a243fdf4706b3f48f1d95db1a4f5529b4d41",
+          "architecture": "frozen MiniLM encoder plus seven-way logistic head; deterministic priority",
+          "encoder_parameters": 22713216,
+          "classes": [
+            [
+              "ran",
+              "inspect_radio",
+              "no"
+            ],
+            [
+              "transport",
+              "inspect_transport",
+              "no"
+            ],
+            [
+              "power",
+              "inspect_power",
+              "no"
+            ],
+            [
+              "core",
+              "inspect_core",
+              "no"
+            ],
+            [
+              "noc",
+              "gather_evidence",
+              "yes"
+            ],
+            [
+              "noc",
+              "verify_change",
+              "yes"
+            ],
+            [
+              "noc",
+              "monitor",
+              "no"
+            ]
+          ],
+          "fields": [
+            "initial_owner",
+            "next_check",
+            "insufficient_evidence"
+          ],
+          "max_tokens": 256,
+          "feature_scale": 0.5,
+          "feature_patterns": [
+            "change|maintenance|configuration|planned work|scope|window",
+            "recover|clear|baseline|no active fault",
+            "missing|stale|unavailable|unknown|not arrived|cannot|disagree|conflict|not independently"
+          ],
+          "classifier_C": 0.1,
+          "class_weight": "balanced",
+          "train_rows": 600,
+          "train_families": 30,
+          "validation_rows": 220,
+          "validation_families": 11,
+          "validation_correct": 220,
+          "train_input_sha256": "52d3a3d6212cdfaf1548f64012ee6cecf7587401d46c7ec6d07c7bc557c4b945",
+          "train_label_sha256": "9882ab495ba1f23e75a6be65340958053e4a9ef0d9c7eafeb0a0683662c40574",
+          "validation_input_sha256": "389469f83a877db5169c1c1e3141164cf780d8135efb010733194b90790404e0",
+          "validation_label_sha256": "eaf371c921dbeb946b3990c4060c3442e1d5695c6edb0d98d8c81668d73a5938",
+          "versions": {
+            "torch": "2.8.0",
+            "transformers": "5.17.0",
+            "sklearn": "1.9.1",
+            "numpy": "2.5.3"
+          }
+        },
+        "device": "mps",
+        "records": 16,
+        "policy_guards": "none",
+        "guarded_records": 0,
+        "attempted_records": 16,
+        "cancelled": false,
+        "input_sha256": "30e34939ef57cfde37a96d5a578f9747ea5f27d17dc66984fc7bd805705d50b4",
+        "execution": "serial; model loaded once; per-incident latency excludes model loading",
+        "no_autoregressive_calls": true
+      },
+      "summary": {
+        "records": 16,
+        "all_four_correct": 8,
+        "field_correct": {
+          "initial_owner": 8,
+          "priority": 16,
+          "next_check": 8,
+          "insufficient_evidence": 8
+        },
+        "failed_records": 0,
+        "missing_records": 0,
+        "pairs": 8,
+        "complete_pairs": 1,
+        "insufficient_evidence": {
+          "true_positive": 2,
+          "false_positive": 3,
+          "false_negative": 5,
+          "precision": 0.4,
+          "recall": 0.2857142857142857
+        },
+        "false_domain_assignments": 5,
+        "false_monitor_dispositions": 0,
+        "p1_records": 2,
+        "p1_missed": 0,
+        "latency_ms": {
+          "p50": 4.018750041723251,
+          "p95": 398.7534169573337,
+          "records": 16
+        }
+      }
+    },
+    "teacher_head": {
+      "predictions": [
+        {
+          "disposition_probabilities": [
+            0.17581184208393097,
+            0.12904199957847595,
+            0.2976464629173279,
+            0.10213194787502289,
+            0.20269295573234558,
+            0.036660436540842056,
+            0.056014370173215866
+          ],
+          "id": "WF-887c2bb778-a-v2",
+          "latency_ms": 159.63270794600248,
+          "predictions": {
+            "initial_owner": "power",
+            "insufficient_evidence": "no",
+            "next_check": "inspect_power",
+            "priority": "P3"
+          },
+          "status": "ok"
+        },
+        {
+          "disposition_probabilities": [
+            0.1928645372390747,
+            0.13263165950775146,
+            0.2675866484642029,
+            0.09652364253997803,
+            0.2128964513540268,
+            0.03924357891082764,
+            0.05825350806117058
+          ],
+          "id": "WF-887c2bb778-b-v2",
+          "latency_ms": 12.151584029197693,
+          "predictions": {
+            "initial_owner": "power",
+            "insufficient_evidence": "no",
+            "next_check": "inspect_power",
+            "priority": "P3"
+          },
+          "status": "ok"
+        },
+        {
+          "disposition_probabilities": [
+            0.2120593786239624,
+            0.21637165546417236,
+            0.1319122016429901,
+            0.16816866397857666,
+            0.15304656326770782,
+            0.04391515254974365,
+            0.07452642172574997
+          ],
+          "id": "WF-e4d3ea3699-a-v2",
+          "latency_ms": 10.147958062589169,
+          "predictions": {
+            "initial_owner": "transport",
+            "insufficient_evidence": "no",
+            "next_check": "inspect_transport",
+            "priority": "P3"
+          },
+          "status": "ok"
+        },
+        {
+          "disposition_probabilities": [
+            0.2289135605096817,
+            0.21463900804519653,
+            0.132057785987854,
+            0.1662580519914627,
+            0.15078629553318024,
+            0.04190996289253235,
+            0.06543534994125366
+          ],
+          "id": "WF-e4d3ea3699-b-v2",
+          "latency_ms": 75.96770883537829,
+          "predictions": {
+            "initial_owner": "ran",
+            "insufficient_evidence": "no",
+            "next_check": "inspect_radio",
+            "priority": "P3"
+          },
+          "status": "ok"
+        },
+        {
+          "disposition_probabilities": [
+            0.06940729171037674,
+            0.07032157480716705,
+            0.07708123326301575,
+            0.14235720038414001,
+            0.31388717889785767,
+            0.1578788012266159,
+            0.1690666377544403
+          ],
+          "id": "WF-25bee86485-a-v2",
+          "latency_ms": 64.97691594995558,
+          "predictions": {
+            "initial_owner": "noc",
+            "insufficient_evidence": "yes",
+            "next_check": "gather_evidence",
+            "priority": "P2"
+          },
+          "status": "ok"
+        },
+        {
+          "disposition_probabilities": [
+            0.05205607786774635,
+            0.059824809432029724,
+            0.06994782388210297,
+            0.057646822184324265,
+            0.11754463613033295,
+            0.03190172463655472,
+            0.611078143119812
+          ],
+          "id": "WF-25bee86485-b-v2",
+          "latency_ms": 6.704957922920585,
+          "predictions": {
+            "initial_owner": "noc",
+            "insufficient_evidence": "no",
+            "next_check": "monitor",
+            "priority": "P4"
+          },
+          "status": "ok"
+        },
+        {
+          "disposition_probabilities": [
+            0.1147158220410347,
+            0.07983702421188354,
+            0.1911650002002716,
+            0.14248019456863403,
+            0.2483157366514206,
+            0.1560361534357071,
+            0.06745001673698425
+          ],
+          "id": "WF-8c543664cc-a-v2",
+          "latency_ms": 5.3697500843554735,
+          "predictions": {
+            "initial_owner": "noc",
+            "insufficient_evidence": "yes",
+            "next_check": "gather_evidence",
+            "priority": "P2"
+          },
+          "status": "ok"
+        },
+        {
+          "disposition_probabilities": [
+            0.1277296096086502,
+            0.09360742568969727,
+            0.27820807695388794,
+            0.07518680393695831,
+            0.17922991514205933,
+            0.16448141634464264,
+            0.08155674487352371
+          ],
+          "id": "WF-8c543664cc-b-v2",
+          "latency_ms": 5.661625182256103,
+          "predictions": {
+            "initial_owner": "power",
+            "insufficient_evidence": "no",
+            "next_check": "inspect_power",
+            "priority": "P2"
+          },
+          "status": "ok"
+        },
+        {
+          "disposition_probabilities": [
+            0.09235385805368423,
+            0.12765814363956451,
+            0.09396151453256607,
+            0.17819514870643616,
+            0.16650815308094025,
+            0.21556438505649567,
+            0.12575876712799072
+          ],
+          "id": "WF-b81deaf387-a-v2",
+          "latency_ms": 7.507208967581391,
+          "predictions": {
+            "initial_owner": "noc",
+            "insufficient_evidence": "yes",
+            "next_check": "verify_change",
+            "priority": "P1"
+          },
+          "status": "ok"
+        },
+        {
+          "disposition_probabilities": [
+            0.040990278124809265,
+            0.048766326159238815,
+            0.04368746280670166,
+            0.13648879528045654,
+            0.12624475359916687,
+            0.4598601460456848,
+            0.14396218955516815
+          ],
+          "id": "WF-b81deaf387-b-v2",
+          "latency_ms": 40.56337499059737,
+          "predictions": {
+            "initial_owner": "noc",
+            "insufficient_evidence": "yes",
+            "next_check": "verify_change",
+            "priority": "P1"
+          },
+          "status": "ok"
+        },
+        {
+          "disposition_probabilities": [
+            0.02593722939491272,
+            0.03264657407999039,
+            0.03650667518377304,
+            0.037273891270160675,
+            0.040148697793483734,
+            0.17140857875347137,
+            0.6560783386230469
+          ],
+          "id": "WF-025f5b51ee-a-v2",
+          "latency_ms": 6.777332862839103,
+          "predictions": {
+            "initial_owner": "noc",
+            "insufficient_evidence": "no",
+            "next_check": "monitor",
+            "priority": "P4"
+          },
+          "status": "ok"
+        },
+        {
+          "disposition_probabilities": [
+            0.029836853966116905,
+            0.03562913462519646,
+            0.042265456169843674,
+            0.03866026550531387,
+            0.06093750149011612,
+            0.6472689509391785,
+            0.14540177583694458
+          ],
+          "id": "WF-025f5b51ee-b-v2",
+          "latency_ms": 7.206166861578822,
+          "predictions": {
+            "initial_owner": "noc",
+            "insufficient_evidence": "yes",
+            "next_check": "verify_change",
+            "priority": "P2"
+          },
+          "status": "ok"
+        },
+        {
+          "disposition_probabilities": [
+            0.22914807498455048,
+            0.12412599474191666,
+            0.14396043121814728,
+            0.09999272972345352,
+            0.17352011799812317,
+            0.12261392176151276,
+            0.10663869976997375
+          ],
+          "id": "WF-218b817fda-a-v2",
+          "latency_ms": 5.785458954051137,
+          "predictions": {
+            "initial_owner": "ran",
+            "insufficient_evidence": "no",
+            "next_check": "inspect_radio",
+            "priority": "P3"
+          },
+          "status": "ok"
+        },
+        {
+          "disposition_probabilities": [
+            0.19062238931655884,
+            0.1332499384880066,
+            0.14456884562969208,
+            0.1144498810172081,
+            0.17434075474739075,
+            0.1315160095691681,
+            0.11125227808952332
+          ],
+          "id": "WF-218b817fda-b-v2",
+          "latency_ms": 6.96329097263515,
+          "predictions": {
+            "initial_owner": "ran",
+            "insufficient_evidence": "no",
+            "next_check": "inspect_radio",
+            "priority": "P3"
+          },
+          "status": "ok"
+        },
+        {
+          "disposition_probabilities": [
+            0.09272587299346924,
+            0.3105534315109253,
+            0.07179509848356247,
+            0.09045276790857315,
+            0.23077715933322906,
+            0.144587904214859,
+            0.05910773202776909
+          ],
+          "id": "WF-a33ebc4c18-a-v2",
+          "latency_ms": 6.0540419071912766,
+          "predictions": {
+            "initial_owner": "transport",
+            "insufficient_evidence": "no",
+            "next_check": "inspect_transport",
+            "priority": "P2"
+          },
+          "status": "ok"
+        },
+        {
+          "disposition_probabilities": [
+            0.14927053451538086,
+            0.14886979758739471,
+            0.07842521369457245,
+            0.09044267237186432,
+            0.3270512819290161,
+            0.14647579193115234,
+            0.059464745223522186
+          ],
+          "id": "WF-a33ebc4c18-b-v2",
+          "latency_ms": 6.340624997392297,
+          "predictions": {
+            "initial_owner": "noc",
+            "insufficient_evidence": "yes",
+            "next_check": "gather_evidence",
+            "priority": "P2"
+          },
+          "status": "ok"
+        }
+      ],
+      "predictions_canonical_sha256": "e5596f7c02a1de886abac3aab15077574f14eb2c954208e1d50873d819b8575a",
+      "metadata": {
+        "provider": "teacher_encoder",
+        "request_protocol": "northstar-teacher-encoder-v1",
+        "input_sha256": "30e34939ef57cfde37a96d5a578f9747ea5f27d17dc66984fc7bd805705d50b4",
+        "head_sha256": "309e45ecc58fb4eed7c9b7c09f8c3fd926f6326e6c5b7d8589faf7c16761b93c",
+        "head_training": {
+          "protocol": "northstar-teacher-encoder-v1",
+          "architecture": "frozen pinned MiniLM plus learned seven-class linear head and structured features; policy priority",
+          "model_id": "sentence-transformers/all-MiniLM-L6-v2",
+          "model_revision": "1110a243fdf4706b3f48f1d95db1a4f5529b4d41",
+          "classes": [
+            [
+              "ran",
+              "inspect_radio",
+              "no"
+            ],
+            [
+              "transport",
+              "inspect_transport",
+              "no"
+            ],
+            [
+              "power",
+              "inspect_power",
+              "no"
+            ],
+            [
+              "core",
+              "inspect_core",
+              "no"
+            ],
+            [
+              "noc",
+              "gather_evidence",
+              "yes"
+            ],
+            [
+              "noc",
+              "verify_change",
+              "yes"
+            ],
+            [
+              "noc",
+              "monitor",
+              "no"
+            ]
+          ],
+          "max_tokens": 512,
+          "feature_scale": 0.5,
+          "renderer_source_sha256": "149d8d4ddbc0af017bec180797ad2d7e2ea2c9ab4235e3f64feeff6d32bc3d8b",
+          "training_records": 58,
+          "training_families": [
+            "change_core_drain_scope",
+            "change_radio_license_scope",
+            "core_api_schema",
+            "core_endpoint_pool",
+            "core_lease_lock",
+            "core_rate_limit_scope",
+            "core_replica_quorum",
+            "core_replica_read_skew",
+            "power_busbar_joint",
+            "power_dc_polarity",
+            "power_earth_fault",
+            "power_inverter_bypass",
+            "power_remote_feed",
+            "power_voltage_sensor_disagreement",
+            "radio_amplifier_gain",
+            "radio_baseband_memory",
+            "radio_duplex_filter",
+            "radio_fronthaul_clock",
+            "radio_remote_cooling",
+            "radio_uplink_decoder",
+            "recovery_data_session",
+            "recovery_sms_transaction",
+            "recovery_voice_setup",
+            "transport_dependency_membership",
+            "transport_label_disposition",
+            "transport_microburst_buffer",
+            "transport_pseudowire_sequence",
+            "transport_spanning_loop",
+            "transport_tunnel_binding"
+          ],
+          "development_records": 16,
+          "development_families": [
+            "alarm_clear_service_probe",
+            "contradictory_power_sources",
+            "core_certificate",
+            "dependency_membership",
+            "maintenance_scope_mismatch",
+            "mixed_dc_voltage",
+            "queue_drops",
+            "unrelated_change_radio"
+          ],
+          "train_input_sha256": "2cf5554791ccad8485acb62d48bcbb7f2652044ac5bcf01fd3d37f03ebc48396",
+          "train_label_sha256": "f16b7c666ede5f8ea7555e365ca08ee2ad0d9eb56802c6a3d26a2075d01fc5d5",
+          "dev_input_sha256": "30e34939ef57cfde37a96d5a578f9747ea5f27d17dc66984fc7bd805705d50b4",
+          "dev_label_sha256": "63cd06e0c42e3cf8e97ea42068e974e75b0618dc88a07e9b4f8ecefb7f5d8f7a",
+          "selection": "Best complete development disposition accuracy; first trial wins ties; development only",
+          "selected_l2": 0.01,
+          "trials": [
+            {
+              "l2": 0.01,
+              "training_correct": 40,
+              "development_correct": 13
+            },
+            {
+              "l2": 0.1,
+              "training_correct": 32,
+              "development_correct": 6
+            },
+            {
+              "l2": 1.0,
+              "training_correct": 29,
+              "development_correct": 4
+            },
+            {
+              "l2": 10.0,
+              "training_correct": 29,
+              "development_correct": 4
+            }
+          ],
+          "head_sha256": "309e45ecc58fb4eed7c9b7c09f8c3fd926f6326e6c5b7d8589faf7c16761b93c",
+          "encoder_parameters": 22713216,
+          "device": "mps",
+          "versions": {
+            "torch": "2.14.0",
+            "numpy": "2.5.3",
+            "transformers": "5.17.0"
+          }
+        },
+        "device": "mps",
+        "model_load_ms": 1930.1679169293493,
+        "records": 16,
+        "failed_records": 0,
+        "execution": "serial; no warmup; per-record time excludes model load; local cached weights only",
+        "no_autoregressive_calls": true
+      },
+      "summary": {
+        "records": 16,
+        "all_four_correct": 13,
+        "field_correct": {
+          "initial_owner": 13,
+          "priority": 16,
+          "next_check": 13,
+          "insufficient_evidence": 13
+        },
+        "failed_records": 0,
+        "missing_records": 0,
+        "pairs": 8,
+        "complete_pairs": 5,
+        "insufficient_evidence": {
+          "true_positive": 5,
+          "false_positive": 1,
+          "false_negative": 2,
+          "precision": 0.8333333333333334,
+          "recall": 0.7142857142857143
+        },
+        "false_domain_assignments": 2,
+        "false_monitor_dispositions": 0,
+        "p1_records": 2,
+        "p1_missed": 0,
+        "latency_ms": {
+          "p50": 6.96329097263515,
+          "p95": 159.63270794600248,
+          "records": 16
+        }
+      }
+    },
+    "teacher_head_serial_repeat": {
+      "predictions": [
+        {
+          "disposition_probabilities": [
+            0.17581184208393097,
+            0.12904199957847595,
+            0.2976464629173279,
+            0.10213194787502289,
+            0.20269295573234558,
+            0.036660436540842056,
+            0.056014370173215866
+          ],
+          "id": "WF-887c2bb778-a-v2",
+          "latency_ms": 67.8452078718692,
+          "predictions": {
+            "initial_owner": "power",
+            "insufficient_evidence": "no",
+            "next_check": "inspect_power",
+            "priority": "P3"
+          },
+          "status": "ok"
+        },
+        {
+          "disposition_probabilities": [
+            0.1928645372390747,
+            0.13263165950775146,
+            0.2675866484642029,
+            0.09652364253997803,
+            0.2128964513540268,
+            0.03924357891082764,
+            0.05825350806117058
+          ],
+          "id": "WF-887c2bb778-b-v2",
+          "latency_ms": 5.9045001398772,
+          "predictions": {
+            "initial_owner": "power",
+            "insufficient_evidence": "no",
+            "next_check": "inspect_power",
+            "priority": "P3"
+          },
+          "status": "ok"
+        },
+        {
+          "disposition_probabilities": [
+            0.2120593786239624,
+            0.21637165546417236,
+            0.1319122016429901,
+            0.16816866397857666,
+            0.15304656326770782,
+            0.04391515254974365,
+            0.07452642172574997
+          ],
+          "id": "WF-e4d3ea3699-a-v2",
+          "latency_ms": 6.162666017189622,
+          "predictions": {
+            "initial_owner": "transport",
+            "insufficient_evidence": "no",
+            "next_check": "inspect_transport",
+            "priority": "P3"
+          },
+          "status": "ok"
+        },
+        {
+          "disposition_probabilities": [
+            0.2289135605096817,
+            0.21463900804519653,
+            0.132057785987854,
+            0.1662580519914627,
+            0.15078629553318024,
+            0.04190996289253235,
+            0.06543534994125366
+          ],
+          "id": "WF-e4d3ea3699-b-v2",
+          "latency_ms": 5.960291950032115,
+          "predictions": {
+            "initial_owner": "ran",
+            "insufficient_evidence": "no",
+            "next_check": "inspect_radio",
+            "priority": "P3"
+          },
+          "status": "ok"
+        },
+        {
+          "disposition_probabilities": [
+            0.06940729171037674,
+            0.07032157480716705,
+            0.07708123326301575,
+            0.14235720038414001,
+            0.31388717889785767,
+            0.1578788012266159,
+            0.1690666377544403
+          ],
+          "id": "WF-25bee86485-a-v2",
+          "latency_ms": 5.2382079884409904,
+          "predictions": {
+            "initial_owner": "noc",
+            "insufficient_evidence": "yes",
+            "next_check": "gather_evidence",
+            "priority": "P2"
+          },
+          "status": "ok"
+        },
+        {
+          "disposition_probabilities": [
+            0.05205607786774635,
+            0.059824809432029724,
+            0.06994782388210297,
+            0.057646822184324265,
+            0.11754463613033295,
+            0.03190172463655472,
+            0.611078143119812
+          ],
+          "id": "WF-25bee86485-b-v2",
+          "latency_ms": 5.53770805709064,
+          "predictions": {
+            "initial_owner": "noc",
+            "insufficient_evidence": "no",
+            "next_check": "monitor",
+            "priority": "P4"
+          },
+          "status": "ok"
+        },
+        {
+          "disposition_probabilities": [
+            0.1147158220410347,
+            0.07983702421188354,
+            0.1911650002002716,
+            0.14248019456863403,
+            0.2483157366514206,
+            0.1560361534357071,
+            0.06745001673698425
+          ],
+          "id": "WF-8c543664cc-a-v2",
+          "latency_ms": 4.381583072245121,
+          "predictions": {
+            "initial_owner": "noc",
+            "insufficient_evidence": "yes",
+            "next_check": "gather_evidence",
+            "priority": "P2"
+          },
+          "status": "ok"
+        },
+        {
+          "disposition_probabilities": [
+            0.1277296096086502,
+            0.09360742568969727,
+            0.27820807695388794,
+            0.07518680393695831,
+            0.17922991514205933,
+            0.16448141634464264,
+            0.08155674487352371
+          ],
+          "id": "WF-8c543664cc-b-v2",
+          "latency_ms": 4.0809581987559795,
+          "predictions": {
+            "initial_owner": "power",
+            "insufficient_evidence": "no",
+            "next_check": "inspect_power",
+            "priority": "P2"
+          },
+          "status": "ok"
+        },
+        {
+          "disposition_probabilities": [
+            0.09235385805368423,
+            0.12765814363956451,
+            0.09396151453256607,
+            0.17819514870643616,
+            0.16650815308094025,
+            0.21556438505649567,
+            0.12575876712799072
+          ],
+          "id": "WF-b81deaf387-a-v2",
+          "latency_ms": 6.079333135858178,
+          "predictions": {
+            "initial_owner": "noc",
+            "insufficient_evidence": "yes",
+            "next_check": "verify_change",
+            "priority": "P1"
+          },
+          "status": "ok"
+        },
+        {
+          "disposition_probabilities": [
+            0.040990278124809265,
+            0.048766326159238815,
+            0.04368746280670166,
+            0.13648879528045654,
+            0.12624475359916687,
+            0.4598601460456848,
+            0.14396218955516815
+          ],
+          "id": "WF-b81deaf387-b-v2",
+          "latency_ms": 7.9026250168681145,
+          "predictions": {
+            "initial_owner": "noc",
+            "insufficient_evidence": "yes",
+            "next_check": "verify_change",
+            "priority": "P1"
+          },
+          "status": "ok"
+        },
+        {
+          "disposition_probabilities": [
+            0.02593722939491272,
+            0.03264657407999039,
+            0.03650667518377304,
+            0.037273891270160675,
+            0.040148697793483734,
+            0.17140857875347137,
+            0.6560783386230469
+          ],
+          "id": "WF-025f5b51ee-a-v2",
+          "latency_ms": 4.738624906167388,
+          "predictions": {
+            "initial_owner": "noc",
+            "insufficient_evidence": "no",
+            "next_check": "monitor",
+            "priority": "P4"
+          },
+          "status": "ok"
+        },
+        {
+          "disposition_probabilities": [
+            0.029836853966116905,
+            0.03562913462519646,
+            0.042265456169843674,
+            0.03866026550531387,
+            0.06093750149011612,
+            0.6472689509391785,
+            0.14540177583694458
+          ],
+          "id": "WF-025f5b51ee-b-v2",
+          "latency_ms": 5.450790980830789,
+          "predictions": {
+            "initial_owner": "noc",
+            "insufficient_evidence": "yes",
+            "next_check": "verify_change",
+            "priority": "P2"
+          },
+          "status": "ok"
+        },
+        {
+          "disposition_probabilities": [
+            0.22914807498455048,
+            0.12412599474191666,
+            0.14396043121814728,
+            0.09999272972345352,
+            0.17352011799812317,
+            0.12261392176151276,
+            0.10663869976997375
+          ],
+          "id": "WF-218b817fda-a-v2",
+          "latency_ms": 4.345624940469861,
+          "predictions": {
+            "initial_owner": "ran",
+            "insufficient_evidence": "no",
+            "next_check": "inspect_radio",
+            "priority": "P3"
+          },
+          "status": "ok"
+        },
+        {
+          "disposition_probabilities": [
+            0.19062238931655884,
+            0.1332499384880066,
+            0.14456884562969208,
+            0.1144498810172081,
+            0.17434075474739075,
+            0.1315160095691681,
+            0.11125227808952332
+          ],
+          "id": "WF-218b817fda-b-v2",
+          "latency_ms": 4.575083032250404,
+          "predictions": {
+            "initial_owner": "ran",
+            "insufficient_evidence": "no",
+            "next_check": "inspect_radio",
+            "priority": "P3"
+          },
+          "status": "ok"
+        },
+        {
+          "disposition_probabilities": [
+            0.09272587299346924,
+            0.3105534315109253,
+            0.07179509848356247,
+            0.09045276790857315,
+            0.23077715933322906,
+            0.144587904214859,
+            0.05910773202776909
+          ],
+          "id": "WF-a33ebc4c18-a-v2",
+          "latency_ms": 4.58954181522131,
+          "predictions": {
+            "initial_owner": "transport",
+            "insufficient_evidence": "no",
+            "next_check": "inspect_transport",
+            "priority": "P2"
+          },
+          "status": "ok"
+        },
+        {
+          "disposition_probabilities": [
+            0.14927053451538086,
+            0.14886979758739471,
+            0.07842521369457245,
+            0.09044267237186432,
+            0.3270512819290161,
+            0.14647579193115234,
+            0.059464745223522186
+          ],
+          "id": "WF-a33ebc4c18-b-v2",
+          "latency_ms": 4.568958887830377,
+          "predictions": {
+            "initial_owner": "noc",
+            "insufficient_evidence": "yes",
+            "next_check": "gather_evidence",
+            "priority": "P2"
+          },
+          "status": "ok"
+        }
+      ],
+      "predictions_canonical_sha256": "43a54cb7d903d3390d6e096c42d30a437e83df726cbc2a59104f3914b0d704f2",
+      "metadata": {
+        "provider": "teacher_encoder",
+        "request_protocol": "northstar-teacher-encoder-v1",
+        "input_sha256": "30e34939ef57cfde37a96d5a578f9747ea5f27d17dc66984fc7bd805705d50b4",
+        "head_sha256": "309e45ecc58fb4eed7c9b7c09f8c3fd926f6326e6c5b7d8589faf7c16761b93c",
+        "head_training": {
+          "protocol": "northstar-teacher-encoder-v1",
+          "architecture": "frozen pinned MiniLM plus learned seven-class linear head and structured features; policy priority",
+          "model_id": "sentence-transformers/all-MiniLM-L6-v2",
+          "model_revision": "1110a243fdf4706b3f48f1d95db1a4f5529b4d41",
+          "classes": [
+            [
+              "ran",
+              "inspect_radio",
+              "no"
+            ],
+            [
+              "transport",
+              "inspect_transport",
+              "no"
+            ],
+            [
+              "power",
+              "inspect_power",
+              "no"
+            ],
+            [
+              "core",
+              "inspect_core",
+              "no"
+            ],
+            [
+              "noc",
+              "gather_evidence",
+              "yes"
+            ],
+            [
+              "noc",
+              "verify_change",
+              "yes"
+            ],
+            [
+              "noc",
+              "monitor",
+              "no"
+            ]
+          ],
+          "max_tokens": 512,
+          "feature_scale": 0.5,
+          "renderer_source_sha256": "149d8d4ddbc0af017bec180797ad2d7e2ea2c9ab4235e3f64feeff6d32bc3d8b",
+          "training_records": 58,
+          "training_families": [
+            "change_core_drain_scope",
+            "change_radio_license_scope",
+            "core_api_schema",
+            "core_endpoint_pool",
+            "core_lease_lock",
+            "core_rate_limit_scope",
+            "core_replica_quorum",
+            "core_replica_read_skew",
+            "power_busbar_joint",
+            "power_dc_polarity",
+            "power_earth_fault",
+            "power_inverter_bypass",
+            "power_remote_feed",
+            "power_voltage_sensor_disagreement",
+            "radio_amplifier_gain",
+            "radio_baseband_memory",
+            "radio_duplex_filter",
+            "radio_fronthaul_clock",
+            "radio_remote_cooling",
+            "radio_uplink_decoder",
+            "recovery_data_session",
+            "recovery_sms_transaction",
+            "recovery_voice_setup",
+            "transport_dependency_membership",
+            "transport_label_disposition",
+            "transport_microburst_buffer",
+            "transport_pseudowire_sequence",
+            "transport_spanning_loop",
+            "transport_tunnel_binding"
+          ],
+          "development_records": 16,
+          "development_families": [
+            "alarm_clear_service_probe",
+            "contradictory_power_sources",
+            "core_certificate",
+            "dependency_membership",
+            "maintenance_scope_mismatch",
+            "mixed_dc_voltage",
+            "queue_drops",
+            "unrelated_change_radio"
+          ],
+          "train_input_sha256": "2cf5554791ccad8485acb62d48bcbb7f2652044ac5bcf01fd3d37f03ebc48396",
+          "train_label_sha256": "f16b7c666ede5f8ea7555e365ca08ee2ad0d9eb56802c6a3d26a2075d01fc5d5",
+          "dev_input_sha256": "30e34939ef57cfde37a96d5a578f9747ea5f27d17dc66984fc7bd805705d50b4",
+          "dev_label_sha256": "63cd06e0c42e3cf8e97ea42068e974e75b0618dc88a07e9b4f8ecefb7f5d8f7a",
+          "selection": "Best complete development disposition accuracy; first trial wins ties; development only",
+          "selected_l2": 0.01,
+          "trials": [
+            {
+              "l2": 0.01,
+              "training_correct": 40,
+              "development_correct": 13
+            },
+            {
+              "l2": 0.1,
+              "training_correct": 32,
+              "development_correct": 6
+            },
+            {
+              "l2": 1.0,
+              "training_correct": 29,
+              "development_correct": 4
+            },
+            {
+              "l2": 10.0,
+              "training_correct": 29,
+              "development_correct": 4
+            }
+          ],
+          "head_sha256": "309e45ecc58fb4eed7c9b7c09f8c3fd926f6326e6c5b7d8589faf7c16761b93c",
+          "encoder_parameters": 22713216,
+          "device": "mps",
+          "versions": {
+            "torch": "2.14.0",
+            "numpy": "2.5.3",
+            "transformers": "5.17.0"
+          }
+        },
+        "device": "mps",
+        "model_load_ms": 1788.3655419573188,
+        "records": 16,
+        "failed_records": 0,
+        "execution": "serial; no warmup; per-record time excludes model load; local cached weights only",
+        "no_autoregressive_calls": true
+      },
+      "summary": {
+        "records": 16,
+        "all_four_correct": 13,
+        "field_correct": {
+          "initial_owner": 13,
+          "priority": 16,
+          "next_check": 13,
+          "insufficient_evidence": 13
+        },
+        "failed_records": 0,
+        "missing_records": 0,
+        "pairs": 8,
+        "complete_pairs": 5,
+        "insufficient_evidence": {
+          "true_positive": 5,
+          "false_positive": 1,
+          "false_negative": 2,
+          "precision": 0.8333333333333334,
+          "recall": 0.7142857142857143
+        },
+        "false_domain_assignments": 2,
+        "false_monitor_dispositions": 0,
+        "p1_records": 2,
+        "p1_missed": 0,
+        "latency_ms": {
+          "p50": 5.2382079884409904,
+          "p95": 67.8452078718692,
+          "records": 16
+        }
+      }
+    },
+    "teacher_finetuned": {
+      "predictions": [
+        {
+          "disposition_probabilities": [
+            0.14574261009693146,
+            0.10167817771434784,
+            0.3244190812110901,
+            0.07998711615800858,
+            0.1755383014678955,
+            0.08541525900363922,
+            0.08721943199634552
+          ],
+          "id": "WF-887c2bb778-a-v2",
+          "latency_ms": 202.9852499254048,
+          "predictions": {
+            "initial_owner": "power",
+            "insufficient_evidence": "no",
+            "next_check": "inspect_power",
+            "priority": "P3"
+          },
+          "status": "ok"
+        },
+        {
+          "disposition_probabilities": [
+            0.21772776544094086,
+            0.08285945653915405,
+            0.19920307397842407,
+            0.06612733751535416,
+            0.25211575627326965,
+            0.09135006368160248,
+            0.09061651676893234
+          ],
+          "id": "WF-887c2bb778-b-v2",
+          "latency_ms": 11.51141687296331,
+          "predictions": {
+            "initial_owner": "noc",
+            "insufficient_evidence": "yes",
+            "next_check": "gather_evidence",
+            "priority": "P3"
+          },
+          "status": "ok"
+        },
+        {
+          "disposition_probabilities": [
+            0.1915537416934967,
+            0.293952077627182,
+            0.07955268025398254,
+            0.12184885889291763,
+            0.09306848794221878,
+            0.104914091527462,
+            0.1151101291179657
+          ],
+          "id": "WF-e4d3ea3699-a-v2",
+          "latency_ms": 7.690999889746308,
+          "predictions": {
+            "initial_owner": "transport",
+            "insufficient_evidence": "no",
+            "next_check": "inspect_transport",
+            "priority": "P3"
+          },
+          "status": "ok"
+        },
+        {
+          "disposition_probabilities": [
+            0.17200477421283722,
+            0.14309898018836975,
+            0.08917411416769028,
+            0.09572387486696243,
+            0.29906511306762695,
+            0.10435941815376282,
+            0.09657370299100876
+          ],
+          "id": "WF-e4d3ea3699-b-v2",
+          "latency_ms": 6.541250040754676,
+          "predictions": {
+            "initial_owner": "noc",
+            "insufficient_evidence": "yes",
+            "next_check": "gather_evidence",
+            "priority": "P3"
+          },
+          "status": "ok"
+        },
+        {
+          "disposition_probabilities": [
+            0.09445672482252121,
+            0.08858966082334518,
+            0.07316476851701736,
+            0.13901372253894806,
+            0.24022117257118225,
+            0.13860169053077698,
+            0.22595232725143433
+          ],
+          "id": "WF-25bee86485-a-v2",
+          "latency_ms": 5.458167055621743,
+          "predictions": {
+            "initial_owner": "noc",
+            "insufficient_evidence": "yes",
+            "next_check": "gather_evidence",
+            "priority": "P2"
+          },
+          "status": "ok"
+        },
+        {
+          "disposition_probabilities": [
+            0.07873165607452393,
+            0.09689793735742569,
+            0.10009650886058807,
+            0.0969739556312561,
+            0.20707294344902039,
+            0.1164795458316803,
+            0.3037474453449249
+          ],
+          "id": "WF-25bee86485-b-v2",
+          "latency_ms": 6.858458975329995,
+          "predictions": {
+            "initial_owner": "noc",
+            "insufficient_evidence": "no",
+            "next_check": "monitor",
+            "priority": "P4"
+          },
+          "status": "ok"
+        },
+        {
+          "disposition_probabilities": [
+            0.12827080488204956,
+            0.09182614833116531,
+            0.26155298948287964,
+            0.07070715725421906,
+            0.22397173941135406,
+            0.11083245277404785,
+            0.11283871531486511
+          ],
+          "id": "WF-8c543664cc-a-v2",
+          "latency_ms": 4.727874882519245,
+          "predictions": {
+            "initial_owner": "power",
+            "insufficient_evidence": "no",
+            "next_check": "inspect_power",
+            "priority": "P2"
+          },
+          "status": "ok"
+        },
+        {
+          "disposition_probabilities": [
+            0.12348435074090958,
+            0.0869450643658638,
+            0.37443807721138,
+            0.0706036314368248,
+            0.16652563214302063,
+            0.0926651656627655,
+            0.08533810079097748
+          ],
+          "id": "WF-8c543664cc-b-v2",
+          "latency_ms": 7.954375119879842,
+          "predictions": {
+            "initial_owner": "power",
+            "insufficient_evidence": "no",
+            "next_check": "inspect_power",
+            "priority": "P2"
+          },
+          "status": "ok"
+        },
+        {
+          "disposition_probabilities": [
+            0.07662371546030045,
+            0.11084282398223877,
+            0.06905259191989899,
+            0.25301507115364075,
+            0.10179916024208069,
+            0.1945711076259613,
+            0.19409561157226562
+          ],
+          "id": "WF-b81deaf387-a-v2",
+          "latency_ms": 12.288999976590276,
+          "predictions": {
+            "initial_owner": "core",
+            "insufficient_evidence": "no",
+            "next_check": "inspect_core",
+            "priority": "P1"
+          },
+          "status": "ok"
+        },
+        {
+          "disposition_probabilities": [
+            0.08059881627559662,
+            0.08185280114412308,
+            0.07203133404254913,
+            0.1584998369216919,
+            0.09632838517427444,
+            0.26876121759414673,
+            0.2419276386499405
+          ],
+          "id": "WF-b81deaf387-b-v2",
+          "latency_ms": 12.503166915848851,
+          "predictions": {
+            "initial_owner": "noc",
+            "insufficient_evidence": "yes",
+            "next_check": "verify_change",
+            "priority": "P1"
+          },
+          "status": "ok"
+        },
+        {
+          "disposition_probabilities": [
+            0.06760795414447784,
+            0.07341094315052032,
+            0.07091781497001648,
+            0.10314210504293442,
+            0.09184956550598145,
+            0.20273788273334503,
+            0.39033371210098267
+          ],
+          "id": "WF-025f5b51ee-a-v2",
+          "latency_ms": 5.530625116080046,
+          "predictions": {
+            "initial_owner": "noc",
+            "insufficient_evidence": "no",
+            "next_check": "monitor",
+            "priority": "P4"
+          },
+          "status": "ok"
+        },
+        {
+          "disposition_probabilities": [
+            0.06409253180027008,
+            0.06715089827775955,
+            0.07851254940032959,
+            0.07682103663682938,
+            0.2584061026573181,
+            0.2180282175540924,
+            0.236988827586174
+          ],
+          "id": "WF-025f5b51ee-b-v2",
+          "latency_ms": 6.1793329659849405,
+          "predictions": {
+            "initial_owner": "noc",
+            "insufficient_evidence": "yes",
+            "next_check": "gather_evidence",
+            "priority": "P2"
+          },
+          "status": "ok"
+        },
+        {
+          "disposition_probabilities": [
+            0.16120600700378418,
+            0.0882587730884552,
+            0.10785527527332306,
+            0.10495494306087494,
+            0.27410921454429626,
+            0.1007615253329277,
+            0.16285428404808044
+          ],
+          "id": "WF-218b817fda-a-v2",
+          "latency_ms": 4.944000160321593,
+          "predictions": {
+            "initial_owner": "noc",
+            "insufficient_evidence": "yes",
+            "next_check": "gather_evidence",
+            "priority": "P3"
+          },
+          "status": "ok"
+        },
+        {
+          "disposition_probabilities": [
+            0.10307299345731735,
+            0.13080711662769318,
+            0.08968863636255264,
+            0.1383361965417862,
+            0.2535434067249298,
+            0.11096614599227905,
+            0.17358559370040894
+          ],
+          "id": "WF-218b817fda-b-v2",
+          "latency_ms": 5.1167500205338,
+          "predictions": {
+            "initial_owner": "noc",
+            "insufficient_evidence": "yes",
+            "next_check": "gather_evidence",
+            "priority": "P3"
+          },
+          "status": "ok"
+        },
+        {
+          "disposition_probabilities": [
+            0.1250692903995514,
+            0.1914842128753662,
+            0.10235105454921722,
+            0.07957939058542252,
+            0.29926151037216187,
+            0.1035621389746666,
+            0.09869242459535599
+          ],
+          "id": "WF-a33ebc4c18-a-v2",
+          "latency_ms": 5.11154206469655,
+          "predictions": {
+            "initial_owner": "noc",
+            "insufficient_evidence": "yes",
+            "next_check": "gather_evidence",
+            "priority": "P2"
+          },
+          "status": "ok"
+        },
+        {
+          "disposition_probabilities": [
+            0.12851430475711823,
+            0.16915184259414673,
+            0.10449755936861038,
+            0.08012446016073227,
+            0.3141108453273773,
+            0.10944390296936035,
+            0.09415704756975174
+          ],
+          "id": "WF-a33ebc4c18-b-v2",
+          "latency_ms": 5.113125080242753,
+          "predictions": {
+            "initial_owner": "noc",
+            "insufficient_evidence": "yes",
+            "next_check": "gather_evidence",
+            "priority": "P2"
+          },
+          "status": "ok"
+        }
+      ],
+      "predictions_canonical_sha256": "285c6a5ce607bf9eb87ca6799366e8b1be239d71a1afbcfb85a343acf3afc79a",
+      "metadata": {
+        "provider": "teacher_finetuned",
+        "request_protocol": "northstar-teacher-finetuned-minilm-v1",
+        "input_sha256": "30e34939ef57cfde37a96d5a578f9747ea5f27d17dc66984fc7bd805705d50b4",
+        "head_training": {
+          "request_protocol": "northstar-teacher-finetuned-minilm-v1",
+          "base_model_id": "sentence-transformers/all-MiniLM-L6-v2",
+          "base_revision": "1110a243fdf4706b3f48f1d95db1a4f5529b4d41",
+          "architecture": "End-to-end MiniLM encoder plus seven-way linear head, structured features, and policy priority",
+          "max_tokens": 512,
+          "feature_size": 21,
+          "selected_epoch": 14,
+          "history": [
+            {
+              "epoch": 1,
+              "training_correct": 29,
+              "development_correct": 5,
+              "mean_training_loss": 1.9660879075527191
+            },
+            {
+              "epoch": 2,
+              "training_correct": 41,
+              "development_correct": 6,
+              "mean_training_loss": 1.8886433839797974
+            },
+            {
+              "epoch": 3,
+              "training_correct": 49,
+              "development_correct": 6,
+              "mean_training_loss": 1.8083691000938416
+            },
+            {
+              "epoch": 4,
+              "training_correct": 50,
+              "development_correct": 6,
+              "mean_training_loss": 1.7334715873003006
+            },
+            {
+              "epoch": 5,
+              "training_correct": 55,
+              "development_correct": 7,
+              "mean_training_loss": 1.6365551203489304
+            },
+            {
+              "epoch": 6,
+              "training_correct": 54,
+              "development_correct": 8,
+              "mean_training_loss": 1.5559758245944977
+            },
+            {
+              "epoch": 7,
+              "training_correct": 56,
+              "development_correct": 7,
+              "mean_training_loss": 1.4531505405902863
+            },
+            {
+              "epoch": 8,
+              "training_correct": 57,
+              "development_correct": 7,
+              "mean_training_loss": 1.3716757893562317
+            },
+            {
+              "epoch": 9,
+              "training_correct": 57,
+              "development_correct": 8,
+              "mean_training_loss": 1.28357994556427
+            },
+            {
+              "epoch": 10,
+              "training_correct": 57,
+              "development_correct": 8,
+              "mean_training_loss": 1.2073551267385483
+            },
+            {
+              "epoch": 11,
+              "training_correct": 57,
+              "development_correct": 9,
+              "mean_training_loss": 1.1062364131212234
+            },
+            {
+              "epoch": 12,
+              "training_correct": 57,
+              "development_correct": 9,
+              "mean_training_loss": 1.0190211683511734
+            },
+            {
+              "epoch": 13,
+              "training_correct": 57,
+              "development_correct": 10,
+              "mean_training_loss": 0.9371470212936401
+            },
+            {
+              "epoch": 14,
+              "training_correct": 57,
+              "development_correct": 11,
+              "mean_training_loss": 0.8651109039783478
+            },
+            {
+              "epoch": 15,
+              "training_correct": 57,
+              "development_correct": 9,
+              "mean_training_loss": 0.7845435664057732
+            },
+            {
+              "epoch": 16,
+              "training_correct": 57,
+              "development_correct": 11,
+              "mean_training_loss": 0.7490583583712578
+            },
+            {
+              "epoch": 17,
+              "training_correct": 57,
+              "development_correct": 10,
+              "mean_training_loss": 0.701323077082634
+            },
+            {
+              "epoch": 18,
+              "training_correct": 58,
+              "development_correct": 11,
+              "mean_training_loss": 0.6450068950653076
+            },
+            {
+              "epoch": 19,
+              "training_correct": 58,
+              "development_correct": 11,
+              "mean_training_loss": 0.5913380831480026
+            },
+            {
+              "epoch": 20,
+              "training_correct": 58,
+              "development_correct": 10,
+              "mean_training_loss": 0.5561243630945683
+            }
+          ],
+          "training_records": 58,
+          "development_records": 16,
+          "train_input_sha256": "2cf5554791ccad8485acb62d48bcbb7f2652044ac5bcf01fd3d37f03ebc48396",
+          "train_label_sha256": "f16b7c666ede5f8ea7555e365ca08ee2ad0d9eb56802c6a3d26a2075d01fc5d5",
+          "dev_input_sha256": "30e34939ef57cfde37a96d5a578f9747ea5f27d17dc66984fc7bd805705d50b4",
+          "dev_label_sha256": "63cd06e0c42e3cf8e97ea42068e974e75b0618dc88a07e9b4f8ecefb7f5d8f7a",
+          "training_families": [
+            "change_core_drain_scope",
+            "change_radio_license_scope",
+            "core_api_schema",
+            "core_endpoint_pool",
+            "core_lease_lock",
+            "core_rate_limit_scope",
+            "core_replica_quorum",
+            "core_replica_read_skew",
+            "power_busbar_joint",
+            "power_dc_polarity",
+            "power_earth_fault",
+            "power_inverter_bypass",
+            "power_remote_feed",
+            "power_voltage_sensor_disagreement",
+            "radio_amplifier_gain",
+            "radio_baseband_memory",
+            "radio_duplex_filter",
+            "radio_fronthaul_clock",
+            "radio_remote_cooling",
+            "radio_uplink_decoder",
+            "recovery_data_session",
+            "recovery_sms_transaction",
+            "recovery_voice_setup",
+            "transport_dependency_membership",
+            "transport_label_disposition",
+            "transport_microburst_buffer",
+            "transport_pseudowire_sequence",
+            "transport_spanning_loop",
+            "transport_tunnel_binding"
+          ],
+          "development_families": [
+            "alarm_clear_service_probe",
+            "contradictory_power_sources",
+            "core_certificate",
+            "dependency_membership",
+            "maintenance_scope_mismatch",
+            "mixed_dc_voltage",
+            "queue_drops",
+            "unrelated_change_radio"
+          ],
+          "selection": "Maximum complete development agreement; earliest epoch wins ties; not holdout performance",
+          "hyperparameters": {
+            "epochs": 20,
+            "encoder_lr": 3e-05,
+            "head_lr": 0.001,
+            "batch_size": 8,
+            "seed": 17,
+            "weight_decay": 0.01
+          },
+          "device": "mps",
+          "training_seconds": 23.088245416991413,
+          "encoder_parameters": 22713216,
+          "renderer_sha256": "149d8d4ddbc0af017bec180797ad2d7e2ea2c9ab4235e3f64feeff6d32bc3d8b",
+          "training_source_sha256": "db16ddb723cc5959b07455c1355d786a08b32961d90ea54abc77d8ab226765ed",
+          "versions": {
+            "torch": "2.14.0",
+            "transformers": "5.17.0",
+            "numpy": "2.5.3"
+          },
+          "artifact_sha256": {
+            "checkpoint/model.safetensors": "e3edd8b9facc648839c39be624dac70e5daee84387a1e32b1dee83c7dae29000",
+            "checkpoint/tokenizer_config.json": "4b91f63e0ec01ae5112b4fab0027b301a38d94f6b1fd001abf2236390168b553",
+            "checkpoint/config.json": "bc07d616645604e14676245d40081ed4cb71e12817fb034d874a123576657924",
+            "checkpoint/tokenizer.json": "f17212c38517cfedc9306b57eeffbaf58c4976fcb42e5a87b405f36a7b9a9eb2",
+            "head.pt": "9f0e5d951fda7fc4e7776eeb3879068690d11c09b2268c18c166b78aed3ddbea"
+          }
+        },
+        "model_load_ms": 291.9956250116229,
+        "device": "mps",
+        "records": 16,
+        "failed_records": 0,
+        "no_autoregressive_calls": true,
+        "execution": "serial local inference; cached checkpoint; no warmup; per-record latency excludes model load"
+      },
+      "summary": {
+        "records": 16,
+        "all_four_correct": 11,
+        "field_correct": {
+          "initial_owner": 12,
+          "priority": 16,
+          "next_check": 11,
+          "insufficient_evidence": 12
+        },
+        "failed_records": 0,
+        "missing_records": 0,
+        "pairs": 8,
+        "complete_pairs": 4,
+        "insufficient_evidence": {
+          "true_positive": 6,
+          "false_positive": 3,
+          "false_negative": 1,
+          "precision": 0.6666666666666666,
+          "recall": 0.8571428571428571
+        },
+        "false_domain_assignments": 1,
+        "false_monitor_dispositions": 0,
+        "p1_records": 2,
+        "p1_missed": 0,
+        "latency_ms": {
+          "p50": 6.1793329659849405,
+          "p95": 202.9852499254048,
+          "records": 16
+        }
+      }
+    }
+  }
+}

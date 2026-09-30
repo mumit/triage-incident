@@ -1,0 +1,12 @@
+{
+  "selection": "Fixed seven paired families selected during primary review before scoring references; spans all dispositions",
+  "family_indices_zero_based": [
+    0,
+    4,
+    8,
+    12,
+    16,
+    24,
+    27
+  ]
+}

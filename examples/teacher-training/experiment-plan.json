@@ -1,0 +1,16 @@
+{
+  "experiment": "teacher-encoder-v1",
+  "training": "Accepted teacher labels from new 30 paired mechanism catalog",
+  "development": "Previously inspected corrected 16 cases; never holdout",
+  "candidate": "Frozen pinned MiniLM mean pooling plus seven-way learned linear head, 512-token renderer and explicit freshness/change/graph features",
+  "priority": "Published structured-impact policy",
+  "l2_trials": [
+    0.01,
+    0.1,
+    1.0,
+    10.0
+  ],
+  "selection": "Highest complete development disposition agreement; first trial wins ties",
+  "next_if_insufficient": "Record frozen-head result before a separately identified end-to-end candidate. Do not add development cases to training.",
+  "no_generalization_claim": "Family IDs are disjoint; conceptual themes deliberately overlap and have not been independently adjudicated."
+}

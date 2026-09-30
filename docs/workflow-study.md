@@ -1,12 +1,14 @@
 # Encoder versus Jev triage configurations
 
-Status: development comparison complete. The [Jev results](workflow-jev-development-results.md) show that the decomposed workflow trails the original Jev protocol when both use policy priority: 11/16 versus 13/16 on drafts, and 120/220 versus 159/220 on validation. The [frozen encoder](workflow-development-results.md) scores 8/16 on drafts and 220/220 on old validation. Labels remain unreviewed; no held-out comparison is available. The preceding [comparison study is closed](study-closeout.md).
+Status: teacher-trained encoder development complete; no held-out comparison is available. The [new head](teacher-encoder-results.md) reaches 13/16 corrected development agreement, compared with 8/16 for the original encoder. The earlier [Jev results](workflow-jev-development-results.md) use provisional draft labels: decomposed Jev trails the original protocol with policy priority, 11/16 versus 13/16 drafts and 120/220 versus 159/220 validation. The preceding [comparison study is closed](study-closeout.md).
 
-The subsequent [compact input control](compact-jev-results.md) preserves original questions and also trails original Jev with policy priority: 11/16 drafts and 141/220 validation. The [specialist review pack and next encoder plan](specialist-review-and-holdout.md) are ready. No candidate has been retrained or promoted from these results.
+The subsequent [compact input control](compact-jev-results.md) preserves original questions and also trails original Jev with policy priority: 11/16 drafts and 141/220 validation. The [specialist review pack and encoder plan](specialist-review-and-holdout.md) preceded the separately reviewed training experiment. No candidate has been promoted for operational use.
 
 [Blind LLM review](llm-review-results.md) now supports the next development phase: Luna reviewed 16 cases, Sol reviewed nine flagged cases, and seven labels passed a conservative candidate filter. Nine cases remain pending; the filter excludes both uncertainty dispositions and is not sufficient for retraining. Human review is recommended for operational validation, while research can proceed with explicit teacher-label provenance.
 
 The [corrected V2 development cohort](development-v2-results.md) has now been reviewed by both teachers across all 16 cases. Separate offline citation revalidation yields 16 candidate labels, including both uncertainty dispositions. The frozen encoder remains at 8/16. New family-disjoint training data is the next step; this already-inspected cohort remains development material.
+
+The [teacher-trained encoder experiment](teacher-encoder-results.md) now supplies 58 accepted training incidents in 29 paired families. A separate frozen-head candidate improves corrected development agreement to 13/16; end-to-end fine-tuning reaches 11/16. Training and development IDs, pairs and families are disjoint, with conceptual overlap disclosed. The original encoder stays frozen, and unseen-family evaluation remains outstanding.
 
 ## Purpose
 
@@ -69,6 +71,6 @@ The encoder command requires the optional encoder environment and the original t
 
 ## Next steps
 
-Keep the original Jev protocol with policy priority as the Jev reference; keep the encoder frozen. Complete specialist review, add new training families, and establish family-disjoint development and holdout splits. Select candidates and thresholds on development data, freeze artifacts, then run the unseen comparison. Neither input compaction nor decomposition has justified replacing the Jev reference in these development results.
+Keep the original Jev protocol with policy priority as the historical Jev reference and the original encoder frozen. Continue the new encoder experiments using separately reviewed training families. Select candidates and thresholds on development data, freeze artifacts, then run an unseen-family comparison. Neither input compaction nor decomposition justified replacing the Jev reference. Specialist review can strengthen operational validation while research proceeds with teacher-label provenance.
 
 The [development result note](workflow-development-results.md) provides the three-candidate run command and portable evidence export. `scripts/run_workflow_study.py` accepts an explicit local `--env-file`, freezes the encoder head and Jev identifier, and scores only saved predictions. Credential availability is checked before a run directory is created.

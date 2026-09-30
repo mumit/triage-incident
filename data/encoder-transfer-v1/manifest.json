@@ -1,0 +1,14 @@
+{
+  "use": "Synthetic training and inspected development, not holdout",
+  "training_families": 30,
+  "development_families": 20,
+  "catalog_sha256": "09b2f6ec0a814ceac1351880cd728e13c1c2e30092a889e3b3f24474952ebbeb",
+  "generator_sha256": "c791ee6c443d7a4138bed64197c4e6a4f51fcd3608522e3f04ba3a33eca58792",
+  "sha256": {
+    "train.inputs.jsonl": "cf61a0738bf9bf06efd551f81a4cd15a927f29cb5df18571cd7ba27b2359fed6",
+    "families.json": "fd106f6198777426df23aaeeda76183a73cfd7c41d5f9de0ce6e3a40c45e50aa",
+    "train.reference.labels.jsonl": "8aacf363a58baa28e6a4c164bba9ba7677c6c0d4732851018e07ae4671de8d99",
+    "development.reference.labels.jsonl": "cf4c2e38be857327116a7e66dc1e8dd33cbeb7208d3002f96421ff0386be54d5",
+    "development.inputs.jsonl": "1c282fd092af8597955dc3f62e6905e3a8502a380ba0328bf06139dcc7ca98eb"
+  }
+}

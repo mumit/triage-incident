@@ -1,0 +1,149 @@
+{
+  "provider": "teacher_encoder",
+  "request_protocol": "northstar-teacher-encoder-v1",
+  "input_sha256": "59083836db5bb2c85eb538e093bffeca363f80763f6ebbbbc04791e0924039f0",
+  "head_sha256": "003752649e71c5c6b806bc37ea2bfb9546e87441a2b4108494b183aa6871d3ab",
+  "head_training": {
+    "protocol": "northstar-teacher-encoder-v1",
+    "architecture": "frozen pinned MiniLM plus learned seven-class linear head and structured features; policy priority",
+    "model_id": "sentence-transformers/all-MiniLM-L6-v2",
+    "model_revision": "1110a243fdf4706b3f48f1d95db1a4f5529b4d41",
+    "classes": [
+      [
+        "ran",
+        "inspect_radio",
+        "no"
+      ],
+      [
+        "transport",
+        "inspect_transport",
+        "no"
+      ],
+      [
+        "power",
+        "inspect_power",
+        "no"
+      ],
+      [
+        "core",
+        "inspect_core",
+        "no"
+      ],
+      [
+        "noc",
+        "gather_evidence",
+        "yes"
+      ],
+      [
+        "noc",
+        "verify_change",
+        "yes"
+      ],
+      [
+        "noc",
+        "monitor",
+        "no"
+      ]
+    ],
+    "max_tokens": 512,
+    "feature_scale": 0.5,
+    "renderer_source_sha256": "149d8d4ddbc0af017bec180797ad2d7e2ea2c9ab4235e3f64feeff6d32bc3d8b",
+    "training_records": 58,
+    "training_families": [
+      "change_core_drain_scope",
+      "change_radio_license_scope",
+      "core_api_schema",
+      "core_endpoint_pool",
+      "core_lease_lock",
+      "core_rate_limit_scope",
+      "core_replica_quorum",
+      "core_replica_read_skew",
+      "power_busbar_joint",
+      "power_dc_polarity",
+      "power_earth_fault",
+      "power_inverter_bypass",
+      "power_remote_feed",
+      "power_voltage_sensor_disagreement",
+      "radio_amplifier_gain",
+      "radio_baseband_memory",
+      "radio_duplex_filter",
+      "radio_fronthaul_clock",
+      "radio_remote_cooling",
+      "radio_uplink_decoder",
+      "recovery_data_session",
+      "recovery_sms_transaction",
+      "recovery_voice_setup",
+      "transport_dependency_membership",
+      "transport_label_disposition",
+      "transport_microburst_buffer",
+      "transport_pseudowire_sequence",
+      "transport_spanning_loop",
+      "transport_tunnel_binding"
+    ],
+    "development_records": 16,
+    "development_families": [
+      "alarm_clear_service_probe",
+      "contradictory_power_sources",
+      "core_certificate",
+      "dependency_membership",
+      "maintenance_scope_mismatch",
+      "mixed_dc_voltage",
+      "queue_drops",
+      "unrelated_change_radio"
+    ],
+    "train_input_sha256": "2cf5554791ccad8485acb62d48bcbb7f2652044ac5bcf01fd3d37f03ebc48396",
+    "train_label_sha256": "f16b7c666ede5f8ea7555e365ca08ee2ad0d9eb56802c6a3d26a2075d01fc5d5",
+    "dev_input_sha256": "30e34939ef57cfde37a96d5a578f9747ea5f27d17dc66984fc7bd805705d50b4",
+    "dev_label_sha256": "63cd06e0c42e3cf8e97ea42068e974e75b0618dc88a07e9b4f8ecefb7f5d8f7a",
+    "selection": "One predefined L2 trial; experiment selects separately",
+    "selected_l2": 0.001,
+    "trials": [
+      {
+        "objective": 0.537720177239813,
+        "gradient_inf_norm": 6.5969807945369385e-09,
+        "converged": true,
+        "iterations": 60,
+        "function_evaluations": 66,
+        "l2": 0.001,
+        "name": "l2-0.001",
+        "training_seconds": 0.025559083092957735,
+        "training_correct": 58,
+        "development_correct": 14
+      }
+    ],
+    "head_sha256": "003752649e71c5c6b806bc37ea2bfb9546e87441a2b4108494b183aa6871d3ab",
+    "encoder_parameters": 22713216,
+    "device": "mps",
+    "versions": {
+      "torch": "2.14.0",
+      "numpy": "2.5.3",
+      "transformers": "5.17.0"
+    },
+    "experiment_protocol": "northstar-encoder-regularization-v1",
+    "experiment_plan_sha256": "6bc891cbc74b6882909053353b17e6a41deb860da9875a3b89e76e6a32adc015",
+    "training_source_sha256": "71cabeb33dd0b3ba74a4f93947f4c913cb1102a93c1f283c23dbc7a22aaf09ab",
+    "optimization": {
+      "objective": 0.537720177239813,
+      "gradient_inf_norm": 6.5969807945369385e-09,
+      "converged": true,
+      "iterations": 60,
+      "function_evaluations": 66,
+      "l2": 0.001,
+      "name": "l2-0.001",
+      "training_seconds": 0.025559083092957735,
+      "training_correct": 58,
+      "development_correct": 14
+    },
+    "optimization_sha256": "d8d5c41443f61e1038e1deddf4731e984c9078fc33a44847094b87a29d58009f",
+    "feature_matrix_sha256": "7a2e5fa922c6f4032792d04d54563d7e942a3673758a38ee41eb49e34e7d7229"
+  },
+  "device": "mps",
+  "model_load_ms": 2706.359166884795,
+  "records": 54,
+  "failed_records": 0,
+  "execution": "serial; no warmup; per-record time excludes model load; local cached weights only",
+  "no_autoregressive_calls": true,
+  "source_input_sha256": "59083836db5bb2c85eb538e093bffeca363f80763f6ebbbbc04791e0924039f0",
+  "source_prediction_sha256": "f59c8e1fe7e2728a204d1726ffbd5b9a31c2c072af55cd753261a829dbed1ac8",
+  "subset": "Post-inference ID selection only; no modified predictions"
+}

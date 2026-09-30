@@ -1,0 +1,670 @@
+{
+  "old-development": {
+    "previous-head": {
+      "records": 16,
+      "all_four_correct": 14,
+      "field_correct": {
+        "initial_owner": 14,
+        "priority": 16,
+        "next_check": 14,
+        "insufficient_evidence": 14
+      },
+      "failed_records": 0,
+      "missing_records": 0,
+      "pairs": 8,
+      "complete_pairs": 6,
+      "insufficient_evidence": {
+        "true_positive": 6,
+        "false_positive": 1,
+        "false_negative": 1,
+        "precision": 0.8571428571428571,
+        "recall": 0.8571428571428571
+      },
+      "false_domain_assignments": 1,
+      "false_monitor_dispositions": 0,
+      "p1_records": 2,
+      "p1_missed": 0,
+      "latency_ms": {
+        "p50": 5.846374901011586,
+        "p95": 78.22237489745021,
+        "records": 16
+      }
+    },
+    "expanded-structured": {
+      "records": 16,
+      "all_four_correct": 14,
+      "field_correct": {
+        "initial_owner": 14,
+        "priority": 16,
+        "next_check": 14,
+        "insufficient_evidence": 14
+      },
+      "failed_records": 0,
+      "missing_records": 0,
+      "pairs": 8,
+      "complete_pairs": 6,
+      "insufficient_evidence": {
+        "true_positive": 5,
+        "false_positive": 0,
+        "false_negative": 2,
+        "precision": 1.0,
+        "recall": 0.7142857142857143
+      },
+      "false_domain_assignments": 2,
+      "false_monitor_dispositions": 0,
+      "p1_records": 2,
+      "p1_missed": 0,
+      "latency_ms": {
+        "p50": 4.525457974523306,
+        "p95": 6.551290862262249,
+        "records": 16
+      }
+    },
+    "expanded-text-only": {
+      "records": 16,
+      "all_four_correct": 9,
+      "field_correct": {
+        "initial_owner": 10,
+        "priority": 16,
+        "next_check": 9,
+        "insufficient_evidence": 10
+      },
+      "failed_records": 0,
+      "missing_records": 0,
+      "pairs": 8,
+      "complete_pairs": 3,
+      "insufficient_evidence": {
+        "true_positive": 5,
+        "false_positive": 4,
+        "false_negative": 2,
+        "precision": 0.5555555555555556,
+        "recall": 0.7142857142857143
+      },
+      "false_domain_assignments": 2,
+      "false_monitor_dispositions": 0,
+      "p1_records": 2,
+      "p1_missed": 0,
+      "latency_ms": {
+        "p50": 4.492457956075668,
+        "p95": 6.565459072589874,
+        "records": 16
+      }
+    },
+    "finetuned-17": {
+      "records": 16,
+      "all_four_correct": 11,
+      "field_correct": {
+        "initial_owner": 13,
+        "priority": 16,
+        "next_check": 11,
+        "insufficient_evidence": 12
+      },
+      "failed_records": 0,
+      "missing_records": 0,
+      "pairs": 8,
+      "complete_pairs": 3,
+      "insufficient_evidence": {
+        "true_positive": 4,
+        "false_positive": 1,
+        "false_negative": 3,
+        "precision": 0.8,
+        "recall": 0.5714285714285714
+      },
+      "false_domain_assignments": 2,
+      "false_monitor_dispositions": 1,
+      "p1_records": 2,
+      "p1_missed": 0,
+      "latency_ms": {
+        "p50": 5.057708825916052,
+        "p95": 7.232500007376075,
+        "records": 16
+      }
+    },
+    "finetuned-29": {
+      "records": 16,
+      "all_four_correct": 12,
+      "field_correct": {
+        "initial_owner": 13,
+        "priority": 16,
+        "next_check": 12,
+        "insufficient_evidence": 13
+      },
+      "failed_records": 0,
+      "missing_records": 0,
+      "pairs": 8,
+      "complete_pairs": 4,
+      "insufficient_evidence": {
+        "true_positive": 5,
+        "false_positive": 1,
+        "false_negative": 2,
+        "precision": 0.8333333333333334,
+        "recall": 0.7142857142857143
+      },
+      "false_domain_assignments": 2,
+      "false_monitor_dispositions": 0,
+      "p1_records": 2,
+      "p1_missed": 0,
+      "latency_ms": {
+        "p50": 5.189750110730529,
+        "p95": 7.1685840375721455,
+        "records": 16
+      }
+    },
+    "luna-classifier": {
+      "records": 16,
+      "all_four_correct": 16,
+      "field_correct": {
+        "initial_owner": 16,
+        "priority": 16,
+        "next_check": 16,
+        "insufficient_evidence": 16
+      },
+      "failed_records": 0,
+      "missing_records": 0,
+      "pairs": 8,
+      "complete_pairs": 8,
+      "insufficient_evidence": {
+        "true_positive": 7,
+        "false_positive": 0,
+        "false_negative": 0,
+        "precision": 1.0,
+        "recall": 1.0
+      },
+      "false_domain_assignments": 0,
+      "false_monitor_dispositions": 0,
+      "p1_records": 2,
+      "p1_missed": 0,
+      "latency_ms": {
+        "p50": 1977.92016598396,
+        "p95": 4069.1791251301765,
+        "records": 16
+      }
+    }
+  },
+  "new-development": {
+    "previous-head": {
+      "records": 38,
+      "all_four_correct": 32,
+      "field_correct": {
+        "initial_owner": 32,
+        "priority": 38,
+        "next_check": 32,
+        "insufficient_evidence": 32
+      },
+      "failed_records": 0,
+      "missing_records": 0,
+      "pairs": 19,
+      "complete_pairs": 13,
+      "insufficient_evidence": {
+        "true_positive": 19,
+        "false_positive": 6,
+        "false_negative": 0,
+        "precision": 0.76,
+        "recall": 1.0
+      },
+      "false_domain_assignments": 0,
+      "false_monitor_dispositions": 0,
+      "p1_records": 0,
+      "p1_missed": 0,
+      "latency_ms": {
+        "p50": 4.566040821373463,
+        "p95": 5.489791976287961,
+        "records": 38
+      }
+    },
+    "expanded-structured": {
+      "records": 38,
+      "all_four_correct": 34,
+      "field_correct": {
+        "initial_owner": 34,
+        "priority": 38,
+        "next_check": 34,
+        "insufficient_evidence": 34
+      },
+      "failed_records": 0,
+      "missing_records": 0,
+      "pairs": 19,
+      "complete_pairs": 15,
+      "insufficient_evidence": {
+        "true_positive": 16,
+        "false_positive": 1,
+        "false_negative": 3,
+        "precision": 0.9411764705882353,
+        "recall": 0.8421052631578947
+      },
+      "false_domain_assignments": 3,
+      "false_monitor_dispositions": 0,
+      "p1_records": 0,
+      "p1_missed": 0,
+      "latency_ms": {
+        "p50": 4.473790992051363,
+        "p95": 5.087082972750068,
+        "records": 38
+      }
+    },
+    "expanded-text-only": {
+      "records": 38,
+      "all_four_correct": 32,
+      "field_correct": {
+        "initial_owner": 33,
+        "priority": 38,
+        "next_check": 32,
+        "insufficient_evidence": 32
+      },
+      "failed_records": 0,
+      "missing_records": 0,
+      "pairs": 19,
+      "complete_pairs": 14,
+      "insufficient_evidence": {
+        "true_positive": 16,
+        "false_positive": 3,
+        "false_negative": 3,
+        "precision": 0.8421052631578947,
+        "recall": 0.8421052631578947
+      },
+      "false_domain_assignments": 2,
+      "false_monitor_dispositions": 1,
+      "p1_records": 0,
+      "p1_missed": 0,
+      "latency_ms": {
+        "p50": 4.416042007505894,
+        "p95": 5.121540976688266,
+        "records": 38
+      }
+    },
+    "finetuned-17": {
+      "records": 38,
+      "all_four_correct": 36,
+      "field_correct": {
+        "initial_owner": 36,
+        "priority": 38,
+        "next_check": 36,
+        "insufficient_evidence": 36
+      },
+      "failed_records": 0,
+      "missing_records": 0,
+      "pairs": 19,
+      "complete_pairs": 17,
+      "insufficient_evidence": {
+        "true_positive": 19,
+        "false_positive": 2,
+        "false_negative": 0,
+        "precision": 0.9047619047619048,
+        "recall": 1.0
+      },
+      "false_domain_assignments": 0,
+      "false_monitor_dispositions": 0,
+      "p1_records": 0,
+      "p1_missed": 0,
+      "latency_ms": {
+        "p50": 5.259500117972493,
+        "p95": 6.669332971796393,
+        "records": 38
+      }
+    },
+    "finetuned-29": {
+      "records": 38,
+      "all_four_correct": 34,
+      "field_correct": {
+        "initial_owner": 34,
+        "priority": 38,
+        "next_check": 34,
+        "insufficient_evidence": 35
+      },
+      "failed_records": 0,
+      "missing_records": 0,
+      "pairs": 19,
+      "complete_pairs": 15,
+      "insufficient_evidence": {
+        "true_positive": 18,
+        "false_positive": 2,
+        "false_negative": 1,
+        "precision": 0.9,
+        "recall": 0.9473684210526315
+      },
+      "false_domain_assignments": 1,
+      "false_monitor_dispositions": 0,
+      "p1_records": 0,
+      "p1_missed": 0,
+      "latency_ms": {
+        "p50": 4.960583057254553,
+        "p95": 5.434874910861254,
+        "records": 38
+      }
+    },
+    "luna-classifier": {
+      "records": 38,
+      "all_four_correct": 38,
+      "field_correct": {
+        "initial_owner": 38,
+        "priority": 38,
+        "next_check": 38,
+        "insufficient_evidence": 38
+      },
+      "failed_records": 0,
+      "missing_records": 0,
+      "pairs": 19,
+      "complete_pairs": 19,
+      "insufficient_evidence": {
+        "true_positive": 19,
+        "false_positive": 0,
+        "false_negative": 0,
+        "precision": 1.0,
+        "recall": 1.0
+      },
+      "false_domain_assignments": 0,
+      "false_monitor_dispositions": 0,
+      "p1_records": 0,
+      "p1_missed": 0,
+      "latency_ms": {
+        "p50": 1978.5136671271175,
+        "p95": 2703.2361668534577,
+        "records": 38
+      }
+    }
+  },
+  "combined-development": {
+    "previous-head": {
+      "records": 54,
+      "all_four_correct": 46,
+      "field_correct": {
+        "initial_owner": 46,
+        "priority": 54,
+        "next_check": 46,
+        "insufficient_evidence": 46
+      },
+      "failed_records": 0,
+      "missing_records": 0,
+      "pairs": 27,
+      "complete_pairs": 19,
+      "insufficient_evidence": {
+        "true_positive": 25,
+        "false_positive": 7,
+        "false_negative": 1,
+        "precision": 0.78125,
+        "recall": 0.9615384615384616
+      },
+      "false_domain_assignments": 1,
+      "false_monitor_dispositions": 0,
+      "p1_records": 2,
+      "p1_missed": 0,
+      "latency_ms": {
+        "p50": 4.663208965212107,
+        "p95": 9.056666865944862,
+        "records": 54
+      }
+    },
+    "expanded-structured": {
+      "records": 54,
+      "all_four_correct": 48,
+      "field_correct": {
+        "initial_owner": 48,
+        "priority": 54,
+        "next_check": 48,
+        "insufficient_evidence": 48
+      },
+      "failed_records": 0,
+      "missing_records": 0,
+      "pairs": 27,
+      "complete_pairs": 21,
+      "insufficient_evidence": {
+        "true_positive": 21,
+        "false_positive": 1,
+        "false_negative": 5,
+        "precision": 0.9545454545454546,
+        "recall": 0.8076923076923077
+      },
+      "false_domain_assignments": 5,
+      "false_monitor_dispositions": 0,
+      "p1_records": 2,
+      "p1_missed": 0,
+      "latency_ms": {
+        "p50": 4.508374957367778,
+        "p95": 5.238916026428342,
+        "records": 54
+      }
+    },
+    "expanded-text-only": {
+      "records": 54,
+      "all_four_correct": 41,
+      "field_correct": {
+        "initial_owner": 43,
+        "priority": 54,
+        "next_check": 41,
+        "insufficient_evidence": 42
+      },
+      "failed_records": 0,
+      "missing_records": 0,
+      "pairs": 27,
+      "complete_pairs": 17,
+      "insufficient_evidence": {
+        "true_positive": 21,
+        "false_positive": 7,
+        "false_negative": 5,
+        "precision": 0.75,
+        "recall": 0.8076923076923077
+      },
+      "false_domain_assignments": 4,
+      "false_monitor_dispositions": 1,
+      "p1_records": 2,
+      "p1_missed": 0,
+      "latency_ms": {
+        "p50": 4.434291971847415,
+        "p95": 5.295165814459324,
+        "records": 54
+      }
+    },
+    "finetuned-17": {
+      "records": 54,
+      "all_four_correct": 47,
+      "field_correct": {
+        "initial_owner": 49,
+        "priority": 54,
+        "next_check": 47,
+        "insufficient_evidence": 48
+      },
+      "failed_records": 0,
+      "missing_records": 0,
+      "pairs": 27,
+      "complete_pairs": 20,
+      "insufficient_evidence": {
+        "true_positive": 23,
+        "false_positive": 3,
+        "false_negative": 3,
+        "precision": 0.8846153846153846,
+        "recall": 0.8846153846153846
+      },
+      "false_domain_assignments": 2,
+      "false_monitor_dispositions": 1,
+      "p1_records": 2,
+      "p1_missed": 0,
+      "latency_ms": {
+        "p50": 5.2270409651100636,
+        "p95": 6.669332971796393,
+        "records": 54
+      }
+    },
+    "finetuned-29": {
+      "records": 54,
+      "all_four_correct": 46,
+      "field_correct": {
+        "initial_owner": 47,
+        "priority": 54,
+        "next_check": 46,
+        "insufficient_evidence": 48
+      },
+      "failed_records": 0,
+      "missing_records": 0,
+      "pairs": 27,
+      "complete_pairs": 19,
+      "insufficient_evidence": {
+        "true_positive": 23,
+        "false_positive": 3,
+        "false_negative": 3,
+        "precision": 0.8846153846153846,
+        "recall": 0.8846153846153846
+      },
+      "false_domain_assignments": 3,
+      "false_monitor_dispositions": 0,
+      "p1_records": 2,
+      "p1_missed": 0,
+      "latency_ms": {
+        "p50": 5.05545805208385,
+        "p95": 5.957333138212562,
+        "records": 54
+      }
+    },
+    "luna-classifier": {
+      "records": 54,
+      "all_four_correct": 54,
+      "field_correct": {
+        "initial_owner": 54,
+        "priority": 54,
+        "next_check": 54,
+        "insufficient_evidence": 54
+      },
+      "failed_records": 0,
+      "missing_records": 0,
+      "pairs": 27,
+      "complete_pairs": 27,
+      "insufficient_evidence": {
+        "true_positive": 26,
+        "false_positive": 0,
+        "false_negative": 0,
+        "precision": 1.0,
+        "recall": 1.0
+      },
+      "false_domain_assignments": 0,
+      "false_monitor_dispositions": 0,
+      "p1_records": 2,
+      "p1_missed": 0,
+      "latency_ms": {
+        "p50": 1978.5136671271175,
+        "p95": 3233.7340409867465,
+        "records": 54
+      }
+    }
+  },
+  "training": {
+    "expanded-structured": {
+      "records": 118,
+      "all_four_correct": 112,
+      "field_correct": {
+        "initial_owner": 112,
+        "priority": 118,
+        "next_check": 112,
+        "insufficient_evidence": 112
+      },
+      "failed_records": 0,
+      "missing_records": 0,
+      "pairs": 59,
+      "complete_pairs": 53,
+      "insufficient_evidence": {
+        "true_positive": 53,
+        "false_positive": 0,
+        "false_negative": 6,
+        "precision": 1.0,
+        "recall": 0.8983050847457628
+      },
+      "false_domain_assignments": 6,
+      "false_monitor_dispositions": 0,
+      "p1_records": 0,
+      "p1_missed": 0,
+      "latency_ms": {
+        "p50": 4.3807500042021275,
+        "p95": 4.875084152445197,
+        "records": 118
+      }
+    },
+    "expanded-text-only": {
+      "records": 118,
+      "all_four_correct": 109,
+      "field_correct": {
+        "initial_owner": 110,
+        "priority": 118,
+        "next_check": 109,
+        "insufficient_evidence": 109
+      },
+      "failed_records": 0,
+      "missing_records": 0,
+      "pairs": 59,
+      "complete_pairs": 50,
+      "insufficient_evidence": {
+        "true_positive": 50,
+        "false_positive": 0,
+        "false_negative": 9,
+        "precision": 1.0,
+        "recall": 0.847457627118644
+      },
+      "false_domain_assignments": 8,
+      "false_monitor_dispositions": 1,
+      "p1_records": 0,
+      "p1_missed": 0,
+      "latency_ms": {
+        "p50": 4.2795410845428705,
+        "p95": 4.759958013892174,
+        "records": 118
+      }
+    },
+    "finetuned-17": {
+      "records": 118,
+      "all_four_correct": 118,
+      "field_correct": {
+        "initial_owner": 118,
+        "priority": 118,
+        "next_check": 118,
+        "insufficient_evidence": 118
+      },
+      "failed_records": 0,
+      "missing_records": 0,
+      "pairs": 59,
+      "complete_pairs": 59,
+      "insufficient_evidence": {
+        "true_positive": 59,
+        "false_positive": 0,
+        "false_negative": 0,
+        "precision": 1.0,
+        "recall": 1.0
+      },
+      "false_domain_assignments": 0,
+      "false_monitor_dispositions": 0,
+      "p1_records": 0,
+      "p1_missed": 0,
+      "latency_ms": {
+        "p50": 5.3829168900847435,
+        "p95": 6.981333019211888,
+        "records": 118
+      }
+    },
+    "finetuned-29": {
+      "records": 118,
+      "all_four_correct": 117,
+      "field_correct": {
+        "initial_owner": 117,
+        "priority": 118,
+        "next_check": 117,
+        "insufficient_evidence": 117
+      },
+      "failed_records": 0,
+      "missing_records": 0,
+      "pairs": 59,
+      "complete_pairs": 58,
+      "insufficient_evidence": {
+        "true_positive": 58,
+        "false_positive": 0,
+        "false_negative": 1,
+        "precision": 1.0,
+        "recall": 0.9830508474576272
+      },
+      "false_domain_assignments": 1,
+      "false_monitor_dispositions": 0,
+      "p1_records": 0,
+      "p1_missed": 0,
+      "latency_ms": {
+        "p50": 4.891750169917941,
+        "p95": 5.381958093494177,
+        "records": 118
+      }
+    }
+  }
+}

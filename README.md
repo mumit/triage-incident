@@ -20,6 +20,8 @@ The [teacher-trained encoder experiment](docs/teacher-encoder-results.md) adds 5
 
 The [bounded regularization experiment](docs/encoder-regularization-results.md) keeps that data and configuration fixed. L2 `0.001` reaches **58/58 training and 14/16 development agreement**, with all five trial fits verified as converged. Broader reviewed data and unseen-family evaluation remain the next steps.
 
+The [expanded encoder transfer experiment](docs/encoder-transfer-results.md) uses 118 training and 54 accepted development incidents. The expanded frozen head reaches **48/54**, versus **46/54** for the previous head and **54/54** for a separately run Luna classifier. Fine-tuning reaches 47/54 and 46/54 across two seeds. The higher head agreement comes with more false domain assignments. Resident serial inference p95 is about 5.5 ms on this Mac; production accuracy remains unmeasured.
+
 ## Browser app
 
 ```bash

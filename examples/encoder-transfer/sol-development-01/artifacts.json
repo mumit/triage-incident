@@ -1,0 +1,6 @@
+{
+  "candidate.labels.jsonl": "8378ced961d346d3a78f7e40a2954a4f6ecb1c577852eea78e6b6949d49b6646",
+  "candidate.inputs.jsonl": "1c282fd092af8597955dc3f62e6905e3a8502a380ba0328bf06139dcc7ca98eb",
+  "adjudication.inputs.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "adjudication.labels.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+}

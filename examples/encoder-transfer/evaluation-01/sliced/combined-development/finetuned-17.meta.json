@@ -1,0 +1,267 @@
+{
+  "provider": "teacher_finetuned",
+  "request_protocol": "northstar-teacher-finetuned-minilm-v1",
+  "input_sha256": "59083836db5bb2c85eb538e093bffeca363f80763f6ebbbbc04791e0924039f0",
+  "head_training": {
+    "request_protocol": "northstar-teacher-finetuned-minilm-v1",
+    "base_model_id": "sentence-transformers/all-MiniLM-L6-v2",
+    "base_revision": "1110a243fdf4706b3f48f1d95db1a4f5529b4d41",
+    "architecture": "End-to-end MiniLM encoder plus seven-way linear head, structured features, and policy priority",
+    "max_tokens": 512,
+    "feature_size": 21,
+    "selected_epoch": 15,
+    "history": [
+      {
+        "epoch": 1,
+        "training_correct": 72,
+        "development_correct": 28,
+        "mean_training_loss": 1.946875508626302
+      },
+      {
+        "epoch": 2,
+        "training_correct": 94,
+        "development_correct": 40,
+        "mean_training_loss": 1.8141324758529662
+      },
+      {
+        "epoch": 3,
+        "training_correct": 108,
+        "development_correct": 39,
+        "mean_training_loss": 1.6662626345952352
+      },
+      {
+        "epoch": 4,
+        "training_correct": 114,
+        "development_correct": 38,
+        "mean_training_loss": 1.4945819218953451
+      },
+      {
+        "epoch": 5,
+        "training_correct": 117,
+        "development_correct": 38,
+        "mean_training_loss": 1.3450116078058878
+      },
+      {
+        "epoch": 6,
+        "training_correct": 117,
+        "development_correct": 41,
+        "mean_training_loss": 1.1833133697509766
+      },
+      {
+        "epoch": 7,
+        "training_correct": 117,
+        "development_correct": 41,
+        "mean_training_loss": 1.0387855251630147
+      },
+      {
+        "epoch": 8,
+        "training_correct": 117,
+        "development_correct": 41,
+        "mean_training_loss": 0.8987774888674418
+      },
+      {
+        "epoch": 9,
+        "training_correct": 117,
+        "development_correct": 43,
+        "mean_training_loss": 0.7678572138150533
+      },
+      {
+        "epoch": 10,
+        "training_correct": 117,
+        "development_correct": 42,
+        "mean_training_loss": 0.6840193033218384
+      },
+      {
+        "epoch": 11,
+        "training_correct": 118,
+        "development_correct": 46,
+        "mean_training_loss": 0.5845160941282909
+      },
+      {
+        "epoch": 12,
+        "training_correct": 118,
+        "development_correct": 46,
+        "mean_training_loss": 0.49815215865770973
+      },
+      {
+        "epoch": 13,
+        "training_correct": 118,
+        "development_correct": 45,
+        "mean_training_loss": 0.43913200696309407
+      },
+      {
+        "epoch": 14,
+        "training_correct": 118,
+        "development_correct": 44,
+        "mean_training_loss": 0.3827196002006531
+      },
+      {
+        "epoch": 15,
+        "training_correct": 118,
+        "development_correct": 47,
+        "mean_training_loss": 0.33257856965065
+      },
+      {
+        "epoch": 16,
+        "training_correct": 118,
+        "development_correct": 45,
+        "mean_training_loss": 0.2975263307491938
+      },
+      {
+        "epoch": 17,
+        "training_correct": 118,
+        "development_correct": 45,
+        "mean_training_loss": 0.2627881040175756
+      },
+      {
+        "epoch": 18,
+        "training_correct": 118,
+        "development_correct": 47,
+        "mean_training_loss": 0.23096166749795277
+      },
+      {
+        "epoch": 19,
+        "training_correct": 118,
+        "development_correct": 47,
+        "mean_training_loss": 0.2094715267419815
+      },
+      {
+        "epoch": 20,
+        "training_correct": 118,
+        "development_correct": 47,
+        "mean_training_loss": 0.187307013074557
+      }
+    ],
+    "training_records": 118,
+    "development_records": 54,
+    "train_input_sha256": "a9b03e3e7cc6fcaff5d36108899664b23d64ca05ea04b6711f91f73fe153f1a9",
+    "train_label_sha256": "1300ef73445c4aad5a284f571429d1375de18283787686daa872b6b005ed0c16",
+    "dev_input_sha256": "59083836db5bb2c85eb538e093bffeca363f80763f6ebbbbc04791e0924039f0",
+    "dev_label_sha256": "3af8ac1496202dac4e7ee7ac59a26375e27fb537ab57705066b0edb9cb0e1bb9",
+    "training_families": [
+      "change_core_drain_scope",
+      "change_core_feature_scope",
+      "change_power_loadbank_scope",
+      "change_radio_license_scope",
+      "change_transport_vrf_scope",
+      "core_api_schema",
+      "core_endpoint_pool",
+      "core_journal_failure",
+      "core_lease_lock",
+      "core_name_cache",
+      "core_rate_limit_scope",
+      "core_replica_quorum",
+      "core_replica_read_skew",
+      "core_service_clock",
+      "core_shard_map",
+      "core_token_expiry",
+      "core_worker_deadlock",
+      "power_ats_interlock",
+      "power_battery_isolation",
+      "power_branch_contactor",
+      "power_busbar_joint",
+      "power_dc_polarity",
+      "power_earth_fault",
+      "power_fuse_contact",
+      "power_inverter_bypass",
+      "power_neutral_connection",
+      "power_rectifier_ripple",
+      "power_remote_feed",
+      "power_voltage_sensor_disagreement",
+      "radio_adc_clipping",
+      "radio_amplifier_gain",
+      "radio_baseband_memory",
+      "radio_beam_calibration",
+      "radio_carrier_mapping",
+      "radio_duplex_filter",
+      "radio_fronthaul_clock",
+      "radio_harq_process",
+      "radio_local_oscillator",
+      "radio_remote_cooling",
+      "radio_timing_advance",
+      "radio_uplink_decoder",
+      "recovery_data_session",
+      "recovery_emergency_test",
+      "recovery_enterprise_vpn",
+      "recovery_roaming_attach",
+      "recovery_sms_transaction",
+      "recovery_voice_setup",
+      "transport_dependency_membership",
+      "transport_ecmp_blackhole",
+      "transport_label_disposition",
+      "transport_microburst_buffer",
+      "transport_mtu_blackhole",
+      "transport_optical_fec",
+      "transport_pseudowire_sequence",
+      "transport_qos_policer",
+      "transport_reverse_path",
+      "transport_spanning_loop",
+      "transport_ttl_rewrite",
+      "transport_tunnel_binding"
+    ],
+    "development_families": [
+      "alarm_clear_service_probe",
+      "change_radio_carrier_scope",
+      "change_transport_port_scope",
+      "contradictory_power_sources",
+      "core_certificate",
+      "core_connection_pool",
+      "core_route_registry",
+      "core_transaction_rollback",
+      "dependency_membership",
+      "maintenance_scope_mismatch",
+      "mixed_dc_voltage",
+      "power_connector_resistance",
+      "power_converter_current_limit",
+      "power_rectifier_thermal_timeline",
+      "power_surge_protector",
+      "queue_drops",
+      "radio_digital_predistortion",
+      "radio_pcie_dma",
+      "radio_srs_configuration",
+      "recovery_iot_registration",
+      "recovery_video_session",
+      "transport_checksum_disagreement",
+      "transport_link_bundle_hash",
+      "transport_mac_learning",
+      "transport_shared_uplink_intervention",
+      "transport_vlan_translation",
+      "unrelated_change_radio"
+    ],
+    "selection": "Maximum complete development agreement; earliest epoch wins ties; not holdout performance",
+    "hyperparameters": {
+      "epochs": 20,
+      "encoder_lr": 3e-05,
+      "head_lr": 0.001,
+      "batch_size": 8,
+      "seed": 17,
+      "weight_decay": 0.01
+    },
+    "device": "mps",
+    "training_seconds": 48.494519541971385,
+    "encoder_parameters": 22713216,
+    "renderer_sha256": "149d8d4ddbc0af017bec180797ad2d7e2ea2c9ab4235e3f64feeff6d32bc3d8b",
+    "training_source_sha256": "a8b1fe9cee76185997b576e38463bf860d547bb6814ebe495b54c9469e73e42d",
+    "versions": {
+      "torch": "2.14.0",
+      "transformers": "5.17.0",
+      "numpy": "2.5.3"
+    },
+    "artifact_sha256": {
+      "checkpoint/model.safetensors": "5feab615b638660781c8df918c0d6d1f08488e8a9ecd13048a8ba5a8c8c57996",
+      "checkpoint/tokenizer_config.json": "4b91f63e0ec01ae5112b4fab0027b301a38d94f6b1fd001abf2236390168b553",
+      "checkpoint/config.json": "bc07d616645604e14676245d40081ed4cb71e12817fb034d874a123576657924",
+      "checkpoint/tokenizer.json": "f17212c38517cfedc9306b57eeffbaf58c4976fcb42e5a87b405f36a7b9a9eb2",
+      "head.pt": "193643f83df9de24252ef948344a9c5550075f6f6fe2b8b15e78359d0b78dc25"
+    }
+  },
+  "model_load_ms": 63.18154186010361,
+  "device": "mps",
+  "records": 54,
+  "failed_records": 0,
+  "no_autoregressive_calls": true,
+  "execution": "serial local inference; cached checkpoint; no warmup; per-record latency excludes model load",
+  "source_input_sha256": "59083836db5bb2c85eb538e093bffeca363f80763f6ebbbbc04791e0924039f0",
+  "source_prediction_sha256": "d850f7acf137806beb26c716f31483962b8bfccf01cef27f6cb8738a54a4a0c4",
+  "subset": "Post-inference ID selection only; no modified predictions"
+}

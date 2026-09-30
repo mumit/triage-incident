@@ -1,0 +1,2447 @@
+{
+  "protocol": "northstar-resident-encoder-benchmark-v1",
+  "device": "mps",
+  "model_load_ms": 2029.0087920147926,
+  "head_sha256": "003752649e71c5c6b806bc37ea2bfb9546e87441a2b4108494b183aa6871d3ab",
+  "input_sha256": "1c282fd092af8597955dc3f62e6905e3a8502a380ba0328bf06139dcc7ca98eb",
+  "execution": "Single resident process; one serial pass of explicit warmup; no concurrency; per-batch times include tokenizer, features, encode and head; no API calls",
+  "limitations": "Local small synthetic sample; no deployment capacity or production latency claim",
+  "measurements": [
+    {
+      "batch_size": 1,
+      "repeats": 10,
+      "measured_records": 400,
+      "decisions_match_serial": true,
+      "batch_p50_ms": 4.524667048826814,
+      "batch_p95_ms": 5.152250174432993,
+      "records_per_second": 218.73730159658538,
+      "wall_seconds": 1.8286775830201805,
+      "batches": [
+        {
+          "batch_records": 1,
+          "latency_ms": 4.847832955420017,
+          "per_record_ms": 4.847832955420017
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.807457793504,
+          "per_record_ms": 4.807457793504
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.790375009179115,
+          "per_record_ms": 4.790375009179115
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.795209039002657,
+          "per_record_ms": 4.795209039002657
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.632999887689948,
+          "per_record_ms": 4.632999887689948
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.695084178820252,
+          "per_record_ms": 4.695084178820252
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.16662497445941,
+          "per_record_ms": 4.16662497445941
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.989250097423792,
+          "per_record_ms": 4.989250097423792
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.342209082096815,
+          "per_record_ms": 4.342209082096815
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.6009160578250885,
+          "per_record_ms": 4.6009160578250885
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.297417122870684,
+          "per_record_ms": 4.297417122870684
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.649749957025051,
+          "per_record_ms": 4.649749957025051
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.313750192523003,
+          "per_record_ms": 4.313750192523003
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.684791900217533,
+          "per_record_ms": 4.684791900217533
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.35170903801918,
+          "per_record_ms": 4.35170903801918
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.614416044205427,
+          "per_record_ms": 4.614416044205427
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.261041060090065,
+          "per_record_ms": 4.261041060090065
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.411582835018635,
+          "per_record_ms": 4.411582835018635
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.302083048969507,
+          "per_record_ms": 4.302083048969507
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.462625132873654,
+          "per_record_ms": 4.462625132873654
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.297291161492467,
+          "per_record_ms": 4.297291161492467
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.455207847058773,
+          "per_record_ms": 4.455207847058773
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.964957945048809,
+          "per_record_ms": 4.964957945048809
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.705917090177536,
+          "per_record_ms": 4.705917090177536
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.754999885335565,
+          "per_record_ms": 4.754999885335565
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.838916938751936,
+          "per_record_ms": 4.838916938751936
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.670665832236409,
+          "per_record_ms": 4.670665832236409
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.657624987885356,
+          "per_record_ms": 4.657624987885356
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.326625028625131,
+          "per_record_ms": 4.326625028625131
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.441416123881936,
+          "per_record_ms": 4.441416123881936
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.194374894723296,
+          "per_record_ms": 4.194374894723296
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.166790982708335,
+          "per_record_ms": 4.166790982708335
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.206666955724359,
+          "per_record_ms": 4.206666955724359
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.666374996304512,
+          "per_record_ms": 4.666374996304512
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.692209186032414,
+          "per_record_ms": 4.692209186032414
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.30462509393692,
+          "per_record_ms": 4.30462509393692
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.471332998946309,
+          "per_record_ms": 4.471332998946309
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.297291161492467,
+          "per_record_ms": 4.297291161492467
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 5.553959170356393,
+          "per_record_ms": 5.553959170356393
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.753833170980215,
+          "per_record_ms": 4.753833170980215
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.835500149056315,
+          "per_record_ms": 4.835500149056315
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.7349170781672,
+          "per_record_ms": 4.7349170781672
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.69183293171227,
+          "per_record_ms": 4.69183293171227
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.8684170469641685,
+          "per_record_ms": 4.8684170469641685
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.897208884358406,
+          "per_record_ms": 4.897208884358406
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 5.071541992947459,
+          "per_record_ms": 5.071541992947459
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.5848749577999115,
+          "per_record_ms": 4.5848749577999115
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.8596670385450125,
+          "per_record_ms": 4.8596670385450125
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.268042044714093,
+          "per_record_ms": 4.268042044714093
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.700790857896209,
+          "per_record_ms": 4.700790857896209
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.203957971185446,
+          "per_record_ms": 4.203957971185446
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.329334013164043,
+          "per_record_ms": 4.329334013164043
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.175041103735566,
+          "per_record_ms": 4.175041103735566
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.51516592875123,
+          "per_record_ms": 4.51516592875123
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.177208989858627,
+          "per_record_ms": 4.177208989858627
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 5.348915932700038,
+          "per_record_ms": 5.348915932700038
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.448082996532321,
+          "per_record_ms": 4.448082996532321
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.5111661311239,
+          "per_record_ms": 4.5111661311239
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.536208929494023,
+          "per_record_ms": 4.536208929494023
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.570875084027648,
+          "per_record_ms": 4.570875084027648
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.559583030641079,
+          "per_record_ms": 4.559583030641079
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.469250096008182,
+          "per_record_ms": 4.469250096008182
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.2258750181645155,
+          "per_record_ms": 4.2258750181645155
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.484333097934723,
+          "per_record_ms": 4.484333097934723
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 5.637374939396977,
+          "per_record_ms": 5.637374939396977
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.992458038032055,
+          "per_record_ms": 4.992458038032055
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.880791064351797,
+          "per_record_ms": 4.880791064351797
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 5.734791979193687,
+          "per_record_ms": 5.734791979193687
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.110208945348859,
+          "per_record_ms": 4.110208945348859
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.941500024870038,
+          "per_record_ms": 4.941500024870038
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.067457979544997,
+          "per_record_ms": 4.067457979544997
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.466332960873842,
+          "per_record_ms": 4.466332960873842
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.462709184736013,
+          "per_record_ms": 4.462709184736013
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.383916966617107,
+          "per_record_ms": 4.383916966617107
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.767624894157052,
+          "per_record_ms": 4.767624894157052
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.47837496176362,
+          "per_record_ms": 4.47837496176362
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 5.13266702182591,
+          "per_record_ms": 5.13266702182591
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.3968751560896635,
+          "per_record_ms": 4.3968751560896635
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.581333138048649,
+          "per_record_ms": 4.581333138048649
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.491291008889675,
+          "per_record_ms": 4.491291008889675
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.653166048228741,
+          "per_record_ms": 4.653166048228741
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.7458328772336245,
+          "per_record_ms": 4.7458328772336245
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.690250148996711,
+          "per_record_ms": 4.690250148996711
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.763833014294505,
+          "per_record_ms": 4.763833014294505
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.693791968747973,
+          "per_record_ms": 4.693791968747973
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.742708057165146,
+          "per_record_ms": 4.742708057165146
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.283333197236061,
+          "per_record_ms": 4.283333197236061
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.565458977594972,
+          "per_record_ms": 4.565458977594972
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.423083970323205,
+          "per_record_ms": 4.423083970323205
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.5422089751809835,
+          "per_record_ms": 4.5422089751809835
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.356999881565571,
+          "per_record_ms": 4.356999881565571
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.493749933317304,
+          "per_record_ms": 4.493749933317304
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.271915880963206,
+          "per_record_ms": 4.271915880963206
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.51304204761982,
+          "per_record_ms": 4.51304204761982
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.403500119224191,
+          "per_record_ms": 4.403500119224191
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.573000129312277,
+          "per_record_ms": 4.573000129312277
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.1879580821841955,
+          "per_record_ms": 4.1879580821841955
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.4013329315930605,
+          "per_record_ms": 4.4013329315930605
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 5.036124959588051,
+          "per_record_ms": 5.036124959588051
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.597125109285116,
+          "per_record_ms": 4.597125109285116
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.367875168099999,
+          "per_record_ms": 4.367875168099999
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.613999975845218,
+          "per_record_ms": 4.613999975845218
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.39387490041554,
+          "per_record_ms": 4.39387490041554
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.640416940674186,
+          "per_record_ms": 4.640416940674186
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.736374830827117,
+          "per_record_ms": 4.736374830827117
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.73712501116097,
+          "per_record_ms": 4.73712501116097
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.6783750876784325,
+          "per_record_ms": 4.6783750876784325
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.810333019122481,
+          "per_record_ms": 4.810333019122481
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.524667048826814,
+          "per_record_ms": 4.524667048826814
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 5.012125009670854,
+          "per_record_ms": 5.012125009670854
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.250624915584922,
+          "per_record_ms": 4.250624915584922
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.227958852425218,
+          "per_record_ms": 4.227958852425218
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.357457859441638,
+          "per_record_ms": 4.357457859441638
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.264833172783256,
+          "per_record_ms": 4.264833172783256
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.676500102505088,
+          "per_record_ms": 4.676500102505088
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.380000056698918,
+          "per_record_ms": 4.380000056698918
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.438749980181456,
+          "per_record_ms": 4.438749980181456
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.262750037014484,
+          "per_record_ms": 4.262750037014484
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.54925000667572,
+          "per_record_ms": 4.54925000667572
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.405084066092968,
+          "per_record_ms": 4.405084066092968
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 5.420832894742489,
+          "per_record_ms": 5.420832894742489
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.771792097017169,
+          "per_record_ms": 4.771792097017169
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.514292115345597,
+          "per_record_ms": 4.514292115345597
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 5.283583886921406,
+          "per_record_ms": 5.283583886921406
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.556375090032816,
+          "per_record_ms": 4.556375090032816
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.863874986767769,
+          "per_record_ms": 4.863874986767769
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.224624950438738,
+          "per_record_ms": 4.224624950438738
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.453666973859072,
+          "per_record_ms": 4.453666973859072
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.051459021866322,
+          "per_record_ms": 4.051459021866322
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.493208136409521,
+          "per_record_ms": 4.493208136409521
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 5.339791998267174,
+          "per_record_ms": 5.339791998267174
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.853249993175268,
+          "per_record_ms": 4.853249993175268
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.537458065897226,
+          "per_record_ms": 4.537458065897226
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.601457854732871,
+          "per_record_ms": 4.601457854732871
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.313291981816292,
+          "per_record_ms": 4.313291981816292
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.5308328699320555,
+          "per_record_ms": 4.5308328699320555
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.172750050202012,
+          "per_record_ms": 4.172750050202012
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.428416024893522,
+          "per_record_ms": 4.428416024893522
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.103749990463257,
+          "per_record_ms": 4.103749990463257
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.464750178158283,
+          "per_record_ms": 4.464750178158283
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.275457933545113,
+          "per_record_ms": 4.275457933545113
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.351000068709254,
+          "per_record_ms": 4.351000068709254
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 5.369707942008972,
+          "per_record_ms": 5.369707942008972
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.693999886512756,
+          "per_record_ms": 4.693999886512756
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.850500030443072,
+          "per_record_ms": 4.850500030443072
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.922499880194664,
+          "per_record_ms": 4.922499880194664
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.837332991883159,
+          "per_record_ms": 4.837332991883159
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 5.4015000350773335,
+          "per_record_ms": 5.4015000350773335
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.2149589862674475,
+          "per_record_ms": 4.2149589862674475
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.050167044624686,
+          "per_record_ms": 4.050167044624686
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.271375015377998,
+          "per_record_ms": 4.271375015377998
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.1252919472754,
+          "per_record_ms": 4.1252919472754
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.165041958913207,
+          "per_record_ms": 4.165041958913207
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.399124998599291,
+          "per_record_ms": 4.399124998599291
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.516624845564365,
+          "per_record_ms": 4.516624845564365
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.288166994228959,
+          "per_record_ms": 4.288166994228959
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.352666903287172,
+          "per_record_ms": 4.352666903287172
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.238666966557503,
+          "per_record_ms": 4.238666966557503
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.523457959294319,
+          "per_record_ms": 4.523457959294319
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 5.086791003122926,
+          "per_record_ms": 5.086791003122926
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.896416096016765,
+          "per_record_ms": 4.896416096016765
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.72120800986886,
+          "per_record_ms": 4.72120800986886
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.65941708534956,
+          "per_record_ms": 4.65941708534956
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.804041935130954,
+          "per_record_ms": 4.804041935130954
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 5.440917098894715,
+          "per_record_ms": 5.440917098894715
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.804540891200304,
+          "per_record_ms": 4.804540891200304
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.439624957740307,
+          "per_record_ms": 4.439624957740307
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.76587493903935,
+          "per_record_ms": 4.76587493903935
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.2966248001903296,
+          "per_record_ms": 4.2966248001903296
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.525083117187023,
+          "per_record_ms": 4.525083117187023
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.288708092644811,
+          "per_record_ms": 4.288708092644811
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 5.465999944135547,
+          "per_record_ms": 5.465999944135547
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.537041997537017,
+          "per_record_ms": 4.537041997537017
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.728125175461173,
+          "per_record_ms": 4.728125175461173
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.503541858866811,
+          "per_record_ms": 4.503541858866811
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.542500013485551,
+          "per_record_ms": 4.542500013485551
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.227000055834651,
+          "per_record_ms": 4.227000055834651
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.619374871253967,
+          "per_record_ms": 4.619374871253967
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.324333975091577,
+          "per_record_ms": 4.324333975091577
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.461040953174233,
+          "per_record_ms": 4.461040953174233
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.107999848201871,
+          "per_record_ms": 4.107999848201871
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.402667051181197,
+          "per_record_ms": 4.402667051181197
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 5.142959067597985,
+          "per_record_ms": 5.142959067597985
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 5.2932919934391975,
+          "per_record_ms": 5.2932919934391975
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.882458131760359,
+          "per_record_ms": 4.882458131760359
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.766041878610849,
+          "per_record_ms": 4.766041878610849
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.681209102272987,
+          "per_record_ms": 4.681209102272987
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 5.701583111658692,
+          "per_record_ms": 5.701583111658692
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.303500056266785,
+          "per_record_ms": 4.303500056266785
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.239875124767423,
+          "per_record_ms": 4.239875124767423
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.152541048824787,
+          "per_record_ms": 4.152541048824787
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.170000087469816,
+          "per_record_ms": 4.170000087469816
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.273749887943268,
+          "per_record_ms": 4.273749887943268
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.145582905039191,
+          "per_record_ms": 4.145582905039191
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.597292048856616,
+          "per_record_ms": 4.597292048856616
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.12870803847909,
+          "per_record_ms": 4.12870803847909
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.293208010494709,
+          "per_record_ms": 4.293208010494709
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.1355409193784,
+          "per_record_ms": 4.1355409193784
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.639208083972335,
+          "per_record_ms": 4.639208083972335
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.467959050089121,
+          "per_record_ms": 4.467959050089121
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.603124922141433,
+          "per_record_ms": 4.603124922141433
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.689999856054783,
+          "per_record_ms": 4.689999856054783
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.705333150923252,
+          "per_record_ms": 4.705333150923252
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.7494578175246716,
+          "per_record_ms": 4.7494578175246716
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.70033404417336,
+          "per_record_ms": 4.70033404417336
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.761458840221167,
+          "per_record_ms": 4.761458840221167
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.248708952218294,
+          "per_record_ms": 4.248708952218294
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.648957867175341,
+          "per_record_ms": 4.648957867175341
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.368915921077132,
+          "per_record_ms": 4.368915921077132
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.447791958227754,
+          "per_record_ms": 4.447791958227754
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.205582896247506,
+          "per_record_ms": 4.205582896247506
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.8345839604735374,
+          "per_record_ms": 4.8345839604735374
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.275333136320114,
+          "per_record_ms": 4.275333136320114
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.629999864846468,
+          "per_record_ms": 4.629999864846468
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.282791865989566,
+          "per_record_ms": 4.282791865989566
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.539208021014929,
+          "per_record_ms": 4.539208021014929
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.197959089651704,
+          "per_record_ms": 4.197959089651704
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.589541116729379,
+          "per_record_ms": 4.589541116729379
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.544457886368036,
+          "per_record_ms": 4.544457886368036
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.474834073334932,
+          "per_record_ms": 4.474834073334932
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.294207785278559,
+          "per_record_ms": 4.294207785278559
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.554040962830186,
+          "per_record_ms": 4.554040962830186
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.397166892886162,
+          "per_record_ms": 4.397166892886162
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.62233298458159,
+          "per_record_ms": 4.62233298458159
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.668458132073283,
+          "per_record_ms": 4.668458132073283
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.481540992856026,
+          "per_record_ms": 4.481540992856026
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.983042133972049,
+          "per_record_ms": 4.983042133972049
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.654000047594309,
+          "per_record_ms": 4.654000047594309
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.259624984115362,
+          "per_record_ms": 4.259624984115362
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.158125026151538,
+          "per_record_ms": 4.158125026151538
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.23229206353426,
+          "per_record_ms": 4.23229206353426
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.190416075289249,
+          "per_record_ms": 4.190416075289249
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.259082954376936,
+          "per_record_ms": 4.259082954376936
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.405332962051034,
+          "per_record_ms": 4.405332962051034
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.63066715747118,
+          "per_record_ms": 4.63066715747118
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.294541897252202,
+          "per_record_ms": 4.294541897252202
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.2624999769032,
+          "per_record_ms": 4.2624999769032
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.3287500739097595,
+          "per_record_ms": 4.3287500739097595
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.472499946132302,
+          "per_record_ms": 4.472499946132302
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.519625101238489,
+          "per_record_ms": 4.519625101238489
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.754791967570782,
+          "per_record_ms": 4.754791967570782
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 5.810749949887395,
+          "per_record_ms": 5.810749949887395
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.854958970099688,
+          "per_record_ms": 4.854958970099688
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.839499946683645,
+          "per_record_ms": 4.839499946683645
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.688332788646221,
+          "per_record_ms": 4.688332788646221
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.804625175893307,
+          "per_record_ms": 4.804625175893307
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.2323339730501175,
+          "per_record_ms": 4.2323339730501175
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.689333960413933,
+          "per_record_ms": 4.689333960413933
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 5.146041978150606,
+          "per_record_ms": 5.146041978150606
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.455749876797199,
+          "per_record_ms": 4.455749876797199
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.447459010407329,
+          "per_record_ms": 4.447459010407329
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.549916135147214,
+          "per_record_ms": 4.549916135147214
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.230458056554198,
+          "per_record_ms": 4.230458056554198
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.690417088568211,
+          "per_record_ms": 4.690417088568211
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.18716692365706,
+          "per_record_ms": 4.18716692365706
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.828667035326362,
+          "per_record_ms": 4.828667035326362
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.1513340547680855,
+          "per_record_ms": 4.1513340547680855
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.454457899555564,
+          "per_record_ms": 4.454457899555564
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.425292136147618,
+          "per_record_ms": 4.425292136147618
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.576124949380755,
+          "per_record_ms": 4.576124949380755
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.357875091955066,
+          "per_record_ms": 4.357875091955066
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.867249866947532,
+          "per_record_ms": 4.867249866947532
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.2651251424103975,
+          "per_record_ms": 4.2651251424103975
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.759624833241105,
+          "per_record_ms": 4.759624833241105
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.560957895591855,
+          "per_record_ms": 4.560957895591855
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 5.141250090673566,
+          "per_record_ms": 5.141250090673566
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.783750046044588,
+          "per_record_ms": 4.783750046044588
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.52791596762836,
+          "per_record_ms": 4.52791596762836
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.434166941791773,
+          "per_record_ms": 4.434166941791773
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.193749977275729,
+          "per_record_ms": 4.193749977275729
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.191625164821744,
+          "per_record_ms": 4.191625164821744
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.0287908632308245,
+          "per_record_ms": 4.0287908632308245
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.024916095659137,
+          "per_record_ms": 4.024916095659137
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.055916098877788,
+          "per_record_ms": 4.055916098877788
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.38533304259181,
+          "per_record_ms": 4.38533304259181
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 5.672333994880319,
+          "per_record_ms": 5.672333994880319
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 5.263833096250892,
+          "per_record_ms": 5.263833096250892
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.412499954923987,
+          "per_record_ms": 4.412499954923987
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.61729196831584,
+          "per_record_ms": 4.61729196831584
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 5.152250174432993,
+          "per_record_ms": 5.152250174432993
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.685208899900317,
+          "per_record_ms": 4.685208899900317
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.914333112537861,
+          "per_record_ms": 4.914333112537861
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 5.162957822903991,
+          "per_record_ms": 5.162957822903991
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.845833871513605,
+          "per_record_ms": 4.845833871513605
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.890042124316096,
+          "per_record_ms": 4.890042124316096
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.749916959553957,
+          "per_record_ms": 4.749916959553957
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 5.137750180438161,
+          "per_record_ms": 5.137750180438161
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 5.199125036597252,
+          "per_record_ms": 5.199125036597252
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.462250042706728,
+          "per_record_ms": 4.462250042706728
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.596709040924907,
+          "per_record_ms": 4.596709040924907
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.318957915529609,
+          "per_record_ms": 4.318957915529609
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.714917158707976,
+          "per_record_ms": 4.714917158707976
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.252790939062834,
+          "per_record_ms": 4.252790939062834
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.4271249789744616,
+          "per_record_ms": 4.4271249789744616
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.265957977622747,
+          "per_record_ms": 4.265957977622747
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.539957968518138,
+          "per_record_ms": 4.539957968518138
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.143666010349989,
+          "per_record_ms": 4.143666010349989
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.463916877284646,
+          "per_record_ms": 4.463916877284646
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.28645801730454,
+          "per_record_ms": 4.28645801730454
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.663124913349748,
+          "per_record_ms": 4.663124913349748
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.37633297406137,
+          "per_record_ms": 4.37633297406137
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.5173331163823605,
+          "per_record_ms": 4.5173331163823605
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.369624890387058,
+          "per_record_ms": 4.369624890387058
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.4778750743716955,
+          "per_record_ms": 4.4778750743716955
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.73808404058218,
+          "per_record_ms": 4.73808404058218
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.823124967515469,
+          "per_record_ms": 4.823124967515469
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 5.000208038836718,
+          "per_record_ms": 5.000208038836718
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.815750056877732,
+          "per_record_ms": 4.815750056877732
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.299707943573594,
+          "per_record_ms": 4.299707943573594
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.17579198256135,
+          "per_record_ms": 4.17579198256135
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.22379095107317,
+          "per_record_ms": 4.22379095107317
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.174207802861929,
+          "per_record_ms": 4.174207802861929
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.267959157004952,
+          "per_record_ms": 4.267959157004952
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.20637521892786,
+          "per_record_ms": 4.20637521892786
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.518167115747929,
+          "per_record_ms": 4.518167115747929
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.4363331981003284,
+          "per_record_ms": 4.4363331981003284
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 5.103333154693246,
+          "per_record_ms": 5.103333154693246
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.26566693931818,
+          "per_record_ms": 4.26566693931818
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.51070792041719,
+          "per_record_ms": 4.51070792041719
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 5.14029199257493,
+          "per_record_ms": 5.14029199257493
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.849833901971579,
+          "per_record_ms": 4.849833901971579
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.880291875451803,
+          "per_record_ms": 4.880291875451803
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.710417008027434,
+          "per_record_ms": 4.710417008027434
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.7108749859035015,
+          "per_record_ms": 4.7108749859035015
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.629750037565827,
+          "per_record_ms": 4.629750037565827
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.666625056415796,
+          "per_record_ms": 4.666625056415796
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.295333055779338,
+          "per_record_ms": 4.295333055779338
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.4161248952150345,
+          "per_record_ms": 4.4161248952150345
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.1552500333637,
+          "per_record_ms": 4.1552500333637
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.407833097502589,
+          "per_record_ms": 4.407833097502589
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.92791598662734,
+          "per_record_ms": 4.92791598662734
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.571417113766074,
+          "per_record_ms": 4.571417113766074
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.255125066265464,
+          "per_record_ms": 4.255125066265464
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.4813749846071005,
+          "per_record_ms": 4.4813749846071005
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.258082946762443,
+          "per_record_ms": 4.258082946762443
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.590459167957306,
+          "per_record_ms": 4.590459167957306
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.1985418647527695,
+          "per_record_ms": 4.1985418647527695
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.499916220083833,
+          "per_record_ms": 4.499916220083833
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.22108406201005,
+          "per_record_ms": 4.22108406201005
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.517874913290143,
+          "per_record_ms": 4.517874913290143
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.213457927107811,
+          "per_record_ms": 4.213457927107811
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 5.218625068664551,
+          "per_record_ms": 5.218625068664551
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.665291868150234,
+          "per_record_ms": 4.665291868150234
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.9047081265598536,
+          "per_record_ms": 4.9047081265598536
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 5.308666033670306,
+          "per_record_ms": 5.308666033670306
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.737667040899396,
+          "per_record_ms": 4.737667040899396
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.6729580499231815,
+          "per_record_ms": 4.6729580499231815
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.603374982252717,
+          "per_record_ms": 4.603374982252717
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.157625138759613,
+          "per_record_ms": 4.157625138759613
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 3.955791937187314,
+          "per_record_ms": 3.955791937187314
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.990041954442859,
+          "per_record_ms": 4.990041954442859
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.223166964948177,
+          "per_record_ms": 4.223166964948177
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.233208019286394,
+          "per_record_ms": 4.233208019286394
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.251708975061774,
+          "per_record_ms": 4.251708975061774
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.598542116582394,
+          "per_record_ms": 4.598542116582394
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.328874871134758,
+          "per_record_ms": 4.328874871134758
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.3579579796642065,
+          "per_record_ms": 4.3579579796642065
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.71233413554728,
+          "per_record_ms": 4.71233413554728
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.658124875277281,
+          "per_record_ms": 4.658124875277281
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.69158380292356,
+          "per_record_ms": 4.69158380292356
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.689458059147,
+          "per_record_ms": 4.689458059147
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.833332961425185,
+          "per_record_ms": 4.833332961425185
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.520416026934981,
+          "per_record_ms": 4.520416026934981
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 5.0894590094685555,
+          "per_record_ms": 5.0894590094685555
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.939249949529767,
+          "per_record_ms": 4.939249949529767
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 5.0785839557647705,
+          "per_record_ms": 5.0785839557647705
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.451917018741369,
+          "per_record_ms": 4.451917018741369
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.561250098049641,
+          "per_record_ms": 4.561250098049641
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.477957962080836,
+          "per_record_ms": 4.477957962080836
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.44362498819828,
+          "per_record_ms": 4.44362498819828
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.512124927714467,
+          "per_record_ms": 4.512124927714467
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.429624881595373,
+          "per_record_ms": 4.429624881595373
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.4274169486016035,
+          "per_record_ms": 4.4274169486016035
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.482167074456811,
+          "per_record_ms": 4.482167074456811
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.304459085687995,
+          "per_record_ms": 4.304459085687995
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.555333172902465,
+          "per_record_ms": 4.555333172902465
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.833749961107969,
+          "per_record_ms": 4.833749961107969
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.635416902601719,
+          "per_record_ms": 4.635416902601719
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.253707826137543,
+          "per_record_ms": 4.253707826137543
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.682749975472689,
+          "per_record_ms": 4.682749975472689
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.140084143728018,
+          "per_record_ms": 4.140084143728018
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.517207853496075,
+          "per_record_ms": 4.517207853496075
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.261166090145707,
+          "per_record_ms": 4.261166090145707
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.963750019669533,
+          "per_record_ms": 4.963750019669533
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.608290968462825,
+          "per_record_ms": 4.608290968462825
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.932790994644165,
+          "per_record_ms": 4.932790994644165
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 5.147416843101382,
+          "per_record_ms": 5.147416843101382
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.7352497931569815,
+          "per_record_ms": 4.7352497931569815
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.459374817088246,
+          "per_record_ms": 4.459374817088246
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.215667024254799,
+          "per_record_ms": 4.215667024254799
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.1114999912679195,
+          "per_record_ms": 4.1114999912679195
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.132417030632496,
+          "per_record_ms": 4.132417030632496
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.928791895508766,
+          "per_record_ms": 4.928791895508766
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.105583066120744,
+          "per_record_ms": 4.105583066120744
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.814333049580455,
+          "per_record_ms": 4.814333049580455
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.513583146035671,
+          "per_record_ms": 4.513583146035671
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.676250042393804,
+          "per_record_ms": 4.676250042393804
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.929125076159835,
+          "per_record_ms": 4.929125076159835
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.858500091359019,
+          "per_record_ms": 4.858500091359019
+        },
+        {
+          "batch_records": 1,
+          "latency_ms": 4.725417122244835,
+          "per_record_ms": 4.725417122244835
+        }
+      ]
+    },
+    {
+      "batch_size": 8,
+      "repeats": 10,
+      "measured_records": 400,
+      "decisions_match_serial": true,
+      "batch_p50_ms": 17.712875036522746,
+      "batch_p95_ms": 22.03000010922551,
+      "records_per_second": 390.8174031225567,
+      "wall_seconds": 1.0234958750661463,
+      "batches": [
+        {
+          "batch_records": 8,
+          "latency_ms": 158.8803748600185,
+          "per_record_ms": 19.86004685750231
+        },
+        {
+          "batch_records": 8,
+          "latency_ms": 18.515124917030334,
+          "per_record_ms": 2.314390614628792
+        },
+        {
+          "batch_records": 8,
+          "latency_ms": 19.543834030628204,
+          "per_record_ms": 2.4429792538285255
+        },
+        {
+          "batch_records": 8,
+          "latency_ms": 21.750417072325945,
+          "per_record_ms": 2.718802134040743
+        },
+        {
+          "batch_records": 8,
+          "latency_ms": 19.02808411978185,
+          "per_record_ms": 2.3785105149727315
+        },
+        {
+          "batch_records": 8,
+          "latency_ms": 19.16504092514515,
+          "per_record_ms": 2.3956301156431437
+        },
+        {
+          "batch_records": 8,
+          "latency_ms": 15.299959108233452,
+          "per_record_ms": 1.9124948885291815
+        },
+        {
+          "batch_records": 8,
+          "latency_ms": 15.374958049505949,
+          "per_record_ms": 1.9218697561882436
+        },
+        {
+          "batch_records": 8,
+          "latency_ms": 17.8242907859385,
+          "per_record_ms": 2.2280363482423127
+        },
+        {
+          "batch_records": 8,
+          "latency_ms": 16.207000007852912,
+          "per_record_ms": 2.025875000981614
+        },
+        {
+          "batch_records": 8,
+          "latency_ms": 19.191999919712543,
+          "per_record_ms": 2.398999989964068
+        },
+        {
+          "batch_records": 8,
+          "latency_ms": 15.771916136145592,
+          "per_record_ms": 1.971489517018199
+        },
+        {
+          "batch_records": 8,
+          "latency_ms": 15.524833928793669,
+          "per_record_ms": 1.9406042410992086
+        },
+        {
+          "batch_records": 8,
+          "latency_ms": 18.71995790861547,
+          "per_record_ms": 2.3399947385769337
+        },
+        {
+          "batch_records": 8,
+          "latency_ms": 16.226917039602995,
+          "per_record_ms": 2.0283646299503744
+        },
+        {
+          "batch_records": 8,
+          "latency_ms": 19.138416973873973,
+          "per_record_ms": 2.3923021217342466
+        },
+        {
+          "batch_records": 8,
+          "latency_ms": 16.18154183961451,
+          "per_record_ms": 2.022692729951814
+        },
+        {
+          "batch_records": 8,
+          "latency_ms": 16.23883401043713,
+          "per_record_ms": 2.0298542513046414
+        },
+        {
+          "batch_records": 8,
+          "latency_ms": 18.578459043055773,
+          "per_record_ms": 2.3223073803819716
+        },
+        {
+          "batch_records": 8,
+          "latency_ms": 17.19700009562075,
+          "per_record_ms": 2.149625011952594
+        },
+        {
+          "batch_records": 8,
+          "latency_ms": 20.584041019901633,
+          "per_record_ms": 2.573005127487704
+        },
+        {
+          "batch_records": 8,
+          "latency_ms": 16.058041946962476,
+          "per_record_ms": 2.0072552433703095
+        },
+        {
+          "batch_records": 8,
+          "latency_ms": 15.572917181998491,
+          "per_record_ms": 1.9466146477498114
+        },
+        {
+          "batch_records": 8,
+          "latency_ms": 17.939750105142593,
+          "per_record_ms": 2.242468763142824
+        },
+        {
+          "batch_records": 8,
+          "latency_ms": 15.781875001266599,
+          "per_record_ms": 1.9727343751583248
+        },
+        {
+          "batch_records": 8,
+          "latency_ms": 18.546332838013768,
+          "per_record_ms": 2.318291604751721
+        },
+        {
+          "batch_records": 8,
+          "latency_ms": 14.927250100299716,
+          "per_record_ms": 1.8659062625374645
+        },
+        {
+          "batch_records": 8,
+          "latency_ms": 15.13812504708767,
+          "per_record_ms": 1.8922656308859587
+        },
+        {
+          "batch_records": 8,
+          "latency_ms": 17.712875036522746,
+          "per_record_ms": 2.2141093795653433
+        },
+        {
+          "batch_records": 8,
+          "latency_ms": 16.095166094601154,
+          "per_record_ms": 2.0118957618251443
+        },
+        {
+          "batch_records": 8,
+          "latency_ms": 19.395791925489902,
+          "per_record_ms": 2.424473990686238
+        },
+        {
+          "batch_records": 8,
+          "latency_ms": 15.51020797342062,
+          "per_record_ms": 1.9387759966775775
+        },
+        {
+          "batch_records": 8,
+          "latency_ms": 15.459916088730097,
+          "per_record_ms": 1.932489511091262
+        },
+        {
+          "batch_records": 8,
+          "latency_ms": 17.97483302652836,
+          "per_record_ms": 2.246854128316045
+        },
+        {
+          "batch_records": 8,
+          "latency_ms": 17.12479186244309,
+          "per_record_ms": 2.140598982805386
+        },
+        {
+          "batch_records": 8,
+          "latency_ms": 19.226541044190526,
+          "per_record_ms": 2.4033176305238158
+        },
+        {
+          "batch_records": 8,
+          "latency_ms": 16.256583854556084,
+          "per_record_ms": 2.0320729818195105
+        },
+        {
+          "batch_records": 8,
+          "latency_ms": 15.711042098701,
+          "per_record_ms": 1.963880262337625
+        },
+        {
+          "batch_records": 8,
+          "latency_ms": 18.156792037189007,
+          "per_record_ms": 2.269599004648626
+        },
+        {
+          "batch_records": 8,
+          "latency_ms": 16.2046670448035,
+          "per_record_ms": 2.0255833806004375
+        },
+        {
+          "batch_records": 8,
+          "latency_ms": 19.545417046174407,
+          "per_record_ms": 2.443177130771801
+        },
+        {
+          "batch_records": 8,
+          "latency_ms": 15.682625118643045,
+          "per_record_ms": 1.9603281398303807
+        },
+        {
+          "batch_records": 8,
+          "latency_ms": 16.176166012883186,
+          "per_record_ms": 2.0220207516103983
+        },
+        {
+          "batch_records": 8,
+          "latency_ms": 18.37133406661451,
+          "per_record_ms": 2.2964167583268136
+        },
+        {
+          "batch_records": 8,
+          "latency_ms": 18.453000113368034,
+          "per_record_ms": 2.3066250141710043
+        },
+        {
+          "batch_records": 8,
+          "latency_ms": 22.03000010922551,
+          "per_record_ms": 2.753750013653189
+        },
+        {
+          "batch_records": 8,
+          "latency_ms": 18.46333290450275,
+          "per_record_ms": 2.3079166130628437
+        },
+        {
+          "batch_records": 8,
+          "latency_ms": 25.222291937097907,
+          "per_record_ms": 3.1527864921372384
+        },
+        {
+          "batch_records": 8,
+          "latency_ms": 18.860874930396676,
+          "per_record_ms": 2.3576093662995845
+        },
+        {
+          "batch_records": 8,
+          "latency_ms": 16.854042187333107,
+          "per_record_ms": 2.1067552734166384
+        }
+      ]
+    },
+    {
+      "batch_size": 16,
+      "repeats": 10,
+      "measured_records": 400,
+      "decisions_match_serial": true,
+      "batch_p50_ms": 32.82191697508097,
+      "batch_p95_ms": 36.521792178973556,
+      "records_per_second": 466.9064945879879,
+      "wall_seconds": 0.8567025831434876,
+      "batches": [
+        {
+          "batch_records": 16,
+          "latency_ms": 38.72862504795194,
+          "per_record_ms": 2.420539065496996
+        },
+        {
+          "batch_records": 16,
+          "latency_ms": 35.75249994173646,
+          "per_record_ms": 2.2345312463585287
+        },
+        {
+          "batch_records": 8,
+          "latency_ms": 17.56229088641703,
+          "per_record_ms": 2.195286360802129
+        },
+        {
+          "batch_records": 16,
+          "latency_ms": 35.44962499290705,
+          "per_record_ms": 2.2156015620566905
+        },
+        {
+          "batch_records": 16,
+          "latency_ms": 32.82191697508097,
+          "per_record_ms": 2.0513698109425604
+        },
+        {
+          "batch_records": 8,
+          "latency_ms": 16.955333994701505,
+          "per_record_ms": 2.119416749337688
+        },
+        {
+          "batch_records": 16,
+          "latency_ms": 35.83641699515283,
+          "per_record_ms": 2.239776062197052
+        },
+        {
+          "batch_records": 16,
+          "latency_ms": 32.32512506656349,
+          "per_record_ms": 2.020320316660218
+        },
+        {
+          "batch_records": 8,
+          "latency_ms": 17.53033301793039,
+          "per_record_ms": 2.1912916272412986
+        },
+        {
+          "batch_records": 16,
+          "latency_ms": 34.660917008295655,
+          "per_record_ms": 2.1663073130184785
+        },
+        {
+          "batch_records": 16,
+          "latency_ms": 33.94704102538526,
+          "per_record_ms": 2.121690064086579
+        },
+        {
+          "batch_records": 8,
+          "latency_ms": 17.550708958879113,
+          "per_record_ms": 2.193838619859889
+        },
+        {
+          "batch_records": 16,
+          "latency_ms": 35.87216604501009,
+          "per_record_ms": 2.2420103778131306
+        },
+        {
+          "batch_records": 16,
+          "latency_ms": 33.58604200184345,
+          "per_record_ms": 2.099127625115216
+        },
+        {
+          "batch_records": 8,
+          "latency_ms": 16.902917064726353,
+          "per_record_ms": 2.112864633090794
+        },
+        {
+          "batch_records": 16,
+          "latency_ms": 36.521792178973556,
+          "per_record_ms": 2.2826120111858472
+        },
+        {
+          "batch_records": 16,
+          "latency_ms": 33.345833187922835,
+          "per_record_ms": 2.084114574245177
+        },
+        {
+          "batch_records": 8,
+          "latency_ms": 16.80091698653996,
+          "per_record_ms": 2.100114623317495
+        },
+        {
+          "batch_records": 16,
+          "latency_ms": 34.820750122889876,
+          "per_record_ms": 2.1762968826806173
+        },
+        {
+          "batch_records": 16,
+          "latency_ms": 32.423165859654546,
+          "per_record_ms": 2.026447866228409
+        },
+        {
+          "batch_records": 8,
+          "latency_ms": 16.55570906586945,
+          "per_record_ms": 2.0694636332336813
+        },
+        {
+          "batch_records": 16,
+          "latency_ms": 34.0335420332849,
+          "per_record_ms": 2.1270963770803064
+        },
+        {
+          "batch_records": 16,
+          "latency_ms": 32.32341702096164,
+          "per_record_ms": 2.0202135638101026
+        },
+        {
+          "batch_records": 8,
+          "latency_ms": 16.651750076562166,
+          "per_record_ms": 2.0814687595702708
+        },
+        {
+          "batch_records": 16,
+          "latency_ms": 34.135749796405435,
+          "per_record_ms": 2.1334843622753397
+        },
+        {
+          "batch_records": 16,
+          "latency_ms": 32.03533380292356,
+          "per_record_ms": 2.0022083626827225
+        },
+        {
+          "batch_records": 8,
+          "latency_ms": 17.175375018268824,
+          "per_record_ms": 2.146921877283603
+        },
+        {
+          "batch_records": 16,
+          "latency_ms": 34.39704212360084,
+          "per_record_ms": 2.1498151327250525
+        },
+        {
+          "batch_records": 16,
+          "latency_ms": 32.88216586224735,
+          "per_record_ms": 2.0551353663904592
+        },
+        {
+          "batch_records": 8,
+          "latency_ms": 17.039959086105227,
+          "per_record_ms": 2.1299948857631534
+        }
+      ]
+    }
+  ]
+}

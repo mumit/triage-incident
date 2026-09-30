@@ -1,0 +1,87 @@
+{
+  "protocol": "northstar-encoder-regularization-v1",
+  "plan_sha256": "6bc891cbc74b6882909053353b17e6a41deb860da9875a3b89e76e6a32adc015",
+  "feature_matrix_sha256": "7a2e5fa922c6f4032792d04d54563d7e942a3673758a38ee41eb49e34e7d7229",
+  "previous_head_diagnostics": {
+    "objective": 1.22503122335992,
+    "gradient_inf_norm": 1.5623914847370801e-06,
+    "converged": false
+  },
+  "trials": [
+    {
+      "objective": 1.2250312229724143,
+      "gradient_inf_norm": 9.082092097476013e-09,
+      "converged": true,
+      "iterations": 49,
+      "function_evaluations": 54,
+      "l2": 0.01,
+      "name": "l2-0.01",
+      "training_seconds": 0.018718665931373835,
+      "training_correct": 40,
+      "development_correct": 13
+    },
+    {
+      "objective": 0.8518017472154944,
+      "gradient_inf_norm": 8.850151113695692e-09,
+      "converged": true,
+      "iterations": 50,
+      "function_evaluations": 56,
+      "l2": 0.003,
+      "name": "l2-0.003",
+      "training_seconds": 0.01993791712448001,
+      "training_correct": 49,
+      "development_correct": 12
+    },
+    {
+      "objective": 0.537720177239813,
+      "gradient_inf_norm": 6.5969807945369385e-09,
+      "converged": true,
+      "iterations": 60,
+      "function_evaluations": 66,
+      "l2": 0.001,
+      "name": "l2-0.001",
+      "training_seconds": 0.025559083092957735,
+      "training_correct": 58,
+      "development_correct": 14
+    },
+    {
+      "objective": 0.28655095220074167,
+      "gradient_inf_norm": 9.189067598849854e-09,
+      "converged": true,
+      "iterations": 99,
+      "function_evaluations": 112,
+      "l2": 0.0003,
+      "name": "l2-0.0003",
+      "training_seconds": 0.060477374820038676,
+      "training_correct": 58,
+      "development_correct": 13
+    },
+    {
+      "objective": 0.1478982424551264,
+      "gradient_inf_norm": 9.855061874203264e-09,
+      "converged": true,
+      "iterations": 160,
+      "function_evaluations": 191,
+      "l2": 0.0001,
+      "name": "l2-0.0001",
+      "training_seconds": 0.11144308396615088,
+      "training_correct": 58,
+      "development_correct": 12
+    }
+  ],
+  "selected": {
+    "objective": 0.537720177239813,
+    "gradient_inf_norm": 6.5969807945369385e-09,
+    "converged": true,
+    "iterations": 60,
+    "function_evaluations": 66,
+    "l2": 0.001,
+    "name": "l2-0.001",
+    "training_seconds": 0.025559083092957735,
+    "training_correct": 58,
+    "development_correct": 14
+  },
+  "reference_head_sha256": "309e45ecc58fb4eed7c9b7c09f8c3fd926f6326e6c5b7d8589faf7c16761b93c",
+  "training_records": 58,
+  "development_records": 16
+}

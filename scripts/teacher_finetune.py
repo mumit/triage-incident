@@ -12,11 +12,12 @@ def main():
     for name in ('train-inputs','train-labels','dev-inputs','dev-labels','output-dir','inputs','model-dir','output'):
         parser.add_argument('--'+name,type=Path)
     parser.add_argument('--epochs',type=int,default=20)
+    parser.add_argument('--seed',type=int,default=17)
     args=parser.parse_args()
     if args.mode=='train':
         if not all((args.train_inputs,args.train_labels,args.dev_inputs,args.dev_labels,args.output_dir)):
             parser.error('Training requires training/development inputs and labels plus output-dir')
-        train(args.train_inputs,args.train_labels,args.dev_inputs,args.dev_labels,args.output_dir,args.epochs)
+        train(args.train_inputs,args.train_labels,args.dev_inputs,args.dev_labels,args.output_dir,args.epochs,args.seed)
     else:
         if not all((args.inputs,args.model_dir,args.output)):
             parser.error('Prediction requires inputs, model-dir, and output')

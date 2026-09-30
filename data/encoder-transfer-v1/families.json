@@ -1,0 +1,352 @@
+[
+  {
+    "family": "radio_local_oscillator",
+    "split": "train",
+    "pair_id": "ET-ca38e5c68d",
+    "theme": "domain_support",
+    "semantic_independence": "New mechanism name; concepts overlap prior data; no independent adjudication."
+  },
+  {
+    "family": "radio_adc_clipping",
+    "split": "train",
+    "pair_id": "ET-719e02bdf3",
+    "theme": "domain_support",
+    "semantic_independence": "New mechanism name; concepts overlap prior data; no independent adjudication."
+  },
+  {
+    "family": "radio_harq_process",
+    "split": "train",
+    "pair_id": "ET-778323d0bf",
+    "theme": "domain_support",
+    "semantic_independence": "New mechanism name; concepts overlap prior data; no independent adjudication."
+  },
+  {
+    "family": "radio_beam_calibration",
+    "split": "train",
+    "pair_id": "ET-26ff555594",
+    "theme": "domain_support",
+    "semantic_independence": "New mechanism name; concepts overlap prior data; no independent adjudication."
+  },
+  {
+    "family": "radio_carrier_mapping",
+    "split": "train",
+    "pair_id": "ET-c06c56d990",
+    "theme": "domain_support",
+    "semantic_independence": "New mechanism name; concepts overlap prior data; no independent adjudication."
+  },
+  {
+    "family": "radio_timing_advance",
+    "split": "train",
+    "pair_id": "ET-088080a321",
+    "theme": "domain_support",
+    "semantic_independence": "New mechanism name; concepts overlap prior data; no independent adjudication."
+  },
+  {
+    "family": "transport_reverse_path",
+    "split": "train",
+    "pair_id": "ET-1474bbee1f",
+    "theme": "domain_support",
+    "semantic_independence": "New mechanism name; concepts overlap prior data; no independent adjudication."
+  },
+  {
+    "family": "transport_ecmp_blackhole",
+    "split": "train",
+    "pair_id": "ET-51cd7f61cf",
+    "theme": "domain_support",
+    "semantic_independence": "New mechanism name; concepts overlap prior data; no independent adjudication."
+  },
+  {
+    "family": "transport_mtu_blackhole",
+    "split": "train",
+    "pair_id": "ET-74d8dcdaaf",
+    "theme": "domain_support",
+    "semantic_independence": "New mechanism name; concepts overlap prior data; no independent adjudication."
+  },
+  {
+    "family": "transport_qos_policer",
+    "split": "train",
+    "pair_id": "ET-17b798a6e2",
+    "theme": "domain_support",
+    "semantic_independence": "New mechanism name; concepts overlap prior data; no independent adjudication."
+  },
+  {
+    "family": "transport_optical_fec",
+    "split": "train",
+    "pair_id": "ET-9b05d338b2",
+    "theme": "domain_support",
+    "semantic_independence": "New mechanism name; concepts overlap prior data; no independent adjudication."
+  },
+  {
+    "family": "transport_ttl_rewrite",
+    "split": "train",
+    "pair_id": "ET-2979943824",
+    "theme": "domain_support",
+    "semantic_independence": "New mechanism name; concepts overlap prior data; no independent adjudication."
+  },
+  {
+    "family": "power_fuse_contact",
+    "split": "train",
+    "pair_id": "ET-398c9a4444",
+    "theme": "domain_support",
+    "semantic_independence": "New mechanism name; concepts overlap prior data; no independent adjudication."
+  },
+  {
+    "family": "power_rectifier_ripple",
+    "split": "train",
+    "pair_id": "ET-68068118a3",
+    "theme": "domain_support",
+    "semantic_independence": "New mechanism name; concepts overlap prior data; no independent adjudication."
+  },
+  {
+    "family": "power_battery_isolation",
+    "split": "train",
+    "pair_id": "ET-bdfd0a34e9",
+    "theme": "domain_support",
+    "semantic_independence": "New mechanism name; concepts overlap prior data; no independent adjudication."
+  },
+  {
+    "family": "power_ats_interlock",
+    "split": "train",
+    "pair_id": "ET-1e0554caf5",
+    "theme": "domain_support",
+    "semantic_independence": "New mechanism name; concepts overlap prior data; no independent adjudication."
+  },
+  {
+    "family": "power_neutral_connection",
+    "split": "train",
+    "pair_id": "ET-dca3bf947a",
+    "theme": "domain_support",
+    "semantic_independence": "New mechanism name; concepts overlap prior data; no independent adjudication."
+  },
+  {
+    "family": "power_branch_contactor",
+    "split": "train",
+    "pair_id": "ET-7f089be251",
+    "theme": "domain_support",
+    "semantic_independence": "New mechanism name; concepts overlap prior data; no independent adjudication."
+  },
+  {
+    "family": "core_name_cache",
+    "split": "train",
+    "pair_id": "ET-a549b7058b",
+    "theme": "domain_support",
+    "semantic_independence": "New mechanism name; concepts overlap prior data; no independent adjudication."
+  },
+  {
+    "family": "core_token_expiry",
+    "split": "train",
+    "pair_id": "ET-00b5d74487",
+    "theme": "domain_support",
+    "semantic_independence": "New mechanism name; concepts overlap prior data; no independent adjudication."
+  },
+  {
+    "family": "core_worker_deadlock",
+    "split": "train",
+    "pair_id": "ET-2301fcbc60",
+    "theme": "domain_support",
+    "semantic_independence": "New mechanism name; concepts overlap prior data; no independent adjudication."
+  },
+  {
+    "family": "core_shard_map",
+    "split": "train",
+    "pair_id": "ET-5677226ed9",
+    "theme": "domain_support",
+    "semantic_independence": "New mechanism name; concepts overlap prior data; no independent adjudication."
+  },
+  {
+    "family": "core_journal_failure",
+    "split": "train",
+    "pair_id": "ET-815c73313c",
+    "theme": "domain_support",
+    "semantic_independence": "New mechanism name; concepts overlap prior data; no independent adjudication."
+  },
+  {
+    "family": "core_service_clock",
+    "split": "train",
+    "pair_id": "ET-331ae73dc1",
+    "theme": "domain_support",
+    "semantic_independence": "New mechanism name; concepts overlap prior data; no independent adjudication."
+  },
+  {
+    "family": "change_transport_vrf_scope",
+    "split": "train",
+    "pair_id": "ET-99ac7c22bd",
+    "theme": "change_scope",
+    "semantic_independence": "New mechanism name; concepts overlap prior data; no independent adjudication."
+  },
+  {
+    "family": "change_power_loadbank_scope",
+    "split": "train",
+    "pair_id": "ET-8312ff6633",
+    "theme": "change_scope",
+    "semantic_independence": "New mechanism name; concepts overlap prior data; no independent adjudication."
+  },
+  {
+    "family": "change_core_feature_scope",
+    "split": "train",
+    "pair_id": "ET-a0b28a0fb8",
+    "theme": "change_scope",
+    "semantic_independence": "New mechanism name; concepts overlap prior data; no independent adjudication."
+  },
+  {
+    "family": "recovery_roaming_attach",
+    "split": "train",
+    "pair_id": "ET-04ee4522a6",
+    "theme": "recovery",
+    "semantic_independence": "New mechanism name; concepts overlap prior data; no independent adjudication."
+  },
+  {
+    "family": "recovery_enterprise_vpn",
+    "split": "train",
+    "pair_id": "ET-51596ea795",
+    "theme": "recovery",
+    "semantic_independence": "New mechanism name; concepts overlap prior data; no independent adjudication."
+  },
+  {
+    "family": "recovery_emergency_test",
+    "split": "train",
+    "pair_id": "ET-40bada0b75",
+    "theme": "recovery",
+    "semantic_independence": "New mechanism name; concepts overlap prior data; no independent adjudication."
+  },
+  {
+    "family": "radio_digital_predistortion",
+    "split": "development",
+    "pair_id": "ET-7db53a8e8e",
+    "theme": "domain_support",
+    "semantic_independence": "New mechanism name; concepts overlap prior data; no independent adjudication."
+  },
+  {
+    "family": "radio_srs_configuration",
+    "split": "development",
+    "pair_id": "ET-7c91702181",
+    "theme": "domain_support",
+    "semantic_independence": "New mechanism name; concepts overlap prior data; no independent adjudication."
+  },
+  {
+    "family": "radio_pcie_dma",
+    "split": "development",
+    "pair_id": "ET-737692e868",
+    "theme": "domain_support",
+    "semantic_independence": "New mechanism name; concepts overlap prior data; no independent adjudication."
+  },
+  {
+    "family": "transport_vlan_translation",
+    "split": "development",
+    "pair_id": "ET-9a8a625eb0",
+    "theme": "domain_support",
+    "semantic_independence": "New mechanism name; concepts overlap prior data; no independent adjudication."
+  },
+  {
+    "family": "transport_link_bundle_hash",
+    "split": "development",
+    "pair_id": "ET-ed0b866d1c",
+    "theme": "domain_support",
+    "semantic_independence": "New mechanism name; concepts overlap prior data; no independent adjudication."
+  },
+  {
+    "family": "transport_mac_learning",
+    "split": "development",
+    "pair_id": "ET-0f8bae1646",
+    "theme": "domain_support",
+    "semantic_independence": "New mechanism name; concepts overlap prior data; no independent adjudication."
+  },
+  {
+    "family": "power_converter_current_limit",
+    "split": "development",
+    "pair_id": "ET-f853235849",
+    "theme": "domain_support",
+    "semantic_independence": "New mechanism name; concepts overlap prior data; no independent adjudication."
+  },
+  {
+    "family": "power_surge_protector",
+    "split": "development",
+    "pair_id": "ET-36d9b5e74e",
+    "theme": "domain_support",
+    "semantic_independence": "New mechanism name; concepts overlap prior data; no independent adjudication."
+  },
+  {
+    "family": "power_connector_resistance",
+    "split": "development",
+    "pair_id": "ET-673bb761f3",
+    "theme": "domain_support",
+    "semantic_independence": "New mechanism name; concepts overlap prior data; no independent adjudication."
+  },
+  {
+    "family": "core_connection_pool",
+    "split": "development",
+    "pair_id": "ET-7c95cd19ca",
+    "theme": "domain_support",
+    "semantic_independence": "New mechanism name; concepts overlap prior data; no independent adjudication."
+  },
+  {
+    "family": "core_transaction_rollback",
+    "split": "development",
+    "pair_id": "ET-0dcffc32de",
+    "theme": "domain_support",
+    "semantic_independence": "New mechanism name; concepts overlap prior data; no independent adjudication."
+  },
+  {
+    "family": "core_route_registry",
+    "split": "development",
+    "pair_id": "ET-37a6fe3658",
+    "theme": "domain_support",
+    "semantic_independence": "New mechanism name; concepts overlap prior data; no independent adjudication."
+  },
+  {
+    "family": "change_radio_carrier_scope",
+    "split": "development",
+    "pair_id": "ET-56f3ef7b25",
+    "theme": "change_scope",
+    "semantic_independence": "New mechanism name; concepts overlap prior data; no independent adjudication."
+  },
+  {
+    "family": "change_transport_port_scope",
+    "split": "development",
+    "pair_id": "ET-39ff33a383",
+    "theme": "change_scope",
+    "semantic_independence": "New mechanism name; concepts overlap prior data; no independent adjudication."
+  },
+  {
+    "family": "recovery_iot_registration",
+    "split": "development",
+    "pair_id": "ET-acc26e0633",
+    "theme": "recovery",
+    "semantic_independence": "New mechanism name; concepts overlap prior data; no independent adjudication."
+  },
+  {
+    "family": "recovery_video_session",
+    "split": "development",
+    "pair_id": "ET-64ff7e7c46",
+    "theme": "recovery",
+    "semantic_independence": "New mechanism name; concepts overlap prior data; no independent adjudication."
+  },
+  {
+    "family": "power_rectifier_thermal_timeline",
+    "split": "development",
+    "pair_id": "ET-4cae4ce71f",
+    "theme": "mixed_age",
+    "semantic_independence": "New mechanism name; concepts overlap prior data; no independent adjudication."
+  },
+  {
+    "family": "transport_checksum_disagreement",
+    "split": "development",
+    "pair_id": "ET-7250172984",
+    "theme": "contradiction",
+    "semantic_independence": "New mechanism name; concepts overlap prior data; no independent adjudication."
+  },
+  {
+    "family": "transport_shared_uplink_intervention",
+    "split": "development",
+    "pair_id": "ET-ff1b90244c",
+    "theme": "graph",
+    "semantic_independence": "New mechanism name; concepts overlap prior data; no independent adjudication."
+  },
+  {
+    "family": "core_signing_key_change_competition",
+    "split": "development",
+    "pair_id": "ET-d51cdd86e8",
+    "theme": "change_competition",
+    "semantic_independence": "New mechanism name; concepts overlap prior data; no independent adjudication."
+  }
+]

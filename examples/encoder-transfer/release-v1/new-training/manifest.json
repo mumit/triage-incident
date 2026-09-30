@@ -1,0 +1,18 @@
+{
+  "use": "teacher-reviewed synthetic training material; not independent ground truth",
+  "source_records": 60,
+  "accepted_records": 60,
+  "accepted_families": 30,
+  "rejected_families": [],
+  "audit_records": 16,
+  "dispositions": 7,
+  "primary_evidence_sha256": "ab62e7648a765497e2a133be5268882781da1a184ced6d34faadec50ea9e70ef",
+  "audit_evidence_sha256": "b6fcf9cb1373121e09de842cc52dd43153e54f64afded9e4b38bceff506549ab",
+  "source_input_sha256": "cf61a0738bf9bf06efd551f81a4cd15a927f29cb5df18571cd7ba27b2359fed6",
+  "exporter_sha256": "310c1d43c778bf88f91c921337ed8490978706f9dd1bc74ed4e0bd2e37d00887",
+  "sha256": {
+    "train.inputs.jsonl": "cf61a0738bf9bf06efd551f81a4cd15a927f29cb5df18571cd7ba27b2359fed6",
+    "train.labels.jsonl": "49021c341f070d9e76f00cef3c3472b18fb51d89aa192d4fdef814b283d67385",
+    "decisions.json": "c371e9b2be089578887672693d34ff5ac55789616a472dde843435af58455de5"
+  }
+}

@@ -1,0 +1,26 @@
+[
+  {
+    "candidate": "structured",
+    "fitted_dimensions": 405,
+    "l2": 0.001,
+    "objective": 0.5399528785084353,
+    "gradient_inf_norm": 8.301028009069511e-09,
+    "converged": true,
+    "iterations": 70,
+    "function_evaluations": 77,
+    "training_correct": 112,
+    "development_correct": 48
+  },
+  {
+    "candidate": "text-only",
+    "fitted_dimensions": 384,
+    "l2": 0.001,
+    "objective": 0.7007175791121245,
+    "gradient_inf_norm": 9.717229146333217e-09,
+    "converged": true,
+    "iterations": 64,
+    "function_evaluations": 72,
+    "training_correct": 109,
+    "development_correct": 41
+  }
+]

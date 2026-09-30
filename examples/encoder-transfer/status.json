@@ -1,0 +1,7 @@
+{
+  "phase": "Synthetic transfer comparison complete",
+  "operational_validation": "Blocked: no representative de-identified incident dataset with triage-time evidence and reviewed labels is available",
+  "best_local_agreement": "48/54",
+  "separate_luna_agreement": "54/54",
+  "no_production_claim": true
+}

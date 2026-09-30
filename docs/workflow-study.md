@@ -12,6 +12,8 @@ The [teacher-trained encoder experiment](teacher-encoder-results.md) now supplie
 
 The [regularization follow-up](encoder-regularization-results.md) improves the head to 14/16 development agreement and 58/58 training agreement with L2 `0.001`. All five fits converge. That head is the current development reference; expanding reviewed data and evaluating unseen families remain necessary.
 
+The [expanded transfer experiment](encoder-transfer-results.md) now compares 118 training and 54 accepted development cases. The expanded head reaches 48/54, text-only 41/54 and fine-tuning 47/54 or 46/54, versus a separate Luna classifier at 54/54. It preserves old/new results, domain-assignment errors, teacher exclusions and resident latency evidence. No candidate matches Luna at full coverage, and operational validation is blocked by the absence of representative labeled tickets.
+
 ## Purpose
 
 Determine whether a compact, decomposed Jev workflow can match a trained local encoder on initial incident triage without autoregressive inference. Test where general decision models add value: new evidence wording, ambiguous domain assignments, recovery, change scope, and conflicting observations.

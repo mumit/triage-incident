@@ -1,0 +1,9 @@
+{
+  "rule": "Maximum combined development complete agreement; predefined order breaks ties",
+  "selected": "expanded-structured",
+  "agreement": 48,
+  "records": 54,
+  "use": "Development reference only; no operational promotion",
+  "head_sha256": "20ef1e8af1ee4bfed12edd0499465696ff37d2e285eedb7cbe935b8eb4663b65",
+  "tradeoff": "False domain assignments increase from 1 to 5; Luna matches all 54 labels"
+}

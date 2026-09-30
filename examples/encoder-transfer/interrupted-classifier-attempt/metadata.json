@@ -1,0 +1,23 @@
+{
+  "provider": "llm",
+  "requested_model": "gpt-6-luna",
+  "endpoint": "https://api.fuelix.ai/v1/chat/completions",
+  "deployment": "Fuel iX proxy; separate zero-shot classification reference",
+  "declared_context_tokens": 32768,
+  "input_file": "data/encoder-transfer-v1/development.inputs.jsonl",
+  "input_sha256": "1c282fd092af8597955dc3f62e6905e3a8502a380ba0328bf06139dcc7ca98eb",
+  "started_at": "2026-09-30T00:51:57.076795+00:00",
+  "records": 40,
+  "execution": "serial; no warmup; up to four HTTP 429 retries with backoff",
+  "policy_sha256": "c18543ebccd1bb5a7e681cb3819ca125e08ffd5cbb6024f40c97b51914513b7e",
+  "question_schema_sha256": "cd1d0b71594a215e691c84c232bd40b6912a9e23194bc39562bad7a8d7e385e4",
+  "benchmark_version": "0.1.0",
+  "request_protocol": "openai-compatible-chat-completions-v1",
+  "prompt_sha256": "f8af64dfd055f61a168088207256fb78d633fc6acc100754d14c757caa089cb9",
+  "reasoning_effort": "none",
+  "interrupted": true,
+  "attempted_records": 0,
+  "successful_records": 0,
+  "failed_records": 0,
+  "missing_records": 40
+}

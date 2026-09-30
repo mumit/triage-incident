@@ -1,0 +1,17 @@
+{
+  "use": "Synthetic training and inspected development; no holdout claim",
+  "new_train_families": 30,
+  "new_development_families": 20,
+  "primary_review": "Luna all new train/development facts blind to references",
+  "audit": "Sol fixed 16 training cases and all 40 new development cases",
+  "filter": "Exclude full family on failed review, input issue, unresolved question, policy error or teacher/audit disagreement",
+  "fitting": "Old accepted train plus new accepted train; no development included",
+  "selection_development": "Old corrected 16 plus accepted new 40; inspected development",
+  "candidates": [
+    "Frozen MiniLM + structured flags, L2 0.001",
+    "Frozen MiniLM text-only ablation, L2 0.001",
+    "End-to-end MiniLM, encoder LR 3e-5, head LR 1e-3, seeds 17 and 29, 20 epochs"
+  ],
+  "selection": "Maximum complete combined development agreement; earliest epoch; listed candidate order breaks ties",
+  "no_autoregressive_inference": "Local encoders only; LLM used offline for labels and separately measured classifier reference"
+}

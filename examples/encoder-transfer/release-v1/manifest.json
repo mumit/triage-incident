@@ -1,0 +1,57 @@
+{
+  "use": "Expanded teacher-labeled synthetic training and inspected development; not holdout",
+  "new_training": {
+    "use": "teacher-reviewed synthetic training material; not independent ground truth",
+    "source_records": 60,
+    "accepted_records": 60,
+    "accepted_families": 30,
+    "rejected_families": [],
+    "audit_records": 16,
+    "dispositions": 7,
+    "primary_evidence_sha256": "ab62e7648a765497e2a133be5268882781da1a184ced6d34faadec50ea9e70ef",
+    "audit_evidence_sha256": "b6fcf9cb1373121e09de842cc52dd43153e54f64afded9e4b38bceff506549ab",
+    "source_input_sha256": "cf61a0738bf9bf06efd551f81a4cd15a927f29cb5df18571cd7ba27b2359fed6",
+    "exporter_sha256": "310c1d43c778bf88f91c921337ed8490978706f9dd1bc74ed4e0bd2e37d00887",
+    "sha256": {
+      "train.inputs.jsonl": "cf61a0738bf9bf06efd551f81a4cd15a927f29cb5df18571cd7ba27b2359fed6",
+      "train.labels.jsonl": "49021c341f070d9e76f00cef3c3472b18fb51d89aa192d4fdef814b283d67385",
+      "decisions.json": "c371e9b2be089578887672693d34ff5ac55789616a472dde843435af58455de5"
+    }
+  },
+  "new_development": {
+    "use": "teacher-reviewed synthetic training material; not independent ground truth",
+    "source_records": 40,
+    "accepted_records": 38,
+    "accepted_families": 19,
+    "rejected_families": [
+      "core_signing_key_change_competition"
+    ],
+    "audit_records": 40,
+    "dispositions": 7,
+    "primary_evidence_sha256": "20a046bcb6b85f944a035fba86f2c76c569e29eb36263593127d45fce329142b",
+    "audit_evidence_sha256": "6626f72437d5ee64f96877844e44458b3b2ad1b4ffc4b6c58b7e9528328866a4",
+    "source_input_sha256": "1c282fd092af8597955dc3f62e6905e3a8502a380ba0328bf06139dcc7ca98eb",
+    "exporter_sha256": "310c1d43c778bf88f91c921337ed8490978706f9dd1bc74ed4e0bd2e37d00887",
+    "sha256": {
+      "train.inputs.jsonl": "ae778f60637603a509882280bf27e065272fd78d2c48219b849f24ef5c3e5263",
+      "train.labels.jsonl": "b2d0bbfe8b12687d1ec671e1ea2722391dadb507fd1d5d9cd8cc87036426f391",
+      "decisions.json": "6243cdbfdbd206f36b0dfdb354231f381f2cf1cd4b19667546f04f7847ec022f"
+    }
+  },
+  "records": {
+    "train": 118,
+    "development": 54
+  },
+  "families": {
+    "train": 59,
+    "development": 27
+  },
+  "sha256": {
+    "development.inputs.jsonl": "59083836db5bb2c85eb538e093bffeca363f80763f6ebbbbc04791e0924039f0",
+    "development.labels.jsonl": "3af8ac1496202dac4e7ee7ac59a26375e27fb537ab57705066b0edb9cb0e1bb9",
+    "new-development.inputs.jsonl": "ae778f60637603a509882280bf27e065272fd78d2c48219b849f24ef5c3e5263",
+    "new-development.labels.jsonl": "40e26b26c1e8058677f84753c91fd745e55210fd62bd791a432a06f5fb8b1eb3",
+    "train.inputs.jsonl": "a9b03e3e7cc6fcaff5d36108899664b23d64ca05ea04b6711f91f73fe153f1a9",
+    "train.labels.jsonl": "1300ef73445c4aad5a284f571429d1375de18283787686daa872b6b005ed0c16"
+  }
+}

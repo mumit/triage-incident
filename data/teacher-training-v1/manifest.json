@@ -1,0 +1,13 @@
+{
+  "use": "AI-authored training development material; not a holdout",
+  "records": 60,
+  "families": 30,
+  "pairs": 30,
+  "catalog_sha256": "d8b2c4f9571e9ca22bac06065990052beaeaa767d8fb6ce31789339d35334f14",
+  "generator_sha256": "c4937025d1c7cbc3a9dc70ad1b0679a8754d95749a48c79292e100ebe3396fc4",
+  "sha256": {
+    "train.inputs.jsonl": "e00635ca996e8a85c748a0d6ced64a28aa6f0d62f0f3483a1201981d316aa111",
+    "reference.labels.jsonl": "be73fa81e4b3eee30e03d2a0d55f7728c5312bf0d4d4eb38a4adc5c37994d5d6",
+    "families.json": "3ee4d236240366be07202cbaf63b9a020d4f5bc083c7b8a2fdd6632715fd3c4d"
+  }
+}

@@ -1,0 +1,4435 @@
+{
+  "protocol": "northstar-teacher-encoder-evidence-v1",
+  "use": "training diagnostic",
+  "label_provenance": "LLM-reviewed synthetic labels; no specialist adjudication",
+  "input_sha256": "2cf5554791ccad8485acb62d48bcbb7f2652044ac5bcf01fd3d37f03ebc48396",
+  "label_sha256": "f16b7c666ede5f8ea7555e365ca08ee2ad0d9eb56802c6a3d26a2075d01fc5d5",
+  "cases": [
+    {
+      "accepted_answers": {
+        "initial_owner": [
+          "ran"
+        ],
+        "insufficient_evidence": [
+          "no"
+        ],
+        "next_check": [
+          "inspect_radio"
+        ],
+        "priority": [
+          "P3"
+        ]
+      },
+      "audit_model": "gpt-6.1-sol-2026-09-29",
+      "id": "TT-81de8eeb61-a",
+      "incident_family_id": "radio_baseband_memory",
+      "labels": {
+        "initial_owner": "ran",
+        "insufficient_evidence": "no",
+        "next_check": "inspect_radio",
+        "priority": "P3"
+      },
+      "pair_id": "TT-81de8eeb61",
+      "review_status": "LLM teacher label; independent model audit on selected families; no specialist review",
+      "split": "teacher_training",
+      "teacher_model": "gpt-6-luna-2026-09-22"
+    },
+    {
+      "accepted_answers": {
+        "initial_owner": [
+          "noc"
+        ],
+        "insufficient_evidence": [
+          "yes"
+        ],
+        "next_check": [
+          "gather_evidence"
+        ],
+        "priority": [
+          "P3"
+        ]
+      },
+      "audit_model": "gpt-6.1-sol-2026-09-29",
+      "id": "TT-81de8eeb61-b",
+      "incident_family_id": "radio_baseband_memory",
+      "labels": {
+        "initial_owner": "noc",
+        "insufficient_evidence": "yes",
+        "next_check": "gather_evidence",
+        "priority": "P3"
+      },
+      "pair_id": "TT-81de8eeb61",
+      "review_status": "LLM teacher label; independent model audit on selected families; no specialist review",
+      "split": "teacher_training",
+      "teacher_model": "gpt-6-luna-2026-09-22"
+    },
+    {
+      "accepted_answers": {
+        "initial_owner": [
+          "ran"
+        ],
+        "insufficient_evidence": [
+          "no"
+        ],
+        "next_check": [
+          "inspect_radio"
+        ],
+        "priority": [
+          "P3"
+        ]
+      },
+      "audit_model": null,
+      "id": "TT-f32a4c097f-a",
+      "incident_family_id": "radio_fronthaul_clock",
+      "labels": {
+        "initial_owner": "ran",
+        "insufficient_evidence": "no",
+        "next_check": "inspect_radio",
+        "priority": "P3"
+      },
+      "pair_id": "TT-f32a4c097f",
+      "review_status": "LLM teacher label; independent model audit on selected families; no specialist review",
+      "split": "teacher_training",
+      "teacher_model": "gpt-6-luna-2026-09-22"
+    },
+    {
+      "accepted_answers": {
+        "initial_owner": [
+          "noc"
+        ],
+        "insufficient_evidence": [
+          "yes"
+        ],
+        "next_check": [
+          "gather_evidence"
+        ],
+        "priority": [
+          "P3"
+        ]
+      },
+      "audit_model": null,
+      "id": "TT-f32a4c097f-b",
+      "incident_family_id": "radio_fronthaul_clock",
+      "labels": {
+        "initial_owner": "noc",
+        "insufficient_evidence": "yes",
+        "next_check": "gather_evidence",
+        "priority": "P3"
+      },
+      "pair_id": "TT-f32a4c097f",
+      "review_status": "LLM teacher label; independent model audit on selected families; no specialist review",
+      "split": "teacher_training",
+      "teacher_model": "gpt-6-luna-2026-09-22"
+    },
+    {
+      "accepted_answers": {
+        "initial_owner": [
+          "ran"
+        ],
+        "insufficient_evidence": [
+          "no"
+        ],
+        "next_check": [
+          "inspect_radio"
+        ],
+        "priority": [
+          "P3"
+        ]
+      },
+      "audit_model": null,
+      "id": "TT-9b175d59a8-a",
+      "incident_family_id": "radio_amplifier_gain",
+      "labels": {
+        "initial_owner": "ran",
+        "insufficient_evidence": "no",
+        "next_check": "inspect_radio",
+        "priority": "P3"
+      },
+      "pair_id": "TT-9b175d59a8",
+      "review_status": "LLM teacher label; independent model audit on selected families; no specialist review",
+      "split": "teacher_training",
+      "teacher_model": "gpt-6-luna-2026-09-22"
+    },
+    {
+      "accepted_answers": {
+        "initial_owner": [
+          "noc"
+        ],
+        "insufficient_evidence": [
+          "yes"
+        ],
+        "next_check": [
+          "gather_evidence"
+        ],
+        "priority": [
+          "P3"
+        ]
+      },
+      "audit_model": null,
+      "id": "TT-9b175d59a8-b",
+      "incident_family_id": "radio_amplifier_gain",
+      "labels": {
+        "initial_owner": "noc",
+        "insufficient_evidence": "yes",
+        "next_check": "gather_evidence",
+        "priority": "P3"
+      },
+      "pair_id": "TT-9b175d59a8",
+      "review_status": "LLM teacher label; independent model audit on selected families; no specialist review",
+      "split": "teacher_training",
+      "teacher_model": "gpt-6-luna-2026-09-22"
+    },
+    {
+      "accepted_answers": {
+        "initial_owner": [
+          "ran"
+        ],
+        "insufficient_evidence": [
+          "no"
+        ],
+        "next_check": [
+          "inspect_radio"
+        ],
+        "priority": [
+          "P3"
+        ]
+      },
+      "audit_model": null,
+      "id": "TT-bc7496c1eb-a",
+      "incident_family_id": "radio_uplink_decoder",
+      "labels": {
+        "initial_owner": "ran",
+        "insufficient_evidence": "no",
+        "next_check": "inspect_radio",
+        "priority": "P3"
+      },
+      "pair_id": "TT-bc7496c1eb",
+      "review_status": "LLM teacher label; independent model audit on selected families; no specialist review",
+      "split": "teacher_training",
+      "teacher_model": "gpt-6-luna-2026-09-22"
+    },
+    {
+      "accepted_answers": {
+        "initial_owner": [
+          "noc"
+        ],
+        "insufficient_evidence": [
+          "yes"
+        ],
+        "next_check": [
+          "gather_evidence"
+        ],
+        "priority": [
+          "P3"
+        ]
+      },
+      "audit_model": null,
+      "id": "TT-bc7496c1eb-b",
+      "incident_family_id": "radio_uplink_decoder",
+      "labels": {
+        "initial_owner": "noc",
+        "insufficient_evidence": "yes",
+        "next_check": "gather_evidence",
+        "priority": "P3"
+      },
+      "pair_id": "TT-bc7496c1eb",
+      "review_status": "LLM teacher label; independent model audit on selected families; no specialist review",
+      "split": "teacher_training",
+      "teacher_model": "gpt-6-luna-2026-09-22"
+    },
+    {
+      "accepted_answers": {
+        "initial_owner": [
+          "ran"
+        ],
+        "insufficient_evidence": [
+          "no"
+        ],
+        "next_check": [
+          "inspect_radio"
+        ],
+        "priority": [
+          "P3"
+        ]
+      },
+      "audit_model": "gpt-6.1-sol-2026-09-29",
+      "id": "TT-1d15bfbb6c-a",
+      "incident_family_id": "radio_duplex_filter",
+      "labels": {
+        "initial_owner": "ran",
+        "insufficient_evidence": "no",
+        "next_check": "inspect_radio",
+        "priority": "P3"
+      },
+      "pair_id": "TT-1d15bfbb6c",
+      "review_status": "LLM teacher label; independent model audit on selected families; no specialist review",
+      "split": "teacher_training",
+      "teacher_model": "gpt-6-luna-2026-09-22"
+    },
+    {
+      "accepted_answers": {
+        "initial_owner": [
+          "noc"
+        ],
+        "insufficient_evidence": [
+          "yes"
+        ],
+        "next_check": [
+          "gather_evidence"
+        ],
+        "priority": [
+          "P3"
+        ]
+      },
+      "audit_model": "gpt-6.1-sol-2026-09-29",
+      "id": "TT-1d15bfbb6c-b",
+      "incident_family_id": "radio_duplex_filter",
+      "labels": {
+        "initial_owner": "noc",
+        "insufficient_evidence": "yes",
+        "next_check": "gather_evidence",
+        "priority": "P3"
+      },
+      "pair_id": "TT-1d15bfbb6c",
+      "review_status": "LLM teacher label; independent model audit on selected families; no specialist review",
+      "split": "teacher_training",
+      "teacher_model": "gpt-6-luna-2026-09-22"
+    },
+    {
+      "accepted_answers": {
+        "initial_owner": [
+          "ran"
+        ],
+        "insufficient_evidence": [
+          "no"
+        ],
+        "next_check": [
+          "inspect_radio"
+        ],
+        "priority": [
+          "P3"
+        ]
+      },
+      "audit_model": null,
+      "id": "TT-9309ad646f-a",
+      "incident_family_id": "radio_remote_cooling",
+      "labels": {
+        "initial_owner": "ran",
+        "insufficient_evidence": "no",
+        "next_check": "inspect_radio",
+        "priority": "P3"
+      },
+      "pair_id": "TT-9309ad646f",
+      "review_status": "LLM teacher label; independent model audit on selected families; no specialist review",
+      "split": "teacher_training",
+      "teacher_model": "gpt-6-luna-2026-09-22"
+    },
+    {
+      "accepted_answers": {
+        "initial_owner": [
+          "noc"
+        ],
+        "insufficient_evidence": [
+          "yes"
+        ],
+        "next_check": [
+          "gather_evidence"
+        ],
+        "priority": [
+          "P3"
+        ]
+      },
+      "audit_model": null,
+      "id": "TT-9309ad646f-b",
+      "incident_family_id": "radio_remote_cooling",
+      "labels": {
+        "initial_owner": "noc",
+        "insufficient_evidence": "yes",
+        "next_check": "gather_evidence",
+        "priority": "P3"
+      },
+      "pair_id": "TT-9309ad646f",
+      "review_status": "LLM teacher label; independent model audit on selected families; no specialist review",
+      "split": "teacher_training",
+      "teacher_model": "gpt-6-luna-2026-09-22"
+    },
+    {
+      "accepted_answers": {
+        "initial_owner": [
+          "transport"
+        ],
+        "insufficient_evidence": [
+          "no"
+        ],
+        "next_check": [
+          "inspect_transport"
+        ],
+        "priority": [
+          "P3"
+        ]
+      },
+      "audit_model": null,
+      "id": "TT-7d90cba1e7-a",
+      "incident_family_id": "transport_spanning_loop",
+      "labels": {
+        "initial_owner": "transport",
+        "insufficient_evidence": "no",
+        "next_check": "inspect_transport",
+        "priority": "P3"
+      },
+      "pair_id": "TT-7d90cba1e7",
+      "review_status": "LLM teacher label; independent model audit on selected families; no specialist review",
+      "split": "teacher_training",
+      "teacher_model": "gpt-6-luna-2026-09-22"
+    },
+    {
+      "accepted_answers": {
+        "initial_owner": [
+          "noc"
+        ],
+        "insufficient_evidence": [
+          "yes"
+        ],
+        "next_check": [
+          "gather_evidence"
+        ],
+        "priority": [
+          "P3"
+        ]
+      },
+      "audit_model": null,
+      "id": "TT-7d90cba1e7-b",
+      "incident_family_id": "transport_spanning_loop",
+      "labels": {
+        "initial_owner": "noc",
+        "insufficient_evidence": "yes",
+        "next_check": "gather_evidence",
+        "priority": "P3"
+      },
+      "pair_id": "TT-7d90cba1e7",
+      "review_status": "LLM teacher label; independent model audit on selected families; no specialist review",
+      "split": "teacher_training",
+      "teacher_model": "gpt-6-luna-2026-09-22"
+    },
+    {
+      "accepted_answers": {
+        "initial_owner": [
+          "transport"
+        ],
+        "insufficient_evidence": [
+          "no"
+        ],
+        "next_check": [
+          "inspect_transport"
+        ],
+        "priority": [
+          "P3"
+        ]
+      },
+      "audit_model": null,
+      "id": "TT-ea8cbc5db1-a",
+      "incident_family_id": "transport_tunnel_binding",
+      "labels": {
+        "initial_owner": "transport",
+        "insufficient_evidence": "no",
+        "next_check": "inspect_transport",
+        "priority": "P3"
+      },
+      "pair_id": "TT-ea8cbc5db1",
+      "review_status": "LLM teacher label; independent model audit on selected families; no specialist review",
+      "split": "teacher_training",
+      "teacher_model": "gpt-6-luna-2026-09-22"
+    },
+    {
+      "accepted_answers": {
+        "initial_owner": [
+          "noc"
+        ],
+        "insufficient_evidence": [
+          "yes"
+        ],
+        "next_check": [
+          "gather_evidence"
+        ],
+        "priority": [
+          "P3"
+        ]
+      },
+      "audit_model": null,
+      "id": "TT-ea8cbc5db1-b",
+      "incident_family_id": "transport_tunnel_binding",
+      "labels": {
+        "initial_owner": "noc",
+        "insufficient_evidence": "yes",
+        "next_check": "gather_evidence",
+        "priority": "P3"
+      },
+      "pair_id": "TT-ea8cbc5db1",
+      "review_status": "LLM teacher label; independent model audit on selected families; no specialist review",
+      "split": "teacher_training",
+      "teacher_model": "gpt-6-luna-2026-09-22"
+    },
+    {
+      "accepted_answers": {
+        "initial_owner": [
+          "transport"
+        ],
+        "insufficient_evidence": [
+          "no"
+        ],
+        "next_check": [
+          "inspect_transport"
+        ],
+        "priority": [
+          "P3"
+        ]
+      },
+      "audit_model": "gpt-6.1-sol-2026-09-29",
+      "id": "TT-d47b9a6141-a",
+      "incident_family_id": "transport_label_disposition",
+      "labels": {
+        "initial_owner": "transport",
+        "insufficient_evidence": "no",
+        "next_check": "inspect_transport",
+        "priority": "P3"
+      },
+      "pair_id": "TT-d47b9a6141",
+      "review_status": "LLM teacher label; independent model audit on selected families; no specialist review",
+      "split": "teacher_training",
+      "teacher_model": "gpt-6-luna-2026-09-22"
+    },
+    {
+      "accepted_answers": {
+        "initial_owner": [
+          "noc"
+        ],
+        "insufficient_evidence": [
+          "yes"
+        ],
+        "next_check": [
+          "gather_evidence"
+        ],
+        "priority": [
+          "P3"
+        ]
+      },
+      "audit_model": "gpt-6.1-sol-2026-09-29",
+      "id": "TT-d47b9a6141-b",
+      "incident_family_id": "transport_label_disposition",
+      "labels": {
+        "initial_owner": "noc",
+        "insufficient_evidence": "yes",
+        "next_check": "gather_evidence",
+        "priority": "P3"
+      },
+      "pair_id": "TT-d47b9a6141",
+      "review_status": "LLM teacher label; independent model audit on selected families; no specialist review",
+      "split": "teacher_training",
+      "teacher_model": "gpt-6-luna-2026-09-22"
+    },
+    {
+      "accepted_answers": {
+        "initial_owner": [
+          "transport"
+        ],
+        "insufficient_evidence": [
+          "no"
+        ],
+        "next_check": [
+          "inspect_transport"
+        ],
+        "priority": [
+          "P3"
+        ]
+      },
+      "audit_model": null,
+      "id": "TT-84718e62ba-a",
+      "incident_family_id": "transport_microburst_buffer",
+      "labels": {
+        "initial_owner": "transport",
+        "insufficient_evidence": "no",
+        "next_check": "inspect_transport",
+        "priority": "P3"
+      },
+      "pair_id": "TT-84718e62ba",
+      "review_status": "LLM teacher label; independent model audit on selected families; no specialist review",
+      "split": "teacher_training",
+      "teacher_model": "gpt-6-luna-2026-09-22"
+    },
+    {
+      "accepted_answers": {
+        "initial_owner": [
+          "noc"
+        ],
+        "insufficient_evidence": [
+          "yes"
+        ],
+        "next_check": [
+          "gather_evidence"
+        ],
+        "priority": [
+          "P3"
+        ]
+      },
+      "audit_model": null,
+      "id": "TT-84718e62ba-b",
+      "incident_family_id": "transport_microburst_buffer",
+      "labels": {
+        "initial_owner": "noc",
+        "insufficient_evidence": "yes",
+        "next_check": "gather_evidence",
+        "priority": "P3"
+      },
+      "pair_id": "TT-84718e62ba",
+      "review_status": "LLM teacher label; independent model audit on selected families; no specialist review",
+      "split": "teacher_training",
+      "teacher_model": "gpt-6-luna-2026-09-22"
+    },
+    {
+      "accepted_answers": {
+        "initial_owner": [
+          "transport"
+        ],
+        "insufficient_evidence": [
+          "no"
+        ],
+        "next_check": [
+          "inspect_transport"
+        ],
+        "priority": [
+          "P3"
+        ]
+      },
+      "audit_model": null,
+      "id": "TT-357a7c6083-a",
+      "incident_family_id": "transport_pseudowire_sequence",
+      "labels": {
+        "initial_owner": "transport",
+        "insufficient_evidence": "no",
+        "next_check": "inspect_transport",
+        "priority": "P3"
+      },
+      "pair_id": "TT-357a7c6083",
+      "review_status": "LLM teacher label; independent model audit on selected families; no specialist review",
+      "split": "teacher_training",
+      "teacher_model": "gpt-6-luna-2026-09-22"
+    },
+    {
+      "accepted_answers": {
+        "initial_owner": [
+          "noc"
+        ],
+        "insufficient_evidence": [
+          "yes"
+        ],
+        "next_check": [
+          "gather_evidence"
+        ],
+        "priority": [
+          "P3"
+        ]
+      },
+      "audit_model": null,
+      "id": "TT-357a7c6083-b",
+      "incident_family_id": "transport_pseudowire_sequence",
+      "labels": {
+        "initial_owner": "noc",
+        "insufficient_evidence": "yes",
+        "next_check": "gather_evidence",
+        "priority": "P3"
+      },
+      "pair_id": "TT-357a7c6083",
+      "review_status": "LLM teacher label; independent model audit on selected families; no specialist review",
+      "split": "teacher_training",
+      "teacher_model": "gpt-6-luna-2026-09-22"
+    },
+    {
+      "accepted_answers": {
+        "initial_owner": [
+          "transport"
+        ],
+        "insufficient_evidence": [
+          "no"
+        ],
+        "next_check": [
+          "inspect_transport"
+        ],
+        "priority": [
+          "P3"
+        ]
+      },
+      "audit_model": null,
+      "id": "TT-e081e87c32-a",
+      "incident_family_id": "transport_dependency_membership",
+      "labels": {
+        "initial_owner": "transport",
+        "insufficient_evidence": "no",
+        "next_check": "inspect_transport",
+        "priority": "P3"
+      },
+      "pair_id": "TT-e081e87c32",
+      "review_status": "LLM teacher label; independent model audit on selected families; no specialist review",
+      "split": "teacher_training",
+      "teacher_model": "gpt-6-luna-2026-09-22"
+    },
+    {
+      "accepted_answers": {
+        "initial_owner": [
+          "noc"
+        ],
+        "insufficient_evidence": [
+          "yes"
+        ],
+        "next_check": [
+          "gather_evidence"
+        ],
+        "priority": [
+          "P3"
+        ]
+      },
+      "audit_model": null,
+      "id": "TT-e081e87c32-b",
+      "incident_family_id": "transport_dependency_membership",
+      "labels": {
+        "initial_owner": "noc",
+        "insufficient_evidence": "yes",
+        "next_check": "gather_evidence",
+        "priority": "P3"
+      },
+      "pair_id": "TT-e081e87c32",
+      "review_status": "LLM teacher label; independent model audit on selected families; no specialist review",
+      "split": "teacher_training",
+      "teacher_model": "gpt-6-luna-2026-09-22"
+    },
+    {
+      "accepted_answers": {
+        "initial_owner": [
+          "power"
+        ],
+        "insufficient_evidence": [
+          "no"
+        ],
+        "next_check": [
+          "inspect_power"
+        ],
+        "priority": [
+          "P3"
+        ]
+      },
+      "audit_model": "gpt-6.1-sol-2026-09-29",
+      "id": "TT-f7ed8c8962-a",
+      "incident_family_id": "power_busbar_joint",
+      "labels": {
+        "initial_owner": "power",
+        "insufficient_evidence": "no",
+        "next_check": "inspect_power",
+        "priority": "P3"
+      },
+      "pair_id": "TT-f7ed8c8962",
+      "review_status": "LLM teacher label; independent model audit on selected families; no specialist review",
+      "split": "teacher_training",
+      "teacher_model": "gpt-6-luna-2026-09-22"
+    },
+    {
+      "accepted_answers": {
+        "initial_owner": [
+          "noc"
+        ],
+        "insufficient_evidence": [
+          "yes"
+        ],
+        "next_check": [
+          "gather_evidence"
+        ],
+        "priority": [
+          "P3"
+        ]
+      },
+      "audit_model": "gpt-6.1-sol-2026-09-29",
+      "id": "TT-f7ed8c8962-b",
+      "incident_family_id": "power_busbar_joint",
+      "labels": {
+        "initial_owner": "noc",
+        "insufficient_evidence": "yes",
+        "next_check": "gather_evidence",
+        "priority": "P3"
+      },
+      "pair_id": "TT-f7ed8c8962",
+      "review_status": "LLM teacher label; independent model audit on selected families; no specialist review",
+      "split": "teacher_training",
+      "teacher_model": "gpt-6-luna-2026-09-22"
+    },
+    {
+      "accepted_answers": {
+        "initial_owner": [
+          "power"
+        ],
+        "insufficient_evidence": [
+          "no"
+        ],
+        "next_check": [
+          "inspect_power"
+        ],
+        "priority": [
+          "P3"
+        ]
+      },
+      "audit_model": null,
+      "id": "TT-f52fcf4a75-a",
+      "incident_family_id": "power_remote_feed",
+      "labels": {
+        "initial_owner": "power",
+        "insufficient_evidence": "no",
+        "next_check": "inspect_power",
+        "priority": "P3"
+      },
+      "pair_id": "TT-f52fcf4a75",
+      "review_status": "LLM teacher label; independent model audit on selected families; no specialist review",
+      "split": "teacher_training",
+      "teacher_model": "gpt-6-luna-2026-09-22"
+    },
+    {
+      "accepted_answers": {
+        "initial_owner": [
+          "noc"
+        ],
+        "insufficient_evidence": [
+          "yes"
+        ],
+        "next_check": [
+          "gather_evidence"
+        ],
+        "priority": [
+          "P3"
+        ]
+      },
+      "audit_model": null,
+      "id": "TT-f52fcf4a75-b",
+      "incident_family_id": "power_remote_feed",
+      "labels": {
+        "initial_owner": "noc",
+        "insufficient_evidence": "yes",
+        "next_check": "gather_evidence",
+        "priority": "P3"
+      },
+      "pair_id": "TT-f52fcf4a75",
+      "review_status": "LLM teacher label; independent model audit on selected families; no specialist review",
+      "split": "teacher_training",
+      "teacher_model": "gpt-6-luna-2026-09-22"
+    },
+    {
+      "accepted_answers": {
+        "initial_owner": [
+          "power"
+        ],
+        "insufficient_evidence": [
+          "no"
+        ],
+        "next_check": [
+          "inspect_power"
+        ],
+        "priority": [
+          "P3"
+        ]
+      },
+      "audit_model": null,
+      "id": "TT-4367352668-a",
+      "incident_family_id": "power_earth_fault",
+      "labels": {
+        "initial_owner": "power",
+        "insufficient_evidence": "no",
+        "next_check": "inspect_power",
+        "priority": "P3"
+      },
+      "pair_id": "TT-4367352668",
+      "review_status": "LLM teacher label; independent model audit on selected families; no specialist review",
+      "split": "teacher_training",
+      "teacher_model": "gpt-6-luna-2026-09-22"
+    },
+    {
+      "accepted_answers": {
+        "initial_owner": [
+          "noc"
+        ],
+        "insufficient_evidence": [
+          "yes"
+        ],
+        "next_check": [
+          "gather_evidence"
+        ],
+        "priority": [
+          "P3"
+        ]
+      },
+      "audit_model": null,
+      "id": "TT-4367352668-b",
+      "incident_family_id": "power_earth_fault",
+      "labels": {
+        "initial_owner": "noc",
+        "insufficient_evidence": "yes",
+        "next_check": "gather_evidence",
+        "priority": "P3"
+      },
+      "pair_id": "TT-4367352668",
+      "review_status": "LLM teacher label; independent model audit on selected families; no specialist review",
+      "split": "teacher_training",
+      "teacher_model": "gpt-6-luna-2026-09-22"
+    },
+    {
+      "accepted_answers": {
+        "initial_owner": [
+          "power"
+        ],
+        "insufficient_evidence": [
+          "no"
+        ],
+        "next_check": [
+          "inspect_power"
+        ],
+        "priority": [
+          "P3"
+        ]
+      },
+      "audit_model": null,
+      "id": "TT-d86ddc77ef-a",
+      "incident_family_id": "power_inverter_bypass",
+      "labels": {
+        "initial_owner": "power",
+        "insufficient_evidence": "no",
+        "next_check": "inspect_power",
+        "priority": "P3"
+      },
+      "pair_id": "TT-d86ddc77ef",
+      "review_status": "LLM teacher label; independent model audit on selected families; no specialist review",
+      "split": "teacher_training",
+      "teacher_model": "gpt-6-luna-2026-09-22"
+    },
+    {
+      "accepted_answers": {
+        "initial_owner": [
+          "noc"
+        ],
+        "insufficient_evidence": [
+          "yes"
+        ],
+        "next_check": [
+          "gather_evidence"
+        ],
+        "priority": [
+          "P3"
+        ]
+      },
+      "audit_model": null,
+      "id": "TT-d86ddc77ef-b",
+      "incident_family_id": "power_inverter_bypass",
+      "labels": {
+        "initial_owner": "noc",
+        "insufficient_evidence": "yes",
+        "next_check": "gather_evidence",
+        "priority": "P3"
+      },
+      "pair_id": "TT-d86ddc77ef",
+      "review_status": "LLM teacher label; independent model audit on selected families; no specialist review",
+      "split": "teacher_training",
+      "teacher_model": "gpt-6-luna-2026-09-22"
+    },
+    {
+      "accepted_answers": {
+        "initial_owner": [
+          "power"
+        ],
+        "insufficient_evidence": [
+          "no"
+        ],
+        "next_check": [
+          "inspect_power"
+        ],
+        "priority": [
+          "P3"
+        ]
+      },
+      "audit_model": "gpt-6.1-sol-2026-09-29",
+      "id": "TT-e5545fc95b-a",
+      "incident_family_id": "power_voltage_sensor_disagreement",
+      "labels": {
+        "initial_owner": "power",
+        "insufficient_evidence": "no",
+        "next_check": "inspect_power",
+        "priority": "P3"
+      },
+      "pair_id": "TT-e5545fc95b",
+      "review_status": "LLM teacher label; independent model audit on selected families; no specialist review",
+      "split": "teacher_training",
+      "teacher_model": "gpt-6-luna-2026-09-22"
+    },
+    {
+      "accepted_answers": {
+        "initial_owner": [
+          "noc"
+        ],
+        "insufficient_evidence": [
+          "yes"
+        ],
+        "next_check": [
+          "gather_evidence"
+        ],
+        "priority": [
+          "P3"
+        ]
+      },
+      "audit_model": "gpt-6.1-sol-2026-09-29",
+      "id": "TT-e5545fc95b-b",
+      "incident_family_id": "power_voltage_sensor_disagreement",
+      "labels": {
+        "initial_owner": "noc",
+        "insufficient_evidence": "yes",
+        "next_check": "gather_evidence",
+        "priority": "P3"
+      },
+      "pair_id": "TT-e5545fc95b",
+      "review_status": "LLM teacher label; independent model audit on selected families; no specialist review",
+      "split": "teacher_training",
+      "teacher_model": "gpt-6-luna-2026-09-22"
+    },
+    {
+      "accepted_answers": {
+        "initial_owner": [
+          "power"
+        ],
+        "insufficient_evidence": [
+          "no"
+        ],
+        "next_check": [
+          "inspect_power"
+        ],
+        "priority": [
+          "P3"
+        ]
+      },
+      "audit_model": null,
+      "id": "TT-a2d39f6556-a",
+      "incident_family_id": "power_dc_polarity",
+      "labels": {
+        "initial_owner": "power",
+        "insufficient_evidence": "no",
+        "next_check": "inspect_power",
+        "priority": "P3"
+      },
+      "pair_id": "TT-a2d39f6556",
+      "review_status": "LLM teacher label; independent model audit on selected families; no specialist review",
+      "split": "teacher_training",
+      "teacher_model": "gpt-6-luna-2026-09-22"
+    },
+    {
+      "accepted_answers": {
+        "initial_owner": [
+          "noc"
+        ],
+        "insufficient_evidence": [
+          "yes"
+        ],
+        "next_check": [
+          "gather_evidence"
+        ],
+        "priority": [
+          "P3"
+        ]
+      },
+      "audit_model": null,
+      "id": "TT-a2d39f6556-b",
+      "incident_family_id": "power_dc_polarity",
+      "labels": {
+        "initial_owner": "noc",
+        "insufficient_evidence": "yes",
+        "next_check": "gather_evidence",
+        "priority": "P3"
+      },
+      "pair_id": "TT-a2d39f6556",
+      "review_status": "LLM teacher label; independent model audit on selected families; no specialist review",
+      "split": "teacher_training",
+      "teacher_model": "gpt-6-luna-2026-09-22"
+    },
+    {
+      "accepted_answers": {
+        "initial_owner": [
+          "core"
+        ],
+        "insufficient_evidence": [
+          "no"
+        ],
+        "next_check": [
+          "inspect_core"
+        ],
+        "priority": [
+          "P3"
+        ]
+      },
+      "audit_model": null,
+      "id": "TT-11decb0418-a",
+      "incident_family_id": "core_replica_quorum",
+      "labels": {
+        "initial_owner": "core",
+        "insufficient_evidence": "no",
+        "next_check": "inspect_core",
+        "priority": "P3"
+      },
+      "pair_id": "TT-11decb0418",
+      "review_status": "LLM teacher label; independent model audit on selected families; no specialist review",
+      "split": "teacher_training",
+      "teacher_model": "gpt-6-luna-2026-09-22"
+    },
+    {
+      "accepted_answers": {
+        "initial_owner": [
+          "noc"
+        ],
+        "insufficient_evidence": [
+          "yes"
+        ],
+        "next_check": [
+          "gather_evidence"
+        ],
+        "priority": [
+          "P3"
+        ]
+      },
+      "audit_model": null,
+      "id": "TT-11decb0418-b",
+      "incident_family_id": "core_replica_quorum",
+      "labels": {
+        "initial_owner": "noc",
+        "insufficient_evidence": "yes",
+        "next_check": "gather_evidence",
+        "priority": "P3"
+      },
+      "pair_id": "TT-11decb0418",
+      "review_status": "LLM teacher label; independent model audit on selected families; no specialist review",
+      "split": "teacher_training",
+      "teacher_model": "gpt-6-luna-2026-09-22"
+    },
+    {
+      "accepted_answers": {
+        "initial_owner": [
+          "core"
+        ],
+        "insufficient_evidence": [
+          "no"
+        ],
+        "next_check": [
+          "inspect_core"
+        ],
+        "priority": [
+          "P3"
+        ]
+      },
+      "audit_model": null,
+      "id": "TT-fb65994b18-a",
+      "incident_family_id": "core_lease_lock",
+      "labels": {
+        "initial_owner": "core",
+        "insufficient_evidence": "no",
+        "next_check": "inspect_core",
+        "priority": "P3"
+      },
+      "pair_id": "TT-fb65994b18",
+      "review_status": "LLM teacher label; independent model audit on selected families; no specialist review",
+      "split": "teacher_training",
+      "teacher_model": "gpt-6-luna-2026-09-22"
+    },
+    {
+      "accepted_answers": {
+        "initial_owner": [
+          "noc"
+        ],
+        "insufficient_evidence": [
+          "yes"
+        ],
+        "next_check": [
+          "gather_evidence"
+        ],
+        "priority": [
+          "P3"
+        ]
+      },
+      "audit_model": null,
+      "id": "TT-fb65994b18-b",
+      "incident_family_id": "core_lease_lock",
+      "labels": {
+        "initial_owner": "noc",
+        "insufficient_evidence": "yes",
+        "next_check": "gather_evidence",
+        "priority": "P3"
+      },
+      "pair_id": "TT-fb65994b18",
+      "review_status": "LLM teacher label; independent model audit on selected families; no specialist review",
+      "split": "teacher_training",
+      "teacher_model": "gpt-6-luna-2026-09-22"
+    },
+    {
+      "accepted_answers": {
+        "initial_owner": [
+          "core"
+        ],
+        "insufficient_evidence": [
+          "no"
+        ],
+        "next_check": [
+          "inspect_core"
+        ],
+        "priority": [
+          "P3"
+        ]
+      },
+      "audit_model": null,
+      "id": "TT-4eb8437251-a",
+      "incident_family_id": "core_api_schema",
+      "labels": {
+        "initial_owner": "core",
+        "insufficient_evidence": "no",
+        "next_check": "inspect_core",
+        "priority": "P3"
+      },
+      "pair_id": "TT-4eb8437251",
+      "review_status": "LLM teacher label; independent model audit on selected families; no specialist review",
+      "split": "teacher_training",
+      "teacher_model": "gpt-6-luna-2026-09-22"
+    },
+    {
+      "accepted_answers": {
+        "initial_owner": [
+          "noc"
+        ],
+        "insufficient_evidence": [
+          "yes"
+        ],
+        "next_check": [
+          "gather_evidence"
+        ],
+        "priority": [
+          "P3"
+        ]
+      },
+      "audit_model": null,
+      "id": "TT-4eb8437251-b",
+      "incident_family_id": "core_api_schema",
+      "labels": {
+        "initial_owner": "noc",
+        "insufficient_evidence": "yes",
+        "next_check": "gather_evidence",
+        "priority": "P3"
+      },
+      "pair_id": "TT-4eb8437251",
+      "review_status": "LLM teacher label; independent model audit on selected families; no specialist review",
+      "split": "teacher_training",
+      "teacher_model": "gpt-6-luna-2026-09-22"
+    },
+    {
+      "accepted_answers": {
+        "initial_owner": [
+          "core"
+        ],
+        "insufficient_evidence": [
+          "no"
+        ],
+        "next_check": [
+          "inspect_core"
+        ],
+        "priority": [
+          "P3"
+        ]
+      },
+      "audit_model": null,
+      "id": "TT-305c0159cb-a",
+      "incident_family_id": "core_replica_read_skew",
+      "labels": {
+        "initial_owner": "core",
+        "insufficient_evidence": "no",
+        "next_check": "inspect_core",
+        "priority": "P3"
+      },
+      "pair_id": "TT-305c0159cb",
+      "review_status": "LLM teacher label; independent model audit on selected families; no specialist review",
+      "split": "teacher_training",
+      "teacher_model": "gpt-6-luna-2026-09-22"
+    },
+    {
+      "accepted_answers": {
+        "initial_owner": [
+          "noc"
+        ],
+        "insufficient_evidence": [
+          "yes"
+        ],
+        "next_check": [
+          "gather_evidence"
+        ],
+        "priority": [
+          "P3"
+        ]
+      },
+      "audit_model": null,
+      "id": "TT-305c0159cb-b",
+      "incident_family_id": "core_replica_read_skew",
+      "labels": {
+        "initial_owner": "noc",
+        "insufficient_evidence": "yes",
+        "next_check": "gather_evidence",
+        "priority": "P3"
+      },
+      "pair_id": "TT-305c0159cb",
+      "review_status": "LLM teacher label; independent model audit on selected families; no specialist review",
+      "split": "teacher_training",
+      "teacher_model": "gpt-6-luna-2026-09-22"
+    },
+    {
+      "accepted_answers": {
+        "initial_owner": [
+          "core"
+        ],
+        "insufficient_evidence": [
+          "no"
+        ],
+        "next_check": [
+          "inspect_core"
+        ],
+        "priority": [
+          "P3"
+        ]
+      },
+      "audit_model": null,
+      "id": "TT-a8b0d880c7-a",
+      "incident_family_id": "core_rate_limit_scope",
+      "labels": {
+        "initial_owner": "core",
+        "insufficient_evidence": "no",
+        "next_check": "inspect_core",
+        "priority": "P3"
+      },
+      "pair_id": "TT-a8b0d880c7",
+      "review_status": "LLM teacher label; independent model audit on selected families; no specialist review",
+      "split": "teacher_training",
+      "teacher_model": "gpt-6-luna-2026-09-22"
+    },
+    {
+      "accepted_answers": {
+        "initial_owner": [
+          "noc"
+        ],
+        "insufficient_evidence": [
+          "yes"
+        ],
+        "next_check": [
+          "gather_evidence"
+        ],
+        "priority": [
+          "P3"
+        ]
+      },
+      "audit_model": null,
+      "id": "TT-a8b0d880c7-b",
+      "incident_family_id": "core_rate_limit_scope",
+      "labels": {
+        "initial_owner": "noc",
+        "insufficient_evidence": "yes",
+        "next_check": "gather_evidence",
+        "priority": "P3"
+      },
+      "pair_id": "TT-a8b0d880c7",
+      "review_status": "LLM teacher label; independent model audit on selected families; no specialist review",
+      "split": "teacher_training",
+      "teacher_model": "gpt-6-luna-2026-09-22"
+    },
+    {
+      "accepted_answers": {
+        "initial_owner": [
+          "core"
+        ],
+        "insufficient_evidence": [
+          "no"
+        ],
+        "next_check": [
+          "inspect_core"
+        ],
+        "priority": [
+          "P3"
+        ]
+      },
+      "audit_model": null,
+      "id": "TT-c3d31a8305-a",
+      "incident_family_id": "core_endpoint_pool",
+      "labels": {
+        "initial_owner": "core",
+        "insufficient_evidence": "no",
+        "next_check": "inspect_core",
+        "priority": "P3"
+      },
+      "pair_id": "TT-c3d31a8305",
+      "review_status": "LLM teacher label; independent model audit on selected families; no specialist review",
+      "split": "teacher_training",
+      "teacher_model": "gpt-6-luna-2026-09-22"
+    },
+    {
+      "accepted_answers": {
+        "initial_owner": [
+          "noc"
+        ],
+        "insufficient_evidence": [
+          "yes"
+        ],
+        "next_check": [
+          "gather_evidence"
+        ],
+        "priority": [
+          "P3"
+        ]
+      },
+      "audit_model": null,
+      "id": "TT-c3d31a8305-b",
+      "incident_family_id": "core_endpoint_pool",
+      "labels": {
+        "initial_owner": "noc",
+        "insufficient_evidence": "yes",
+        "next_check": "gather_evidence",
+        "priority": "P3"
+      },
+      "pair_id": "TT-c3d31a8305",
+      "review_status": "LLM teacher label; independent model audit on selected families; no specialist review",
+      "split": "teacher_training",
+      "teacher_model": "gpt-6-luna-2026-09-22"
+    },
+    {
+      "accepted_answers": {
+        "initial_owner": [
+          "noc"
+        ],
+        "insufficient_evidence": [
+          "yes"
+        ],
+        "next_check": [
+          "verify_change"
+        ],
+        "priority": [
+          "P2"
+        ]
+      },
+      "audit_model": null,
+      "id": "TT-becea8541f-a",
+      "incident_family_id": "change_radio_license_scope",
+      "labels": {
+        "initial_owner": "noc",
+        "insufficient_evidence": "yes",
+        "next_check": "verify_change",
+        "priority": "P2"
+      },
+      "pair_id": "TT-becea8541f",
+      "review_status": "LLM teacher label; independent model audit on selected families; no specialist review",
+      "split": "teacher_training",
+      "teacher_model": "gpt-6-luna-2026-09-22"
+    },
+    {
+      "accepted_answers": {
+        "initial_owner": [
+          "noc"
+        ],
+        "insufficient_evidence": [
+          "no"
+        ],
+        "next_check": [
+          "monitor"
+        ],
+        "priority": [
+          "P4"
+        ]
+      },
+      "audit_model": null,
+      "id": "TT-becea8541f-b",
+      "incident_family_id": "change_radio_license_scope",
+      "labels": {
+        "initial_owner": "noc",
+        "insufficient_evidence": "no",
+        "next_check": "monitor",
+        "priority": "P4"
+      },
+      "pair_id": "TT-becea8541f",
+      "review_status": "LLM teacher label; independent model audit on selected families; no specialist review",
+      "split": "teacher_training",
+      "teacher_model": "gpt-6-luna-2026-09-22"
+    },
+    {
+      "accepted_answers": {
+        "initial_owner": [
+          "noc"
+        ],
+        "insufficient_evidence": [
+          "yes"
+        ],
+        "next_check": [
+          "verify_change"
+        ],
+        "priority": [
+          "P2"
+        ]
+      },
+      "audit_model": null,
+      "id": "TT-4c8707d460-a",
+      "incident_family_id": "change_core_drain_scope",
+      "labels": {
+        "initial_owner": "noc",
+        "insufficient_evidence": "yes",
+        "next_check": "verify_change",
+        "priority": "P2"
+      },
+      "pair_id": "TT-4c8707d460",
+      "review_status": "LLM teacher label; independent model audit on selected families; no specialist review",
+      "split": "teacher_training",
+      "teacher_model": "gpt-6-luna-2026-09-22"
+    },
+    {
+      "accepted_answers": {
+        "initial_owner": [
+          "noc"
+        ],
+        "insufficient_evidence": [
+          "no"
+        ],
+        "next_check": [
+          "monitor"
+        ],
+        "priority": [
+          "P4"
+        ]
+      },
+      "audit_model": null,
+      "id": "TT-4c8707d460-b",
+      "incident_family_id": "change_core_drain_scope",
+      "labels": {
+        "initial_owner": "noc",
+        "insufficient_evidence": "no",
+        "next_check": "monitor",
+        "priority": "P4"
+      },
+      "pair_id": "TT-4c8707d460",
+      "review_status": "LLM teacher label; independent model audit on selected families; no specialist review",
+      "split": "teacher_training",
+      "teacher_model": "gpt-6-luna-2026-09-22"
+    },
+    {
+      "accepted_answers": {
+        "initial_owner": [
+          "noc"
+        ],
+        "insufficient_evidence": [
+          "yes"
+        ],
+        "next_check": [
+          "gather_evidence"
+        ],
+        "priority": [
+          "P3"
+        ]
+      },
+      "audit_model": "gpt-6.1-sol-2026-09-29",
+      "id": "TT-b57745970a-a",
+      "incident_family_id": "recovery_sms_transaction",
+      "labels": {
+        "initial_owner": "noc",
+        "insufficient_evidence": "yes",
+        "next_check": "gather_evidence",
+        "priority": "P3"
+      },
+      "pair_id": "TT-b57745970a",
+      "review_status": "LLM teacher label; independent model audit on selected families; no specialist review",
+      "split": "teacher_training",
+      "teacher_model": "gpt-6-luna-2026-09-22"
+    },
+    {
+      "accepted_answers": {
+        "initial_owner": [
+          "noc"
+        ],
+        "insufficient_evidence": [
+          "no"
+        ],
+        "next_check": [
+          "monitor"
+        ],
+        "priority": [
+          "P4"
+        ]
+      },
+      "audit_model": "gpt-6.1-sol-2026-09-29",
+      "id": "TT-b57745970a-b",
+      "incident_family_id": "recovery_sms_transaction",
+      "labels": {
+        "initial_owner": "noc",
+        "insufficient_evidence": "no",
+        "next_check": "monitor",
+        "priority": "P4"
+      },
+      "pair_id": "TT-b57745970a",
+      "review_status": "LLM teacher label; independent model audit on selected families; no specialist review",
+      "split": "teacher_training",
+      "teacher_model": "gpt-6-luna-2026-09-22"
+    },
+    {
+      "accepted_answers": {
+        "initial_owner": [
+          "noc"
+        ],
+        "insufficient_evidence": [
+          "yes"
+        ],
+        "next_check": [
+          "gather_evidence"
+        ],
+        "priority": [
+          "P3"
+        ]
+      },
+      "audit_model": null,
+      "id": "TT-38a72c612f-a",
+      "incident_family_id": "recovery_data_session",
+      "labels": {
+        "initial_owner": "noc",
+        "insufficient_evidence": "yes",
+        "next_check": "gather_evidence",
+        "priority": "P3"
+      },
+      "pair_id": "TT-38a72c612f",
+      "review_status": "LLM teacher label; independent model audit on selected families; no specialist review",
+      "split": "teacher_training",
+      "teacher_model": "gpt-6-luna-2026-09-22"
+    },
+    {
+      "accepted_answers": {
+        "initial_owner": [
+          "noc"
+        ],
+        "insufficient_evidence": [
+          "no"
+        ],
+        "next_check": [
+          "monitor"
+        ],
+        "priority": [
+          "P4"
+        ]
+      },
+      "audit_model": null,
+      "id": "TT-38a72c612f-b",
+      "incident_family_id": "recovery_data_session",
+      "labels": {
+        "initial_owner": "noc",
+        "insufficient_evidence": "no",
+        "next_check": "monitor",
+        "priority": "P4"
+      },
+      "pair_id": "TT-38a72c612f",
+      "review_status": "LLM teacher label; independent model audit on selected families; no specialist review",
+      "split": "teacher_training",
+      "teacher_model": "gpt-6-luna-2026-09-22"
+    },
+    {
+      "accepted_answers": {
+        "initial_owner": [
+          "noc"
+        ],
+        "insufficient_evidence": [
+          "yes"
+        ],
+        "next_check": [
+          "gather_evidence"
+        ],
+        "priority": [
+          "P3"
+        ]
+      },
+      "audit_model": null,
+      "id": "TT-1e9a2c8c72-a",
+      "incident_family_id": "recovery_voice_setup",
+      "labels": {
+        "initial_owner": "noc",
+        "insufficient_evidence": "yes",
+        "next_check": "gather_evidence",
+        "priority": "P3"
+      },
+      "pair_id": "TT-1e9a2c8c72",
+      "review_status": "LLM teacher label; independent model audit on selected families; no specialist review",
+      "split": "teacher_training",
+      "teacher_model": "gpt-6-luna-2026-09-22"
+    },
+    {
+      "accepted_answers": {
+        "initial_owner": [
+          "noc"
+        ],
+        "insufficient_evidence": [
+          "no"
+        ],
+        "next_check": [
+          "monitor"
+        ],
+        "priority": [
+          "P4"
+        ]
+      },
+      "audit_model": null,
+      "id": "TT-1e9a2c8c72-b",
+      "incident_family_id": "recovery_voice_setup",
+      "labels": {
+        "initial_owner": "noc",
+        "insufficient_evidence": "no",
+        "next_check": "monitor",
+        "priority": "P4"
+      },
+      "pair_id": "TT-1e9a2c8c72",
+      "review_status": "LLM teacher label; independent model audit on selected families; no specialist review",
+      "split": "teacher_training",
+      "teacher_model": "gpt-6-luna-2026-09-22"
+    }
+  ],
+  "runs": {
+    "teacher_head": {
+      "predictions": [
+        {
+          "disposition_probabilities": [
+            0.3223840296268463,
+            0.14746232330799103,
+            0.1546320766210556,
+            0.1389918476343155,
+            0.16756562888622284,
+            0.03147486224770546,
+            0.037489257752895355
+          ],
+          "id": "TT-81de8eeb61-a",
+          "latency_ms": 69.81625012122095,
+          "predictions": {
+            "initial_owner": "ran",
+            "insufficient_evidence": "no",
+            "next_check": "inspect_radio",
+            "priority": "P3"
+          },
+          "status": "ok"
+        },
+        {
+          "disposition_probabilities": [
+            0.24627849459648132,
+            0.16025295853614807,
+            0.157133549451828,
+            0.1416601985692978,
+            0.2182742804288864,
+            0.03334764018654823,
+            0.04305281862616539
+          ],
+          "id": "TT-81de8eeb61-b",
+          "latency_ms": 6.804915843531489,
+          "predictions": {
+            "initial_owner": "ran",
+            "insufficient_evidence": "no",
+            "next_check": "inspect_radio",
+            "priority": "P3"
+          },
+          "status": "ok"
+        },
+        {
+          "disposition_probabilities": [
+            0.32699114084243774,
+            0.1568770855665207,
+            0.15941518545150757,
+            0.14102141559123993,
+            0.14919540286064148,
+            0.029384786263108253,
+            0.03711490333080292
+          ],
+          "id": "TT-f32a4c097f-a",
+          "latency_ms": 5.653708009049296,
+          "predictions": {
+            "initial_owner": "ran",
+            "insufficient_evidence": "no",
+            "next_check": "inspect_radio",
+            "priority": "P3"
+          },
+          "status": "ok"
+        },
+        {
+          "disposition_probabilities": [
+            0.17643068730831146,
+            0.16244018077850342,
+            0.2126951664686203,
+            0.14348240196704865,
+            0.22983227670192719,
+            0.030982960015535355,
+            0.04413633048534393
+          ],
+          "id": "TT-f32a4c097f-b",
+          "latency_ms": 4.557417007163167,
+          "predictions": {
+            "initial_owner": "noc",
+            "insufficient_evidence": "yes",
+            "next_check": "gather_evidence",
+            "priority": "P3"
+          },
+          "status": "ok"
+        },
+        {
+          "disposition_probabilities": [
+            0.34318339824676514,
+            0.12687161564826965,
+            0.1983906477689743,
+            0.11502335220575333,
+            0.15446427464485168,
+            0.02756287343800068,
+            0.034503817558288574
+          ],
+          "id": "TT-9b175d59a8-a",
+          "latency_ms": 4.268249962478876,
+          "predictions": {
+            "initial_owner": "ran",
+            "insufficient_evidence": "no",
+            "next_check": "inspect_radio",
+            "priority": "P3"
+          },
+          "status": "ok"
+        },
+        {
+          "disposition_probabilities": [
+            0.29140856862068176,
+            0.11076724529266357,
+            0.1671273112297058,
+            0.0950285792350769,
+            0.24462977051734924,
+            0.02839800901710987,
+            0.06264058500528336
+          ],
+          "id": "TT-9b175d59a8-b",
+          "latency_ms": 4.225417040288448,
+          "predictions": {
+            "initial_owner": "ran",
+            "insufficient_evidence": "no",
+            "next_check": "inspect_radio",
+            "priority": "P3"
+          },
+          "status": "ok"
+        },
+        {
+          "disposition_probabilities": [
+            0.4423535466194153,
+            0.1658327728509903,
+            0.09159601479768753,
+            0.10564836114645004,
+            0.14136968553066254,
+            0.024685725569725037,
+            0.028513966128230095
+          ],
+          "id": "TT-bc7496c1eb-a",
+          "latency_ms": 4.394958959892392,
+          "predictions": {
+            "initial_owner": "ran",
+            "insufficient_evidence": "no",
+            "next_check": "inspect_radio",
+            "priority": "P3"
+          },
+          "status": "ok"
+        },
+        {
+          "disposition_probabilities": [
+            0.2915949523448944,
+            0.1663416475057602,
+            0.14055515825748444,
+            0.10039959102869034,
+            0.23908284306526184,
+            0.026287075132131577,
+            0.03573880344629288
+          ],
+          "id": "TT-bc7496c1eb-b",
+          "latency_ms": 4.32062498293817,
+          "predictions": {
+            "initial_owner": "ran",
+            "insufficient_evidence": "no",
+            "next_check": "inspect_radio",
+            "priority": "P3"
+          },
+          "status": "ok"
+        },
+        {
+          "disposition_probabilities": [
+            0.35111698508262634,
+            0.14321213960647583,
+            0.1683235913515091,
+            0.1287335306406021,
+            0.14241260290145874,
+            0.028470242395997047,
+            0.03773095831274986
+          ],
+          "id": "TT-1d15bfbb6c-a",
+          "latency_ms": 4.188500111922622,
+          "predictions": {
+            "initial_owner": "ran",
+            "insufficient_evidence": "no",
+            "next_check": "inspect_radio",
+            "priority": "P3"
+          },
+          "status": "ok"
+        },
+        {
+          "disposition_probabilities": [
+            0.2804899215698242,
+            0.148048534989357,
+            0.18038310110569,
+            0.12574000656604767,
+            0.1975831836462021,
+            0.029700621962547302,
+            0.038054633885622025
+          ],
+          "id": "TT-1d15bfbb6c-b",
+          "latency_ms": 4.305416019633412,
+          "predictions": {
+            "initial_owner": "ran",
+            "insufficient_evidence": "no",
+            "next_check": "inspect_radio",
+            "priority": "P3"
+          },
+          "status": "ok"
+        },
+        {
+          "disposition_probabilities": [
+            0.22628837823867798,
+            0.14573928713798523,
+            0.22017914056777954,
+            0.1473911702632904,
+            0.18768365681171417,
+            0.033038754016160965,
+            0.03967955335974693
+          ],
+          "id": "TT-9309ad646f-a",
+          "latency_ms": 4.184541990980506,
+          "predictions": {
+            "initial_owner": "ran",
+            "insufficient_evidence": "no",
+            "next_check": "inspect_radio",
+            "priority": "P3"
+          },
+          "status": "ok"
+        },
+        {
+          "disposition_probabilities": [
+            0.21742092072963715,
+            0.13187874853610992,
+            0.22197939455509186,
+            0.13543547689914703,
+            0.22392216324806213,
+            0.03091926872730255,
+            0.03844393789768219
+          ],
+          "id": "TT-9309ad646f-b",
+          "latency_ms": 4.210250219330192,
+          "predictions": {
+            "initial_owner": "noc",
+            "insufficient_evidence": "yes",
+            "next_check": "gather_evidence",
+            "priority": "P3"
+          },
+          "status": "ok"
+        },
+        {
+          "disposition_probabilities": [
+            0.15110035240650177,
+            0.3038603663444519,
+            0.1569088101387024,
+            0.16677138209342957,
+            0.14971019327640533,
+            0.027725383639335632,
+            0.04392344877123833
+          ],
+          "id": "TT-7d90cba1e7-a",
+          "latency_ms": 4.205124918371439,
+          "predictions": {
+            "initial_owner": "transport",
+            "insufficient_evidence": "no",
+            "next_check": "inspect_transport",
+            "priority": "P3"
+          },
+          "status": "ok"
+        },
+        {
+          "disposition_probabilities": [
+            0.13764134049415588,
+            0.24920934438705444,
+            0.15839634835720062,
+            0.1704861968755722,
+            0.20280881226062775,
+            0.031817201524972916,
+            0.04964075982570648
+          ],
+          "id": "TT-7d90cba1e7-b",
+          "latency_ms": 4.254041938111186,
+          "predictions": {
+            "initial_owner": "transport",
+            "insufficient_evidence": "no",
+            "next_check": "inspect_transport",
+            "priority": "P3"
+          },
+          "status": "ok"
+        },
+        {
+          "disposition_probabilities": [
+            0.13515110313892365,
+            0.2849322557449341,
+            0.15453627705574036,
+            0.18444937467575073,
+            0.16618351638317108,
+            0.030593527480959892,
+            0.04415394365787506
+          ],
+          "id": "TT-ea8cbc5db1-a",
+          "latency_ms": 4.210165934637189,
+          "predictions": {
+            "initial_owner": "transport",
+            "insufficient_evidence": "no",
+            "next_check": "inspect_transport",
+            "priority": "P3"
+          },
+          "status": "ok"
+        },
+        {
+          "disposition_probabilities": [
+            0.1292830854654312,
+            0.24666810035705566,
+            0.14256183803081512,
+            0.1851598620414734,
+            0.21556496620178223,
+            0.03301108628511429,
+            0.04775111749768257
+          ],
+          "id": "TT-ea8cbc5db1-b",
+          "latency_ms": 4.187165992334485,
+          "predictions": {
+            "initial_owner": "transport",
+            "insufficient_evidence": "no",
+            "next_check": "inspect_transport",
+            "priority": "P3"
+          },
+          "status": "ok"
+        },
+        {
+          "disposition_probabilities": [
+            0.14479407668113708,
+            0.2792494297027588,
+            0.15302559733390808,
+            0.1888599842786789,
+            0.15989838540554047,
+            0.029994966462254524,
+            0.04417756572365761
+          ],
+          "id": "TT-d47b9a6141-a",
+          "latency_ms": 4.158542025834322,
+          "predictions": {
+            "initial_owner": "transport",
+            "insufficient_evidence": "no",
+            "next_check": "inspect_transport",
+            "priority": "P3"
+          },
+          "status": "ok"
+        },
+        {
+          "disposition_probabilities": [
+            0.15145660936832428,
+            0.22243861854076385,
+            0.15677818655967712,
+            0.17939265072345734,
+            0.21098297834396362,
+            0.033065684139728546,
+            0.04588519409298897
+          ],
+          "id": "TT-d47b9a6141-b",
+          "latency_ms": 4.253124818205833,
+          "predictions": {
+            "initial_owner": "transport",
+            "insufficient_evidence": "no",
+            "next_check": "inspect_transport",
+            "priority": "P3"
+          },
+          "status": "ok"
+        },
+        {
+          "disposition_probabilities": [
+            0.16640059649944305,
+            0.27392369508743286,
+            0.14855614304542542,
+            0.18790845572948456,
+            0.14644908905029297,
+            0.029960934072732925,
+            0.04680107533931732
+          ],
+          "id": "TT-84718e62ba-a",
+          "latency_ms": 4.089292138814926,
+          "predictions": {
+            "initial_owner": "transport",
+            "insufficient_evidence": "no",
+            "next_check": "inspect_transport",
+            "priority": "P3"
+          },
+          "status": "ok"
+        },
+        {
+          "disposition_probabilities": [
+            0.16670510172843933,
+            0.24056485295295715,
+            0.1491221785545349,
+            0.1772007942199707,
+            0.1909368336200714,
+            0.0314512737095356,
+            0.044018957763910294
+          ],
+          "id": "TT-84718e62ba-b",
+          "latency_ms": 4.167458973824978,
+          "predictions": {
+            "initial_owner": "transport",
+            "insufficient_evidence": "no",
+            "next_check": "inspect_transport",
+            "priority": "P3"
+          },
+          "status": "ok"
+        },
+        {
+          "disposition_probabilities": [
+            0.17707644402980804,
+            0.2942318320274353,
+            0.153321772813797,
+            0.14431029558181763,
+            0.1545010507106781,
+            0.031069116666913033,
+            0.04548952355980873
+          ],
+          "id": "TT-357a7c6083-a",
+          "latency_ms": 4.1487079579383135,
+          "predictions": {
+            "initial_owner": "transport",
+            "insufficient_evidence": "no",
+            "next_check": "inspect_transport",
+            "priority": "P3"
+          },
+          "status": "ok"
+        },
+        {
+          "disposition_probabilities": [
+            0.11979646235704422,
+            0.1620684266090393,
+            0.11682665348052979,
+            0.2555798590183258,
+            0.28014707565307617,
+            0.028164492920041084,
+            0.03741700202226639
+          ],
+          "id": "TT-357a7c6083-b",
+          "latency_ms": 4.172499990090728,
+          "predictions": {
+            "initial_owner": "noc",
+            "insufficient_evidence": "yes",
+            "next_check": "gather_evidence",
+            "priority": "P3"
+          },
+          "status": "ok"
+        },
+        {
+          "disposition_probabilities": [
+            0.11217165738344193,
+            0.5075914263725281,
+            0.10342570394277573,
+            0.06036987155675888,
+            0.16103841364383698,
+            0.023260168731212616,
+            0.0321427546441555
+          ],
+          "id": "TT-e081e87c32-a",
+          "latency_ms": 100.50233313813806,
+          "predictions": {
+            "initial_owner": "transport",
+            "insufficient_evidence": "no",
+            "next_check": "inspect_transport",
+            "priority": "P3"
+          },
+          "status": "ok"
+        },
+        {
+          "disposition_probabilities": [
+            0.1836114525794983,
+            0.28497225046157837,
+            0.12253198772668839,
+            0.07649549096822739,
+            0.26607662439346313,
+            0.027857497334480286,
+            0.038454584777355194
+          ],
+          "id": "TT-e081e87c32-b",
+          "latency_ms": 7.365624886006117,
+          "predictions": {
+            "initial_owner": "transport",
+            "insufficient_evidence": "no",
+            "next_check": "inspect_transport",
+            "priority": "P3"
+          },
+          "status": "ok"
+        },
+        {
+          "disposition_probabilities": [
+            0.16240999102592468,
+            0.13560931384563446,
+            0.3724438548088074,
+            0.10739262402057648,
+            0.16268108785152435,
+            0.02490057423710823,
+            0.0345626175403595
+          ],
+          "id": "TT-f7ed8c8962-a",
+          "latency_ms": 5.032374989241362,
+          "predictions": {
+            "initial_owner": "power",
+            "insufficient_evidence": "no",
+            "next_check": "inspect_power",
+            "priority": "P3"
+          },
+          "status": "ok"
+        },
+        {
+          "disposition_probabilities": [
+            0.15322232246398926,
+            0.12860801815986633,
+            0.3253602683544159,
+            0.10135144740343094,
+            0.22952017188072205,
+            0.02606956847012043,
+            0.03586818277835846
+          ],
+          "id": "TT-f7ed8c8962-b",
+          "latency_ms": 4.120708908885717,
+          "predictions": {
+            "initial_owner": "power",
+            "insufficient_evidence": "no",
+            "next_check": "inspect_power",
+            "priority": "P3"
+          },
+          "status": "ok"
+        },
+        {
+          "disposition_probabilities": [
+            0.18531472980976105,
+            0.14305108785629272,
+            0.32280510663986206,
+            0.11234824359416962,
+            0.17273226380348206,
+            0.027849283069372177,
+            0.03589937835931778
+          ],
+          "id": "TT-f52fcf4a75-a",
+          "latency_ms": 4.365541040897369,
+          "predictions": {
+            "initial_owner": "power",
+            "insufficient_evidence": "no",
+            "next_check": "inspect_power",
+            "priority": "P3"
+          },
+          "status": "ok"
+        },
+        {
+          "disposition_probabilities": [
+            0.1718078851699829,
+            0.13245470821857452,
+            0.3013443052768707,
+            0.10027825087308884,
+            0.22733177244663239,
+            0.02887008525431156,
+            0.03791302070021629
+          ],
+          "id": "TT-f52fcf4a75-b",
+          "latency_ms": 4.228416830301285,
+          "predictions": {
+            "initial_owner": "power",
+            "insufficient_evidence": "no",
+            "next_check": "inspect_power",
+            "priority": "P3"
+          },
+          "status": "ok"
+        },
+        {
+          "disposition_probabilities": [
+            0.14874884486198425,
+            0.13683712482452393,
+            0.3257215619087219,
+            0.12728093564510345,
+            0.19145940244197845,
+            0.028645869344472885,
+            0.041306328028440475
+          ],
+          "id": "TT-4367352668-a",
+          "latency_ms": 4.283874994143844,
+          "predictions": {
+            "initial_owner": "power",
+            "insufficient_evidence": "no",
+            "next_check": "inspect_power",
+            "priority": "P3"
+          },
+          "status": "ok"
+        },
+        {
+          "disposition_probabilities": [
+            0.11139053106307983,
+            0.10472806543111801,
+            0.21013106405735016,
+            0.18816393613815308,
+            0.32280126214027405,
+            0.026818258687853813,
+            0.035966865718364716
+          ],
+          "id": "TT-4367352668-b",
+          "latency_ms": 4.302541958168149,
+          "predictions": {
+            "initial_owner": "noc",
+            "insufficient_evidence": "yes",
+            "next_check": "gather_evidence",
+            "priority": "P3"
+          },
+          "status": "ok"
+        },
+        {
+          "disposition_probabilities": [
+            0.17383064329624176,
+            0.1573621779680252,
+            0.3110473155975342,
+            0.13285182416439056,
+            0.15679338574409485,
+            0.028143055737018585,
+            0.039971575140953064
+          ],
+          "id": "TT-d86ddc77ef-a",
+          "latency_ms": 4.246375057846308,
+          "predictions": {
+            "initial_owner": "power",
+            "insufficient_evidence": "no",
+            "next_check": "inspect_power",
+            "priority": "P3"
+          },
+          "status": "ok"
+        },
+        {
+          "disposition_probabilities": [
+            0.1627236157655716,
+            0.1594262719154358,
+            0.27144336700439453,
+            0.12869927287101746,
+            0.20908889174461365,
+            0.029116058722138405,
+            0.039502520114183426
+          ],
+          "id": "TT-d86ddc77ef-b",
+          "latency_ms": 4.20095887966454,
+          "predictions": {
+            "initial_owner": "power",
+            "insufficient_evidence": "no",
+            "next_check": "inspect_power",
+            "priority": "P3"
+          },
+          "status": "ok"
+        },
+        {
+          "disposition_probabilities": [
+            0.15479151904582977,
+            0.14888273179531097,
+            0.3273833990097046,
+            0.1326766014099121,
+            0.16447532176971436,
+            0.028592536225914955,
+            0.043197982013225555
+          ],
+          "id": "TT-e5545fc95b-a",
+          "latency_ms": 4.128041910007596,
+          "predictions": {
+            "initial_owner": "power",
+            "insufficient_evidence": "no",
+            "next_check": "inspect_power",
+            "priority": "P3"
+          },
+          "status": "ok"
+        },
+        {
+          "disposition_probabilities": [
+            0.12418238818645477,
+            0.10460813343524933,
+            0.2408115565776825,
+            0.17330172657966614,
+            0.30298301577568054,
+            0.02500314638018608,
+            0.029109977185726166
+          ],
+          "id": "TT-e5545fc95b-b",
+          "latency_ms": 4.181083990260959,
+          "predictions": {
+            "initial_owner": "noc",
+            "insufficient_evidence": "yes",
+            "next_check": "gather_evidence",
+            "priority": "P3"
+          },
+          "status": "ok"
+        },
+        {
+          "disposition_probabilities": [
+            0.157638818025589,
+            0.15458975732326508,
+            0.32574281096458435,
+            0.12422506511211395,
+            0.1673513948917389,
+            0.029536403715610504,
+            0.040915846824645996
+          ],
+          "id": "TT-a2d39f6556-a",
+          "latency_ms": 4.037083126604557,
+          "predictions": {
+            "initial_owner": "power",
+            "insufficient_evidence": "no",
+            "next_check": "inspect_power",
+            "priority": "P3"
+          },
+          "status": "ok"
+        },
+        {
+          "disposition_probabilities": [
+            0.15069164335727692,
+            0.13866181671619415,
+            0.3079848289489746,
+            0.10756419599056244,
+            0.22522996366024017,
+            0.030429640784859657,
+            0.03943799063563347
+          ],
+          "id": "TT-a2d39f6556-b",
+          "latency_ms": 4.2766667902469635,
+          "predictions": {
+            "initial_owner": "power",
+            "insufficient_evidence": "no",
+            "next_check": "inspect_power",
+            "priority": "P3"
+          },
+          "status": "ok"
+        },
+        {
+          "disposition_probabilities": [
+            0.09581407159566879,
+            0.10750750452280045,
+            0.08664978295564651,
+            0.4516614079475403,
+            0.19860006868839264,
+            0.024128587916493416,
+            0.035638563334941864
+          ],
+          "id": "TT-11decb0418-a",
+          "latency_ms": 4.28620888851583,
+          "predictions": {
+            "initial_owner": "core",
+            "insufficient_evidence": "no",
+            "next_check": "inspect_core",
+            "priority": "P3"
+          },
+          "status": "ok"
+        },
+        {
+          "disposition_probabilities": [
+            0.1497846394777298,
+            0.1480308473110199,
+            0.15123410522937775,
+            0.25175029039382935,
+            0.21865059435367584,
+            0.030797097831964493,
+            0.04975246265530586
+          ],
+          "id": "TT-11decb0418-b",
+          "latency_ms": 4.0917908772826195,
+          "predictions": {
+            "initial_owner": "core",
+            "insufficient_evidence": "no",
+            "next_check": "inspect_core",
+            "priority": "P3"
+          },
+          "status": "ok"
+        },
+        {
+          "disposition_probabilities": [
+            0.15037383139133453,
+            0.1801551878452301,
+            0.13881534337997437,
+            0.2906194031238556,
+            0.15481840074062347,
+            0.03218287229537964,
+            0.05303499102592468
+          ],
+          "id": "TT-fb65994b18-a",
+          "latency_ms": 4.81279194355011,
+          "predictions": {
+            "initial_owner": "core",
+            "insufficient_evidence": "no",
+            "next_check": "inspect_core",
+            "priority": "P3"
+          },
+          "status": "ok"
+        },
+        {
+          "disposition_probabilities": [
+            0.14568912982940674,
+            0.17969262599945068,
+            0.15687832236289978,
+            0.21312947571277618,
+            0.21934320032596588,
+            0.03354496881365776,
+            0.05172238498926163
+          ],
+          "id": "TT-fb65994b18-b",
+          "latency_ms": 4.822625080123544,
+          "predictions": {
+            "initial_owner": "noc",
+            "insufficient_evidence": "yes",
+            "next_check": "gather_evidence",
+            "priority": "P3"
+          },
+          "status": "ok"
+        },
+        {
+          "disposition_probabilities": [
+            0.1372489035129547,
+            0.16043832898139954,
+            0.1323288381099701,
+            0.3228612542152405,
+            0.16724182665348053,
+            0.03298255801200867,
+            0.04689832776784897
+          ],
+          "id": "TT-4eb8437251-a",
+          "latency_ms": 4.2233329731971025,
+          "predictions": {
+            "initial_owner": "core",
+            "insufficient_evidence": "no",
+            "next_check": "inspect_core",
+            "priority": "P3"
+          },
+          "status": "ok"
+        },
+        {
+          "disposition_probabilities": [
+            0.14023888111114502,
+            0.15992426872253418,
+            0.1421135514974594,
+            0.2531345784664154,
+            0.22304721176624298,
+            0.033240046352148056,
+            0.048301465809345245
+          ],
+          "id": "TT-4eb8437251-b",
+          "latency_ms": 4.3553749565035105,
+          "predictions": {
+            "initial_owner": "core",
+            "insufficient_evidence": "no",
+            "next_check": "inspect_core",
+            "priority": "P3"
+          },
+          "status": "ok"
+        },
+        {
+          "disposition_probabilities": [
+            0.151983842253685,
+            0.17752401530742645,
+            0.1425662785768509,
+            0.30473601818084717,
+            0.14723677933216095,
+            0.030419202521443367,
+            0.045533906668424606
+          ],
+          "id": "TT-305c0159cb-a",
+          "latency_ms": 4.178666975349188,
+          "predictions": {
+            "initial_owner": "core",
+            "insufficient_evidence": "no",
+            "next_check": "inspect_core",
+            "priority": "P3"
+          },
+          "status": "ok"
+        },
+        {
+          "disposition_probabilities": [
+            0.15354503691196442,
+            0.1711425632238388,
+            0.15927745401859283,
+            0.23050160706043243,
+            0.208932563662529,
+            0.03220346197485924,
+            0.044397275894880295
+          ],
+          "id": "TT-305c0159cb-b",
+          "latency_ms": 4.343915963545442,
+          "predictions": {
+            "initial_owner": "core",
+            "insufficient_evidence": "no",
+            "next_check": "inspect_core",
+            "priority": "P3"
+          },
+          "status": "ok"
+        },
+        {
+          "disposition_probabilities": [
+            0.15029072761535645,
+            0.16829340159893036,
+            0.13095785677433014,
+            0.32980260252952576,
+            0.14573387801647186,
+            0.031139718368649483,
+            0.0437818244099617
+          ],
+          "id": "TT-a8b0d880c7-a",
+          "latency_ms": 4.109374945983291,
+          "predictions": {
+            "initial_owner": "core",
+            "insufficient_evidence": "no",
+            "next_check": "inspect_core",
+            "priority": "P3"
+          },
+          "status": "ok"
+        },
+        {
+          "disposition_probabilities": [
+            0.14260457456111908,
+            0.1678081750869751,
+            0.15669021010398865,
+            0.24241477251052856,
+            0.21595214307308197,
+            0.031608469784259796,
+            0.042921680957078934
+          ],
+          "id": "TT-a8b0d880c7-b",
+          "latency_ms": 4.283708054572344,
+          "predictions": {
+            "initial_owner": "core",
+            "insufficient_evidence": "no",
+            "next_check": "inspect_core",
+            "priority": "P3"
+          },
+          "status": "ok"
+        },
+        {
+          "disposition_probabilities": [
+            0.10379408299922943,
+            0.12658542394638062,
+            0.10820242017507553,
+            0.3940981924533844,
+            0.2011442482471466,
+            0.028486350551247597,
+            0.03768927603960037
+          ],
+          "id": "TT-c3d31a8305-a",
+          "latency_ms": 4.119583871215582,
+          "predictions": {
+            "initial_owner": "core",
+            "insufficient_evidence": "no",
+            "next_check": "inspect_core",
+            "priority": "P3"
+          },
+          "status": "ok"
+        },
+        {
+          "disposition_probabilities": [
+            0.09588150680065155,
+            0.12448187917470932,
+            0.1107638031244278,
+            0.3241662085056305,
+            0.2780761122703552,
+            0.02872725948691368,
+            0.03790319710969925
+          ],
+          "id": "TT-c3d31a8305-b",
+          "latency_ms": 4.226208198815584,
+          "predictions": {
+            "initial_owner": "core",
+            "insufficient_evidence": "no",
+            "next_check": "inspect_core",
+            "priority": "P3"
+          },
+          "status": "ok"
+        },
+        {
+          "disposition_probabilities": [
+            0.036031946539878845,
+            0.02879059687256813,
+            0.023103659972548485,
+            0.02890087477862835,
+            0.03095431812107563,
+            0.7692140936851501,
+            0.08300455659627914
+          ],
+          "id": "TT-becea8541f-a",
+          "latency_ms": 5.490167066454887,
+          "predictions": {
+            "initial_owner": "noc",
+            "insufficient_evidence": "yes",
+            "next_check": "verify_change",
+            "priority": "P2"
+          },
+          "status": "ok"
+        },
+        {
+          "disposition_probabilities": [
+            0.02225901000201702,
+            0.030957674607634544,
+            0.031087664887309074,
+            0.03734502196311951,
+            0.036299560219049454,
+            0.20649386942386627,
+            0.6355571746826172
+          ],
+          "id": "TT-becea8541f-b",
+          "latency_ms": 5.309124942868948,
+          "predictions": {
+            "initial_owner": "noc",
+            "insufficient_evidence": "no",
+            "next_check": "monitor",
+            "priority": "P4"
+          },
+          "status": "ok"
+        },
+        {
+          "disposition_probabilities": [
+            0.023643771186470985,
+            0.02768278494477272,
+            0.030827300623059273,
+            0.03402329608798027,
+            0.03982475399971008,
+            0.7579398155212402,
+            0.08605825155973434
+          ],
+          "id": "TT-4c8707d460-a",
+          "latency_ms": 4.664209205657244,
+          "predictions": {
+            "initial_owner": "noc",
+            "insufficient_evidence": "yes",
+            "next_check": "verify_change",
+            "priority": "P2"
+          },
+          "status": "ok"
+        },
+        {
+          "disposition_probabilities": [
+            0.021698515862226486,
+            0.02747267857193947,
+            0.028232727199792862,
+            0.03517230227589607,
+            0.031988926231861115,
+            0.16545948386192322,
+            0.6899754405021667
+          ],
+          "id": "TT-4c8707d460-b",
+          "latency_ms": 4.670166177675128,
+          "predictions": {
+            "initial_owner": "noc",
+            "insufficient_evidence": "no",
+            "next_check": "monitor",
+            "priority": "P4"
+          },
+          "status": "ok"
+        },
+        {
+          "disposition_probabilities": [
+            0.06322821229696274,
+            0.06516647338867188,
+            0.051674675196409225,
+            0.13803903758525848,
+            0.39659950137138367,
+            0.04882355406880379,
+            0.23646855354309082
+          ],
+          "id": "TT-b57745970a-a",
+          "latency_ms": 76.35233295150101,
+          "predictions": {
+            "initial_owner": "noc",
+            "insufficient_evidence": "yes",
+            "next_check": "gather_evidence",
+            "priority": "P3"
+          },
+          "status": "ok"
+        },
+        {
+          "disposition_probabilities": [
+            0.04122689738869667,
+            0.051001615822315216,
+            0.04162999615073204,
+            0.04983782768249512,
+            0.08220610022544861,
+            0.022859152406454086,
+            0.711238443851471
+          ],
+          "id": "TT-b57745970a-b",
+          "latency_ms": 5.176499951630831,
+          "predictions": {
+            "initial_owner": "noc",
+            "insufficient_evidence": "no",
+            "next_check": "monitor",
+            "priority": "P4"
+          },
+          "status": "ok"
+        },
+        {
+          "disposition_probabilities": [
+            0.05456816777586937,
+            0.08291390538215637,
+            0.060286298394203186,
+            0.15301206707954407,
+            0.3736015558242798,
+            0.05073530972003937,
+            0.22488272190093994
+          ],
+          "id": "TT-38a72c612f-a",
+          "latency_ms": 5.021916003897786,
+          "predictions": {
+            "initial_owner": "noc",
+            "insufficient_evidence": "yes",
+            "next_check": "gather_evidence",
+            "priority": "P3"
+          },
+          "status": "ok"
+        },
+        {
+          "disposition_probabilities": [
+            0.0325336679816246,
+            0.06319812685251236,
+            0.04194148629903793,
+            0.056888729333877563,
+            0.07719765603542328,
+            0.02172488532960415,
+            0.7065154314041138
+          ],
+          "id": "TT-38a72c612f-b",
+          "latency_ms": 4.7889589332044125,
+          "predictions": {
+            "initial_owner": "noc",
+            "insufficient_evidence": "no",
+            "next_check": "monitor",
+            "priority": "P4"
+          },
+          "status": "ok"
+        },
+        {
+          "disposition_probabilities": [
+            0.07594288140535355,
+            0.06794339418411255,
+            0.05996096506714821,
+            0.11922717094421387,
+            0.3923285901546478,
+            0.05478915944695473,
+            0.22980785369873047
+          ],
+          "id": "TT-1e9a2c8c72-a",
+          "latency_ms": 4.061917075887322,
+          "predictions": {
+            "initial_owner": "noc",
+            "insufficient_evidence": "yes",
+            "next_check": "gather_evidence",
+            "priority": "P3"
+          },
+          "status": "ok"
+        },
+        {
+          "disposition_probabilities": [
+            0.046400588005781174,
+            0.048944540321826935,
+            0.04201589152216911,
+            0.044748470187187195,
+            0.08392295241355896,
+            0.024832600727677345,
+            0.7091349363327026
+          ],
+          "id": "TT-1e9a2c8c72-b",
+          "latency_ms": 4.118624841794372,
+          "predictions": {
+            "initial_owner": "noc",
+            "insufficient_evidence": "no",
+            "next_check": "monitor",
+            "priority": "P4"
+          },
+          "status": "ok"
+        }
+      ],
+      "predictions_canonical_sha256": "f0740ddcb3acafa944a913c0a71ce228ab811a0f7910e6bd6f03a4248efce014",
+      "metadata": {
+        "provider": "teacher_encoder",
+        "request_protocol": "northstar-teacher-encoder-v1",
+        "input_sha256": "2cf5554791ccad8485acb62d48bcbb7f2652044ac5bcf01fd3d37f03ebc48396",
+        "head_sha256": "309e45ecc58fb4eed7c9b7c09f8c3fd926f6326e6c5b7d8589faf7c16761b93c",
+        "head_training": {
+          "protocol": "northstar-teacher-encoder-v1",
+          "architecture": "frozen pinned MiniLM plus learned seven-class linear head and structured features; policy priority",
+          "model_id": "sentence-transformers/all-MiniLM-L6-v2",
+          "model_revision": "1110a243fdf4706b3f48f1d95db1a4f5529b4d41",
+          "classes": [
+            [
+              "ran",
+              "inspect_radio",
+              "no"
+            ],
+            [
+              "transport",
+              "inspect_transport",
+              "no"
+            ],
+            [
+              "power",
+              "inspect_power",
+              "no"
+            ],
+            [
+              "core",
+              "inspect_core",
+              "no"
+            ],
+            [
+              "noc",
+              "gather_evidence",
+              "yes"
+            ],
+            [
+              "noc",
+              "verify_change",
+              "yes"
+            ],
+            [
+              "noc",
+              "monitor",
+              "no"
+            ]
+          ],
+          "max_tokens": 512,
+          "feature_scale": 0.5,
+          "renderer_source_sha256": "149d8d4ddbc0af017bec180797ad2d7e2ea2c9ab4235e3f64feeff6d32bc3d8b",
+          "training_records": 58,
+          "training_families": [
+            "change_core_drain_scope",
+            "change_radio_license_scope",
+            "core_api_schema",
+            "core_endpoint_pool",
+            "core_lease_lock",
+            "core_rate_limit_scope",
+            "core_replica_quorum",
+            "core_replica_read_skew",
+            "power_busbar_joint",
+            "power_dc_polarity",
+            "power_earth_fault",
+            "power_inverter_bypass",
+            "power_remote_feed",
+            "power_voltage_sensor_disagreement",
+            "radio_amplifier_gain",
+            "radio_baseband_memory",
+            "radio_duplex_filter",
+            "radio_fronthaul_clock",
+            "radio_remote_cooling",
+            "radio_uplink_decoder",
+            "recovery_data_session",
+            "recovery_sms_transaction",
+            "recovery_voice_setup",
+            "transport_dependency_membership",
+            "transport_label_disposition",
+            "transport_microburst_buffer",
+            "transport_pseudowire_sequence",
+            "transport_spanning_loop",
+            "transport_tunnel_binding"
+          ],
+          "development_records": 16,
+          "development_families": [
+            "alarm_clear_service_probe",
+            "contradictory_power_sources",
+            "core_certificate",
+            "dependency_membership",
+            "maintenance_scope_mismatch",
+            "mixed_dc_voltage",
+            "queue_drops",
+            "unrelated_change_radio"
+          ],
+          "train_input_sha256": "2cf5554791ccad8485acb62d48bcbb7f2652044ac5bcf01fd3d37f03ebc48396",
+          "train_label_sha256": "f16b7c666ede5f8ea7555e365ca08ee2ad0d9eb56802c6a3d26a2075d01fc5d5",
+          "dev_input_sha256": "30e34939ef57cfde37a96d5a578f9747ea5f27d17dc66984fc7bd805705d50b4",
+          "dev_label_sha256": "63cd06e0c42e3cf8e97ea42068e974e75b0618dc88a07e9b4f8ecefb7f5d8f7a",
+          "selection": "Best complete development disposition accuracy; first trial wins ties; development only",
+          "selected_l2": 0.01,
+          "trials": [
+            {
+              "l2": 0.01,
+              "training_correct": 40,
+              "development_correct": 13
+            },
+            {
+              "l2": 0.1,
+              "training_correct": 32,
+              "development_correct": 6
+            },
+            {
+              "l2": 1.0,
+              "training_correct": 29,
+              "development_correct": 4
+            },
+            {
+              "l2": 10.0,
+              "training_correct": 29,
+              "development_correct": 4
+            }
+          ],
+          "head_sha256": "309e45ecc58fb4eed7c9b7c09f8c3fd926f6326e6c5b7d8589faf7c16761b93c",
+          "encoder_parameters": 22713216,
+          "device": "mps",
+          "versions": {
+            "torch": "2.14.0",
+            "numpy": "2.5.3",
+            "transformers": "5.17.0"
+          }
+        },
+        "device": "mps",
+        "model_load_ms": 1950.6977091077715,
+        "records": 58,
+        "failed_records": 0,
+        "execution": "serial; no warmup; per-record time excludes model load; local cached weights only",
+        "no_autoregressive_calls": true
+      },
+      "summary": {
+        "records": 58,
+        "all_four_correct": 40,
+        "field_correct": {
+          "initial_owner": 40,
+          "priority": 58,
+          "next_check": 40,
+          "insufficient_evidence": 40
+        },
+        "failed_records": 0,
+        "missing_records": 0,
+        "pairs": 29,
+        "complete_pairs": 11,
+        "insufficient_evidence": {
+          "true_positive": 11,
+          "false_positive": 0,
+          "false_negative": 18,
+          "precision": 1.0,
+          "recall": 0.3793103448275862
+        },
+        "false_domain_assignments": 18,
+        "false_monitor_dispositions": 0,
+        "p1_records": 0,
+        "p1_missed": 0,
+        "latency_ms": {
+          "p50": 4.254041938111186,
+          "p95": 69.81625012122095,
+          "records": 58
+        }
+      }
+    },
+    "teacher_finetuned": {
+      "predictions": [
+        {
+          "disposition_probabilities": [
+            0.45307469367980957,
+            0.08511132001876831,
+            0.11385323107242584,
+            0.08751403540372849,
+            0.10170850902795792,
+            0.08807248622179031,
+            0.07066572457551956
+          ],
+          "id": "TT-81de8eeb61-a",
+          "latency_ms": 63.49058402702212,
+          "predictions": {
+            "initial_owner": "ran",
+            "insufficient_evidence": "no",
+            "next_check": "inspect_radio",
+            "priority": "P3"
+          },
+          "status": "ok"
+        },
+        {
+          "disposition_probabilities": [
+            0.09311306476593018,
+            0.07593110203742981,
+            0.09306421130895615,
+            0.0801195353269577,
+            0.49352410435676575,
+            0.07460290938615799,
+            0.08964505046606064
+          ],
+          "id": "TT-81de8eeb61-b",
+          "latency_ms": 8.17012507468462,
+          "predictions": {
+            "initial_owner": "noc",
+            "insufficient_evidence": "yes",
+            "next_check": "gather_evidence",
+            "priority": "P3"
+          },
+          "status": "ok"
+        },
+        {
+          "disposition_probabilities": [
+            0.4534662067890167,
+            0.08219746500253677,
+            0.1186128482222557,
+            0.08685878664255142,
+            0.09731485694646835,
+            0.08827203512191772,
+            0.07327774912118912
+          ],
+          "id": "TT-f32a4c097f-a",
+          "latency_ms": 6.996291922405362,
+          "predictions": {
+            "initial_owner": "ran",
+            "insufficient_evidence": "no",
+            "next_check": "inspect_radio",
+            "priority": "P3"
+          },
+          "status": "ok"
+        },
+        {
+          "disposition_probabilities": [
+            0.09058083593845367,
+            0.07640522718429565,
+            0.09559022635221481,
+            0.07995648682117462,
+            0.49468493461608887,
+            0.07437974214553833,
+            0.08840255439281464
+          ],
+          "id": "TT-f32a4c097f-b",
+          "latency_ms": 6.730708060786128,
+          "predictions": {
+            "initial_owner": "noc",
+            "insufficient_evidence": "yes",
+            "next_check": "gather_evidence",
+            "priority": "P3"
+          },
+          "status": "ok"
+        },
+        {
+          "disposition_probabilities": [
+            0.45175811648368835,
+            0.07977370917797089,
+            0.11522305011749268,
+            0.09086698293685913,
+            0.09929964691400528,
+            0.0890343189239502,
+            0.07404416799545288
+          ],
+          "id": "TT-9b175d59a8-a",
+          "latency_ms": 5.894750123843551,
+          "predictions": {
+            "initial_owner": "ran",
+            "insufficient_evidence": "no",
+            "next_check": "inspect_radio",
+            "priority": "P3"
+          },
+          "status": "ok"
+        },
+        {
+          "disposition_probabilities": [
+            0.08798479288816452,
+            0.07410966604948044,
+            0.09482863545417786,
+            0.07605288177728653,
+            0.5027722120285034,
+            0.07290545850992203,
+            0.09134634584188461
+          ],
+          "id": "TT-9b175d59a8-b",
+          "latency_ms": 6.495459005236626,
+          "predictions": {
+            "initial_owner": "noc",
+            "insufficient_evidence": "yes",
+            "next_check": "gather_evidence",
+            "priority": "P3"
+          },
+          "status": "ok"
+        },
+        {
+          "disposition_probabilities": [
+            0.4550933241844177,
+            0.09025940299034119,
+            0.10659833997488022,
+            0.08750592917203903,
+            0.10042191296815872,
+            0.0861169844865799,
+            0.07400401681661606
+          ],
+          "id": "TT-bc7496c1eb-a",
+          "latency_ms": 4.8056659288704395,
+          "predictions": {
+            "initial_owner": "ran",
+            "insufficient_evidence": "no",
+            "next_check": "inspect_radio",
+            "priority": "P3"
+          },
+          "status": "ok"
+        },
+        {
+          "disposition_probabilities": [
+            0.09116289019584656,
+            0.07482273876667023,
+            0.0915304571390152,
+            0.07836800813674927,
+            0.5072925090789795,
+            0.07126618921756744,
+            0.08555728197097778
+          ],
+          "id": "TT-bc7496c1eb-b",
+          "latency_ms": 4.721625009551644,
+          "predictions": {
+            "initial_owner": "noc",
+            "insufficient_evidence": "yes",
+            "next_check": "gather_evidence",
+            "priority": "P3"
+          },
+          "status": "ok"
+        },
+        {
+          "disposition_probabilities": [
+            0.45294976234436035,
+            0.08049026876688004,
+            0.11796519160270691,
+            0.09136208146810532,
+            0.1002325639128685,
+            0.08672092109918594,
+            0.0702793076634407
+          ],
+          "id": "TT-1d15bfbb6c-a",
+          "latency_ms": 4.813374951481819,
+          "predictions": {
+            "initial_owner": "ran",
+            "insufficient_evidence": "no",
+            "next_check": "inspect_radio",
+            "priority": "P3"
+          },
+          "status": "ok"
+        },
+        {
+          "disposition_probabilities": [
+            0.08955936878919601,
+            0.07625122368335724,
+            0.09722264856100082,
+            0.08043812960386276,
+            0.49495306611061096,
+            0.07343768328428268,
+            0.08813795447349548
+          ],
+          "id": "TT-1d15bfbb6c-b",
+          "latency_ms": 4.699792014434934,
+          "predictions": {
+            "initial_owner": "noc",
+            "insufficient_evidence": "yes",
+            "next_check": "gather_evidence",
+            "priority": "P3"
+          },
+          "status": "ok"
+        },
+        {
+          "disposition_probabilities": [
+            0.44561898708343506,
+            0.08296327292919159,
+            0.1272495687007904,
+            0.09351319074630737,
+            0.09873656928539276,
+            0.08380497992038727,
+            0.06811341643333435
+          ],
+          "id": "TT-9309ad646f-a",
+          "latency_ms": 4.4559999369084835,
+          "predictions": {
+            "initial_owner": "ran",
+            "insufficient_evidence": "no",
+            "next_check": "inspect_radio",
+            "priority": "P3"
+          },
+          "status": "ok"
+        },
+        {
+          "disposition_probabilities": [
+            0.09209704399108887,
+            0.07555943727493286,
+            0.0975521057844162,
+            0.0791546180844307,
+            0.4948139190673828,
+            0.07386500388383865,
+            0.08695786446332932
+          ],
+          "id": "TT-9309ad646f-b",
+          "latency_ms": 4.5274170115590096,
+          "predictions": {
+            "initial_owner": "noc",
+            "insufficient_evidence": "yes",
+            "next_check": "gather_evidence",
+            "priority": "P3"
+          },
+          "status": "ok"
+        },
+        {
+          "disposition_probabilities": [
+            0.09313375502824783,
+            0.4118882417678833,
+            0.10211502015590668,
+            0.13728469610214233,
+            0.08887574076652527,
+            0.07589264959096909,
+            0.09080987423658371
+          ],
+          "id": "TT-7d90cba1e7-a",
+          "latency_ms": 4.4003750663250685,
+          "predictions": {
+            "initial_owner": "transport",
+            "insufficient_evidence": "no",
+            "next_check": "inspect_transport",
+            "priority": "P3"
+          },
+          "status": "ok"
+        },
+        {
+          "disposition_probabilities": [
+            0.0864192321896553,
+            0.08096662908792496,
+            0.089744433760643,
+            0.08217962831258774,
+            0.49213796854019165,
+            0.07487964630126953,
+            0.09367238730192184
+          ],
+          "id": "TT-7d90cba1e7-b",
+          "latency_ms": 4.650583025068045,
+          "predictions": {
+            "initial_owner": "noc",
+            "insufficient_evidence": "yes",
+            "next_check": "gather_evidence",
+            "priority": "P3"
+          },
+          "status": "ok"
+        },
+        {
+          "disposition_probabilities": [
+            0.09095200151205063,
+            0.40986838936805725,
+            0.09932322800159454,
+            0.1430414319038391,
+            0.09070543199777603,
+            0.07658959925174713,
+            0.08951996266841888
+          ],
+          "id": "TT-ea8cbc5db1-a",
+          "latency_ms": 4.641625098884106,
+          "predictions": {
+            "initial_owner": "transport",
+            "insufficient_evidence": "no",
+            "next_check": "inspect_transport",
+            "priority": "P3"
+          },
+          "status": "ok"
+        },
+        {
+          "disposition_probabilities": [
+            0.08559444546699524,
+            0.08316706866025925,
+            0.09038286656141281,
+            0.08253324776887894,
+            0.4919699430465698,
+            0.07403415441513062,
+            0.09231830388307571
+          ],
+          "id": "TT-ea8cbc5db1-b",
+          "latency_ms": 4.880917025730014,
+          "predictions": {
+            "initial_owner": "noc",
+            "insufficient_evidence": "yes",
+            "next_check": "gather_evidence",
+            "priority": "P3"
+          },
+          "status": "ok"
+        },
+        {
+          "disposition_probabilities": [
+            0.09736860543489456,
+            0.41176044940948486,
+            0.10284984856843948,
+            0.12368132174015045,
+            0.09513736516237259,
+            0.07895039021968842,
+            0.09025199711322784
+          ],
+          "id": "TT-d47b9a6141-a",
+          "latency_ms": 4.636958008632064,
+          "predictions": {
+            "initial_owner": "transport",
+            "insufficient_evidence": "no",
+            "next_check": "inspect_transport",
+            "priority": "P3"
+          },
+          "status": "ok"
+        },
+        {
+          "disposition_probabilities": [
+            0.08786039054393768,
+            0.08063333481550217,
+            0.09140825271606445,
+            0.08054880797863007,
+            0.49344995617866516,
+            0.0747985765337944,
+            0.09130064398050308
+          ],
+          "id": "TT-d47b9a6141-b",
+          "latency_ms": 4.7677920665591955,
+          "predictions": {
+            "initial_owner": "noc",
+            "insufficient_evidence": "yes",
+            "next_check": "gather_evidence",
+            "priority": "P3"
+          },
+          "status": "ok"
+        },
+        {
+          "disposition_probabilities": [
+            0.09588897228240967,
+            0.4092106521129608,
+            0.10094107687473297,
+            0.13374997675418854,
+            0.08690552413463593,
+            0.07864753901958466,
+            0.09465627372264862
+          ],
+          "id": "TT-84718e62ba-a",
+          "latency_ms": 4.63654100894928,
+          "predictions": {
+            "initial_owner": "transport",
+            "insufficient_evidence": "no",
+            "next_check": "inspect_transport",
+            "priority": "P3"
+          },
+          "status": "ok"
+        },
+        {
+          "disposition_probabilities": [
+            0.08861931413412094,
+            0.0801457092165947,
+            0.0927264541387558,
+            0.08079177886247635,
+            0.4942970871925354,
+            0.0740969106554985,
+            0.08932279050350189
+          ],
+          "id": "TT-84718e62ba-b",
+          "latency_ms": 4.704833030700684,
+          "predictions": {
+            "initial_owner": "noc",
+            "insufficient_evidence": "yes",
+            "next_check": "gather_evidence",
+            "priority": "P3"
+          },
+          "status": "ok"
+        },
+        {
+          "disposition_probabilities": [
+            0.10180177539587021,
+            0.3939855992794037,
+            0.09720414131879807,
+            0.1458352655172348,
+            0.09203504770994186,
+            0.075017549097538,
+            0.09412066638469696
+          ],
+          "id": "TT-357a7c6083-a",
+          "latency_ms": 4.58758301101625,
+          "predictions": {
+            "initial_owner": "transport",
+            "insufficient_evidence": "no",
+            "next_check": "inspect_transport",
+            "priority": "P3"
+          },
+          "status": "ok"
+        },
+        {
+          "disposition_probabilities": [
+            0.08608844876289368,
+            0.0760493353009224,
+            0.08713392168283463,
+            0.08313532173633575,
+            0.5105656981468201,
+            0.07162792980670929,
+            0.08539927750825882
+          ],
+          "id": "TT-357a7c6083-b",
+          "latency_ms": 4.709375090897083,
+          "predictions": {
+            "initial_owner": "noc",
+            "insufficient_evidence": "yes",
+            "next_check": "gather_evidence",
+            "priority": "P3"
+          },
+          "status": "ok"
+        },
+        {
+          "disposition_probabilities": [
+            0.09531552344560623,
+            0.4011640250682831,
+            0.09474780410528183,
+            0.11456551402807236,
+            0.135015606880188,
+            0.0672091692686081,
+            0.09198237955570221
+          ],
+          "id": "TT-e081e87c32-a",
+          "latency_ms": 5.909750005230308,
+          "predictions": {
+            "initial_owner": "transport",
+            "insufficient_evidence": "no",
+            "next_check": "inspect_transport",
+            "priority": "P3"
+          },
+          "status": "ok"
+        },
+        {
+          "disposition_probabilities": [
+            0.082764632999897,
+            0.3325294852256775,
+            0.09486077725887299,
+            0.12320984154939651,
+            0.1916494518518448,
+            0.07521244138479233,
+            0.09977340698242188
+          ],
+          "id": "TT-e081e87c32-b",
+          "latency_ms": 6.262208102270961,
+          "predictions": {
+            "initial_owner": "transport",
+            "insufficient_evidence": "no",
+            "next_check": "inspect_transport",
+            "priority": "P3"
+          },
+          "status": "ok"
+        },
+        {
+          "disposition_probabilities": [
+            0.12199504673480988,
+            0.08681721985340118,
+            0.4533494710922241,
+            0.09737809747457504,
+            0.10613012313842773,
+            0.0702022835612297,
+            0.06412774324417114
+          ],
+          "id": "TT-f7ed8c8962-a",
+          "latency_ms": 4.525500116869807,
+          "predictions": {
+            "initial_owner": "power",
+            "insufficient_evidence": "no",
+            "next_check": "inspect_power",
+            "priority": "P3"
+          },
+          "status": "ok"
+        },
+        {
+          "disposition_probabilities": [
+            0.08637884259223938,
+            0.07588129490613937,
+            0.10022825747728348,
+            0.08055383712053299,
+            0.4922412931919098,
+            0.07363102585077286,
+            0.09108532965183258
+          ],
+          "id": "TT-f7ed8c8962-b",
+          "latency_ms": 4.724166821688414,
+          "predictions": {
+            "initial_owner": "noc",
+            "insufficient_evidence": "yes",
+            "next_check": "gather_evidence",
+            "priority": "P3"
+          },
+          "status": "ok"
+        },
+        {
+          "disposition_probabilities": [
+            0.12022250145673752,
+            0.08991340547800064,
+            0.45127731561660767,
+            0.09337394684553146,
+            0.11098960041999817,
+            0.06799587607383728,
+            0.06622736901044846
+          ],
+          "id": "TT-f52fcf4a75-a",
+          "latency_ms": 4.627707879990339,
+          "predictions": {
+            "initial_owner": "power",
+            "insufficient_evidence": "no",
+            "next_check": "inspect_power",
+            "priority": "P3"
+          },
+          "status": "ok"
+        },
+        {
+          "disposition_probabilities": [
+            0.08702386915683746,
+            0.07512804120779037,
+            0.09977679699659348,
+            0.08023247867822647,
+            0.49424460530281067,
+            0.07399798184633255,
+            0.08959619700908661
+          ],
+          "id": "TT-f52fcf4a75-b",
+          "latency_ms": 4.8382089007645845,
+          "predictions": {
+            "initial_owner": "noc",
+            "insufficient_evidence": "yes",
+            "next_check": "gather_evidence",
+            "priority": "P3"
+          },
+          "status": "ok"
+        },
+        {
+          "disposition_probabilities": [
+            0.12088599056005478,
+            0.08819003403186798,
+            0.45138007402420044,
+            0.09845350682735443,
+            0.10786440223455429,
+            0.06869105994701385,
+            0.06453486531972885
+          ],
+          "id": "TT-4367352668-a",
+          "latency_ms": 4.517917055636644,
+          "predictions": {
+            "initial_owner": "power",
+            "insufficient_evidence": "no",
+            "next_check": "inspect_power",
+            "priority": "P3"
+          },
+          "status": "ok"
+        },
+        {
+          "disposition_probabilities": [
+            0.08829108625650406,
+            0.0724869966506958,
+            0.09471332281827927,
+            0.08164474368095398,
+            0.5106887221336365,
+            0.06931452453136444,
+            0.08286052197217941
+          ],
+          "id": "TT-4367352668-b",
+          "latency_ms": 4.783083917573094,
+          "predictions": {
+            "initial_owner": "noc",
+            "insufficient_evidence": "yes",
+            "next_check": "gather_evidence",
+            "priority": "P3"
+          },
+          "status": "ok"
+        },
+        {
+          "disposition_probabilities": [
+            0.12329595535993576,
+            0.0912059098482132,
+            0.4487597346305847,
+            0.10329076647758484,
+            0.09951263666152954,
+            0.06848249584436417,
+            0.06545250117778778
+          ],
+          "id": "TT-d86ddc77ef-a",
+          "latency_ms": 4.6025419142097235,
+          "predictions": {
+            "initial_owner": "power",
+            "insufficient_evidence": "no",
+            "next_check": "inspect_power",
+            "priority": "P3"
+          },
+          "status": "ok"
+        },
+        {
+          "disposition_probabilities": [
+            0.08820927143096924,
+            0.07608836889266968,
+            0.09651796519756317,
+            0.08124750107526779,
+            0.49477002024650574,
+            0.07426901906728745,
+            0.08889785408973694
+          ],
+          "id": "TT-d86ddc77ef-b",
+          "latency_ms": 4.733082838356495,
+          "predictions": {
+            "initial_owner": "noc",
+            "insufficient_evidence": "yes",
+            "next_check": "gather_evidence",
+            "priority": "P3"
+          },
+          "status": "ok"
+        },
+        {
+          "disposition_probabilities": [
+            0.11777395009994507,
+            0.08915328234434128,
+            0.4509904980659485,
+            0.09307638555765152,
+            0.11345432698726654,
+            0.06828323751688004,
+            0.06726837158203125
+          ],
+          "id": "TT-e5545fc95b-a",
+          "latency_ms": 4.543333081528544,
+          "predictions": {
+            "initial_owner": "power",
+            "insufficient_evidence": "no",
+            "next_check": "inspect_power",
+            "priority": "P3"
+          },
+          "status": "ok"
+        },
+        {
+          "disposition_probabilities": [
+            0.08858930319547653,
+            0.07376226782798767,
+            0.09402654320001602,
+            0.07987958192825317,
+            0.5113266110420227,
+            0.06953278928995132,
+            0.08288288861513138
+          ],
+          "id": "TT-e5545fc95b-b",
+          "latency_ms": 4.648749949410558,
+          "predictions": {
+            "initial_owner": "noc",
+            "insufficient_evidence": "yes",
+            "next_check": "gather_evidence",
+            "priority": "P3"
+          },
+          "status": "ok"
+        },
+        {
+          "disposition_probabilities": [
+            0.12257224321365356,
+            0.08729276806116104,
+            0.4528864324092865,
+            0.09818585962057114,
+            0.10417753458023071,
+            0.06941322982311249,
+            0.06547189503908157
+          ],
+          "id": "TT-a2d39f6556-a",
+          "latency_ms": 4.668249981477857,
+          "predictions": {
+            "initial_owner": "power",
+            "insufficient_evidence": "no",
+            "next_check": "inspect_power",
+            "priority": "P3"
+          },
+          "status": "ok"
+        },
+        {
+          "disposition_probabilities": [
+            0.08811403810977936,
+            0.0751696303486824,
+            0.10097475349903107,
+            0.08052182197570801,
+            0.4945289194583893,
+            0.07369185239076614,
+            0.08699902147054672
+          ],
+          "id": "TT-a2d39f6556-b",
+          "latency_ms": 4.781166091561317,
+          "predictions": {
+            "initial_owner": "noc",
+            "insufficient_evidence": "yes",
+            "next_check": "gather_evidence",
+            "priority": "P3"
+          },
+          "status": "ok"
+        },
+        {
+          "disposition_probabilities": [
+            0.08852926641702652,
+            0.10795585811138153,
+            0.09166280925273895,
+            0.46632638573646545,
+            0.09105731546878815,
+            0.07204685360193253,
+            0.08242157101631165
+          ],
+          "id": "TT-11decb0418-a",
+          "latency_ms": 4.732667002826929,
+          "predictions": {
+            "initial_owner": "core",
+            "insufficient_evidence": "no",
+            "next_check": "inspect_core",
+            "priority": "P3"
+          },
+          "status": "ok"
+        },
+        {
+          "disposition_probabilities": [
+            0.09108273684978485,
+            0.07692580670118332,
+            0.09204743802547455,
+            0.08349835872650146,
+            0.4929995834827423,
+            0.0747084990143776,
+            0.0887375921010971
+          ],
+          "id": "TT-11decb0418-b",
+          "latency_ms": 4.676416981965303,
+          "predictions": {
+            "initial_owner": "noc",
+            "insufficient_evidence": "yes",
+            "next_check": "gather_evidence",
+            "priority": "P3"
+          },
+          "status": "ok"
+        },
+        {
+          "disposition_probabilities": [
+            0.08909659087657928,
+            0.1156693547964096,
+            0.09837212413549423,
+            0.45368242263793945,
+            0.08249910175800323,
+            0.07626152783632278,
+            0.08441884815692902
+          ],
+          "id": "TT-fb65994b18-a",
+          "latency_ms": 4.520083079114556,
+          "predictions": {
+            "initial_owner": "core",
+            "insufficient_evidence": "no",
+            "next_check": "inspect_core",
+            "priority": "P3"
+          },
+          "status": "ok"
+        },
+        {
+          "disposition_probabilities": [
+            0.08822682499885559,
+            0.07837039232254028,
+            0.0922137126326561,
+            0.08322899043560028,
+            0.493518203496933,
+            0.07421112060546875,
+            0.090230792760849
+          ],
+          "id": "TT-fb65994b18-b",
+          "latency_ms": 7.853999966755509,
+          "predictions": {
+            "initial_owner": "noc",
+            "insufficient_evidence": "yes",
+            "next_check": "gather_evidence",
+            "priority": "P3"
+          },
+          "status": "ok"
+        },
+        {
+          "disposition_probabilities": [
+            0.09111876785755157,
+            0.11122722923755646,
+            0.09979493916034698,
+            0.4512621760368347,
+            0.08872093260288239,
+            0.07671449333429337,
+            0.08116145431995392
+          ],
+          "id": "TT-4eb8437251-a",
+          "latency_ms": 10.46804222278297,
+          "predictions": {
+            "initial_owner": "core",
+            "insufficient_evidence": "no",
+            "next_check": "inspect_core",
+            "priority": "P3"
+          },
+          "status": "ok"
+        },
+        {
+          "disposition_probabilities": [
+            0.08882682025432587,
+            0.07728547602891922,
+            0.09355465322732925,
+            0.08369574695825577,
+            0.4935930669307709,
+            0.07398020476102829,
+            0.0890640914440155
+          ],
+          "id": "TT-4eb8437251-b",
+          "latency_ms": 6.365374894812703,
+          "predictions": {
+            "initial_owner": "noc",
+            "insufficient_evidence": "yes",
+            "next_check": "gather_evidence",
+            "priority": "P3"
+          },
+          "status": "ok"
+        },
+        {
+          "disposition_probabilities": [
+            0.09092814475297928,
+            0.11226906627416611,
+            0.09958595782518387,
+            0.4514254629611969,
+            0.0848441869020462,
+            0.07705841958522797,
+            0.08388873189687729
+          ],
+          "id": "TT-305c0159cb-a",
+          "latency_ms": 4.868625197559595,
+          "predictions": {
+            "initial_owner": "core",
+            "insufficient_evidence": "no",
+            "next_check": "inspect_core",
+            "priority": "P3"
+          },
+          "status": "ok"
+        },
+        {
+          "disposition_probabilities": [
+            0.08935881406068802,
+            0.07702832669019699,
+            0.09375884383916855,
+            0.0835656002163887,
+            0.4940453767776489,
+            0.07423391193151474,
+            0.08800903707742691
+          ],
+          "id": "TT-305c0159cb-b",
+          "latency_ms": 4.814582876861095,
+          "predictions": {
+            "initial_owner": "noc",
+            "insufficient_evidence": "yes",
+            "next_check": "gather_evidence",
+            "priority": "P3"
+          },
+          "status": "ok"
+        },
+        {
+          "disposition_probabilities": [
+            0.088353231549263,
+            0.11337433010339737,
+            0.09657792001962662,
+            0.4551984369754791,
+            0.0846543163061142,
+            0.07704350352287292,
+            0.08479829132556915
+          ],
+          "id": "TT-a8b0d880c7-a",
+          "latency_ms": 4.691042006015778,
+          "predictions": {
+            "initial_owner": "core",
+            "insufficient_evidence": "no",
+            "next_check": "inspect_core",
+            "priority": "P3"
+          },
+          "status": "ok"
+        },
+        {
+          "disposition_probabilities": [
+            0.08772659301757812,
+            0.0778837576508522,
+            0.09738073498010635,
+            0.08279015868902206,
+            0.4942851960659027,
+            0.07298942655324936,
+            0.086944080889225
+          ],
+          "id": "TT-a8b0d880c7-b",
+          "latency_ms": 5.339415976777673,
+          "predictions": {
+            "initial_owner": "noc",
+            "insufficient_evidence": "yes",
+            "next_check": "gather_evidence",
+            "priority": "P3"
+          },
+          "status": "ok"
+        },
+        {
+          "disposition_probabilities": [
+            0.08762285858392715,
+            0.11139436066150665,
+            0.09347734600305557,
+            0.4640680253505707,
+            0.08697063475847244,
+            0.07468661665916443,
+            0.08178011327981949
+          ],
+          "id": "TT-c3d31a8305-a",
+          "latency_ms": 4.893374862149358,
+          "predictions": {
+            "initial_owner": "core",
+            "insufficient_evidence": "no",
+            "next_check": "inspect_core",
+            "priority": "P3"
+          },
+          "status": "ok"
+        },
+        {
+          "disposition_probabilities": [
+            0.08717842400074005,
+            0.07492811977863312,
+            0.0879082903265953,
+            0.0839049220085144,
+            0.510590672492981,
+            0.07013693451881409,
+            0.0853525921702385
+          ],
+          "id": "TT-c3d31a8305-b",
+          "latency_ms": 4.963083192706108,
+          "predictions": {
+            "initial_owner": "noc",
+            "insufficient_evidence": "yes",
+            "next_check": "gather_evidence",
+            "priority": "P3"
+          },
+          "status": "ok"
+        },
+        {
+          "disposition_probabilities": [
+            0.09876621514558792,
+            0.07459805905818939,
+            0.078822560608387,
+            0.09529203921556473,
+            0.09128168970346451,
+            0.39429306983947754,
+            0.16694632172584534
+          ],
+          "id": "TT-becea8541f-a",
+          "latency_ms": 6.125624990090728,
+          "predictions": {
+            "initial_owner": "noc",
+            "insufficient_evidence": "yes",
+            "next_check": "verify_change",
+            "priority": "P2"
+          },
+          "status": "ok"
+        },
+        {
+          "disposition_probabilities": [
+            0.07015800476074219,
+            0.08398958295583725,
+            0.0688573494553566,
+            0.09493589401245117,
+            0.09800148010253906,
+            0.13757170736789703,
+            0.4464859664440155
+          ],
+          "id": "TT-becea8541f-b",
+          "latency_ms": 5.851333029568195,
+          "predictions": {
+            "initial_owner": "noc",
+            "insufficient_evidence": "no",
+            "next_check": "monitor",
+            "priority": "P4"
+          },
+          "status": "ok"
+        },
+        {
+          "disposition_probabilities": [
+            0.09369277954101562,
+            0.07476228475570679,
+            0.08083416521549225,
+            0.09934575855731964,
+            0.09488555043935776,
+            0.3933902382850647,
+            0.16308917105197906
+          ],
+          "id": "TT-4c8707d460-a",
+          "latency_ms": 5.064083030447364,
+          "predictions": {
+            "initial_owner": "noc",
+            "insufficient_evidence": "yes",
+            "next_check": "verify_change",
+            "priority": "P2"
+          },
+          "status": "ok"
+        },
+        {
+          "disposition_probabilities": [
+            0.07016799598932266,
+            0.08314745873212814,
+            0.06891008466482162,
+            0.0970698744058609,
+            0.09393637627363205,
+            0.13351161777973175,
+            0.4532565176486969
+          ],
+          "id": "TT-4c8707d460-b",
+          "latency_ms": 5.125583149492741,
+          "predictions": {
+            "initial_owner": "noc",
+            "insufficient_evidence": "no",
+            "next_check": "monitor",
+            "priority": "P4"
+          },
+          "status": "ok"
+        },
+        {
+          "disposition_probabilities": [
+            0.09277484565973282,
+            0.07436392456293106,
+            0.09541478753089905,
+            0.07466498762369156,
+            0.49171513319015503,
+            0.08019530028104782,
+            0.09087106585502625
+          ],
+          "id": "TT-b57745970a-a",
+          "latency_ms": 5.796416196972132,
+          "predictions": {
+            "initial_owner": "noc",
+            "insufficient_evidence": "yes",
+            "next_check": "gather_evidence",
+            "priority": "P3"
+          },
+          "status": "ok"
+        },
+        {
+          "disposition_probabilities": [
+            0.0739152580499649,
+            0.08643408864736557,
+            0.0745784118771553,
+            0.09090825915336609,
+            0.10624704509973526,
+            0.1272774189710617,
+            0.44063952565193176
+          ],
+          "id": "TT-b57745970a-b",
+          "latency_ms": 4.5154590625315905,
+          "predictions": {
+            "initial_owner": "noc",
+            "insufficient_evidence": "no",
+            "next_check": "monitor",
+            "priority": "P4"
+          },
+          "status": "ok"
+        },
+        {
+          "disposition_probabilities": [
+            0.09762606769800186,
+            0.071155846118927,
+            0.09406833350658417,
+            0.07233896106481552,
+            0.4913505017757416,
+            0.07914897054433823,
+            0.09431128203868866
+          ],
+          "id": "TT-38a72c612f-a",
+          "latency_ms": 4.5610840898007154,
+          "predictions": {
+            "initial_owner": "noc",
+            "insufficient_evidence": "yes",
+            "next_check": "gather_evidence",
+            "priority": "P3"
+          },
+          "status": "ok"
+        },
+        {
+          "disposition_probabilities": [
+            0.07610759884119034,
+            0.0891806110739708,
+            0.07116193324327469,
+            0.09109155833721161,
+            0.10723323374986649,
+            0.12514401972293854,
+            0.44008105993270874
+          ],
+          "id": "TT-38a72c612f-b",
+          "latency_ms": 4.574874881654978,
+          "predictions": {
+            "initial_owner": "noc",
+            "insufficient_evidence": "no",
+            "next_check": "monitor",
+            "priority": "P4"
+          },
+          "status": "ok"
+        },
+        {
+          "disposition_probabilities": [
+            0.09779027104377747,
+            0.07139328122138977,
+            0.09439130127429962,
+            0.07156055420637131,
+            0.49345067143440247,
+            0.0803096666932106,
+            0.09110420197248459
+          ],
+          "id": "TT-1e9a2c8c72-a",
+          "latency_ms": 4.486041842028499,
+          "predictions": {
+            "initial_owner": "noc",
+            "insufficient_evidence": "yes",
+            "next_check": "gather_evidence",
+            "priority": "P3"
+          },
+          "status": "ok"
+        },
+        {
+          "disposition_probabilities": [
+            0.0763898640871048,
+            0.0858132541179657,
+            0.07108534127473831,
+            0.08999121934175491,
+            0.10511044412851334,
+            0.12953414022922516,
+            0.4420756697654724
+          ],
+          "id": "TT-1e9a2c8c72-b",
+          "latency_ms": 4.63670794852078,
+          "predictions": {
+            "initial_owner": "noc",
+            "insufficient_evidence": "no",
+            "next_check": "monitor",
+            "priority": "P4"
+          },
+          "status": "ok"
+        }
+      ],
+      "predictions_canonical_sha256": "af56971bbdff33415e23b8c79bf4405281dda5fa5f329c2d6b8bbf0089d92155",
+      "metadata": {
+        "provider": "teacher_finetuned",
+        "request_protocol": "northstar-teacher-finetuned-minilm-v1",
+        "input_sha256": "2cf5554791ccad8485acb62d48bcbb7f2652044ac5bcf01fd3d37f03ebc48396",
+        "head_training": {
+          "request_protocol": "northstar-teacher-finetuned-minilm-v1",
+          "base_model_id": "sentence-transformers/all-MiniLM-L6-v2",
+          "base_revision": "1110a243fdf4706b3f48f1d95db1a4f5529b4d41",
+          "architecture": "End-to-end MiniLM encoder plus seven-way linear head, structured features, and policy priority",
+          "max_tokens": 512,
+          "feature_size": 21,
+          "selected_epoch": 14,
+          "history": [
+            {
+              "epoch": 1,
+              "training_correct": 29,
+              "development_correct": 5,
+              "mean_training_loss": 1.9660879075527191
+            },
+            {
+              "epoch": 2,
+              "training_correct": 41,
+              "development_correct": 6,
+              "mean_training_loss": 1.8886433839797974
+            },
+            {
+              "epoch": 3,
+              "training_correct": 49,
+              "development_correct": 6,
+              "mean_training_loss": 1.8083691000938416
+            },
+            {
+              "epoch": 4,
+              "training_correct": 50,
+              "development_correct": 6,
+              "mean_training_loss": 1.7334715873003006
+            },
+            {
+              "epoch": 5,
+              "training_correct": 55,
+              "development_correct": 7,
+              "mean_training_loss": 1.6365551203489304
+            },
+            {
+              "epoch": 6,
+              "training_correct": 54,
+              "development_correct": 8,
+              "mean_training_loss": 1.5559758245944977
+            },
+            {
+              "epoch": 7,
+              "training_correct": 56,
+              "development_correct": 7,
+              "mean_training_loss": 1.4531505405902863
+            },
+            {
+              "epoch": 8,
+              "training_correct": 57,
+              "development_correct": 7,
+              "mean_training_loss": 1.3716757893562317
+            },
+            {
+              "epoch": 9,
+              "training_correct": 57,
+              "development_correct": 8,
+              "mean_training_loss": 1.28357994556427
+            },
+            {
+              "epoch": 10,
+              "training_correct": 57,
+              "development_correct": 8,
+              "mean_training_loss": 1.2073551267385483
+            },
+            {
+              "epoch": 11,
+              "training_correct": 57,
+              "development_correct": 9,
+              "mean_training_loss": 1.1062364131212234
+            },
+            {
+              "epoch": 12,
+              "training_correct": 57,
+              "development_correct": 9,
+              "mean_training_loss": 1.0190211683511734
+            },
+            {
+              "epoch": 13,
+              "training_correct": 57,
+              "development_correct": 10,
+              "mean_training_loss": 0.9371470212936401
+            },
+            {
+              "epoch": 14,
+              "training_correct": 57,
+              "development_correct": 11,
+              "mean_training_loss": 0.8651109039783478
+            },
+            {
+              "epoch": 15,
+              "training_correct": 57,
+              "development_correct": 9,
+              "mean_training_loss": 0.7845435664057732
+            },
+            {
+              "epoch": 16,
+              "training_correct": 57,
+              "development_correct": 11,
+              "mean_training_loss": 0.7490583583712578
+            },
+            {
+              "epoch": 17,
+              "training_correct": 57,
+              "development_correct": 10,
+              "mean_training_loss": 0.701323077082634
+            },
+            {
+              "epoch": 18,
+              "training_correct": 58,
+              "development_correct": 11,
+              "mean_training_loss": 0.6450068950653076
+            },
+            {
+              "epoch": 19,
+              "training_correct": 58,
+              "development_correct": 11,
+              "mean_training_loss": 0.5913380831480026
+            },
+            {
+              "epoch": 20,
+              "training_correct": 58,
+              "development_correct": 10,
+              "mean_training_loss": 0.5561243630945683
+            }
+          ],
+          "training_records": 58,
+          "development_records": 16,
+          "train_input_sha256": "2cf5554791ccad8485acb62d48bcbb7f2652044ac5bcf01fd3d37f03ebc48396",
+          "train_label_sha256": "f16b7c666ede5f8ea7555e365ca08ee2ad0d9eb56802c6a3d26a2075d01fc5d5",
+          "dev_input_sha256": "30e34939ef57cfde37a96d5a578f9747ea5f27d17dc66984fc7bd805705d50b4",
+          "dev_label_sha256": "63cd06e0c42e3cf8e97ea42068e974e75b0618dc88a07e9b4f8ecefb7f5d8f7a",
+          "training_families": [
+            "change_core_drain_scope",
+            "change_radio_license_scope",
+            "core_api_schema",
+            "core_endpoint_pool",
+            "core_lease_lock",
+            "core_rate_limit_scope",
+            "core_replica_quorum",
+            "core_replica_read_skew",
+            "power_busbar_joint",
+            "power_dc_polarity",
+            "power_earth_fault",
+            "power_inverter_bypass",
+            "power_remote_feed",
+            "power_voltage_sensor_disagreement",
+            "radio_amplifier_gain",
+            "radio_baseband_memory",
+            "radio_duplex_filter",
+            "radio_fronthaul_clock",
+            "radio_remote_cooling",
+            "radio_uplink_decoder",
+            "recovery_data_session",
+            "recovery_sms_transaction",
+            "recovery_voice_setup",
+            "transport_dependency_membership",
+            "transport_label_disposition",
+            "transport_microburst_buffer",
+            "transport_pseudowire_sequence",
+            "transport_spanning_loop",
+            "transport_tunnel_binding"
+          ],
+          "development_families": [
+            "alarm_clear_service_probe",
+            "contradictory_power_sources",
+            "core_certificate",
+            "dependency_membership",
+            "maintenance_scope_mismatch",
+            "mixed_dc_voltage",
+            "queue_drops",
+            "unrelated_change_radio"
+          ],
+          "selection": "Maximum complete development agreement; earliest epoch wins ties; not holdout performance",
+          "hyperparameters": {
+            "epochs": 20,
+            "encoder_lr": 3e-05,
+            "head_lr": 0.001,
+            "batch_size": 8,
+            "seed": 17,
+            "weight_decay": 0.01
+          },
+          "device": "mps",
+          "training_seconds": 23.088245416991413,
+          "encoder_parameters": 22713216,
+          "renderer_sha256": "149d8d4ddbc0af017bec180797ad2d7e2ea2c9ab4235e3f64feeff6d32bc3d8b",
+          "training_source_sha256": "db16ddb723cc5959b07455c1355d786a08b32961d90ea54abc77d8ab226765ed",
+          "versions": {
+            "torch": "2.14.0",
+            "transformers": "5.17.0",
+            "numpy": "2.5.3"
+          },
+          "artifact_sha256": {
+            "checkpoint/model.safetensors": "e3edd8b9facc648839c39be624dac70e5daee84387a1e32b1dee83c7dae29000",
+            "checkpoint/tokenizer_config.json": "4b91f63e0ec01ae5112b4fab0027b301a38d94f6b1fd001abf2236390168b553",
+            "checkpoint/config.json": "bc07d616645604e14676245d40081ed4cb71e12817fb034d874a123576657924",
+            "checkpoint/tokenizer.json": "f17212c38517cfedc9306b57eeffbaf58c4976fcb42e5a87b405f36a7b9a9eb2",
+            "head.pt": "9f0e5d951fda7fc4e7776eeb3879068690d11c09b2268c18c166b78aed3ddbea"
+          }
+        },
+        "model_load_ms": 235.25058291852474,
+        "device": "mps",
+        "records": 58,
+        "failed_records": 0,
+        "no_autoregressive_calls": true,
+        "execution": "serial local inference; cached checkpoint; no warmup; per-record latency excludes model load"
+      },
+      "summary": {
+        "records": 58,
+        "all_four_correct": 57,
+        "field_correct": {
+          "initial_owner": 57,
+          "priority": 58,
+          "next_check": 57,
+          "insufficient_evidence": 57
+        },
+        "failed_records": 0,
+        "missing_records": 0,
+        "pairs": 29,
+        "complete_pairs": 28,
+        "insufficient_evidence": {
+          "true_positive": 28,
+          "false_positive": 0,
+          "false_negative": 1,
+          "precision": 1.0,
+          "recall": 0.9655172413793104
+        },
+        "false_domain_assignments": 1,
+        "false_monitor_dispositions": 0,
+        "p1_records": 0,
+        "p1_missed": 0,
+        "latency_ms": {
+          "p50": 4.732667002826929,
+          "p95": 8.17012507468462,
+          "records": 58
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,204 @@
+{
+  "request_protocol": "northstar-teacher-finetuned-minilm-v1",
+  "base_model_id": "sentence-transformers/all-MiniLM-L6-v2",
+  "base_revision": "1110a243fdf4706b3f48f1d95db1a4f5529b4d41",
+  "architecture": "End-to-end MiniLM encoder plus seven-way linear head, structured features, and policy priority",
+  "max_tokens": 512,
+  "feature_size": 21,
+  "selected_epoch": 14,
+  "history": [
+    {
+      "epoch": 1,
+      "training_correct": 29,
+      "development_correct": 5,
+      "mean_training_loss": 1.9660879075527191
+    },
+    {
+      "epoch": 2,
+      "training_correct": 41,
+      "development_correct": 6,
+      "mean_training_loss": 1.8886433839797974
+    },
+    {
+      "epoch": 3,
+      "training_correct": 49,
+      "development_correct": 6,
+      "mean_training_loss": 1.8083691000938416
+    },
+    {
+      "epoch": 4,
+      "training_correct": 50,
+      "development_correct": 6,
+      "mean_training_loss": 1.7334715873003006
+    },
+    {
+      "epoch": 5,
+      "training_correct": 55,
+      "development_correct": 7,
+      "mean_training_loss": 1.6365551203489304
+    },
+    {
+      "epoch": 6,
+      "training_correct": 54,
+      "development_correct": 8,
+      "mean_training_loss": 1.5559758245944977
+    },
+    {
+      "epoch": 7,
+      "training_correct": 56,
+      "development_correct": 7,
+      "mean_training_loss": 1.4531505405902863
+    },
+    {
+      "epoch": 8,
+      "training_correct": 57,
+      "development_correct": 7,
+      "mean_training_loss": 1.3716757893562317
+    },
+    {
+      "epoch": 9,
+      "training_correct": 57,
+      "development_correct": 8,
+      "mean_training_loss": 1.28357994556427
+    },
+    {
+      "epoch": 10,
+      "training_correct": 57,
+      "development_correct": 8,
+      "mean_training_loss": 1.2073551267385483
+    },
+    {
+      "epoch": 11,
+      "training_correct": 57,
+      "development_correct": 9,
+      "mean_training_loss": 1.1062364131212234
+    },
+    {
+      "epoch": 12,
+      "training_correct": 57,
+      "development_correct": 9,
+      "mean_training_loss": 1.0190211683511734
+    },
+    {
+      "epoch": 13,
+      "training_correct": 57,
+      "development_correct": 10,
+      "mean_training_loss": 0.9371470212936401
+    },
+    {
+      "epoch": 14,
+      "training_correct": 57,
+      "development_correct": 11,
+      "mean_training_loss": 0.8651109039783478
+    },
+    {
+      "epoch": 15,
+      "training_correct": 57,
+      "development_correct": 9,
+      "mean_training_loss": 0.7845435664057732
+    },
+    {
+      "epoch": 16,
+      "training_correct": 57,
+      "development_correct": 11,
+      "mean_training_loss": 0.7490583583712578
+    },
+    {
+      "epoch": 17,
+      "training_correct": 57,
+      "development_correct": 10,
+      "mean_training_loss": 0.701323077082634
+    },
+    {
+      "epoch": 18,
+      "training_correct": 58,
+      "development_correct": 11,
+      "mean_training_loss": 0.6450068950653076
+    },
+    {
+      "epoch": 19,
+      "training_correct": 58,
+      "development_correct": 11,
+      "mean_training_loss": 0.5913380831480026
+    },
+    {
+      "epoch": 20,
+      "training_correct": 58,
+      "development_correct": 10,
+      "mean_training_loss": 0.5561243630945683
+    }
+  ],
+  "training_records": 58,
+  "development_records": 16,
+  "train_input_sha256": "2cf5554791ccad8485acb62d48bcbb7f2652044ac5bcf01fd3d37f03ebc48396",
+  "train_label_sha256": "f16b7c666ede5f8ea7555e365ca08ee2ad0d9eb56802c6a3d26a2075d01fc5d5",
+  "dev_input_sha256": "30e34939ef57cfde37a96d5a578f9747ea5f27d17dc66984fc7bd805705d50b4",
+  "dev_label_sha256": "63cd06e0c42e3cf8e97ea42068e974e75b0618dc88a07e9b4f8ecefb7f5d8f7a",
+  "training_families": [
+    "change_core_drain_scope",
+    "change_radio_license_scope",
+    "core_api_schema",
+    "core_endpoint_pool",
+    "core_lease_lock",
+    "core_rate_limit_scope",
+    "core_replica_quorum",
+    "core_replica_read_skew",
+    "power_busbar_joint",
+    "power_dc_polarity",
+    "power_earth_fault",
+    "power_inverter_bypass",
+    "power_remote_feed",
+    "power_voltage_sensor_disagreement",
+    "radio_amplifier_gain",
+    "radio_baseband_memory",
+    "radio_duplex_filter",
+    "radio_fronthaul_clock",
+    "radio_remote_cooling",
+    "radio_uplink_decoder",
+    "recovery_data_session",
+    "recovery_sms_transaction",
+    "recovery_voice_setup",
+    "transport_dependency_membership",
+    "transport_label_disposition",
+    "transport_microburst_buffer",
+    "transport_pseudowire_sequence",
+    "transport_spanning_loop",
+    "transport_tunnel_binding"
+  ],
+  "development_families": [
+    "alarm_clear_service_probe",
+    "contradictory_power_sources",
+    "core_certificate",
+    "dependency_membership",
+    "maintenance_scope_mismatch",
+    "mixed_dc_voltage",
+    "queue_drops",
+    "unrelated_change_radio"
+  ],
+  "selection": "Maximum complete development agreement; earliest epoch wins ties; not holdout performance",
+  "hyperparameters": {
+    "epochs": 20,
+    "encoder_lr": 3e-05,
+    "head_lr": 0.001,
+    "batch_size": 8,
+    "seed": 17,
+    "weight_decay": 0.01
+  },
+  "device": "mps",
+  "training_seconds": 23.088245416991413,
+  "encoder_parameters": 22713216,
+  "renderer_sha256": "149d8d4ddbc0af017bec180797ad2d7e2ea2c9ab4235e3f64feeff6d32bc3d8b",
+  "training_source_sha256": "db16ddb723cc5959b07455c1355d786a08b32961d90ea54abc77d8ab226765ed",
+  "versions": {
+    "torch": "2.14.0",
+    "transformers": "5.17.0",
+    "numpy": "2.5.3"
+  },
+  "artifact_sha256": {
+    "checkpoint/model.safetensors": "e3edd8b9facc648839c39be624dac70e5daee84387a1e32b1dee83c7dae29000",
+    "checkpoint/tokenizer_config.json": "4b91f63e0ec01ae5112b4fab0027b301a38d94f6b1fd001abf2236390168b553",
+    "checkpoint/config.json": "bc07d616645604e14676245d40081ed4cb71e12817fb034d874a123576657924",
+    "checkpoint/tokenizer.json": "f17212c38517cfedc9306b57eeffbaf58c4976fcb42e5a87b405f36a7b9a9eb2",
+    "head.pt": "9f0e5d951fda7fc4e7776eeb3879068690d11c09b2268c18c166b78aed3ddbea"
+  }
+}

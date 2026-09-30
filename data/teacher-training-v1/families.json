@@ -1,0 +1,182 @@
+[
+  {
+    "incident_family_id": "radio_baseband_memory",
+    "pair_id": "TT-81de8eeb61",
+    "mechanism": "domain_support",
+    "related_development_themes": "Positive/negative evidence, scope or recovery; conceptually related to development interventions. Mechanism overlap has not been independently adjudicated."
+  },
+  {
+    "incident_family_id": "radio_fronthaul_clock",
+    "pair_id": "TT-f32a4c097f",
+    "mechanism": "domain_support",
+    "related_development_themes": "Positive/negative evidence, scope or recovery; conceptually related to development interventions. Mechanism overlap has not been independently adjudicated."
+  },
+  {
+    "incident_family_id": "radio_amplifier_gain",
+    "pair_id": "TT-9b175d59a8",
+    "mechanism": "domain_support",
+    "related_development_themes": "Positive/negative evidence, scope or recovery; conceptually related to development interventions. Mechanism overlap has not been independently adjudicated."
+  },
+  {
+    "incident_family_id": "radio_uplink_decoder",
+    "pair_id": "TT-bc7496c1eb",
+    "mechanism": "domain_support",
+    "related_development_themes": "Positive/negative evidence, scope or recovery; conceptually related to development interventions. Mechanism overlap has not been independently adjudicated."
+  },
+  {
+    "incident_family_id": "radio_duplex_filter",
+    "pair_id": "TT-1d15bfbb6c",
+    "mechanism": "domain_support",
+    "related_development_themes": "Positive/negative evidence, scope or recovery; conceptually related to development interventions. Mechanism overlap has not been independently adjudicated."
+  },
+  {
+    "incident_family_id": "radio_remote_cooling",
+    "pair_id": "TT-9309ad646f",
+    "mechanism": "domain_support",
+    "related_development_themes": "Positive/negative evidence, scope or recovery; conceptually related to development interventions. Mechanism overlap has not been independently adjudicated."
+  },
+  {
+    "incident_family_id": "transport_spanning_loop",
+    "pair_id": "TT-7d90cba1e7",
+    "mechanism": "domain_support",
+    "related_development_themes": "Positive/negative evidence, scope or recovery; conceptually related to development interventions. Mechanism overlap has not been independently adjudicated."
+  },
+  {
+    "incident_family_id": "transport_tunnel_binding",
+    "pair_id": "TT-ea8cbc5db1",
+    "mechanism": "domain_support",
+    "related_development_themes": "Positive/negative evidence, scope or recovery; conceptually related to development interventions. Mechanism overlap has not been independently adjudicated."
+  },
+  {
+    "incident_family_id": "transport_label_disposition",
+    "pair_id": "TT-d47b9a6141",
+    "mechanism": "domain_support",
+    "related_development_themes": "Positive/negative evidence, scope or recovery; conceptually related to development interventions. Mechanism overlap has not been independently adjudicated."
+  },
+  {
+    "incident_family_id": "transport_microburst_buffer",
+    "pair_id": "TT-84718e62ba",
+    "mechanism": "domain_support",
+    "related_development_themes": "Positive/negative evidence, scope or recovery; conceptually related to development interventions. Mechanism overlap has not been independently adjudicated."
+  },
+  {
+    "incident_family_id": "transport_pseudowire_sequence",
+    "pair_id": "TT-357a7c6083",
+    "mechanism": "domain_support",
+    "related_development_themes": "Positive/negative evidence, scope or recovery; conceptually related to development interventions. Mechanism overlap has not been independently adjudicated."
+  },
+  {
+    "incident_family_id": "transport_dependency_membership",
+    "pair_id": "TT-e081e87c32",
+    "mechanism": "domain_support",
+    "related_development_themes": "Positive/negative evidence, scope or recovery; conceptually related to development interventions. Mechanism overlap has not been independently adjudicated."
+  },
+  {
+    "incident_family_id": "power_busbar_joint",
+    "pair_id": "TT-f7ed8c8962",
+    "mechanism": "domain_support",
+    "related_development_themes": "Positive/negative evidence, scope or recovery; conceptually related to development interventions. Mechanism overlap has not been independently adjudicated."
+  },
+  {
+    "incident_family_id": "power_remote_feed",
+    "pair_id": "TT-f52fcf4a75",
+    "mechanism": "domain_support",
+    "related_development_themes": "Positive/negative evidence, scope or recovery; conceptually related to development interventions. Mechanism overlap has not been independently adjudicated."
+  },
+  {
+    "incident_family_id": "power_earth_fault",
+    "pair_id": "TT-4367352668",
+    "mechanism": "domain_support",
+    "related_development_themes": "Positive/negative evidence, scope or recovery; conceptually related to development interventions. Mechanism overlap has not been independently adjudicated."
+  },
+  {
+    "incident_family_id": "power_inverter_bypass",
+    "pair_id": "TT-d86ddc77ef",
+    "mechanism": "domain_support",
+    "related_development_themes": "Positive/negative evidence, scope or recovery; conceptually related to development interventions. Mechanism overlap has not been independently adjudicated."
+  },
+  {
+    "incident_family_id": "power_voltage_sensor_disagreement",
+    "pair_id": "TT-e5545fc95b",
+    "mechanism": "domain_support",
+    "related_development_themes": "Positive/negative evidence, scope or recovery; conceptually related to development interventions. Mechanism overlap has not been independently adjudicated."
+  },
+  {
+    "incident_family_id": "power_dc_polarity",
+    "pair_id": "TT-a2d39f6556",
+    "mechanism": "domain_support",
+    "related_development_themes": "Positive/negative evidence, scope or recovery; conceptually related to development interventions. Mechanism overlap has not been independently adjudicated."
+  },
+  {
+    "incident_family_id": "core_replica_quorum",
+    "pair_id": "TT-11decb0418",
+    "mechanism": "domain_support",
+    "related_development_themes": "Positive/negative evidence, scope or recovery; conceptually related to development interventions. Mechanism overlap has not been independently adjudicated."
+  },
+  {
+    "incident_family_id": "core_lease_lock",
+    "pair_id": "TT-fb65994b18",
+    "mechanism": "domain_support",
+    "related_development_themes": "Positive/negative evidence, scope or recovery; conceptually related to development interventions. Mechanism overlap has not been independently adjudicated."
+  },
+  {
+    "incident_family_id": "core_api_schema",
+    "pair_id": "TT-4eb8437251",
+    "mechanism": "domain_support",
+    "related_development_themes": "Positive/negative evidence, scope or recovery; conceptually related to development interventions. Mechanism overlap has not been independently adjudicated."
+  },
+  {
+    "incident_family_id": "core_replica_read_skew",
+    "pair_id": "TT-305c0159cb",
+    "mechanism": "domain_support",
+    "related_development_themes": "Positive/negative evidence, scope or recovery; conceptually related to development interventions. Mechanism overlap has not been independently adjudicated."
+  },
+  {
+    "incident_family_id": "core_rate_limit_scope",
+    "pair_id": "TT-a8b0d880c7",
+    "mechanism": "domain_support",
+    "related_development_themes": "Positive/negative evidence, scope or recovery; conceptually related to development interventions. Mechanism overlap has not been independently adjudicated."
+  },
+  {
+    "incident_family_id": "core_endpoint_pool",
+    "pair_id": "TT-c3d31a8305",
+    "mechanism": "domain_support",
+    "related_development_themes": "Positive/negative evidence, scope or recovery; conceptually related to development interventions. Mechanism overlap has not been independently adjudicated."
+  },
+  {
+    "incident_family_id": "change_edge_acl_scope",
+    "pair_id": "TT-38142b7717",
+    "mechanism": "change_scope",
+    "related_development_themes": "Positive/negative evidence, scope or recovery; conceptually related to development interventions. Mechanism overlap has not been independently adjudicated."
+  },
+  {
+    "incident_family_id": "change_radio_license_scope",
+    "pair_id": "TT-becea8541f",
+    "mechanism": "change_scope",
+    "related_development_themes": "Positive/negative evidence, scope or recovery; conceptually related to development interventions. Mechanism overlap has not been independently adjudicated."
+  },
+  {
+    "incident_family_id": "change_core_drain_scope",
+    "pair_id": "TT-4c8707d460",
+    "mechanism": "change_scope",
+    "related_development_themes": "Positive/negative evidence, scope or recovery; conceptually related to development interventions. Mechanism overlap has not been independently adjudicated."
+  },
+  {
+    "incident_family_id": "recovery_sms_transaction",
+    "pair_id": "TT-b57745970a",
+    "mechanism": "recovery",
+    "related_development_themes": "Positive/negative evidence, scope or recovery; conceptually related to development interventions. Mechanism overlap has not been independently adjudicated."
+  },
+  {
+    "incident_family_id": "recovery_data_session",
+    "pair_id": "TT-38a72c612f",
+    "mechanism": "recovery",
+    "related_development_themes": "Positive/negative evidence, scope or recovery; conceptually related to development interventions. Mechanism overlap has not been independently adjudicated."
+  },
+  {
+    "incident_family_id": "recovery_voice_setup",
+    "pair_id": "TT-1e9a2c8c72",
+    "mechanism": "recovery",
+    "related_development_themes": "Positive/negative evidence, scope or recovery; conceptually related to development interventions. Mechanism overlap has not been independently adjudicated."
+  }
+]

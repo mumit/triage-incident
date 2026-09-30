@@ -14,7 +14,9 @@ The [current comparison study is closed](docs/study-closeout.md), with frozen fi
 
 The [blind LLM review](docs/llm-review-results.md) uses Luna as an offline label teacher and a second model for flagged cases. It preserves reviewer issues and candidate-label provenance. Autoregressive calls support development; the current encoder still runs locally without them.
 
-The [corrected development V2 review](docs/development-v2-results.md) retains valid uncertainty examples and produces 16 candidate labels across all seven dispositions after a separately recorded citation revalidation. Luna and Sol agree on these corrected inputs; the frozen encoder remains at 8/16. New training families are still needed.
+The [corrected development V2 review](docs/development-v2-results.md) retains valid uncertainty examples and produces 16 candidate labels across all seven dispositions after a separately recorded citation revalidation. Luna and Sol agree on these corrected inputs; the original frozen encoder remains at 8/16.
+
+The [teacher-trained encoder experiment](docs/teacher-encoder-results.md) adds 58 accepted synthetic training incidents in 29 paired families. A new frozen MiniLM head reaches **13/16** corrected development agreement; end-to-end MiniLM fine-tuning reaches **11/16**. Both run locally without autoregressive calls. These candidates were selected on development data and do not yet match teacher decisions or establish holdout accuracy.
 
 ## Browser app
 

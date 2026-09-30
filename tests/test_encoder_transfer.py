@@ -2,6 +2,7 @@ import importlib.util
 import tempfile
 import unittest
 from pathlib import Path
+from unittest.mock import patch
 
 from triage_bench.dataset import ROOT,read_jsonl
 from triage_bench.encoder import CLASSES,FIELDS
@@ -10,10 +11,20 @@ spec=importlib.util.spec_from_file_location('transfer_generator',ROOT/'scripts/p
 generator=importlib.util.module_from_spec(spec);spec.loader.exec_module(generator)
 
 
+_iterdir = Path.iterdir
+
+
+def reversed_directory_order(path):
+    return iter(sorted(_iterdir(path), reverse=True))
+
+
 class TransferDataTests(unittest.TestCase):
     def test_reproduction_pair_assignment_and_cross_split_mechanism_ids(self):
         with tempfile.TemporaryDirectory() as temporary:
-            output=Path(temporary)/'data';generator.build(output)
+            output=Path(temporary)/'data'
+            with patch.object(Path, 'iterdir', reversed_directory_order):
+                manifest=generator.build(output)
+            self.assertEqual(list(manifest['sha256']),sorted(manifest['sha256']))
             for name in ('train.inputs.jsonl','train.reference.labels.jsonl','development.inputs.jsonl',
                          'development.reference.labels.jsonl','families.json','manifest.json'):
                 self.assertEqual((output/name).read_bytes(),(ROOT/'data/encoder-transfer-v1'/name).read_bytes())
@@ -41,7 +52,10 @@ class TransferDataTests(unittest.TestCase):
         from scripts.prepare_transfer_release import prepare
         root=ROOT/'examples/encoder-transfer'
         with tempfile.TemporaryDirectory() as temporary:
-            output=Path(temporary)/'release';manifest=prepare(root,output)
+            output=Path(temporary)/'release'
+            with patch.object(Path, 'iterdir', reversed_directory_order):
+                manifest=prepare(root,output)
+            self.assertEqual(list(manifest['sha256']),sorted(manifest['sha256']))
             self.assertEqual(manifest['records'],{'train':118,'development':54})
             self.assertEqual(manifest['families'],{'train':59,'development':27})
             self.assertEqual(manifest['new_development']['rejected_families'],['core_signing_key_change_competition'])

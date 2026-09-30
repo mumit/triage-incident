@@ -109,7 +109,7 @@ def build(output):
     (output/'families.json').write_text(json.dumps(families,indent=2)+'\n')
     manifest={'use':'Synthetic training and inspected development, not holdout','training_families':30,'development_families':20,
               'catalog_sha256':sha(catalog.__file__),'generator_sha256':sha(__file__),
-              'sha256':{p.name:sha(p) for p in output.iterdir() if p.is_file()}}
+              'sha256':{p.name:sha(p) for p in sorted(output.iterdir()) if p.is_file()}}
     (output/'manifest.json').write_text(json.dumps(manifest,indent=2)+'\n')
     return manifest
 

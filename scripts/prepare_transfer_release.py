@@ -46,7 +46,7 @@ def prepare(evidence_root,output):
               'new_training':train_manifest,'new_development':dev_manifest,
               'records':{s:len(read_jsonl(output/(s+'.inputs.jsonl'))) for s in ('train','development')},
               'families':{s:len({k['incident_family_id'] for k in read_jsonl(output/(s+'.labels.jsonl'))}) for s in ('train','development')},
-              'sha256':{p.name:sha(p) for p in output.iterdir() if p.is_file()}}
+              'sha256':{p.name:sha(p) for p in sorted(output.iterdir()) if p.is_file()}}
     (output/'manifest.json').write_text(json.dumps(manifest,indent=2)+'\n')
     return manifest
 

@@ -10,6 +10,8 @@ The [corrected V2 development cohort](development-v2-results.md) has now been re
 
 The [teacher-trained encoder experiment](teacher-encoder-results.md) now supplies 58 accepted training incidents in 29 paired families. A separate frozen-head candidate improves corrected development agreement to 13/16; end-to-end fine-tuning reaches 11/16. Training and development IDs, pairs and families are disjoint, with conceptual overlap disclosed. The original encoder stays frozen, and unseen-family evaluation remains outstanding.
 
+The [regularization follow-up](encoder-regularization-results.md) improves the head to 14/16 development agreement and 58/58 training agreement with L2 `0.001`. All five fits converge. That head is the current development reference; expanding reviewed data and evaluating unseen families remain necessary.
+
 ## Purpose
 
 Determine whether a compact, decomposed Jev workflow can match a trained local encoder on initial incident triage without autoregressive inference. Test where general decision models add value: new evidence wording, ambiguous domain assignments, recovery, change scope, and conflicting observations.

@@ -18,6 +18,8 @@ The [corrected development V2 review](docs/development-v2-results.md) retains va
 
 The [teacher-trained encoder experiment](docs/teacher-encoder-results.md) adds 58 accepted synthetic training incidents in 29 paired families. A new frozen MiniLM head reaches **13/16** corrected development agreement; end-to-end MiniLM fine-tuning reaches **11/16**. Both run locally without autoregressive calls. These candidates were selected on development data and do not yet match teacher decisions or establish holdout accuracy.
 
+The [bounded regularization experiment](docs/encoder-regularization-results.md) keeps that data and configuration fixed. L2 `0.001` reaches **58/58 training and 14/16 development agreement**, with all five trial fits verified as converged. Broader reviewed data and unseen-family evaluation remain the next steps.
+
 ## Browser app
 
 ```bash

@@ -1,0 +1,31 @@
+{
+  "protocol": "northstar-encoder-regularization-v1",
+  "l2_trials": [
+    0.01,
+    0.003,
+    0.001,
+    0.0003,
+    0.0001
+  ],
+  "identities": {
+    "train_input_sha256": "2cf5554791ccad8485acb62d48bcbb7f2652044ac5bcf01fd3d37f03ebc48396",
+    "train_label_sha256": "f16b7c666ede5f8ea7555e365ca08ee2ad0d9eb56802c6a3d26a2075d01fc5d5",
+    "dev_input_sha256": "30e34939ef57cfde37a96d5a578f9747ea5f27d17dc66984fc7bd805705d50b4",
+    "dev_label_sha256": "63cd06e0c42e3cf8e97ea42068e974e75b0618dc88a07e9b4f8ecefb7f5d8f7a"
+  },
+  "renderer_source_sha256": "149d8d4ddbc0af017bec180797ad2d7e2ea2c9ab4235e3f64feeff6d32bc3d8b",
+  "model_id": "sentence-transformers/all-MiniLM-L6-v2",
+  "model_revision": "1110a243fdf4706b3f48f1d95db1a4f5529b4d41",
+  "feature_scale": 0.5,
+  "max_tokens": 512,
+  "solver": {
+    "max_iter": 1000,
+    "tolerance_grad": 1e-08,
+    "tolerance_change": 1e-15,
+    "line_search_fn": "strong_wolfe",
+    "required_gradient_inf_norm": 1e-07
+  },
+  "selection": "Maximum development complete agreement among converged fits; grid order breaks ties",
+  "evaluation_use": "Previously inspected development only; not holdout",
+  "source_sha256": "71cabeb33dd0b3ba74a4f93947f4c913cb1102a93c1f283c23dbc7a22aaf09ab"
+}

@@ -1,0 +1,15 @@
+{
+  "release": "workflow-development-v2-llm-reviewed-candidates",
+  "evaluation_use": "developer-inspected development only; not a training/validation split or independent holdout",
+  "review_status": "Luna/Sol agreement after separately recorded offline Luna revalidation; no specialist review",
+  "records": 16,
+  "families": 8,
+  "pairs": 8,
+  "dispositions": 7,
+  "source_input_sha256": "30e34939ef57cfde37a96d5a578f9747ea5f27d17dc66984fc7bd805705d50b4",
+  "sha256": {
+    "candidate.inputs.jsonl": "30e34939ef57cfde37a96d5a578f9747ea5f27d17dc66984fc7bd805705d50b4",
+    "candidate.labels.jsonl": "63cd06e0c42e3cf8e97ea42068e974e75b0618dc88a07e9b4f8ecefb7f5d8f7a",
+    "reconciliation.json": "9800b1eb9e773fae2dda46129d1b964cdd4434b362d8480d6a13ddb36aab8f35"
+  }
+}

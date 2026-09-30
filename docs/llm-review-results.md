@@ -2,6 +2,8 @@
 
 Status: completed on 2026-09-29. Luna reviewed all 16 drafts; a second model independently reviewed nine flagged cases. Seven cases passed the conservative candidate filter. Existing inputs, benchmark labels, and encoder weights remain unchanged. These are LLM-reviewed development candidates, not specialist-approved labels or independent accuracy results.
 
+The subsequent [corrected development V2 review](development-v2-results.md) produces 16 candidate labels under a clearer rubric and corrected inputs, with the original failures preserved. This note retains the first review outcomes.
+
 ## Purpose and design
 
 Use an autoregressive model offline to review synthetic inputs and propose training labels for an encoder that will run without autoregressive calls. Review disagreements and input quality before training; measure teacher-to-encoder transfer separately from operational accuracy.

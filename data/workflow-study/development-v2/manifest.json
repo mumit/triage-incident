@@ -1,0 +1,16 @@
+{
+  "version": "workflow-development-v2",
+  "evaluation_use": "corrected, developer-inspected synthetic development; never a holdout",
+  "author": "AI coding agent; changes informed by prior Luna/Sol review",
+  "reference_status": "provisional original answer sets; not independent adjudication",
+  "records": 16,
+  "families": 8,
+  "source_input_sha256": "2326f2877980291feb621ebd615b0d0f6ffcf1ebcb0f154c9aa9d20b1f0895a7",
+  "source_label_sha256": "26400ae85758429febc6077944bae566c2badb1216443475796745f5e1617e21",
+  "generation_source_sha256": "e590d6749d02201af90a1ff303314a0283d4fc16a1296a507a270436f024b0ee",
+  "sha256": {
+    "development.inputs.jsonl": "30e34939ef57cfde37a96d5a578f9747ea5f27d17dc66984fc7bd805705d50b4",
+    "reference.labels.jsonl": "8417f8ea7ec2969ec638ea97038d8ab70836901c3ddf1c8f0e532a911ec59080",
+    "changes.json": "a7d5f99af1dfa3b047257cf479f7fedee8f74d7abaaa535b602f4897d0766f93"
+  }
+}

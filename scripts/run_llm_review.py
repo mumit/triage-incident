@@ -9,6 +9,7 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 from triage_bench.app import load_env  # noqa: E402
 from triage_bench.llm_review import run  # noqa: E402
+from triage_bench import llm_review_v2  # noqa: E402
 
 
 def main():
@@ -20,6 +21,7 @@ def main():
     parser.add_argument('--base-url')
     parser.add_argument('--reasoning-effort', default='none', choices=('default', 'none', 'low', 'medium', 'high'))
     parser.add_argument('--min-interval', type=float, default=3.5)
+    parser.add_argument('--protocol', choices=('v1', 'v2'), default='v1')
     args = parser.parse_args()
     if args.env_file:
         if not args.env_file.is_file():
@@ -31,6 +33,7 @@ def main():
         parser.error('Configure FUELIX_BEARER_TOKEN and LLM_BASE_URL or --base-url')
     meta = run(args.inputs, args.output, args.model, endpoint, key, args.reasoning_effort,
                min_interval=args.min_interval,
+               review_protocol=llm_review_v2 if args.protocol == 'v2' else None,
                progress=lambda index, count, row: print(f'{index}/{count}: {row["status"]}', flush=True))
     print(f'Saved {meta["successful_records"]} valid reviews; {meta["failed_records"]} failed. No labels read.')
     if meta['failed_records']:

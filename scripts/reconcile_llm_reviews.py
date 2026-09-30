@@ -19,17 +19,19 @@ def main():
     parser.add_argument('--secondary-evidence', type=Path, required=True)
     parser.add_argument('--output-dir', type=Path)
     parser.add_argument('--verify-dir', type=Path)
+    parser.add_argument('--all-cases', action='store_true', help='Second reviewer independently reviews the entire same cohort')
     args = parser.parse_args()
     if bool(args.output_dir) == bool(args.verify_dir):
         parser.error('Choose output-dir or verify-dir')
     primary_path = args.primary_dir / 'evidence.json'
     primary = verify_evidence(primary_path, args.inputs, args.labels)
-    secondary = verify_evidence(args.secondary_evidence, args.primary_dir / 'adjudication.inputs.jsonl',
-                                args.primary_dir / 'adjudication.labels.jsonl')
+    secondary = verify_evidence(args.secondary_evidence,
+        args.inputs if args.all_cases else args.primary_dir / 'adjudication.inputs.jsonl',
+        args.labels if args.all_cases else args.primary_dir / 'adjudication.labels.jsonl')
     artifacts = json.loads((args.primary_dir / 'artifacts.json').read_text())
     if any(sha(args.primary_dir / name) != checksum for name, checksum in artifacts.items()):
         raise ValueError('Primary exported artifacts changed')
-    result = reconcile(primary, secondary)
+    result = reconcile(primary, secondary, all_cases=args.all_cases)
     records = {record['id']: record for record in read_jsonl(args.inputs)}
     candidates = [case for case in result['cases'] if case['status'] == 'candidate']
     input_text = ''.join(json.dumps(records[case['id']]) + '\n' for case in candidates)

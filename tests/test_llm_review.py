@@ -6,7 +6,7 @@ import unittest
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
 
-from triage_bench import llm_review
+from triage_bench import llm_review, llm_review_v2
 from triage_bench.dataset import ROOT, read_jsonl
 
 
@@ -79,6 +79,33 @@ class LLMReviewTests(unittest.TestCase):
         issues = llm_review.policy_issues(review['answers'], llm_review.public_packet(self.record()))
         self.assertEqual(len(issues), 2)
 
+    def test_v2_graph_citations_compare_json_structure_without_relaxing_strings(self):
+        packet = llm_review.public_packet(self.record())
+        review = self.review()
+        citation = {'path': '/topology/edges', 'quote': json.dumps(packet['topology']['edges'], separators=(',', ':'))}
+        review['evidence']['initial_owner'] = [citation]
+        response = self.response(review)
+        with self.assertRaisesRegex(ValueError, 'Citation quote'):
+            llm_review.normalize(response, packet)
+        self.assertEqual(llm_review_v2.normalize(response, packet), review)
+        citation['quote'] = '[["invented", "edge"]]'
+        with self.assertRaisesRegex(ValueError, 'Citation quote'):
+            llm_review_v2.normalize(self.response(review), packet)
+        citation.update(path='/service_impact/status', quote=json.dumps(packet['service_impact']['status']))
+        self.assertEqual(llm_review_v2.normalize(self.response(review), packet), review)
+        with self.assertRaisesRegex(ValueError, 'Citation quote'):
+            llm_review.normalize(self.response(review), packet)
+        citation.update(path='/service_impact/affected_sites', quote='true')
+        with self.assertRaisesRegex(ValueError, 'Citation quote'):
+            llm_review_v2.normalize(self.response(review), packet)
+        packet['service_impact']['affected_sites'] = 12
+        citation['quote'] = '2'
+        with self.assertRaisesRegex(ValueError, 'Citation quote'):
+            llm_review_v2.normalize(self.response(review), packet)
+        citation.update(path='/observations/0/detail', quote='INVENTED_EVIDENCE')
+        with self.assertRaisesRegex(ValueError, 'Citation quote'):
+            llm_review_v2.normalize(self.response(review), packet)
+
     def test_second_review_cannot_override_input_issues_or_disagreement(self):
         record = self.record()
         row = {'id': record['id'], 'status': 'ok', 'review': self.review(),
@@ -98,6 +125,37 @@ class LLMReviewTests(unittest.TestCase):
         secondary['metadata']['requested_model'] = 'luna'
         with self.assertRaisesRegex(ValueError, 'different requested model'):
             llm_review.reconcile(primary, secondary)
+
+    def test_all_case_reconciliation_does_not_skip_unflagged_model_disagreement(self):
+        record = self.record()
+        row = {'id': record['id'], 'status': 'ok', 'review': self.review(),
+               'predictions': self.review()['answers'], 'policy_issues': [], 'resolved_model': 'luna-fixture'}
+        primary = {'metadata': {'requested_model': 'luna', 'request_protocol': llm_review_v2.PROTOCOL},
+                   'reviews': [row], 'comparison': {'cases': [{'id': record['id'], 'incident_family_id': 'family',
+                        'pair_id': None, 'differences': {}, 'requires_adjudication': False}]}}
+        other = copy.deepcopy(row)
+        other['resolved_model'] = 'sol-fixture'
+        secondary = {'metadata': {'requested_model': 'sol', 'request_protocol': llm_review_v2.PROTOCOL}, 'reviews': [other]}
+        self.assertEqual(llm_review.reconcile(primary, secondary, all_cases=True)['candidate_records'], 1)
+        other['predictions']['initial_owner'] = 'noc'
+        self.assertEqual(llm_review.reconcile(primary, secondary, all_cases=True)['pending_records'], 1)
+        secondary['metadata']['request_protocol'] = llm_review.PROTOCOL
+        with self.assertRaisesRegex(ValueError, 'same review protocol'):
+            llm_review.reconcile(primary, secondary, all_cases=True)
+
+    def test_offline_revalidation_preserves_source_failure_and_raw_response(self):
+        record = self.record()
+        review = self.review()
+        review['evidence']['priority'] = [{'path': '/service_impact/status', 'quote': '"degraded"'}]
+        row = {'id': record['id'], 'status': 'error', 'error': 'Citation quote not present',
+               'raw_response': self.response(review), 'latency_ms': 123}
+        derived = llm_review.revalidate_rows([record], [row])[0]
+        self.assertEqual(row['status'], 'error')
+        self.assertEqual(derived['status'], 'ok')
+        self.assertEqual(derived['source_status'], 'error')
+        self.assertEqual(derived['source_error'], row['error'])
+        self.assertEqual(derived['raw_response'], row['raw_response'])
+        self.assertEqual(derived['latency_ms'], 123)
 
     def test_transport_preserves_failure_redacts_secrets_and_exports_without_rewriting_labels(self):
         payloads = []

@@ -14,6 +14,8 @@ The [current comparison study is closed](docs/study-closeout.md), with frozen fi
 
 The [blind LLM review](docs/llm-review-results.md) uses Luna as an offline label teacher and a second model for flagged cases. It preserves reviewer issues and candidate-label provenance. Autoregressive calls support development; the current encoder still runs locally without them.
 
+The [corrected development V2 review](docs/development-v2-results.md) retains valid uncertainty examples and produces 16 candidate labels across all seven dispositions after a separately recorded citation revalidation. Luna and Sol agree on these corrected inputs; the frozen encoder remains at 8/16. New training families are still needed.
+
 ## Browser app
 
 ```bash
